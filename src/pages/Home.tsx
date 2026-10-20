@@ -17,7 +17,7 @@ export function Home() {
         <div>
           <h1>Learn {openings.length} popular chess openings</h1>
           <p className="lead">
-            {totalLines} lines to learn. Watch each line with explanations, then play it yourself. The opening tree shows all your openings for one colour in a single tree. Lines you know come back for review on a spaced schedule,
+            {totalLines} lines to learn. Watch each line with explanations, then play it yourself. The Explorer shows all your openings for one colour in a single tree. Lines you know come back for review on a spaced schedule,
             and Play mode tests you against a chosen set of openings.
           </p>
         </div>
@@ -25,8 +25,8 @@ export function Home() {
           <button type="button" className="primary" disabled={due.length === 0} onClick={() => go('/review')}>
             {due.length ? `Review ${due.length} due line${due.length > 1 ? 's' : ''}` : 'No reviews due'}
           </button>
-          <button type="button" onClick={() => go('/map')}>
-            Opening tree
+          <button type="button" onClick={() => go('/explorer')}>
+            Explorer
           </button>
           <button type="button" onClick={() => go('/play')}>
             Play mode

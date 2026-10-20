@@ -96,7 +96,7 @@ export function MapPage({ side: initialSide }: { side?: string }) {
     <div className="page explore map">
       <header className="explore-head">
         <div>
-          <h1>Opening tree</h1>
+          <h1>Explorer</h1>
           <p className="muted small" style={{ margin: '0.2em 0 0' }}>
             All your openings as {side} in one tree. Tap a position to open its branches.
           </p>
