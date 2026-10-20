@@ -6,7 +6,6 @@ import { explain } from '../lib/describe'
 import { buildTree, moveNumber, pathTo, type TreeNode } from '../lib/tree'
 import { Board, ARROW_BEST, ARROW_NEXT } from '../components/Board'
 import { MiniBoard } from '../components/MiniBoard'
-import { FlowTree } from '../components/FlowTree'
 import { go } from '../router'
 import { NotFound } from './OpeningPage'
 
@@ -14,17 +13,6 @@ export const plural = (n: number, word: string) => `${n} ${n === 1 ? word : word
 
 export function isMine(node: TreeNode, side: Side): boolean {
   return (node.ply % 2 === 0) === (side === 'white')
-}
-
-type View = 'cards' | 'diagram'
-const VIEW_KEY = 'chess-trainer:explore-view:v1'
-
-function readView(): View {
-  try {
-    return localStorage.getItem(VIEW_KEY) === 'diagram' ? 'diagram' : 'cards'
-  } catch {
-    return 'cards'
-  }
 }
 
 /** The first sentence of a note, for card previews. */
@@ -44,15 +32,6 @@ export function TreePage({ openingId }: { openingId: string }) {
   const tree = useMemo(() => (opening ? buildTree(opening.lines) : null), [opening])
   const [selectedId, setSelectedId] = useState('root')
   const [hoverId, setHoverId] = useState<string | null>(null)
-  const [view, setViewState] = useState<View>(readView)
-  const setView = (v: View) => {
-    setViewState(v)
-    try {
-      localStorage.setItem(VIEW_KEY, v)
-    } catch {
-      // Kept for this visit only.
-    }
-  }
 
   const selected = tree?.byId.get(selectedId) ?? tree?.root
 
@@ -120,21 +99,13 @@ export function TreePage({ openingId }: { openingId: string }) {
       : `Your opponent has ${selected.children.length} choices`
 
   return (
-    <div className={`page explore ${view}`}>
+    <div className="page explore">
       <header className="explore-head">
         <div>
           <button type="button" className="link" onClick={() => go(`/opening/${opening.id}`)}>
             ← {opening.name}
           </button>
           <h1>Explore the opening</h1>
-        </div>
-        <div className="segmented" role="group" aria-label="View">
-          <button type="button" className={view === 'cards' ? 'on' : ''} aria-pressed={view === 'cards'} onClick={() => setView('cards')}>
-            Cards
-          </button>
-          <button type="button" className={view === 'diagram' ? 'on' : ''} aria-pressed={view === 'diagram'} onClick={() => setView('diagram')}>
-            Tree
-          </button>
         </div>
       </header>
 
@@ -193,9 +164,7 @@ export function TreePage({ openingId }: { openingId: string }) {
             )}
           </div>
 
-          {view === 'diagram' ? (
-            <FlowTree root={tree.root} selected={selected} side={side} onSelect={select} />
-          ) : selected.children.length === 0 ? (
+          {selected.children.length === 0 ? (
             <div className="choice-end">
               <p>
                 <strong>End of the line.</strong> {lines.length === 1 ? `This was "${lines[0].name}".` : ''}

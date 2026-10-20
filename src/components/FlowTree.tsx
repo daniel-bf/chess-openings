@@ -71,11 +71,14 @@ export function FlowTree({
   selected,
   side,
   onSelect,
+  tagFor,
 }: {
   root: TreeNode
   selected: TreeNode
   side: Side
   onSelect: (id: string) => void
+  /** An optional name tag for the box that starts at this move, such as the opening it leads into. */
+  tagFor?: (first: TreeNode) => string | null
 }) {
   const [showAll, setShowAll] = useState(false)
   const [zoom, setZoom] = useState<number | null>(null)
@@ -160,6 +163,7 @@ export function FlowTree({
               const who = first ? (isMine(first, side) ? 'mine' : 'theirs') : 'start'
               const lines = b.end.lineIds.length
               const target = b.end.move ? b.end : b.run[b.run.length - 1] ?? null
+              const tag = first && tagFor ? tagFor(first) : null
               return (
                 <button
                   key={b.id}
@@ -169,6 +173,7 @@ export function FlowTree({
                   title={b.run.length ? runLabel(b.run) : 'Start'}
                   onClick={() => onSelect(target ? target.id : 'root')}
                 >
+                  {tag && <span className="flow-tag">{tag}</span>}
                   <MiniBoard
                     fen={b.end.move?.fenAfter ?? START_FEN}
                     orientation={side}
