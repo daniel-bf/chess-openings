@@ -335,3 +335,73 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .map-openings .label { color: var(--muted); margin-right: 2px; }
 .map-openings button { border: 1px solid var(--border); background: var(--surface); border-radius: 999px; padding: 0.25em 0.8em; font: inherit; color: inherit; cursor: pointer; }
 .map-openings button:hover { border-color: var(--muted); }
+
+/* Explorer experiments: view picker */
+.style-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 16px; }
+.style-pick button { border: 1px solid var(--border); background: var(--surface); border-radius: 999px; padding: 0.35em 1em; font: inherit; font-weight: 600; color: var(--muted); cursor: pointer; }
+.style-pick button.on { background: var(--text); color: var(--surface); border-color: var(--text); }
+.swatch { display: inline-block; width: 0.75em; height: 0.75em; border-radius: 3px; vertical-align: -0.05em; margin-right: 4px; flex: none; }
+
+/* Peek: a small card about one position */
+.peek { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; padding: 12px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); align-items: start; }
+.peek-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.peek-moves { font-family: var(--font-mono); font-weight: 600; font-size: 0.88rem; line-height: 1.35; }
+.peek-openings { display: flex; flex-wrap: wrap; gap: 4px; }
+.peek-openings button { display: inline-flex; text-align: left; align-items: center; border: 1px solid; border-radius: 999px; background: none; padding: 0.15em 0.6em; font: inherit; font-size: 0.78rem; color: inherit; cursor: pointer; }
+.peek-note { margin: 0; font-size: 0.9rem; line-height: 1.45; }
+.small-btn { align-self: flex-start; font-size: 0.85rem; padding: 0.4em 0.9em; }
+
+/* Wheel */
+.wheel-view { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.wheel-wrap { width: 100%; max-width: 640px; justify-self: center; }
+.wheel { width: 100%; height: auto; display: block; }
+.wheel-seg { cursor: pointer; }
+.wheel-seg path { stroke: var(--bg); stroke-width: 1.5; transition: opacity 0.15s; }
+.wheel:hover .wheel-seg path { opacity: 0.8; }
+.wheel .wheel-seg:hover path, .wheel .wheel-seg.on path { opacity: 1; stroke: var(--text); stroke-width: 2.5; }
+.wheel-text { font-family: var(--font-mono); font-size: 13px; font-weight: 600; fill: #fff; pointer-events: none; paint-order: stroke; stroke: rgba(0, 0, 0, 0.35); stroke-width: 2px; }
+.wheel-center { cursor: pointer; }
+.wheel-center circle { fill: var(--surface); stroke: var(--border); stroke-width: 2; }
+.wheel-center-move { font-family: var(--font-mono); font-size: 22px; font-weight: 700; fill: var(--text); }
+.wheel-center-hint { font-size: 13px; fill: var(--muted); }
+.wheel-side { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.wheel-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.85rem; }
+@media (min-width: 900px) {
+  .wheel-view { grid-template-columns: minmax(0, 1fr) 340px; align-items: start; }
+  .wheel-side { position: sticky; top: 76px; }
+}
+
+/* Mind map */
+.mm-view { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.mm-main { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.mm-scroll { overflow: auto; max-height: min(74vh, 820px); border: 1px solid var(--border); border-radius: 12px; background: var(--bg); overscroll-behavior: contain; }
+.mm-canvas { position: relative; }
+.mm-lines { position: absolute; inset: 0; pointer-events: none; }
+.mm-lines path { fill: none; stroke-linecap: round; }
+.mm-node { position: absolute; display: flex; flex-direction: column; align-items: flex-start; }
+.mm-tag { font-size: 0.72rem; font-weight: 700; white-space: nowrap; height: 16px; line-height: 16px; filter: saturate(1.2); }
+.mm-pill { height: 30px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; border: 2px solid; border-radius: 999px; background: var(--surface); color: inherit; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.mm-pill.start { border-color: var(--muted) !important; }
+.mm-pill:hover { box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); }
+.mm-pill.active { background: var(--text); color: var(--surface); }
+.mm-more { font-family: var(--font-body); font-size: 0.7rem; padding: 0 6px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.mm-side .peek { position: sticky; top: 76px; }
+@media (min-width: 900px) { .mm-view { grid-template-columns: minmax(0, 1fr) 320px; align-items: start; } .mm-side { position: sticky; top: 76px; } }
+@media (max-width: 899px) { .mm-side { order: -1; } .mm-side .peek { grid-template-columns: 96px minmax(0, 1fr); } .mm-side .peek-note { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; } }
+
+/* Board map */
+.bm-view { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.bm-board { width: 100%; max-width: 560px; justify-self: center; }
+.bm-side { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.bm-title { margin: 0; font-size: 1.05rem; }
+.bm-rows { display: flex; flex-direction: column; gap: 6px; }
+.bm-row { display: grid; grid-template-columns: 4.6em minmax(0, 1fr) 3em; grid-template-areas: 'move bar count' 'names names names'; gap: 4px 10px; align-items: center; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.bm-row:hover { border-color: var(--muted); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); }
+.bm-move { grid-area: move; font-family: var(--font-mono); font-weight: 700; }
+.bm-bar { grid-area: bar; display: flex; height: 12px; border-radius: 6px; overflow: hidden; gap: 2px; }
+.bm-count { grid-area: count; text-align: right; font-size: 0.85rem; color: var(--muted); }
+.bm-names { grid-area: names; font-size: 0.8rem; color: var(--muted); }
+@media (min-width: 800px) {
+  .bm-view { grid-template-columns: minmax(320px, min(50vw, calc(100vh - 230px), 600px)) minmax(0, 1fr); align-items: start; gap: 28px; }
+  .bm-board { position: sticky; top: 76px; max-width: none; }
+}
