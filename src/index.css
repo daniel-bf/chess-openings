@@ -237,3 +237,26 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .sound-preview { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 0.6em; }
 .sound-preview button { padding: 0.35em 0.7em; font-size: 0.88rem; }
 .sound-head button { white-space: nowrap; flex-shrink: 0; }
+
+/* Opening tree */
+.tree { max-height: 46vh; overflow: auto; border: 1px solid var(--border); border-radius: 8px; padding: 0.6em 0.7em; margin: 0.8em 0; font-family: var(--font-mono, monospace); font-size: 0.9rem; line-height: 1.9; }
+.tree ul { list-style: none; margin: 0; padding: 0; }
+.tree li { position: relative; padding-left: 1.3em; border-left: 2px solid var(--border); margin-left: 0.4em; }
+.tree li.theirs { border-left-color: #e0a020; }
+.tree li.mine { border-left-color: var(--accent); }
+.tree-fork { margin: 0.1em 0 0.3em; }
+.tree-fork-label { margin: 0.2em 0 0; font-family: var(--font-body, inherit); color: var(--muted, #667); font-size: 0.78rem; }
+.tree-toggle { position: absolute; left: 0.1em; top: 0.35em; border: none; background: none; padding: 0; width: 1.1em; font-size: 0.8rem; line-height: 1; cursor: pointer; color: inherit; }
+.tree-run { display: inline; }
+.tree-move { border: none; background: none; padding: 0.05em 0.3em; border-radius: 4px; font: inherit; cursor: pointer; color: inherit; }
+.tree-move.mine { font-weight: 700; color: var(--accent); }
+.tree-move:hover { background: var(--surface-2); }
+.tree-move.selected { background: var(--accent); color: var(--accent-text); }
+.tree-move .num { opacity: 0.6; margin-right: 0.15em; font-weight: 400; }
+.tree-next { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3em; margin-top: 0.4em; }
+.tree-next .tree-move { border: 1px solid var(--border); background: var(--surface); }
+.tree-legend { margin-top: 0.4em; text-align: center; }
+.dot { display: inline-block; width: 0.7em; height: 0.7em; border-radius: 50%; vertical-align: middle; }
+.dot.mine { background: var(--accent); }
+.dot.theirs { background: #e0a020; }
+.tree-lines ul li { display: flex; justify-content: space-between; gap: 0.5em; font-size: 0.9rem; }

@@ -22,7 +22,10 @@ export function OpeningPage({ id }: { id: string }) {
           ))}
         </ul>
         <div className="row">
-          <button type="button" className="primary" onClick={() => go(`/practice/${opening.id}`)}>
+          <button type="button" className="primary" onClick={() => go(`/tree/${opening.id}`)}>
+            Explore the tree
+          </button>
+          <button type="button" onClick={() => go(`/practice/${opening.id}`)}>
             Drill all {opening.lines.length} lines
           </button>
           <button type="button" onClick={() => go(`/play?openings=${opening.id}`)}>
