@@ -7,11 +7,24 @@ import { buildTree, moveNumber, pathTo, type TreeNode } from '../lib/tree'
 import { Board, ARROW_BEST, ARROW_NEXT } from '../components/Board'
 import { go } from '../router'
 import { NotFound } from './OpeningPage'
+import { MiniBoard } from '../components/MiniBoard'
 
 const plural = (n: number, word: string) => `${n} ${n === 1 ? word : word.replace(/y$/, 'ie') + 's'}`
 
 function isMine(node: TreeNode, side: Side): boolean {
   return (node.ply % 2 === 0) === (side === 'white')
+}
+
+/** The first sentence of a note, for card previews. */
+function firstSentence(text: string): string {
+  const m = /^.*?[.!?](\s|$)/.exec(text)
+  return (m ? m[0] : text).trim()
+}
+
+/** A name for the lines under a node: the line's own name, or the first one plus a count. */
+function branchName(node: TreeNode): string {
+  const names = node.lineIds.map((id) => lineById.get(id)!.name)
+  return names.length === 1 ? names[0] : `${names[0]} +${names.length - 1} more`
 }
 
 export function TreePage({ openingId }: { openingId: string }) {
@@ -61,16 +74,6 @@ export function TreePage({ openingId }: { openingId: string }) {
   const fen = selected.move?.fenAfter ?? START_FEN
   const note = selected.move ? explain(moves, moves.length - 1) : null
   const nextMine = selected.children.length > 0 && isMine(selected.children[0], side)
-
-  function select(node: TreeNode) {
-    setSelectedId(node.id)
-    // Opening a collapsed branch when one of its moves is chosen from the board panel.
-    setCollapsed((c) => {
-      const open = new Set(c)
-      for (let n: TreeNode | null = node; n; n = n.parent) open.delete(n.id)
-      return open
-    })
-  }
 
   function toggle(id: string) {
     setCollapsed((c) => {
@@ -152,6 +155,12 @@ export function TreePage({ openingId }: { openingId: string }) {
   }
 
   const lines = selected.lineIds.map((id) => lineById.get(id)!)
+  // The next position where someone has a real choice (or the end of the line).
+  let nextFork: TreeNode = selected
+  while (nextFork.children.length === 1) nextFork = nextFork.children[0]
+  const skip = pathTo(nextFork).length - path.length
+  let lastFork: TreeNode | null = selected.parent
+  while (lastFork && lastFork.children.length < 2) lastFork = lastFork.parent
 
   return (
     <div className="page">
@@ -184,11 +193,20 @@ export function TreePage({ openingId }: { openingId: string }) {
             <button type="button" className="link" onClick={() => go(`/opening/${opening.id}`)}>
               ← {opening.name}
             </button>
-            <h1>Opening tree</h1>
-            <p className="muted small">
-              All {opening.lines.length} lines in one tree. It branches where your opponent can choose a different move. Click a move to see the position.
-            </p>
+            <h1>Explore the opening</h1>
           </div>
+
+          <nav className="trail" aria-label="Moves so far">
+            <button type="button" className={`trail-step${!selected.move ? ' current' : ''}`} onClick={() => setSelectedId('root')}>
+              Start
+            </button>
+            {path.map((n) => (
+              <button key={n.id} type="button" className={`trail-step ${isMine(n, side) ? 'mine' : 'theirs'}${n === selected ? ' current' : ''}`} onClick={() => setSelectedId(n.id)}>
+                {n.ply % 2 === 0 && <span className="num">{n.ply / 2 + 1}.</span>}
+                {n.move!.san}
+              </button>
+            ))}
+          </nav>
 
           <div className="feedback info">
             {note && selected.move ? (
@@ -199,42 +217,74 @@ export function TreePage({ openingId }: { openingId: string }) {
                 {note.text}
               </p>
             ) : (
-              <p>Starting position. You play {side}.</p>
+              <p>
+                You play <strong>{side}</strong>. {opening.lines.length} lines start here. Follow the cards to walk through them, one choice at a time.
+              </p>
             )}
-            {selected.children.length > 0 ? (
-              <div className="tree-next">
-                <span className="small muted">{nextMine ? 'Your move:' : 'Opponent can play:'}</span>
-                {selected.children.map((c) => (
-                  <button key={c.id} type="button" className={`tree-move ${isMine(c, side) ? 'mine' : 'theirs'}`} onClick={() => select(c)}>
-                    {c.move!.san}
-                    <span className="muted small"> {plural(c.lineIds.length, 'line')}</span>
+          </div>
+
+          {selected.children.length === 0 ? (
+            <div className="choice-end">
+              <p>
+                <strong>End of the line.</strong> {lines.length === 1 ? `This was "${lines[0].name}".` : ''}
+              </p>
+              <div className="row">
+                {lines.length === 1 && (
+                  <button type="button" className="primary" onClick={() => go(`/learn/${lines[0].id}`)}>
+                    Learn this line
                   </button>
-                ))}
+                )}
+                {lastFork && (
+                  <button type="button" onClick={() => setSelectedId(lastFork.id)}>
+                    Back to the last choice
+                  </button>
+                )}
               </div>
-            ) : (
-              <p className="small muted">End of the line.</p>
-            )}
-          </div>
-
-          <div className="tree" ref={treeRef}>
-            {tree.root.children.length > 0 && (tree.root.children.length === 1 ? <Branch start={tree.root.children[0]} /> : <Fork node={tree.root} />)}
-          </div>
-
-          {selected.move && (
-            <div className="tree-lines">
-              <h3 className="small">Lines through this move</h3>
-              <ul className="plain">
-                {lines.map((l) => (
-                  <li key={l.id}>
-                    <span>{l.name}</span>
-                    <button type="button" className="link small" onClick={() => go(`/learn/${l.id}`)}>
-                      Learn
-                    </button>
-                  </li>
-                ))}
-              </ul>
             </div>
+          ) : (
+            <>
+              <h2 className="choice-title">
+                {nextMine
+                  ? selected.children.length === 1
+                    ? 'Your move'
+                    : 'Your options'
+                  : selected.children.length === 1
+                    ? 'Your opponent plays'
+                    : `Your opponent can choose (${selected.children.length})`}
+              </h2>
+              <div className={`choices${selected.children.length === 1 ? ' single' : ''}`}>
+                {selected.children.map((c) => {
+                  const idea = c.move!.comment ? firstSentence(c.move!.comment) : null
+                  return (
+                    <button key={c.id} type="button" className={`choice ${isMine(c, side) ? 'mine' : 'theirs'}`} onClick={() => setSelectedId(c.id)}>
+                      <MiniBoard fen={c.move!.fenAfter} orientation={side} highlight={[c.move!.from, c.move!.to]} />
+                      <span className="choice-body">
+                        <span className="choice-move">
+                          {moveNumber(c)} {c.move!.san}
+                        </span>
+                        {idea && <span className="choice-idea">{idea}</span>}
+                        <span className="choice-meta">
+                          {selected.children.length > 1 ? branchName(c) : plural(c.lineIds.length, 'line')}
+                        </span>
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
+              {selected.children.length === 1 && skip > 1 && (
+                <button type="button" className="ghost skip" onClick={() => setSelectedId(nextFork.id)}>
+                  {nextFork.children.length > 1 ? `Skip ${skip} moves to the next choice ⏭` : `Skip ${skip} moves to the end ⏭`}
+                </button>
+              )}
+            </>
           )}
+
+          <details className="tree-map">
+            <summary>Map of all {opening.lines.length} lines</summary>
+            <div className="tree" ref={treeRef}>
+              {tree.root.children.length > 0 && (tree.root.children.length === 1 ? <Branch start={tree.root.children[0]} /> : <Fork node={tree.root} />)}
+            </div>
+          </details>
         </aside>
       </div>
     </div>

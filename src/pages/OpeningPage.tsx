@@ -23,7 +23,7 @@ export function OpeningPage({ id }: { id: string }) {
         </ul>
         <div className="row">
           <button type="button" className="primary" onClick={() => go(`/tree/${opening.id}`)}>
-            Explore the tree
+            Explore the opening
           </button>
           <button type="button" onClick={() => go(`/practice/${opening.id}`)}>
             Drill all {opening.lines.length} lines
