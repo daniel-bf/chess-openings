@@ -25,6 +25,9 @@ export function OpeningPage({ id }: { id: string }) {
           <button type="button" className="primary" onClick={() => go(`/tree/${opening.id}`)}>
             Explore the opening
           </button>
+          <button type="button" onClick={() => go(`/structure/${opening.id}`)}>
+            How it's built
+          </button>
           <button type="button" onClick={() => go(`/practice/${opening.id}`)}>
             Drill all {opening.lines.length} lines
           </button>
