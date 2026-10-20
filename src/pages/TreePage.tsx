@@ -8,11 +8,23 @@ import { Board, ARROW_BEST, ARROW_NEXT } from '../components/Board'
 import { go } from '../router'
 import { NotFound } from './OpeningPage'
 import { MiniBoard } from '../components/MiniBoard'
+import { TreeDiagram } from '../components/TreeDiagram'
 
 const plural = (n: number, word: string) => `${n} ${n === 1 ? word : word.replace(/y$/, 'ie') + 's'}`
 
 function isMine(node: TreeNode, side: Side): boolean {
   return (node.ply % 2 === 0) === (side === 'white')
+}
+
+type View = 'cards' | 'diagram'
+const VIEW_KEY = 'chess-trainer:explore-view:v1'
+
+function readView(): View {
+  try {
+    return localStorage.getItem(VIEW_KEY) === 'diagram' ? 'diagram' : 'cards'
+  } catch {
+    return 'cards'
+  }
 }
 
 /** The first sentence of a note, for card previews. */
@@ -32,6 +44,15 @@ export function TreePage({ openingId }: { openingId: string }) {
   const tree = useMemo(() => (opening ? buildTree(opening.lines) : null), [opening])
   const [selectedId, setSelectedId] = useState('root')
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
+  const [view, setViewState] = useState<View>(readView)
+  const setView = (v: View) => {
+    setViewState(v)
+    try {
+      localStorage.setItem(VIEW_KEY, v)
+    } catch {
+      // Kept for this visit only.
+    }
+  }
 
   const selected = tree?.byId.get(selectedId) ?? tree?.root
 
@@ -164,7 +185,7 @@ export function TreePage({ openingId }: { openingId: string }) {
 
   return (
     <div className="page">
-      <div className="session">
+      <div className={`session${view === 'diagram' ? ' diagram-view' : ''}`}>
         <div className="board-col">
           <Board
             fen={fen}
@@ -194,6 +215,15 @@ export function TreePage({ openingId }: { openingId: string }) {
               ← {opening.name}
             </button>
             <h1>Explore the opening</h1>
+            <div className="pace" role="group" aria-label="View">
+              <span>View:</span>
+              <button type="button" className={view === 'cards' ? 'on' : ''} aria-pressed={view === 'cards'} onClick={() => setView('cards')}>
+                Cards
+              </button>
+              <button type="button" className={view === 'diagram' ? 'on' : ''} aria-pressed={view === 'diagram'} onClick={() => setView('diagram')}>
+                Diagram
+              </button>
+            </div>
           </div>
 
           <nav className="trail" aria-label="Moves so far">
@@ -223,7 +253,17 @@ export function TreePage({ openingId }: { openingId: string }) {
             )}
           </div>
 
-          {selected.children.length === 0 ? (
+          {view === 'diagram' ? (
+            <>
+              {selected.children.length > 0 && (
+                <p className="small muted">
+                  {isMine(selected.children[0], side) ? 'Next, your move: ' : 'Next, your opponent can play: '}
+                  {selected.children.map((c) => c.move!.san).join(', ')}
+                </p>
+              )}
+              <TreeDiagram root={tree.root} side={side} selectedId={selectedId} onSelect={setSelectedId} />
+            </>
+          ) : selected.children.length === 0 ? (
             <div className="choice-end">
               <p>
                 <strong>End of the line.</strong> {lines.length === 1 ? `This was "${lines[0].name}".` : ''}
@@ -279,12 +319,14 @@ export function TreePage({ openingId }: { openingId: string }) {
             </>
           )}
 
+          {view === 'cards' && (
           <details className="tree-map">
             <summary>Map of all {opening.lines.length} lines</summary>
             <div className="tree" ref={treeRef}>
               {tree.root.children.length > 0 && (tree.root.children.length === 1 ? <Branch start={tree.root.children[0]} /> : <Fork node={tree.root} />)}
             </div>
           </details>
+          )}
         </aside>
       </div>
     </div>
