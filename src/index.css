@@ -300,29 +300,27 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .dot.mine { background: var(--accent); }
 .dot.theirs { background: #e0a020; }
 
-/* Path diagram: a vertical stem with branches, like a metro map */
-.metro { list-style: none; margin: 0; padding: 4px 0 4px 26px; position: relative; }
-.metro::before { content: ''; position: absolute; left: 10px; top: 14px; bottom: 14px; width: 3px; border-radius: 2px; background: var(--border); }
-.metro > li { position: relative; }
-.metro-dot { position: absolute; left: -22px; top: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
-.metro-run.future .metro-dot, .metro-dot.end { border-color: var(--muted); }
-.metro-run { padding: 4px 0; }
-.metro-moves { display: flex; flex-wrap: wrap; gap: 2px; font-family: var(--font-mono); font-size: 0.9rem; }
-.metro-move { border: none; background: none; padding: 0.2em 0.35em; border-radius: 6px; color: inherit; cursor: pointer; font: inherit; }
-.metro-move.mine { color: var(--accent); font-weight: 700; }
-.metro-move.future { opacity: 0.6; }
-.metro-move:hover { background: var(--surface-2); opacity: 1; }
-.metro-move.selected { background: var(--accent); color: var(--accent-text); opacity: 1; }
-.metro-move .num { opacity: 0.55; margin-right: 0.12em; font-weight: 400; }
-.metro-fork { margin: 6px 0 8px; padding: 10px 12px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
-.metro-fork::before { content: ''; position: absolute; left: -16px; top: 20px; width: 16px; height: 3px; background: var(--border); }
-.metro-fork.theirs { border-left: 4px solid #e0a020; }
-.metro-fork.mine { border-left: 4px solid var(--accent); }
-.metro-label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; }
-.metro-branches { display: flex; flex-wrap: wrap; gap: 6px; }
-.branch-chip { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 6px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2); color: inherit; cursor: pointer; font: inherit; }
-.branch-chip:hover { border-color: var(--muted); }
-.branch-chip.on { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-.branch-move { font-family: var(--font-mono); font-weight: 700; font-size: 0.9rem; }
-.branch-count { font-size: 0.72rem; opacity: 0.75; }
-.metro-end { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 6px 0; font-size: 0.9rem; }
+/* Flow tree: the opening drawn top-down, a small board at each position */
+.flow { display: flex; flex-direction: column; gap: 8px; }
+.flow-tools { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.flow-zoom { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.flow-zoom button { border: none; border-radius: 0; background: var(--surface); color: inherit; padding: 0.3em 0.75em; cursor: pointer; font: inherit; min-width: 2.4em; }
+.flow-zoom button + button { border-left: 1px solid var(--border); }
+.flow-zoom button.on { background: var(--accent); color: var(--accent-text); }
+.flow-scroll { overflow: auto; max-height: min(72vh, 760px); border: 1px solid var(--border); border-radius: 12px; background: var(--bg); -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+.flow-size { position: relative; }
+.flow-canvas { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.flow-lines { position: absolute; left: 0; top: 0; pointer-events: none; }
+.flow-lines path { fill: none; stroke-width: 3; stroke-linecap: round; }
+.flow-lines path.mine { stroke: var(--accent); }
+.flow-lines path.theirs { stroke: #e0a020; }
+.flow-box { position: absolute; display: flex; flex-direction: column; align-items: stretch; gap: 4px; padding: 6px; border: 1px solid var(--border); border-top-width: 4px; border-radius: 10px; background: var(--surface); color: inherit; cursor: pointer; font: inherit; text-align: center; box-sizing: border-box; transition: box-shadow 0.12s ease; }
+.flow-box.mine { border-top-color: var(--accent); }
+.flow-box.theirs { border-top-color: #e0a020; }
+.flow-box.start { border-top-color: var(--muted); }
+.flow-box .miniboard { width: 84px; align-self: center; }
+.flow-box:hover, .flow-box:focus-visible { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14); }
+.flow-box.active { outline: 3px solid var(--accent); outline-offset: 2px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); }
+.flow-label { font-family: var(--font-mono); font-size: 0.74rem; font-weight: 600; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.flow-box.mine .flow-label { color: var(--accent); }
+.flow-meta { font-size: 0.68rem; color: var(--muted); margin-top: auto; }

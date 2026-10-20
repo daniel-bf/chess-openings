@@ -6,7 +6,7 @@ import { explain } from '../lib/describe'
 import { buildTree, moveNumber, pathTo, type TreeNode } from '../lib/tree'
 import { Board, ARROW_BEST, ARROW_NEXT } from '../components/Board'
 import { MiniBoard } from '../components/MiniBoard'
-import { PathDiagram } from '../components/PathDiagram'
+import { FlowTree } from '../components/FlowTree'
 import { go } from '../router'
 import { NotFound } from './OpeningPage'
 
@@ -133,7 +133,7 @@ export function TreePage({ openingId }: { openingId: string }) {
             Cards
           </button>
           <button type="button" className={view === 'diagram' ? 'on' : ''} aria-pressed={view === 'diagram'} onClick={() => setView('diagram')}>
-            Diagram
+            Tree
           </button>
         </div>
       </header>
@@ -194,7 +194,7 @@ export function TreePage({ openingId }: { openingId: string }) {
           </div>
 
           {view === 'diagram' ? (
-            <PathDiagram root={tree.root} selected={selected} side={side} onSelect={select} />
+            <FlowTree root={tree.root} selected={selected} side={side} onSelect={select} />
           ) : selected.children.length === 0 ? (
             <div className="choice-end">
               <p>
