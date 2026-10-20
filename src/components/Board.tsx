@@ -37,7 +37,14 @@ export function Board({ fen, orientation, movable, onMove, arrows = [], lastMove
   const [selection, setSelection] = useState<{ fen: string; square: string } | null>(null)
   const selected = selection?.fen === fen ? selection.square : null
   const setSelected = (square: string | null) => setSelection(square ? { fen, square } : null)
-  const chess = useMemo(() => new Chess(fen), [fen])
+  const chess = useMemo(() => {
+    try {
+      return new Chess(fen)
+    } catch {
+      // A made-up position (such as a summary of several lines) still shows; it just cannot be played.
+      return new Chess(fen, { skipValidation: true })
+    }
+  }, [fen])
   const turn: Side = chess.turn() === 'w' ? 'white' : 'black'
   const canMove = movable !== null && movable === turn && !chess.isGameOver()
 
