@@ -37,7 +37,8 @@ async function score(fen: string) {
 
 engine.processCommand('uci')
 const seen = new Set<string>()
-for (const src of openingSources) {
+const only = process.env.OPENINGS?.split(',')
+for (const src of openingSources.filter((s) => !only || only.includes(s.id))) {
   const opening = buildOpening(src)
   for (const line of opening.lines) {
     for (const mv of line.moves) {
