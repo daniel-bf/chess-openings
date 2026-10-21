@@ -14,7 +14,7 @@ export const scotch: OpeningSource = {
   ],
   lines: [
     {
-      name: "4...Nf6: Mieses Variation",
+      name: "Schmidt: Mieses Variation (8...Ba6 9.b3)",
       pgn: `1. e4 {Takes a central square and opens lines for the queen and the f1 bishop.}
         e5 {Black claims an equal share of the centre.}
         2. Nf3 {Develops with a threat: the e5 pawn is attacked.}
@@ -32,7 +32,7 @@ export const scotch: OpeningSource = {
         9. b3 {Supports c4 so the pin costs nothing. This is the Mieses main line: you have space, Black has active pieces.}`,
     },
     {
-      name: "4...Nf6 5...dxc6",
+      name: "Schmidt Variation (5...dxc6)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Nxc6
         dxc6 {Black opens lines for the bishops and threatens ...Qxd1+ followed by ...Nxe4.}
         6. Qxd8+ {Trade queens with check: Black's king loses the right to castle.}
@@ -41,7 +41,7 @@ export const scotch: OpeningSource = {
         8. Bd2 {Breaks the pin. You have an easy endgame to play, with a healthy kingside pawn majority.}`,
     },
     {
-      name: "4...Bc5 5.Nxc6 Qf6",
+      name: "Classical: Intermezzo Variation (6...dxc6)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4
         Bc5 {The Classical Variation: the bishop attacks the d4 knight.}
         5. Nxc6 {Trade the attacked knight off.}
@@ -53,7 +53,7 @@ export const scotch: OpeningSource = {
         9. Bd3 {Develop and get ready to castle. Later c3 will chase the d4 bishop away.}`,
     },
     {
-      name: "4...Bc5 5...bxc6",
+      name: "Classical Variation (5.Nxc6 bxc6)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 5. Nxc6
         bxc6 {Black takes toward the centre.}
         6. Bd3 {Develops and protects e4.}
@@ -62,7 +62,7 @@ export const scotch: OpeningSource = {
         Nf6 8. h3 {Stops ...Ng4, which would hit f2 and h2 again, and prepares to castle. Black's broken queenside pawns are a long-term target.}`,
     },
     {
-      name: "4...Qh4 Steinitz",
+      name: "Steinitz Variation (4...Qh4)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4
         Qh4 {The Steinitz Variation: the queen attacks e4 straight away.}
         5. Nc3 {Defends e4 with a developing move.}
@@ -74,7 +74,7 @@ export const scotch: OpeningSource = {
         9. O-O {Castle. Your pieces will use the open e-file and diagonals against Black's king on d8.}`,
     },
     {
-      name: "4...Nxd4 5...Qf6",
+      name: "Lolli Variation (4...Nxd4 5.Qxd4)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4
         Nxd4 {Black trades knights, but this brings your queen to a great central square.}
         5. Qxd4 {The queen is safe here: Black has no easy way to chase it.}
@@ -85,7 +85,7 @@ export const scotch: OpeningSource = {
         axb6 8. Nc3 {Develop. You have more space thanks to the e5 pawn and a lead in development.}`,
     },
     {
-      name: "4...Bb4+",
+      name: "Malaniuk Variation (4...Bb4+)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4
         Bb4+ {A check that mainly wants to provoke c3.}
         5. c3 {Block with a pawn. This gains time, because the bishop has to move again.}
@@ -94,7 +94,7 @@ export const scotch: OpeningSource = {
         d6 8. O-O {Castle. You have more space and easier development.}`,
     },
     {
-      name: "3...d6",
+      name: "3...d6: Steinitz Defence (4.Bb5)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. d4
         d6 {A Philidor-style defence: Black holds e5 with a pawn instead of giving up the centre.}
         4. Bb5 {With the d-pawn gone from d7, this pins the c6 knight to Black's king and adds pressure on e5. It is the Old Steinitz Ruy Lopez by another move order.}
@@ -104,6 +104,31 @@ export const scotch: OpeningSource = {
         6. Nxd4 {Take back with the knight.}
         Nf6 7. O-O {Castle.}
         Be7 8. Re1 {Protect e4, so your d4 knight and b5 bishop are free to act. You keep more space with e4 against d6.}`,
+    },
+    {
+      name: "Schmidt: Mieses Variation (8...Nb6)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Nxc6 bxc6 6. e5 Qe7 7. Qe2 Nd5 8. c4
+        Nb6 {The other main retreat: the knight leaves the centre but eyes c4 and d5.}
+        9. Nc3 {Develops and controls d5, so Black's freeing ...d5 is harder to arrange.}
+        Qe6 {The queen steps off the e-file and attacks c4.}
+        10. Qe4 {Defends both c4 and e5 at once. This is the main line: you keep your space, Black has the bishop pair to come.}`,
+    },
+    {
+      name: "Classical: Intermezzo Variation (6...bxc6)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 5. Nxc6 Qf6 6. Qd2
+        bxc6 {Black takes toward the centre and keeps the d-pawn ready for ...d5.}
+        7. Bd3 {Develops and protects e4, so your queen is free to move again.}
+        Ne7 {The knight heads for g6 and keeps the f-file free for the queen.}
+        8. O-O {Castle. Next come Nc3 and Na4 or Qf4; Black's split queenside pawns are a long-term target.}`,
+    },
+    {
+      name: "4...Qf6 (5.Be3 Bc5)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4
+        Qf6 {Black attacks the d4 knight a second time, together with the c6 knight.}
+        5. Be3 {Develops and defends the knight.}
+        Bc5 {A third attack on d4.}
+        6. c3 {A third defender: the knight is solid, and the pawn also takes b4 and d4 away from Black's pieces.}
+        Nge7 7. Bc4 {Develops toward f7 and gets ready to castle. This is the main line of the Classical Variation (4...Bc5 5.Be3 Qf6), reached by another move order.}`,
     },
   ],
 }

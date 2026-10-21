@@ -50,11 +50,11 @@ export const pircPlans: Plans = {
     ]
   },
   "pirc:6": {
-    "plan": "With 3.Bd3 White aims for a quiet set-up with c3 and a solid centre. You fianchetto, castle and prepare ...e5 with ...Nc6. The position is calm; if White plays d5 the knight goes to e5 or b8 and you continue with ...e5 or ...c6, and if White keeps the tension, ...e5 gives you a fair share of the centre.",
+    "plan": "With 3.Bd3 White aims for a quiet set-up with c3 and a solid centre. You fianchetto, castle and prepare ...e5 with ...Nbd7, often adding ...Re8 so the e-pawn is well supported. Once ...e5 is in: if White closes the centre with d5, play on the kingside with ...Nh5 and ...f5; if White swaps on e5, you have an equal, open centre.",
     "remember": [
       "3...g6 and 4...Bg7 put the bishop on the long diagonal aiming at d4.",
       "5...O-O gets your king safe before you start central play.",
-      "6...Nc6 develops and adds pressure on d4, preparing ...e5."
+      "6...Nbd7 supports ...e5, so the push does not simply drop a pawn after dxe5 and Nxe5."
     ]
   },
   "pirc:7": {
@@ -63,6 +63,30 @@ export const pircPlans: Plans = {
       "5...O-O comes before ...e5, so your king is safe when the centre opens.",
       "6...e5 challenges d4 and claims central space; after 7.d5 the centre is closed.",
       "7...Nh5 clears the way for ...f5 and eyes the f4 square."
+    ]
+  },
+  "pirc:8": {
+    "plan": "White pushes e5 straight away to kick your knight. You swap on e5 first, so White must take back with the f-pawn, then put the knight on d5 and b6. With ...Nc6 and ...Bg4 you pile up on d4 and e5, the targets in White's centre. Typical follow-ups are ...Na5 to swap off the b3 bishop, ...f6 to open the f-file for your rook, and ...Qd7 with ...Rad8.",
+    "remember": [
+      "6...dxe5 7.fxe5 makes White take back with the f-pawn, loosening the kingside.",
+      "7...Nd5 and 8...Nb6 keep the knight active and gain time on the c4 bishop.",
+      "9...Nc6 and 10...Bg4 attack d4 and pin the f3 knight that defends it."
+    ]
+  },
+  "pirc:9": {
+    "plan": "With 5.h3 White takes the g4 square from your pieces and plays Be3 and Qd2. You castle, gain queenside space with ...a6, and when a4 stops ...b5 you switch to ...b6 and ...Bb7, putting the bishop on the long light diagonal against e4. Then ...Nbd7 and a central break with ...e5 or ...c5. Watch out for White's e5 push: keep enough pieces on e5 before you open the centre.",
+    "remember": [
+      "5...O-O gets the king safe before White's Be3 and Qd2 set-up is ready.",
+      "6...a6 prepares ...b5; when 7.a4 stops it, 7...b6 and ...Bb7 aim at e4 instead.",
+      "Prepare ...e5 or ...c5 with ...Nbd7 so the break comes with your pieces ready."
+    ]
+  },
+  "pirc:10": {
+    "plan": "White plays Be2 and h4-h5 to open the h-file against your castled king. You stop it with ...h5, after which there is no open file for White's rooks and your king is safe on g8. Then play as in the Classical: ...c6, ...Nbd7 and ...e5, or ...Bg4 against the f3 knight, with the g4 square now a good post because the h5 pawn defends it.",
+    "remember": [
+      "4...Bg7 is the normal fianchetto; the bishop presses on d4.",
+      "5...h5 stops h5 and keeps the h-file closed, and it gives your pieces the g4 square.",
+      "6...O-O is safe once the h-pawns are locked; then ...c6, ...Nbd7 and ...e5."
     ]
   },
 }

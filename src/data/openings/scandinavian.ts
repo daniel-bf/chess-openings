@@ -14,7 +14,7 @@ export const scandinavian: OpeningSource = {
   ],
   lines: [
     {
-      name: "Main line: 3.Nc3 Qa5 4.d4",
+      name: "Classical Variation (5...Bf5 6.Bc4)",
       pgn: `1. e4 d5 {Attack the e4 pawn straight away. If White takes, you recapture and get an open, easy centre.}
         2. exd5 Qxd5 {Take back with the queen. It comes out early, but White has no centre pawn on e4 any more and your pieces can develop freely.}
         3. Nc3 {White develops with gain of time: the knight attacks your queen, so it has to move again.}
@@ -34,14 +34,14 @@ export const scandinavian: OpeningSource = {
         11. Bxc3 Qc7 {The c3 bishop now hits your queen, so step to c7, a safe square that also watches e5. Then castle short.}`,
     },
     {
-      name: "Main line: 6.Bd2",
+      name: "Classical Variation: 6.Bd2",
       pgn: `1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. d4 Nf6 5. Nf3 Bf5
         6. Bd2 {White unpins the knight first. Watch out: now Nd5 would uncover the d2 bishop's attack on your queen.}
         c6 {Covers d5 at once, so the Nd5 trick never works.}
         7. Bc4 e6 {The same set-up as the main line, reached in a different order. Next come ...Bb4 or ...Be7, ...Nbd7 and castling.}`,
     },
     {
-      name: "4.Nf3 and 5.Bc4",
+      name: "Main Line: 4.Nf3 and 5.Bc4",
       pgn: `1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5
         4. Nf3 {White develops and keeps d4 for later.}
         Nf6 {Develop the knight to its natural square, where it guards your king and eyes e4 and d5.}
@@ -55,7 +55,7 @@ export const scandinavian: OpeningSource = {
         Bh5 {Keep the pin. Next come ...e6, ...Nbd7, ...Bd6 or ...Be7 and castling.}`,
     },
     {
-      name: "4.Bc4 with castling",
+      name: "Main Line: 4.Bc4",
       pgn: `1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5
         4. Bc4 {White aims at f7 and delays d4.}
         Nf6 {Develop the knight to its natural square, where it guards your king and eyes e4 and d5.}
@@ -66,7 +66,7 @@ export const scandinavian: OpeningSource = {
         8. d3 e6 {Opens the f8 bishop's path and blocks the c4 bishop's line to f7. Next come ...Nbd7, ...Be7 or ...Bd6, and short castling.}`,
     },
     {
-      name: "3.d4 without Nc3",
+      name: "Mieses-Kotroc Variation: 3.d4",
       pgn: `1. e4 d5 2. exd5 Qxd5
         3. d4 {White skips Nc3, so your queen is not attacked yet.}
         Nf6 {Develop first: there is no need to move the queen until it is attacked. If 4.Nc3 now, ...Qa5 takes you back to the main line.}
@@ -77,7 +77,7 @@ export const scandinavian: OpeningSource = {
         Qd7 {Keep the queen on the d-file, where it still eyes d4, and away from knight attacks. ...Rd8 or long castling (...O-O-O) can follow to keep pressing d4.}`,
     },
     {
-      name: "3.Nf3 transposing",
+      name: "Mieses-Kotroc Variation: 3.Nf3",
       pgn: `1. e4 d5 2. exd5 Qxd5
         3. Nf3 {Flexible: White develops and keeps d4 for later.}
         Nf6 {Same idea as against 3.d4: develop and leave the queen where it is until it is attacked.}
@@ -104,6 +104,32 @@ export const scandinavian: OpeningSource = {
         e5 {Back up the d4 pawn with another pawn and claim the centre.}
         4. Ng3 {The knight eyes f5 and supports a later f4 or Bc4.}
         Be6 {Develops and covers f5 and c4, squares White's pieces want. Follow with ...Nc6, ...Nf6 and ...Bd6.}`,
+    },
+    {
+      name: "Main Line, Mieses Variation: 5.Bc4",
+      pgn: `1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. d4 Nf6
+        5. Bc4 {White develops the bishop before the king's knight, aiming at f7.}
+        c6 {Play this first: it takes d5 and b5 from White's knights and gives your queen a retreat on c7.}
+        6. Bd2 {Unpins the c3 knight. Nd5 would now uncover an attack on your queen, but ...Qxd5 simply wins the knight because c6 also covers d5.}
+        Bf5 {The bishop comes out before ...e6, as always.}
+        7. Nge2 {The knight heads for g3 to chase your bishop.}
+        e6 {Opens the f8 bishop and supports d5. Next ...Nbd7, ...Bb4 or ...Be7, and castling.}
+        8. Ng3 {Attacks the f5 bishop.}
+        Bg6 {Keep the bishop on its good diagonal. If h4, answer ...h6 so the bishop can drop back to h7.}`,
+    },
+    {
+      name: "Blackmar-Diemer Gambit: Teichmann Defence (2.d4)",
+      pgn: `1. e4 d5
+        2. d4 {White offers a pawn: after ...dxe4 this is the Blackmar-Diemer Gambit.}
+        dxe4 {Take the pawn: you are now playing against a gambit.}
+        3. Nc3 {Attacks e4.}
+        Nf6 {Defends e4 with a developing move.}
+        4. f3 {The Blackmar-Diemer Gambit: White offers a second pawn for open lines.}
+        exf3 {Accept. White gets the f-file and fast development, but you have an extra pawn.}
+        5. Nxf3 Bg4 {The Teichmann Defence: pin the f3 knight and plan to swap it off, so White's attack loses a key piece.}
+        6. h3 Bxf3 {Swap now. You give up the bishop but remove an attacker and keep the extra pawn.}
+        7. Qxf3 c6 {Blunts the queen's view of b7 and supports a later ...e6 and ...Nbd7. Your position is very solid.}
+        8. Be3 e6 {Builds the pawn wall and frees the f8 bishop. Next ...Nbd7, ...Bd6 or ...Bb4, and castling.}`,
     },
   ],
 }

@@ -65,4 +65,28 @@ export const dutchPlans: Plans = {
       "6...d6 prepares ...e5, which will attack the f4 bishop and gain time."
     ]
   },
+  "dutch:8": {
+    "plan": "After 9.Nd4 White prepares e4 to open the centre. You take with ...fxe4, swap knights and put your other knight on c5, where it hits e4 and cannot be kicked by b4 thanks to ...a5. Then ...Bd7, ...Qf7 and the f-file give you active play, while White pushes on the queenside with b3, Rb1 and a3.",
+    "remember": [
+      "9...Na6 heads for c5, supported by the a5 pawn.",
+      "10...fxe4 opens the f-file for your rook.",
+      "12...Nc5 puts the knight on its best square with tempo on the e4 bishop."
+    ]
+  },
+  "dutch:9": {
+    "plan": "Against 4.f3 you keep the extra pawn with ...d5. After fxe4 dxe4 your e4 pawn is defended by ...Bf5, and you develop with ...Nc6, ...e6 and ...Qd7. Castling long is often the safest choice. White's compensation is quick development and the half-open f-file, so do not grab more material: finish development first.",
+    "remember": [
+      "4...d5 keeps the pawn without opening the f-file for White.",
+      "6...Bf5 defends e4, so Bxf6 does not win it back.",
+      "7...Nc6 develops with a hit on d4; ...e6 then blunts the c4 bishop."
+    ]
+  },
+  "dutch:10": {
+    "plan": "With 3.Nc3 White develops before choosing a set-up; if White fianchettoes and castles, it is the main Leningrad again. You play ...g6, ...Bg7, ...O-O and ...d6, then ...Qe8 to prepare ...e5. If White closes the centre with d5, use ...a5 and ...Na6-c5 as in the main line.",
+    "remember": [
+      "3...g6 keeps to the Leningrad set-up.",
+      "6...d6 stops Ne5 and prepares ...e5.",
+      "7...Qe8 transposes to the main line: follow up with ...e5 or, after d5, ...a5 and ...Na6."
+    ]
+  },
 }

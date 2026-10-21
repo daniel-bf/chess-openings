@@ -89,4 +89,28 @@ export const italianPlans: Plans = {
       "Nbd2 develops and supports e4, which Black's f6 knight attacks."
     ]
   },
+  "italian:11": {
+    "plan": "Black pinned your knight with ...Bg4 before you had played h3. After h3 Bh5 the pin stays, but it costs Black time: your knight goes d2-f1-g3, attacks the h5 bishop and ends the pin. Then you continue with the usual Pianissimo plans: d4 in the centre, or b4 and a4 on the queenside. Black wants ...Bxf3 at a moment when your recapture is awkward, or ...d5 to free the position.",
+    "remember": [
+      "h3 asks the g4 bishop to decide: ...Bxf3 gives you the bishop pair, ...Bh5 keeps the pin.",
+      "Nbd2-f1-g3 attacks the h5 bishop and removes the pin for good.",
+      "Do not rush d4: prepare it with the knight trip and Bb3 so the centre holds."
+    ]
+  },
+  "italian:12": {
+    "plan": "Black played ...d6 before ...Nf6, so you took the centre at once with d4. After exd4 cxd4 you have two central pawns against one, and Black's b6 bishop presses on d4. Your plan is Nc3, Bb3, h3, castling and Be3 to hold d4, later pushing d5 or e5 to gain space. Black hopes for ...Bg4 or ...Na5 and ...Nxe4 tricks against your centre.",
+    "remember": [
+      "5.d4 is good because e4 is not attacked yet: Black has no knight on f6.",
+      "cxd4 gives you two pawns side by side on d4 and e4.",
+      "Bb3 sidesteps ...Na5 and the ...Nxe4 and ...d5 fork trick."
+    ]
+  },
+  "italian:13": {
+    "plan": "Black gambled with ...f5, which weakens the diagonal from your c4 bishop to g8. You keep it simple with d3, castle, Nc3 and Bg5, and Black struggles to castle short. Later you can play Bxf6 and Nd5, or open the f-file with exf5 to aim at Black's king. Black wants ...f4 to gain kingside space, or ...fxe4 dxe4 and ...Bg4.",
+    "remember": [
+      "d3 keeps e4 safe, so ...fxe4 just trades pawns.",
+      "The c4 bishop covers g8: Black cannot easily castle short.",
+      "Bg5 pins the f6 knight; Bxf6 and Nd5 put a knight on a strong central square."
+    ]
+  },
 }

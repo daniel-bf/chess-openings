@@ -89,4 +89,20 @@ export const slavPlans: Plans = {
       "8...Be7 develops and protects the b4 pawn that the a2 knight attacks."
     ]
   },
+  "slav:11": {
+    "plan": "After 6.Nh4 you retreat with ...Bc8 and hit back with ...e5 while White's knight is offside. Once the centre opens, White has an isolated d4 pawn and slightly freer pieces; you castle, put a knight on d5 and pieces on the e- and d-files, and aim at d4. Keep an eye on White's h4 knight: it wants to return to f3 or f5.",
+    "remember": [
+      "6...Bc8 keeps the bishop pair; White's knight on h4 is now misplaced.",
+      "7...e5 strikes while the h4 knight cannot defend e5.",
+      "After 8...exd4 9.exd4, White's d4 pawn is isolated: blockade it with a knight on d5."
+    ]
+  },
+  "slav:12": {
+    "plan": "Against 4.g3 you put the bishop on f5 and build the solid c6, d5, e6 wall, so the g2 bishop has nothing to bite on. After ...Be7, ...O-O and ...Nbd7, you free your game with ...dxc4 (then ...Nb6 or ...c5) or ...Ne4. White hopes for cxd5 and Qb3 against b7, so keep the queen ready to defend it with ...Qb6 or ...Qc8.",
+    "remember": [
+      "4...Bf5 develops the bishop before ...e6 locks it in.",
+      "5...e6 builds a pawn wall that blunts the g2 bishop.",
+      "Watch b7: after cxd5 and Qb3, your f5 bishop no longer guards it."
+    ]
+  },
 }

@@ -65,4 +65,28 @@ export const grunfeldPlans: Plans = {
       "9...e5 opens the centre against the king on c1, and after 10.d5 the knight goes to d4."
     ]
   },
+  "grunfeld:8": {
+    "plan": "Against 7.Be3 with Qd2 and Rc1, the main line goes into an endgame after ...Qa5, ...cxd4 and ...Qxd2+. White keeps the centre, but without queens it is a target: you hit d4 with ...Rd8, ...Nc6 and ...Bg4, and your queenside pawns can advance. White's king on d2 is well placed in the centre, so play actively rather than waiting.",
+    "remember": [
+      "8...Qa5 pins the c3 pawn to White's queen and eyes a2.",
+      "9...cxd4 and 10...Qxd2+ swap queens with check.",
+      "After 11...O-O, aim ...Rd8, ...Nc6 and ...Bg4 at the d4 pawn."
+    ]
+  },
+  "grunfeld:9": {
+    "plan": "With 5.Bg5 White plays for control of d5. You jump to e4, take the bishop when White grabs d5, and win the pawn back with ...e6 and ...exd5. You end up with the two bishops and a solid pawn on d5. Castle, support d5 with ...c6, and later free your light-squared bishop with ...Bf5 or ...Bg4. White will try a minority attack with b4-b5.",
+    "remember": [
+      "5...Ne4 hits the g5 bishop and the c3 knight at once.",
+      "6...Nxg5 wins the bishop pair.",
+      "7...e6 and 8...exd5 win back the pawn."
+    ]
+  },
+  "grunfeld:10": {
+    "plan": "Against 5.Bf4 you castle, then strike with ...c5. After dxc5 Qa5 and ...dxc4, you win both pawns back and reach the same position as the 4.Bf4 line. Your pieces are active: ...Rd8, ...Be6 or ...Bg4 and ...Qa5 follow, with pressure down the d-file and along the long diagonal.",
+    "remember": [
+      "5...O-O first, then 6...c5 against e3.",
+      "7...Qa5 pins the c3 knight and prepares to win back c5.",
+      "9...Qxc5 regains the pawn with tempo on the c4 bishop."
+    ]
+  },
 }

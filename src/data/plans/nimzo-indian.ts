@@ -65,4 +65,28 @@ export const nimzoIndianPlans: Plans = {
       "7...c6 and 8...d5 shut out the g2 bishop. Against 9.Ne5, 9...Nfd7 challenges the strong knight."
     ]
   },
+  "nimzo-indian:8": {
+    "plan": "With 5.Ne2 White wants to take back on c3 with a piece. You claim the centre with ...d5 and drop the bishop to e7 when a3 asks the question. After cxd5 exd5 you have a solid Carlsbad-type structure; support d5 with ...c6 and develop with ...Nbd7, ...Re8 and ...Bd6. White's minority attack with b4-b5 is slow, so look for kingside play with ...Nf8-g6.",
+    "remember": [
+      "6...Be7 keeps the bishop when taking on c3 would not double White's pawns.",
+      "7...exd5 keeps a pawn on d5 and frees your c8 bishop.",
+      "8...c6 makes d5 rock solid against the g2 bishop."
+    ]
+  },
+  "nimzo-indian:9": {
+    "plan": "4.g3 transposes to the 4.Nf3 c5 5.g3 line once White plays Nf3. You swap on d4, castle and strike with ...d5, then meet Qb3 with ...Qb6. White's g2 bishop presses on the long diagonal and on b7, so finish development with ...Nc6 and ...Bd7 or ...e5 to cut the diagonal.",
+    "remember": [
+      "4...c5 hits d4 at once, as against 4.Nf3.",
+      "5...cxd4 opens the c-file; White recaptures with the knight.",
+      "7...d5 blocks the g2 bishop's long diagonal and claims the centre."
+    ]
+  },
+  "nimzo-indian:10": {
+    "plan": "In the Kasparov-Petrosian Variation White gets a big pawn centre with c3, d4 and e4. You develop quickly, castle and attack d4 with ...c5, ...Nc6 (or ...Nd7) and ...Rc8, while your b7 bishop presses on e4. White aims for a kingside attack with d5 or Qe2 and h4, so keep pieces near your king and do not open the centre while you are behind in development.",
+    "remember": [
+      "4...Bb7 controls e4; ...Bb4 is not possible after a3.",
+      "7...Nxc3 swaps before e4 can kick your knight.",
+      "10...c5 attacks d4, the heart of White's centre."
+    ]
+  },
 }

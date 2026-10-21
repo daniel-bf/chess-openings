@@ -14,7 +14,7 @@ export const petroff: OpeningSource = {
   ],
   lines: [
     {
-      name: "Classical Attack (5.d4)",
+      name: "Classical Attack: Chigorin Variation, Main Line (8.c4 Nb4)",
       pgn: `1. e4 e5 {Claim your share of the centre.}
         2. Nf3 {Attacks e5.}
         Nf6 {Petrov's Defence: rather than defending e5, attack e4 back.}
@@ -49,7 +49,7 @@ export const petroff: OpeningSource = {
         Nf6 {The knight is in place. Now start your own play on the queenside with ...Be6, ...Qa5 or pawn moves like ...c5 and ...b5.}`,
     },
     {
-      name: "Lasker Variation (5.Qe2)",
+      name: "Cozio Attack (5.Qe2)",
       pgn: `1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4
         5. Qe2 {White pins your e4 knight to your king along the open e-file and threatens d3 to win it.}
         Qe7 {Block the pin with your own queen, so the knight is free to retreat.}
@@ -72,7 +72,7 @@ export const petroff: OpeningSource = {
         10. Nxe5 dxe5 {The pawns are now mirrored and there are no weaknesses. The position is equal.}`,
     },
     {
-      name: "Steinitz Variation (3.d4)",
+      name: "Modern Attack: Centre Variation (3.d4 Nxe4 4.Bd3)",
       pgn: `1. e4 e5 2. Nf3 Nf6
         3. d4 {White opens the centre at once instead of taking on e5.}
         Nxe4 {Take the pawn: this is the main line. Your e5 pawn is attacked, but White's e4 pawn is gone too.}
@@ -86,7 +86,7 @@ export const petroff: OpeningSource = {
         c6 {Back up d5 with another pawn. Solid and equal.}`,
     },
     {
-      name: "Cochrane Gambit (4.Nxf7)",
+      name: "Cochrane Gambit: Centre Variation (5.d4)",
       pgn: `1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6
         4. Nxf7 {The Cochrane Gambit: White gives up the knight for two pawns and hopes your king will be exposed.}
         Kxf7 {Take it. You are a piece for two pawns up; the king will find safety.}
@@ -95,12 +95,12 @@ export const petroff: OpeningSource = {
         6. dxc5 {White grabs a third pawn.}
         d5 {Strike back in the centre and open lines: your f8 bishop can recapture on c5 later.}
         7. e5 {Kicks your knight. (7.exd5 Bxc5 is great for you.)}
-        Ng4 {The knight jumps forward and attacks the e5 pawn.}
-        8. h3 {Chases the knight.}
-        Nxe5 {Win the pawn back: you are a piece for two pawns up with active play. If 9.Qh5+, block with ...Ng6.}`,
+        Ne4 {The knight jumps to a strong central square, where no pawn can chase it, and eyes the c5 pawn and f2.}
+        8. Bd3 {Attacks the e4 knight.}
+        Nxc5 {Win a pawn back with tempo on the d3 bishop: you are a piece for two pawns up, with a big centre pawn on d5.}`,
     },
     {
-      name: "Three Knights Game (3.Nc3)",
+      name: "Three Knights Game (3.Nc3 Bb4)",
       pgn: `1. e4 e5 2. Nf3 Nf6
         3. Nc3 {White defends e4 with the knight.}
         Bb4 {Pin the knight, the only defender of e4. (3...Nc6 leads to the Four Knights instead.)}
@@ -113,7 +113,7 @@ export const petroff: OpeningSource = {
         8. O-O d6 {Takes e5 away from White's knight and opens the c8 bishop. An equal game with active pieces.}`,
     },
     {
-      name: "Boden–Kieseritzky Gambit (3.Bc4)",
+      name: "Italian Variation: Boden-Kieseritzky Gambit (3.Bc4)",
       pgn: `1. e4 e5 2. Nf3 Nf6
         3. Bc4 {White ignores the attack on e4 and develops.}
         Nxe4 {Take the pawn: it is a real gain, and White's compensation is not enough if you defend carefully.}
@@ -125,6 +125,35 @@ export const petroff: OpeningSource = {
         g6 {Stops Qh5+ and takes f5 away from the knight.}
         7. f4 {Attacks e5 again.}
         Qe7 {Defends e5 and covers f7 and the light squares around your king. Next ...d6, ...c6 and ...Be6 to swap off the c4 bishop.}`,
+    },
+    {
+      name: "Classical Attack: Berger Variation (8.Re1 Bg4 9.c3 f5)",
+      pgn: `1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Nc6 7. O-O Be7
+        8. Re1 {The Chigorin Variation: the rook joins the attack on your e4 knight along the e-file.}
+        Bg4 {Pins the f3 knight to the queen and adds pressure on d4.}
+        9. c3 {Supports d4.}
+        f5 {Back up the e4 knight with a pawn, so it cannot be driven away easily.}
+        10. Nbd2 O-O {King to safety. Your knight on e4 is firmly supported by d5 and f5.}`,
+    },
+    {
+      name: "French Attack (5.d3)",
+      pgn: `1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4
+        5. d3 {The French Attack: White simply kicks your knight back.}
+        Nf6 {Retreat to the knight's best square, where it guards your king.}
+        6. d4 {White takes the centre after all.}
+        d5 {Claim your share of the centre and open the c8 bishop.}
+        7. Bd3 Bd6 {Mirror White's development and get ready to castle.}
+        8. O-O O-O {A symmetrical, equal position. Continue with ...Bg4 or ...Re8 and ...c6.}`,
+    },
+    {
+      name: "Millennium Attack (5.Bd3)",
+      pgn: `1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4
+        5. Bd3 {The Millennium Attack: White attacks the knight with the bishop and plans O-O, Re1 and c3 with Bc2.}
+        Nf6 {Retreat to f6, where the knight guards your king.}
+        6. O-O Be7 {Develops and prepares castling.}
+        7. h3 {Stops ...Bg4.}
+        O-O {King to safety.}
+        8. c3 Re8 {Take the open e-file before White's rook gets there. Next ...Bf8, ...c6 or ...Nbd7.}`,
     },
   ],
 }

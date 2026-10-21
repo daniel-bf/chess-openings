@@ -65,4 +65,28 @@ export const scotchPlans: Plans = {
       "Re1 adds a second defender to e4, so your knight on d4 and bishop on b5 are free to act."
     ]
   },
+  "scotch:8": {
+    "plan": "In this Mieses line Black's knight went to b6 instead of staying central. Your space with e5 and c4 is the trump: Nc3 and Qe4 keep everything protected, then you develop with Bd2 or Be2, castle and push f4 or c5 to gain more space. Black will try ...Ba6, ...Bb4 and ...d5 to undermine your centre and use the bishop pair.",
+    "remember": [
+      "Nc3 controls d5 and makes Black's ...d5 break harder.",
+      "Qe4 defends c4 and e5 at the same time.",
+      "Black's split queenside pawns make an endgame good for you."
+    ]
+  },
+  "scotch:9": {
+    "plan": "Black answered Nxc6 with ...Qf6 and took back with the b-pawn. Your queen on d2 looks odd but guards f2; Bd3 frees it by protecting e4. After castling you bring the knight to c3 and then a4 to trade or chase the c5 bishop, or play Qf4 to offer a queen trade. Black has active pieces and ...d5 ideas, but the broken c-pawns are a lasting weakness.",
+    "remember": [
+      "Qd2 defends f2 against the queen and c5 bishop.",
+      "Bd3 protects e4 so the queen can move again.",
+      "Na4 can win the bishop pair by hitting the c5 bishop."
+    ]
+  },
+  "scotch:10": {
+    "plan": "Black attacked the d4 knight with ...Qf6 and ...Bc5, which is the Classical Variation by another move order. Be3 and c3 keep the knight firmly protected, and Bc4 develops toward f7. You castle next and keep a strong knight in the centre. Black wants ...Ne5 or ...Bxd4 to break up your set-up, and sometimes ...Qg6 to hit e4 and g2.",
+    "remember": [
+      "Be3 defends the d4 knight and develops.",
+      "c3 adds a third defender and takes b4 and d4 from Black.",
+      "Bc4 and castling come next; keep watching f2."
+    ]
+  },
 }

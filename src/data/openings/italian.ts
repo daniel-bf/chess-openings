@@ -14,7 +14,7 @@ export const italian: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Giuoco Pianissimo: main line',
+      name: 'Giuoco Pianissimo: main line (6...a6 7.a4)',
       pgn: `1. e4 {Takes a central square and opens lines for the queen and the f1 bishop.}
         e5 {Black claims an equal share of the centre.}
         2. Nf3 {Develops with a threat: the e5 pawn is attacked.}
@@ -38,7 +38,7 @@ export const italian: OpeningSource = {
         11. Nf1 {The second step. After Ng3 the knight eyes f5 and h5 near Black's king, and you can choose between d4, b4 or Be3.}`,
     },
     {
-      name: 'Giuoco Piano: 6...d5 break',
+      name: 'Giuoco Pianissimo: 5...O-O and ...d5',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3
         O-O {Black castles first and keeps the ...d5 break in reserve.}
         6. O-O {Castle as well. Your king is safe before Black opens the centre.}
@@ -47,10 +47,10 @@ export const italian: OpeningSource = {
         Nxd5 8. Re1 {Now e5 is the target: the rook attacks it, and with Black's d-pawn gone only the c6 knight defends it.}
         Bg4 {Pins your f3 knight to the queen, so it cannot capture on e5.}
         9. h3 {Asks the bishop to decide: give up the bishop pair with ...Bxf3, or keep the pin with ...Bh5.}
-        Bh5 10. Nbd2 {Develops and heads for e4, where the knight hits the c5 bishop. Your rook, knight and bishop all keep an eye on e5.}`,
+        Bh5 10. Nbd2 {Develops and heads for e4, where the knight hits the c5 bishop. The e1 rook keeps pressing on e5.}`,
     },
     {
-      name: 'Two Knights: 4.d3 main line',
+      name: "Two Knights: Modern Bishop's Opening (4.d3 Be7)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4
         Nf6 {The Two Knights Defence. Instead of copying with ...Bc5, Black develops and attacks e4.}
         4. d3 {Protects e4 calmly. You avoid the sharp 4.Ng5 lines and go for the same slow build-up as in the Giuoco Piano.}
@@ -67,7 +67,7 @@ export const italian: OpeningSource = {
         11. Nbd2 {Same plan as in the Ruy Lopez: the knight heads for f1 and g3, and d4 comes later.}`,
     },
     {
-      name: 'Two Knights: 4...Bc5',
+      name: 'Giuoco Pianissimo: Normal (4.d3 Bc5)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3
         Bc5 {Transposes to the Giuoco Piano: the same set-up reached by a different move order.}
         5. c3 {Back in the Giuoco Pianissimo: c3 prepares d4 and gives the bishop a retreat.}
@@ -89,7 +89,7 @@ export const italian: OpeningSource = {
         O-O 8. h3 {With your knight gone from f3, ...Bg4 would attack your queen and ...Ng4 could jump in. h3 stops both. You have more space and freer pieces.}`,
     },
     {
-      name: 'Blackburne Shilling Gambit (3...Nd4)',
+      name: 'Blackburne-Kostić Gambit (3...Nd4)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4
         Nd4 {The Blackburne Shilling Gambit, a cheap trap that leaves e5 hanging on purpose.}
         4. Nxd4 {Just take the knight. Not 4.Nxe5? Qg5!, hitting the knight and g2: after 5.Nxf7? Qxg2 6.Rf1 Qxe4+ 7.Be2 Nf3 is mate.}
@@ -102,7 +102,7 @@ export const italian: OpeningSource = {
         d6 9. Nd2 {Develops the last minor piece. Next comes f4 to open the f-file against Black's king on f8. You are a pawn up with the safer king.}`,
     },
     {
-      name: "Giuoco Piano: 4...Qe7",
+      name: "Classical: Centre-Holding Variation (4...Qe7)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3
         Qe7 {The queen guards e5 in advance, so that your d4 does not simply win the centre.}
         5. d4 {Take the centre anyway. The e5 pawn is attacked again and Black has to give ground.}
@@ -123,7 +123,7 @@ export const italian: OpeningSource = {
         O-O 8. h3`,
     },
     {
-      name: "Two Knights: 4...h6 with ...g6",
+      name: "Two Knights: Modern Bishop's Opening (4.d3 h6)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3
         h6 {Keeps your knight and bishop off g5 and prepares ...g6 and ...Bg7 (a "fianchetto": the bishop goes on the long diagonal).}
         5. O-O {Castle, as usual.}
@@ -132,7 +132,7 @@ export const italian: OpeningSource = {
         Bg7 8. d4 {With c3 and Re1 in place, strike now. You gain central space and the g7 bishop runs into a solid pawn chain.}`,
     },
     {
-      name: "Two Knights: 6...d5 drops e5",
+      name: "Two Knights: Modern Bishop's Opening (6...d5?)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 Be7 5. O-O O-O 6. Re1
         d5 {Looks natural, but with your rook already on e1 it loses a pawn.}
         7. exd5 {Take first. After ...Nxd5, the e5 pawn has lost its d-pawn support.}
@@ -142,11 +142,40 @@ export const italian: OpeningSource = {
         10. Re1 {Bring the rook home before ...Bd6 or ...Bf6 hits it. You are a clean pawn up: finish development with Nd2 and Nf3.}`,
     },
     {
-      name: "Giuoco Pianissimo: 9...Ne7",
+      name: "Giuoco Pianissimo: 9...Ne7 (10.d4)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. O-O a6 7. a4 Ba7 8. Re1 O-O 9. h3
         Ne7 {The knight heads for g6 and the kingside, but it no longer guards d4 and e5.}
         10. d4 {Strike now. With the c6 knight gone, d4 hits e5 and Black cannot easily pressure your centre.}
         Ng6 11. Nbd2 {Develops and supports e4. The knight can still go to f1 and g3 later, and you keep a strong centre.}`,
+    },
+    {
+      name: "Giuoco Pianissimo: 7...Bg4 (8.h3)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. O-O O-O 7. Re1
+        Bg4 {The main line on Wikibooks: Black pins your f3 knight to the queen before you have played h3.}
+        8. h3 {Ask the bishop at once. ...Bxf3 hands you the bishop pair, ...Be6 offers to trade your c4 bishop, and ...Bh5 keeps the pin.}
+        Bh5 {Black keeps the pin, but the bishop is now far from the queenside.}
+        9. Nbd2 {Develops and starts the trip Nf1-g3. From g3 the knight hits the h5 bishop and ends the pin for good.}`,
+    },
+    {
+      name: "Classical: La Bourdonnais Variation (4...d6)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3
+        d6 {Black supports e5 first and leaves the g8 knight at home.}
+        5. d4 {With no knight on f6, e4 is not under attack, so take the centre at once: e5 is hit and the c5 bishop's diagonal is blocked.}
+        exd4 6. cxd4 {Take back with the c-pawn: you now have two pawns side by side on d4 and e4.}
+        Bb6 {The bishop steps back but keeps aiming at d4 and f2.}
+        7. Nc3 {Develops and guards e4.}
+        Nf6 {Attacks e4, which your c3 knight defends.}
+        8. Bb3 {Move the bishop off c4 before it becomes a target for ...Na5, or for the trick ...Nxe4 and ...d5, which forks bishop and knight. Next come h3, O-O and Be3.}`,
+    },
+    {
+      name: "Rousseau Gambit (3...f5)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4
+        f5 {The Rousseau Gambit: Black attacks e4 at once and opens the f-file, but it weakens the a2-g8 diagonal to Black's own king.}
+        4. d3 {The calm answer given by Wikibooks: e4 is protected, and after ...fxe4 you simply take back with the pawn.}
+        Nf6 {Develops and attacks e4 a second time.}
+        5. O-O {Castle. Your c4 bishop covers g8, so Black will find it hard to castle short.}
+        Bc5 6. Nc3 {Develops and defends e4 once more.}
+        d6 7. Bg5 {Pins the f6 knight to the queen. Bxf6 followed by Nd5 can follow, landing your knight on a great central square.}`,
     },
   ],
 }

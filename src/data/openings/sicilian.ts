@@ -38,7 +38,7 @@ export const sicilian: OpeningSource = {
         b4 {Don't move the knight: hit the c3 knight first, because it guards d5 and e4.}`,
     },
     {
-      name: 'Najdorf: 6.Bg5 main line (7...Be7)',
+      name: 'Najdorf: Main Line (6.Bg5 e6 7.f4 Be7)',
       pgn: `1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6
         6. Bg5 {The sharpest try. White pins the f6 knight to the queen and plans f4, Qf3 and long castling.}
         e6 {Solid: it covers d5 and f5 and frees the f8 bishop so ...Be7 can break the pin.}
@@ -55,7 +55,7 @@ export const sicilian: OpeningSource = {
         Nd7 {The knight retreats but is not passive: it can go to c5 or b6 to join your queenside attack.}`,
     },
     {
-      name: 'Najdorf: Classical (6.Be2)',
+      name: 'Najdorf: Opocensky Variation, Traditional Line (6.Be2)',
       pgn: `1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6
         6. Be2 {A calm positional system: White castles short and fights for the d5 square instead of attacking.}
         e5 {Gains space and drives the d4 knight back with tempo.}
@@ -67,7 +67,7 @@ export const sicilian: OpeningSource = {
         Rc8 {With ...b5 blocked, your rook takes the half-open c-file and presses on c2 and the c3 knight.}`,
     },
     {
-      name: 'Moscow Variation (3.Bb5+)',
+      name: 'Moscow Variation: Main Line (3.Bb5+ Bd7)',
       pgn: `1. e4 c5 2. Nf3 d6
         3. Bb5+ {White avoids the Open Sicilian with a check and is happy to swap the light-squared bishop.}
         Bd7 {The simplest block: offer the bishop trade and get a very solid game.}
@@ -82,7 +82,7 @@ export const sicilian: OpeningSource = {
         10. e5 Ne4 {The knight jumps to a great central square, and White has no light-squared bishop left to chase it.}`,
     },
     {
-      name: 'Alapin (2.c3)',
+      name: 'Alapin Variation (2.c3 Nf6)',
       pgn: `1. e4 c5
         2. c3 {The Alapin. White wants d4 next, so that c3xd4 keeps two pawns in the centre.}
         Nf6 {Attack e4 at once, before White gets d4 in. The c3 pawn has taken the knight's natural square, so White usually pushes e5.}
@@ -100,7 +100,7 @@ export const sicilian: OpeningSource = {
         12. O-O Be7 {Castle next. White's d4 pawn has no neighbours on c or e (an isolated pawn), and you aim to blockade it on d5.}`,
     },
     {
-      name: 'Smith-Morra Gambit',
+      name: 'Smith-Morra Gambit Accepted: Scheveningen Formation',
       pgn: `1. e4 c5
         2. d4 {White offers a pawn: this starts the Smith-Morra Gambit.}
         cxd4 {Take, as in all Sicilians.}
@@ -117,7 +117,7 @@ export const sicilian: OpeningSource = {
         e5 {Closes the d-file and takes the centre. You are a solid pawn up; castle next.}`,
     },
     {
-      name: 'Najdorf: Fischer-Sozin Attack (6.Bc4)',
+      name: 'Najdorf: Lipnitsky (Fischer-Sozin) Attack (6.Bc4)',
       pgn: `1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6
         6. Bc4 {Fischer's favourite: the bishop aims at f7 and e6, ready for sacrifices there.}
         e6 {Blunts the bishop: it now bites on a pawn protected by f7.}
@@ -132,7 +132,7 @@ export const sicilian: OpeningSource = {
         Ne8 {The knight protects g7. Next come ...Bb7 and ...Nd7 to finish development.}`,
     },
     {
-      name: 'Najdorf: 6.f3 (into the English Attack)',
+      name: 'Najdorf: English Attack via 6.f3',
       pgn: `1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6
         6. f3 {White plays f3 first to rule out ...Ng4 and then goes for the English Attack.}
         e5 {Same answer as against 6.Be3: space with tempo on the d4 knight.}
@@ -155,7 +155,7 @@ export const sicilian: OpeningSource = {
         Be7 {Develop and castle short next. You have a comfortable Najdorf structure.}`,
     },
     {
-      name: 'Grand Prix Attack (2.Nc3 and 3.f4)',
+      name: 'Closed: Grand Prix Attack (2.Nc3 d6 3.f4)',
       pgn: `1. e4 c5
         2. Nc3 {White keeps d4 back for now; this is a Closed Sicilian set-up.}
         d6 {Your usual move: it controls e5.}
@@ -168,6 +168,45 @@ export const sicilian: OpeningSource = {
         7. d3 Nge7 {The knight goes to e7, not f6, so it supports ...d5 and covers f5 if White pushes f4-f5.}
         8. Qe1 {White wants Qh4 to attack your king.}
         O-O {Your king is safe; next you play ...d5 in the centre or ...b5 on the queenside.}`,
+    },
+    {
+      name: 'Closed: Fianchetto Variation (2.Nc3 d6 3.g3)',
+      pgn: `1. e4 c5 2. Nc3 d6
+        3. g3 {The Closed Sicilian proper: White fianchettoes the king's bishop, keeps the d-pawn back and later attacks on the kingside with f4-f5.}
+        Nc6 {Develops and controls d4, the square White has left alone.}
+        4. Bg2 g6 {Answer the fianchetto with your own: a bishop on g7 will rake the long diagonal towards b2.}
+        5. d3 Bg7 {The bishop eyes d4 and b2 and guards your king.}
+        6. f4 {White grabs kingside space and prepares f5 or e5.}
+        e6 {Takes d5 and f5 away from White's pieces, so the f4-f5 push is harder.}
+        7. Nf3 Nge7 {The knight goes to e7, not f6: it does not block the bishop's diagonal, it cannot be kicked by e5, and it supports ...d5 later.}
+        8. O-O O-O {Castle. Your queenside play with ...Rb8 and ...b5 comes next.}
+        9. Be3 {The bishop eyes c5 and fights for d4.}
+        Nd4 {Jump into the hole on d4: White can only remove the knight by giving up a minor piece, and then your c-pawn or bishop takes back.}`,
+    },
+    {
+      name: 'Chekhover Variation (4.Qxd4)',
+      pgn: `1. e4 c5 2. Nf3 d6 3. d4 cxd4
+        4. Qxd4 {The Chekhover: White takes back with the queen to avoid the Open Sicilian main lines, planning quick development and long castling.}
+        Nc6 {Develop with tempo: the knight attacks the queen.}
+        5. Bb5 {Pins your knight so the queen can stay on d4.}
+        Bd7 {Breaks the pin, ready to take back on c6 with the bishop.}
+        6. Bxc6 Bxc6 {Take back with the bishop: it now points at White's e4 pawn along the long diagonal, and you own both bishops.}
+        7. Nc3 Nf6 {Develops and adds a second attacker on e4.}
+        8. Bg5 {Pins your knight and prepares long castling.}
+        e6 {Opens the f8 bishop so ...Be7 can break the pin.}
+        9. O-O-O Be7 {Breaks the pin: if Bxf6, take back with the bishop and the d6 pawn stays covered.}
+        10. Rhe1 O-O {King to safety. With the two bishops and play on the c-file you have a good game.}`,
+    },
+    {
+      name: 'Najdorf: Amsterdam Variation (6.f4)',
+      pgn: `1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6
+        6. f4 {The Amsterdam Variation: White wants e5 or f5 and a kingside attack.}
+        e5 {Hit the f4 pawn and the d4 knight at once and fight for the e5 square.}
+        7. Nf3 {The knight keeps an eye on e5.}
+        Nbd7 {Supports e5, so fxe5 can be met by taking back with the knight or pawn.}
+        8. a4 {Stops ...b5.}
+        Be7 {Develop and get ready to castle.}
+        9. Bd3 O-O {King to safety. Next comes ...exf4 to win the e5 square for a knight, or ...Nc5 and ...b6.}`,
     },
   ],
 }

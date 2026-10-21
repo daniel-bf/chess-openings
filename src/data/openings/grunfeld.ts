@@ -14,7 +14,7 @@ export const grunfeld: OpeningSource = {
   ],
   lines: [
     {
-      name: "Exchange: Modern (7.Nf3 and 8.Rb1)",
+      name: "Exchange: Modern Exchange Variation (7.Nf3, 8.Rb1)",
       pgn: `1. d4 Nf6 {Develop and control e4 without committing your pawns yet.}
         2. c4 g6 {Prepare ...Bg7, which puts the bishop on the long diagonal towards d4.}
         3. Nc3 d5 {The Grünfeld. Strike the centre at once, before White can play e4.}
@@ -32,7 +32,7 @@ export const grunfeld: OpeningSource = {
         Bg4 {Develop with pressure. The bishop hits the f3 knight, which defends d4 and the e5 square.}`,
     },
     {
-      name: "Exchange: Classical (7.Bc4)",
+      name: "Exchange: Spassky Variation (7.Bc4)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7
         7. Bc4 {The Classical Exchange. The bishop is active on c4, and the knight will go to e2 so ...Bg4 cannot pin it to the queen.}
         c5 {Hit d4.}
@@ -45,7 +45,7 @@ export const grunfeld: OpeningSource = {
         13. cxd4 Be6 {The bishop takes control of d5 and eyes the a2 pawn. Watch for White's d4-d5 push. In theory Black often answers with ...Bxa1, giving up the bishop for the rook.}`,
     },
     {
-      name: "Russian System: Hungarian (7...a6)",
+      name: "Russian Variation: Hungarian Variation (7...a6)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5
         4. Nf3 Bg7 {Develop the bishop to the long diagonal.}
         5. Qb3 {The Russian System. The queen attacks d5.}
@@ -57,7 +57,7 @@ export const grunfeld: OpeningSource = {
         9. Qb3 c5 {Strike d4 at once. Next ...Bb7 hits e4.}`,
     },
     {
-      name: "4.Bf4 main line (5...c5)",
+      name: "Brinckmann Attack (4.Bf4)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5
         4. Bf4 {White develops the bishop before e3 and aims at c7.}
         Bg7 {Develop onto the long diagonal.}
@@ -69,7 +69,7 @@ export const grunfeld: OpeningSource = {
         10. Bb3 Nc6 {Develop. Your pieces have good squares, and ...Qa5, ...Bf5 or ...Rd8 can follow.}`,
     },
     {
-      name: "4.Bg5 (Stockholm Variation)",
+      name: "Stockholm Variation (4.Bg5)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5
         4. Bg5 {White threatens Bxf6 and then cxd5, winning the d5 pawn.}
         Ne4 {Attack the bishop and the c3 knight at the same time.}
@@ -78,7 +78,7 @@ export const grunfeld: OpeningSource = {
         7. e3 Be6 {Protect the c4 pawn. You are a pawn up, and White has the centre and quick development in return.}`,
     },
     {
-      name: "Slow System (4.Nf3 Bg7 5.e3)",
+      name: "Three Knights: Burille Variation (5.e3)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7
         5. e3 {The Slow System. White protects d4 solidly but shuts in the c1 bishop.}
         O-O {Castle first and see how White sets up.}
@@ -87,7 +87,7 @@ export const grunfeld: OpeningSource = {
         8. exd4 Nc6 {Pile up on d4 with the knight and the g7 bishop. ...Bg4 can follow to pin the f3 knight that defends it.}`,
     },
     {
-      name: "Fianchetto (3.g3) with 6.e4",
+      name: "Neo-Grünfeld: with g3 (3.g3)",
       pgn: `1. d4 Nf6 2. c4 g6
         3. g3 {White also fianchettoes, and the g2 bishop aims at d5 and b7.}
         Bg7 {Develop and castle soon.}
@@ -101,7 +101,7 @@ export const grunfeld: OpeningSource = {
         9. O-O O-O {Castle. Next ...exd5 opens the centre, and ...Na6 heads for b4 or c7 to attack d5.}`,
     },
     {
-      name: "3.f3 (Anti-Grünfeld)",
+      name: "Neo-Grünfeld: Goglidze Attack (3.f3)",
       pgn: `1. d4 Nf6 2. c4 g6
         3. f3 {White prepares e4 with full pawn support, as in the Sämisch King's Indian.}
         d5 {Strike at once, before White can play e4.}
@@ -113,6 +113,38 @@ export const grunfeld: OpeningSource = {
         Nc6 {Develop and pressure d4.}
         9. O-O-O e5 {Strike the centre. With White's king on the queenside, opening lines in the middle favours you.}
         10. d5 Nd4 {The knight lands on a strong central square. If White takes it with the bishop, ...exd4 hits the c3 knight and opens the e-file.}`,
+    },
+    {
+      name: "Exchange Variation (7.Be3)",
+      pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7
+        7. Be3 {White protects d4 with the bishop and plans Qd2 and Rc1, keeping the g1 knight flexible.}
+        c5 {Hit d4, as always in the Grünfeld.}
+        8. Qd2 {White adds another defender to c3 and d4.}
+        Qa5 {Press on c3 and a2. The c3 pawn is now pinned to White's queen, so it cannot move.}
+        9. Rc1 {The rook protects c3 a second time.}
+        cxd4 {Release the tension now, so the queen swap comes with check.}
+        10. cxd4 Qxd2+ {Swap queens. Without queens, White's big centre is easier to attack and your king is safe.}
+        11. Kxd2 O-O {Castle. Next ...Rd8 and ...Nc6 hit d4, and ...Bd7 or ...e6 completes development.}`,
+    },
+    {
+      name: "Three Knights: Petrosian System (5.Bg5)",
+      pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7
+        5. Bg5 {White hopes for Bxf6 and cxd5, winning control of d5.}
+        Ne4 {Hit the bishop and the c3 knight, just as against 4.Bg5.}
+        6. cxd5 {White grabs the centre pawn and leaves the bishop to its fate.}
+        Nxg5 {Take the bishop: you win the bishop pair.}
+        7. Nxg5 e6 {Hit d5 again; you will win the pawn back.}
+        8. Nf3 exd5 {Pawns are level and you have the two bishops. Next ...O-O and ...c6, with a solid game.}`,
+    },
+    {
+      name: "Three Knights: Hungarian Variation (5.Bf4)",
+      pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7
+        5. Bf4 {White develops the bishop to the active f4 square, aiming at c7.}
+        O-O {Castle first; the ...c5 strike comes next.}
+        6. e3 c5 {Hit d4 now, as in the 4.Bf4 line.}
+        7. dxc5 Qa5 {Pin the c3 knight and get ready to win back c5.}
+        8. Rc1 dxc4 {Take on c4 too: both pawns will come back.}
+        9. Bxc4 Qxc5 10. Bb3 Nc6 {Develop. This is the same position as in the 4.Bf4 line, reached by another move order.}`,
     },
   ],
 }

@@ -14,7 +14,7 @@ export const slav: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Czech Variation: 6.e3 main line',
+      name: 'Czech: Dutch Variation (9.Qe2)',
       pgn: `1. d4 d5 {Put a pawn in the centre so White cannot simply take it over with e4.}
         2. c4 {The Queen's Gambit: White attacks d5 and wants to lure the pawn away from the centre.}
         c6 {The Slav. The c-pawn protects d5, and unlike ...e6 it leaves the c8 bishop free to come out.}
@@ -52,7 +52,7 @@ export const slav: OpeningSource = {
         Be7 {Develop, attack the g5 knight and get ready to castle. You stay a pawn up, and the worst of the attack is over.}`,
     },
     {
-      name: 'Exchange Slav',
+      name: 'Exchange Variation (3.cxd5)',
       pgn: `1. d4 d5 2. c4 c6
         3. cxd5 {The Exchange Variation. White makes the pawns symmetrical and hopes the extra move gives a small, safe edge.}
         cxd5 {Take back with the pawn so you keep a pawn on d5. The c-file is now open for both sides.}
@@ -67,7 +67,7 @@ export const slav: OpeningSource = {
         10. O-O Be7 {Finish developing and castle next. The position is level, and later ...a6 asks the b5 bishop to make up its mind.}`,
     },
     {
-      name: 'Slow Slav: 4.e3 Bf5 5.Nc3 e6 6.Nh4',
+      name: 'Quiet Variation: Schallopp Defence (6.Nh4)',
       pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6
         4. e3 {The Slow Slav. White protects c4 calmly, but now the c1 bishop is shut in behind e3.}
         Bf5 {Develop the bishop outside the pawn chain before ...e6.}
@@ -80,7 +80,7 @@ export const slav: OpeningSource = {
         9. O-O Bd6 {Develop with a threat. You now threaten ...Bxh2+, and the king cannot take back because your h8 rook is on the open h-file. White must spend a move on h3, g3 or f4.}`,
     },
     {
-      name: 'Slow Slav: 4.e3 Bf5 5.Bd3',
+      name: 'Quiet Variation: Schallopp Defence (5.Bd3)',
       pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3 Bf5
         5. Bd3 {White offers to trade light-squared bishops.}
         Bxd3 {Accept. White's light-squared bishop is one of its best attackers against your king, and swapping it leaves your solid pawns with no weak light squares.}
@@ -89,7 +89,7 @@ export const slav: OpeningSource = {
         8. Nc3 Bd6 {Develop and add more support to ...e5. Next come ...O-O and ...e5 (often after ...dxc4) to free your game.}`,
     },
     {
-      name: 'Slow Slav with Nc3: 5.Qb3',
+      name: '3.Nc3 Nf6 4.e3 Bf5 (5.Qb3)',
       pgn: `1. d4 d5 2. c4 c6
         3. Nc3 Nf6 {Develop and protect d5 again.}
         4. e3 Bf5 {Get the bishop out before ...e6, just as in the other Slow Slav lines.}
@@ -100,7 +100,7 @@ export const slav: OpeningSource = {
         7. Nf3 Nbd7 {Prepare ...e5. That push hits d4, the base of White's c5 and d4 pawn chain.}`,
     },
     {
-      name: '4.Qc2',
+      name: 'Modern Line (4.Qc2)',
       pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6
         4. Qc2 {White protects c4 with the queen and keeps the c1 bishop free.}
         dxc4 {Take anyway. The queen has to spend another move taking back, and on c4 it can be chased.}
@@ -111,7 +111,7 @@ export const slav: OpeningSource = {
         8. O-O Be7 {Finish developing and castle next. Then free your game with ...c5 or ...e5.}`,
     },
     {
-      name: '3.e3 move order',
+      name: 'Quiet Variation: Schallopp Defence (via 3.e3)',
       pgn: `1. d4 d5 2. c4 c6
         3. e3 {A quiet move order. White protects c4 straight away.}
         Nf6 {Develop. You will follow with ...Bf5 and ...e6, just like against the Slow Slav.}
@@ -119,7 +119,7 @@ export const slav: OpeningSource = {
         e6 6. Nh4 Bg6 7. Nxg6 hxg6`,
     },
     {
-      name: 'Krause Attack: 6.Ne5 Nbd7',
+      name: 'Czech: Carlsbad Variation, Morozevich Line (6.Ne5)',
       pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5
         6. Ne5 {The Krause Attack. White wins c4 back with the knight and plans f3 and e4.}
         Nbd7 {Challenge the e5 knight straight away.}
@@ -132,7 +132,7 @@ export const slav: OpeningSource = {
         11. Bg2 g5 {A sharp, well-known idea from theory. The pawn attacks the f4 bishop to break the pin. Your kingside loosens, but your pieces get very active.}`,
     },
     {
-      name: 'Czech Variation: 9.Nh4',
+      name: 'Czech: Dutch Variation (9.Nh4)',
       pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. e3 e6 7. Bxc4 Bb4 8. O-O Nbd7
         9. Nh4 {White goes after your f5 bishop to win the bishop pair.}
         O-O {Castle first. If the knight takes on f5, you will recapture with the e-pawn.}
@@ -141,7 +141,7 @@ export const slav: OpeningSource = {
         g6 {Protect f5 with a pawn. Your structure is solid, and the f5 pawn keeps White's bishops quiet.}`,
     },
     {
-      name: 'Alekhine Variation: 5.e3 b5',
+      name: 'Alekhine Variation (5.e3)',
       pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4
         5. e3 {The Alekhine Variation. White plans Bxc4 without spending a move on a4.}
         b5 {With a4 not played, ...b5 is possible. It protects the c4 pawn.}
@@ -151,6 +151,25 @@ export const slav: OpeningSource = {
         e6 {Open the f8 bishop. White will get the c4 pawn back, so quick development matters most.}
         8. Bxc4 Be7 {Develop. The bishop also protects the b4 pawn that the a2 knight attacks.}
         9. O-O O-O {Castle. Your queenside space and White's badly placed a2 knight give you a comfortable game.}`,
+    },
+    {
+      name: "Czech: Bled Attack (6.Nh4)",
+      pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5
+        6. Nh4 {The Bled Attack: White chases your bishop to win the bishop pair, or at least make it move again.}
+        Bc8 {Go back home. It looks odd, but you keep both bishops, and White's knight on h4 is badly placed. ...e5 comes next.}
+        7. e3 {White prepares Bxc4 to win back the pawn.}
+        e5 {Strike in the centre at once. The h4 knight no longer covers e5.}
+        8. Bxc4 exd4 {Open the e-file before White can castle.}
+        9. exd4 Be7 {Develop and get ready to castle. White is left with an isolated d-pawn (no pawns beside it on the c- or e-files), a long-term target for your pieces.}`,
+    },
+    {
+      name: "Modern Line (4.g3)",
+      pgn: `1. d4 d5 2. c4 c6 3. Nf3 Nf6
+        4. g3 {White fianchettoes, Catalan-style: the g2 bishop will press on d5 along the long diagonal.}
+        Bf5 {As always in the Slav, get the bishop out before ...e6.}
+        5. Bg2 e6 {Build the c6, d5, e6 pawn wall, which blunts the g2 bishop, and open your f8 bishop.}
+        6. O-O Be7 {Develop and get ready to castle.}
+        7. Nc3 O-O {Castle. Next ...Nbd7, then free your game with ...dxc4 or ...Ne4 and ...c5 or ...e5.}`,
     },
   ],
 }

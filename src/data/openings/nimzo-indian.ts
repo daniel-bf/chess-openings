@@ -14,7 +14,7 @@ export const nimzoIndian: OpeningSource = {
   ],
   lines: [
     {
-      name: "Rubinstein (4.e3): main line",
+      name: "Rubinstein: Normal Variation, Bernstein Defence (4.e3)",
       pgn: `1. d4 Nf6 {Develop and control e4 without committing your pawns yet.}
         2. c4 e6 {Open the f8 bishop's diagonal so it can come to b4.}
         3. Nc3 {White prepares e4 to build a big pawn centre.}
@@ -30,7 +30,7 @@ export const nimzoIndian: OpeningSource = {
         10. Bxc4 Qc7 {The main line. The queen supports ...e5, which challenges White's centre and opens the c8 bishop.}`,
     },
     {
-      name: "Classical (4.Qc2)",
+      name: "Classical: Keres Defence (4.Qc2)",
       pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
         4. Qc2 {The Classical. If you take on c3, White recaptures with the queen and keeps healthy pawns. The queen also watches e4.}
         O-O {Castle and wait to see White's plan.}
@@ -43,7 +43,7 @@ export const nimzoIndian: OpeningSource = {
         9. Bh4 d5 {Strike in the centre while White's king is still uncastled and White is behind in development.}`,
     },
     {
-      name: "Sämisch (4.a3)",
+      name: "Sämisch: Capablanca Variation (4.a3)",
       pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
         4. a3 {The Sämisch. White forces you to decide straight away.}
         Bxc3+ {Take. Your whole plan is that the doubled c-pawns will become weak.}
@@ -56,7 +56,7 @@ export const nimzoIndian: OpeningSource = {
         Ne8 {Capablanca's idea. The knight steps away from e5 and Bg5 before they happen, and it frees the f-pawn for ...f5, which challenges e4.}`,
     },
     {
-      name: "Leningrad (4.Bg5)",
+      name: "Leningrad: Benoni Defence (4.Bg5)",
       pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
         4. Bg5 {The Leningrad. White pins your f6 knight to the queen.}
         h6 {Ask the bishop to decide straight away.}
@@ -67,7 +67,7 @@ export const nimzoIndian: OpeningSource = {
         8. bxc3 e5 {Complete the c5, d6, e5 pawn chain. The centre is locked, which suits your knights, and White's dark-squared bishop runs into your pawns. If the pin on f6 gets annoying, ...g5 breaks it.}`,
     },
     {
-      name: "Kmoch (4.f3)",
+      name: "Kmoch Variation (4.f3)",
       pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
         4. f3 {The Kmoch Variation. White prepares e4 with a pawn.}
         d5 {Stop e4 at once.}
@@ -80,7 +80,7 @@ export const nimzoIndian: OpeningSource = {
         10. Be3 O-O {Castle. Next ...Nbd7 wins back c5, and White's c-pawns stay weak.}`,
     },
     {
-      name: "Romanishin (4.Nf3 c5 5.g3)",
+      name: "Romanishin: English Hybrid (4.Nf3 c5 5.g3)",
       pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
         4. Nf3 {A natural developing move.}
         c5 {Hit d4 straight away.}
@@ -93,7 +93,7 @@ export const nimzoIndian: OpeningSource = {
         Qb6 {Defend the b4 bishop, hit the d4 knight and offer a queen trade into an equal position.}`,
     },
     {
-      name: "Spielmann (4.Qb3)",
+      name: "Spielmann: Carlsbad Variation (4.Qb3)",
       pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
         4. Qb3 {The Spielmann. The queen attacks your b4 bishop and is ready to retake on c3 without doubled pawns.}
         c5 {Defend the bishop and hit d4.}
@@ -103,7 +103,7 @@ export const nimzoIndian: OpeningSource = {
         8. Nxd2 O-O {Castle. Next ...Bxc5 regains the pawn, and you are fully developed and equal.}`,
     },
     {
-      name: "Queen's Indian (3.Nf3 b6 4.g3 Ba6)",
+      name: "Queen's Indian: Fianchetto, Check Variation (3.Nf3)",
       pgn: `1. d4 Nf6 2. c4 e6
         3. Nf3 {White avoids the Nimzo pin by not playing Nc3 yet.}
         b6 {The Queen's Indian. Your bishop will fight for e4 from b7, or attack c4 from a6.}
@@ -116,6 +116,38 @@ export const nimzoIndian: OpeningSource = {
         d5 {Claim the centre. Your pawns on c6 and d5 shut out the g2 bishop.}
         9. Ne5 {The knight lands on a strong central square.}
         Nfd7 {Challenge it at once, so you can swap off White's best piece.}`,
+    },
+    {
+      name: "Reshevsky Variation (5.Ne2)",
+      pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O
+        5. Ne2 {The Reshevsky Variation: the knight can recapture on c3, so White avoids doubled pawns.}
+        d5 {Claim the centre, just as against 5.Bd3.}
+        6. a3 {White asks the bishop to decide.}
+        Be7 {Keep the bishop. Taking on c3 would hand White the two bishops with healthy pawns, and White's Ne2 and a3 have not developed much.}
+        7. cxd5 exd5 {Take back with the pawn: you keep a strong pawn on d5 and open the c8 bishop.}
+        8. g3 {White plans Bg2 to press on d5.}
+        c6 {Support d5 with a pawn so the g2 bishop bites on granite. Next ...Nbd7, ...Re8 and ...Bd6.}`,
+    },
+    {
+      name: "Romanishin Variation (4.g3)",
+      pgn: `1. d4 Nf6 2. c4 e6 3. Nc3 Bb4
+        4. g3 {The Romanishin Variation (also called the Kasparov Variation): White fianchettoes and plans Nf3 and Bg2.}
+        c5 {Hit d4 straight away, as against 4.Nf3.}
+        5. Nf3 {White defends d4. This reaches the 4.Nf3 c5 5.g3 line by another route, so play it the same way.}
+        cxd4 6. Nxd4 O-O 7. Bg2 d5`,
+    },
+    {
+      name: "Queen's Indian: Kasparov-Petrosian, Kasparov Attack (3.Nf3 b6 4.a3)",
+      pgn: `1. d4 Nf6 2. c4 e6 3. Nf3 b6
+        4. a3 {The Petrosian Variation: White rules out ...Bb4 and prepares Nc3, then d5 or e4.}
+        Bb7 {Control e4, the square White wants for a pawn.}
+        5. Nc3 d5 {Put a pawn on d5 so White cannot push d4-d5.}
+        6. cxd5 Nxd5 {Take back with the knight, which now challenges the c3 knight.}
+        7. Qc2 {The Kasparov Attack: the queen prepares e4.}
+        Nxc3 {Swap knights before e4 kicks yours away.}
+        8. bxc3 Be7 {Develop and get ready to castle. White has a big centre, but the c3 pawn is a little weak.}
+        9. e4 O-O {Castle before the centre opens.}
+        10. Bd3 c5 {Hit d4: the standard way to pressure White's big centre. ...Nc6 or ...Nd7 and ...Rc8 follow.}`,
     },
   ],
 }

@@ -14,7 +14,7 @@ export const ruyLopez: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Closed: Chigorin main line',
+      name: 'Closed: Chigorin Defence (9...Na5)',
       pgn: `1. e4 {Takes a central square and opens lines for the queen and the f1 bishop.}
         e5 {Black claims an equal share of the centre.}
         2. Nf3 {Develops with a threat: the e5 pawn is attacked.}
@@ -39,7 +39,7 @@ export const ruyLopez: OpeningSource = {
         12. Nbd2 {The famous knight trip begins: d2, then f1, then g3 or e3, while the centre stays tense.}`,
     },
     {
-      name: 'Marshall Attack',
+      name: 'Marshall Attack: Modern Main Line (8...d5)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3
         O-O {Black castles first and keeps ...d5 in reserve.}
         8. c3 {Prepares d4 and gives the bishop the c2 square.}
@@ -57,7 +57,7 @@ export const ruyLopez: OpeningSource = {
         15. Be3 {Develops and covers the dark squares. Next come Qd3, Nd2 and Re4 to beat off the attack and keep the extra pawn.}`,
     },
     {
-      name: 'Berlin Defence',
+      name: 'Berlin Defence: Berlin Wall (4...Nxe4)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5
         Nf6 {The Berlin Defence: Black skips ...a6 and attacks e4 straight away.}
         4. O-O {Castle and offer e4: you win it back by opening the centre.}
@@ -74,7 +74,7 @@ export const ruyLopez: OpeningSource = {
         11. Bf4 {Develops and protects the e5 pawn. Next come Rad1 and Rfe1 to take the open d-file.}`,
     },
     {
-      name: 'Open Variation',
+      name: 'Open: St. Petersburg Variation (5...Nxe4)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O
         Nxe4 {The Open Ruy Lopez: Black takes the pawn and goes for active piece play.}
         6. d4 {Open lines at once, while Black's king is still in the centre.}
@@ -88,7 +88,7 @@ export const ruyLopez: OpeningSource = {
         O-O 11. Bc2 {A second attacker on e4. Black must decide: trade it, retreat it, or sacrifice with 11...Nxf2 (the Dilworth Attack).}`,
     },
     {
-      name: 'Classical Defence (3...Bc5)',
+      name: 'Classical Defence: Benelux Variation (3...Bc5)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5
         Bc5 {The Classical Defence: the bishop takes its most active diagonal, aimed at f2.}
         4. O-O {Castle first, so your king is safe from the c5 bishop.}
@@ -99,7 +99,7 @@ export const ruyLopez: OpeningSource = {
         d6 8. h3 {Stops ...Bg4, which would pin the f3 knight, the main defender of d4. You keep a broad centre.}`,
     },
     {
-      name: 'Schliemann Gambit (3...f5)',
+      name: 'Schliemann Defence (3...f5 4.d3)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5
         f5 {The Schliemann (or Jaenisch) Gambit: Black hits e4 with the f-pawn to open the f-file.}
         4. d3 {A calm and safe answer. You support e4 and avoid the sharp main lines.}
@@ -109,7 +109,7 @@ export const ruyLopez: OpeningSource = {
         Be7 8. Bc4 {The bishop switches to the open a2-g8 diagonal. It covers g8, so Black cannot castle kingside for now, and it eyes the weak e6 square.}`,
     },
     {
-      name: "Closed: Breyer Variation (9...Nb8)",
+      name: "Closed: Breyer Defence (9...Nb8)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3
         Nb8 {The Breyer Variation: the knight goes back to re-route via d7, where it supports e5 and frees the c-pawn and the b7 bishop.}
         10. d4 {Take the centre while the knight is on b8 and not pressing on d4.}
@@ -121,7 +121,7 @@ export const ruyLopez: OpeningSource = {
         15. a4 {Open a second front: a4 attacks b5 and can open the a-file for your rook.}`,
     },
     {
-      name: "Closed: Zaitsev Variation (9...Bb7)",
+      name: "Closed: Flohr-Zaitsev System (9...Bb7)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3
         Bb7 {The Zaitsev Variation: the bishop joins the pressure on e4.}
         10. d4 {Take the centre.}
@@ -135,7 +135,7 @@ export const ruyLopez: OpeningSource = {
         15. Bb1 {Keep the bishop. On b1 it still guards e4. Next comes Ra3, swinging the rook along the third rank.}`,
     },
     {
-      name: "Steinitz Deferred (4...d6)",
+      name: "Morphy Defence: Modern Steinitz (4...d6)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4
         d6 {The Steinitz Deferred: Black supports e5 with a pawn before developing the kingside.}
         5. c3 {Prepares d4 and gives the bishop the c2 square, so it cannot be trapped by ...b5 and ...c5-c4 later.}
@@ -146,7 +146,7 @@ export const ruyLopez: OpeningSource = {
         O-O 9. Nbd2 {Develops. The knight can go to f1 and g3 as in the Closed Ruy Lopez, and you keep more space.}`,
     },
     {
-      name: "Old Steinitz Defence (3...d6)",
+      name: "Steinitz Defence (3...d6)",
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5
         d6 {The Old Steinitz Defence: very solid, but it shuts in the f8 bishop and gives up space.}
         4. d4 {Hit the centre at once. With the d-pawn gone from d7, the c6 knight is pinned to Black's king and cannot help much.}
@@ -158,6 +158,40 @@ export const ruyLopez: OpeningSource = {
         8. Nxd4 {Take back with a central knight. You have more space with e4 against d6.}
         O-O
         9. Bf1 {Avoid trades: the side with more space wants to keep pieces on. The bishop guards your king and Black stays cramped.}`,
+    },
+    {
+      name: "Morphy Defence: Arkhangelsk Variation (5...b5)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O
+        b5 {The Arkhangelsk: Black chases your bishop at once and plans ...Bb7 and ...Bc5, aiming both bishops at your kingside.}
+        6. Bb3 {The bishop retreats to its best diagonal, aimed at f7.}
+        Bb7 {The bishop joins the pressure on e4.}
+        7. Re1 {Defends e4, which both the f6 knight and the b7 bishop attack.}
+        Bc5 {The bishop takes its most active square, aimed at f2.}
+        8. c3 {Prepares d4, which will hit e5 and block the c5 bishop.}
+        d6 9. d4 {Strike in the centre while Black's king is still uncastled.}
+        Bb6 {The bishop steps back and keeps pressing on d4.}
+        10. Bg5 {Develops with a pin: the f6 knight cannot take on e4 or help in the centre without losing the queen.}`,
+    },
+    {
+      name: "Morphy Defence: M\u00f8ller Defence (5...Bc5)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O
+        Bc5 {The Møller Defence: the bishop takes its most active diagonal before ...b5.}
+        6. c3 {Prepares d4, which will hit e5 and the c5 bishop together.}
+        b5 7. Bb3 {Back to the a2-g8 diagonal, aimed at f7.}
+        d6 {Supports e5, so d4 does not simply win it.}
+        8. d4 {Take the centre now: the c5 bishop has to move again.}
+        Bb6 9. a4 {Attack the b5 pawn. The a-file can open for your rook, and Black's queenside pawns become targets.}`,
+    },
+    {
+      name: "Bird Variation (3...Nd4)",
+      pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5
+        Nd4 {Bird's Defence: Black trades off your f3 knight and gets a pawn wedge on d4.}
+        4. Nxd4 {Take. The pawn that arrives on d4 cramps you a little, but it is cut off from Black's other pawns.}
+        exd4 5. O-O {Castle quickly. Your plan is d3, Nd2 and f4, using your extra central pawn.}
+        c6 {Chases the b5 bishop.}
+        6. Bc4 {The bishop goes to its best diagonal, aimed at f7.}
+        Nf6 7. Re1 {Defends e4, which the f6 knight attacks.}
+        d6 8. d3 {Supports e4 and opens your c1 bishop. Next come Nd2-f3 or f4, and later c3 to break up the d4 wedge.}`,
     },
   ],
 }

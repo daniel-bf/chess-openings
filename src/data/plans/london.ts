@@ -14,7 +14,7 @@ export const londonPlans: Plans = {
     "remember": [
       "5.Qb3 defends b2 and offers a queen trade; after ...c4, 6.Qc2 keeps guarding b2.",
       "After 6...Bf5?, 7.Qxf5 Qxb2 8.Qxd5 wins a piece, and 9.Qxc4 picks up another pawn.",
-      "Only take on f5 if d5 falls too: with Nf3 and ...Nf6 already played, Qxf5?? Qxb2 loses for White.",
+      "Check before taking on f5: with Nf3 and ...Nf6 both played, Qxf5?? Qxb2 loses for White, and the queen goes back to c1 instead.",
     ]
   },
   "london:2": {
@@ -87,6 +87,30 @@ export const londonPlans: Plans = {
       "4.Nf3 controls e5, making Black's ...e5 break harder.",
       "5.Be2: against a fianchetto, e2 is a better square than d3.",
       "6.h3 gives the bishop a retreat square on h2 if Black plays ...Nh5 or ...e5.",
+    ]
+  },
+  "london:11": {
+    "plan": "This is the sharpest test of the early Bf4. If Black grabs b2, White gets fast development and attacking chances: Nb5 threatens Nc7+, and Rb1 and a3 keep hitting the queen while Black's queenside pieces are still at home. If Black does not take, White completes development with Nf3, Bd3 and O-O, and Rb1 can guard b2.",
+    "remember": [
+      "4.Nc3 leaves b2 as bait instead of defending it.",
+      "After 4...Qxb2, 5.Nb5 threatens Nc7+ forking king and rook.",
+      "Black's only good answer is ...Nd5; keep developing and chase the queen with Rb1 or a3.",
+    ]
+  },
+  "london:12": {
+    "plan": "Black's bishop on b7 and knight on f6 fight for e4. White keeps the London shape with h3, Bd3, O-O and c3, then plays Nbd2 and Qe2, and can break with e4 or use the e5 square for a knight. Black looks for ...d5 or ...d6 with ...Nbd7 and queenside play with ...c5.",
+    "remember": [
+      "5.h3 gives the bishop a retreat square on h2.",
+      "6.Bd3 and Nbd2 add control of e4, the square Black's b7 bishop is aiming at.",
+      "8.c3 keeps d4 protected by a pawn against ...c5.",
+    ]
+  },
+  "london:13": {
+    "plan": "After ...c4 Black has queenside space but has released the pressure on d4. White develops with Nd2, Ngf3, Be2 and castling, then breaks with e4 to open the centre where White is better placed; b3 can also be used to attack the c4 pawn. Black aims for ...Bf5 (once it is safe), ...e6 and ...b5-b4 on the queenside.",
+    "remember": [
+      "5.Qb3 meets ...Qb6 and offers a queen trade.",
+      "After 5...c4, 6.Qc2 keeps guarding b2; 6...Bf5? 7.Qxf5 Qxb2 8.Qc8 is mate.",
+      "7.Nd2 and Ngf3 prepare the e4 break.",
     ]
   },
 }

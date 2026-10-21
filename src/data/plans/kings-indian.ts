@@ -81,4 +81,28 @@ export const kingsIndianPlans: Plans = {
       "10...Bg4 pins the f3 knight to the e2 bishop, adding more pressure on e2."
     ]
   },
+  "kings-indian:10": {
+    "plan": "In the Modern System, White's knight goes to d2 and then c4 or b3 to support the c5 push, while b4 is prepared with a3 and Rb1. You slow the queenside down with ...a5, clear the f-pawn with ...Nd7 and play ...f5. Then it is the usual closed King's Indian race: ...Nf6, ...f4 and ...g5-g4 on the kingside, while White tries to open the c-file.",
+    "remember": [
+      "9...a5 means White needs a3 and Rb1 before b4, which buys you time.",
+      "10...Nd7 clears the f-pawn and keeps an eye on c5.",
+      "11...f5 is your main break: hit e4 first, then ...Nf6 and ...f4 when White takes or defends."
+    ]
+  },
+  "kings-indian:11": {
+    "plan": "With 6.Bg5 White pins your knight early. You answer with ...h6 and ...g5 to break the pin, then ...Nh5 to win the bishop pair with ...Nxg3. After the swap, strike the centre with ...e5 or ...c5 and use your dark-squared bishop. Keep an eye on your loosened kingside: ...f5 and the h-file can matter for both sides.",
+    "remember": [
+      "6...h6 asks the bishop to decide straight away.",
+      "7...g5 breaks the pin; this is the line recommended against 6.Bg5.",
+      "8...Nh5 hits the g3 bishop so you can take it with ...Nxg3 and get the bishop pair."
+    ]
+  },
+  "kings-indian:12": {
+    "plan": "Against 7.Nge2, White keeps the tension in the centre and will usually castle long. You build with ...c6 and ...Nbd7 and keep two plans ready: ...a6 and ...b5 to open lines at White's king, or ...exd4 followed by ...Re8 and ...d5 to attack the e4 pawn. If White closes the centre with d5, take with ...cxd5 and use the open c-file.",
+    "remember": [
+      "7...c6 prepares ...b5 and gives your queen a5 and b6.",
+      "8...Nbd7 supports e5 so you are not forced to take on d4.",
+      "If White castles long, ...a6 and ...b5 open lines against the king."
+    ]
+  },
 }
