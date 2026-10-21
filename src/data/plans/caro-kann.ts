@@ -81,4 +81,28 @@ export const caroKannPlans: Plans = {
       "...O-O after d4 completes development, and your d5 knight blockades White's isolated d4 pawn."
     ]
   },
+  "caro-kann:10": {
+    "plan": "White uses the g- and h-pawns to chase your f5 bishop. You build the wall with ...e6, keep the bishop on g6 then h7, and hit the centre with ...c5 at once. After h4 the move ...h5 stops h5 and loosens White's kingside; if White grabs that pawn, ...Nc6, ...cxd4 and ...Qb6 or ...Nge7-f5 put heavy pressure on d4 and e5. White's king has no safe home, so open the centre fast.",
+    "remember": [
+      "4...e6 lets the bishop go back to g6 when g4 comes, and frees your f8 bishop.",
+      "6...c5 answers the wing attack with a strike in the centre against d4.",
+      "7...h5 stops h4-h5; after 8.Nf4 Bh7 9.Nxh5, 9...Nc6 develops and piles up on d4."
+    ]
+  },
+  "caro-kann:11": {
+    "plan": "White uses the h-pawn to harass your f5 bishop. You answer h4 with ...h5, which stops h5 and makes g4 harmless because the pawn on h5 guards g4. After c4 you build the French-style wall with ...e6, bring the king's knight to e7 and then f5 or g6, and develop with ...Nd7. Your targets are d4 and c4: ...dxc4 at the right moment opens the d5 square, and ...c5 hits the base of the chain.",
+    "remember": [
+      "4...h5 stops h5 for good, and g4 can then be met by ...Bxg4.",
+      "5...e6 and 6...Ne7 set up the wall; the knight can go to f5 or g6 to hit d4 and e5.",
+      "7...Nd7 develops and keeps ...Bg6 ready for when White plays Ng3."
+    ]
+  },
+  "caro-kann:12": {
+    "plan": "White plays a slow King's Indian Attack set-up with d3, Nd2, g3 and Bg2. You take a big centre with ...d5 and ...e5, defend e5 with ...Bd6 and ...Re8, castle short and develop with ...Nbd7 and ...a5 to gain queenside space. Watch for White's d4 or exd5 break; with your strong pawn pair on d5 and e5 you are at least equal.",
+    "remember": [
+      "2...d5 and 3...e5 give you two pawns side by side in the centre.",
+      "4...Bd6 defends e5 and keeps your c8 bishop's diagonal open.",
+      "7...Re8 adds a second defender to e5, freeing your pieces for ...Nbd7 and ...a5."
+    ]
+  },
 }

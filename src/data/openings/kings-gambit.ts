@@ -14,7 +14,7 @@ export const kingsGambit: OpeningSource = {
   ],
   lines: [
     {
-      name: "Kieseritzky Gambit",
+      name: "Kieseritzky Gambit: Berlin Defence, Rubinstein (6.d4)",
       pgn: `1. e4 {Takes a central square and opens lines for the queen and the f1 bishop.}
         e5 {Black claims an equal share of the centre.}
         2. f4 {The King's Gambit: offer the f-pawn to pull Black's e-pawn away from the centre.}
@@ -31,7 +31,7 @@ export const kingsGambit: OpeningSource = {
         9. Qe2 {Block the e-file so there is no discovered check. Sharp play follows, often with the kings castled on opposite sides.}`,
     },
     {
-      name: "Modern Defence (3...d5)",
+      name: "Modern (Abbazia) Defence (3...d5)",
       pgn: `1. e4 e5 2. f4 exf4 3. Nf3
         d5 {The Modern Defence: Black hits back in the centre instead of holding on to f4.}
         4. exd5 {Take the pawn.}
@@ -80,7 +80,7 @@ export const kingsGambit: OpeningSource = {
         Bxd6 8. Qe2+ {Check. Black has to spend a move answering it (often ...Qe7 and a queen trade), and Bxf4 will win the pawn back.}`,
     },
     {
-      name: "Classical Declined (2...Bc5)",
+      name: "Declined: Classical Variation (2...Bc5)",
       pgn: `1. e4 e5 2. f4
         Bc5 {Declined: the bishop covers g1, so you cannot castle short for now. Never 3.fxe5?? Qh4+.}
         3. Nf3 {Develop and stop ...Qh4+.}
@@ -94,7 +94,7 @@ export const kingsGambit: OpeningSource = {
         axb6 9. O-O {Castle now that the c5 bishop has gone. The f-file will open soon.}`,
     },
     {
-      name: "Falkbeer Countergambit",
+      name: "Falkbeer Countergambit (3...e4 4.d3)",
       pgn: `1. e4 e5 2. f4
         d5 {The Falkbeer Countergambit: Black hits back in the centre.}
         3. exd5 {Take.}
@@ -106,7 +106,7 @@ export const kingsGambit: OpeningSource = {
         7. Qe2 {Pins the e4 knight against Black's king and covers f2.}`,
     },
     {
-      name: "2...Nc6 3...exf4",
+      name: "MacLeod Defence (2...Nc6 3.Nf3 exf4)",
       pgn: `1. e4 e5 2. f4
         Nc6 {Black develops before deciding what to do about f4.}
         3. Nf3 {Develop and stop ...Qh4+.}
@@ -117,6 +117,41 @@ export const kingsGambit: OpeningSource = {
         g4 {Black counter-attacks your f3 knight.}
         6. dxc6 {Take the knight.}
         gxf3 7. Qxf3 {Take back. Material is level; you have open lines and the f4 pawn is a target. Watch out for ...Qh4+.}`,
+    },
+    {
+      name: "Becker Defence (3...h6)",
+      pgn: `1. e4 e5 2. f4 exf4 3. Nf3
+        h6 {The Becker Defence: Black prepares ...g5, so your knight can never use g5 to attack the pawn chain.}
+        4. d4 {Take the centre and open the c1 bishop toward f4.}
+        g5 {Holds the f4 pawn.}
+        5. h4 {Attack the g5 pawn at once, before Black's pawns become a solid chain.}
+        Bg7 {Develops and guards the h8 rook, so the h-file can be opened safely.}
+        6. hxg5 {Open the h-file.}
+        hxg5 7. Rxh8 {Trade rooks.}
+        Bxh8 8. g3 {Strike at the f4 pawn, which only the g5 pawn holds. This is a gambit line: you are a pawn down but get open lines for your pieces.}`,
+    },
+    {
+      name: "Falkbeer: Nimzowitsch-Marshall Countergambit (3...c6)",
+      pgn: `1. e4 e5 2. f4 d5 3. exd5
+        c6 {The Nimzowitsch-Marshall Countergambit: Black offers another pawn for quick development.}
+        4. Nc3 {The main line: develop and protect your extra d5 pawn.}
+        exf4 5. Nf3 {Develop and stop ...Qh4+.}
+        Bd6 {Defends f4 and aims at h2.}
+        6. d4 {Take the centre and open the c1 bishop toward f4.}
+        Ne7 7. dxc6 {Take: this removes Black's c-pawn before ...cxd5.}
+        Nbxc6 8. Ne4 {Attack the d6 bishop, the main defender of f4. If it is traded, Bxf4 wins the pawn back.}`,
+    },
+    {
+      name: "Declined: Petrov's Defence (2...Nf6)",
+      pgn: `1. e4 e5 2. f4
+        Nf6 {Black ignores the f4 pawn and attacks e4.}
+        3. fxe5 {Take: the pawn kicks the knight.}
+        Nxe4 4. Nf3 {Develop and stop ...Qh4+.}
+        Ng5 {Black wants to trade off your f3 knight.}
+        5. d4 {Take the centre and open your c1 bishop.}
+        Nxf3+ 6. Qxf3 {Take back with the queen, which is active on f3.}
+        Qh4+ 7. Qf2 {Block and offer a queen trade.}
+        Qxf2+ 8. Kxf2 {Take back. You have more space and the e5 pawn, and without queens your king is safe in the centre.}`,
     },
   ],
 }

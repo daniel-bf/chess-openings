@@ -65,4 +65,28 @@ export const kingsGambitPlans: Plans = {
       "Qxf3 recaptures the piece and lines your queen up against the f4 pawn and the f7 square."
     ]
   },
+  "kings-gambit:8": {
+    "plan": "Black prepared ...g5 with ...h6, so you hit back at once with d4 and h4. After the rooks come off on the h-file, g3 attacks the f4 pawn, which only the g5 pawn holds. You are a pawn down for now but have a big centre and open lines; Bxf4 or Nxg5 ideas win material back. Black wants ...d6, ...Nc6 and ...g4 to kick your knight.",
+    "remember": [
+      "d4 and h4 before Black's pawns become a solid chain.",
+      "Bg7 guards h8, so the h-file trade is equal.",
+      "g3 attacks f4: the pawn chain is easier to break than it looks."
+    ]
+  },
+  "kings-gambit:9": {
+    "plan": "Black offered a second pawn with ...c6 for quick development. You take the centre with Nc3, Nf3 and d4, remove the c-pawn with dxc6, then Ne4 to go after the d6 bishop, which guards f4. Once the bishop is traded, Bxf4 wins back material and you have the freer game. Black wants ...O-O, ...Bf5 and ...Nd5 with active pieces.",
+    "remember": [
+      "Nc3 protects the d5 pawn and develops.",
+      "d4 opens the c1 bishop toward f4.",
+      "Ne4 attacks the d6 bishop, the main defender of f4."
+    ]
+  },
+  "kings-gambit:10": {
+    "plan": "Black declined with ...Nf6 and traded knights to reach a queenless middlegame. You have the e5 pawn, more space and a healthy centre with d4; your king is safe on f2 now that queens are off. Develop with Nc3, Bd3 or Be3 and use the f-file for your rooks. Black wants ...d6 to break up e5 and free the bishops.",
+    "remember": [
+      "fxe5 kicks the knight and keeps your extra central pawn.",
+      "d4 takes the centre and opens your c1 bishop.",
+      "Qf2 offers a queen trade, after which your king is safe on f2."
+    ]
+  },
 }

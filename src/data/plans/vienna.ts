@@ -65,4 +65,28 @@ export const viennaPlans: Plans = {
       "Bxf4 wins back the gambit pawn, and Bd3 develops behind your e4 pawn."
     ]
   },
+  "vienna:8": {
+    "plan": "Black's ...Bc5 threatened ...Bf2+, so you blocked it with d4 and then unpinned with Bd2. The e4 knight is Black's best piece: Bd3 attacks it, and trading it leaves you with the e5 pawn and a big centre. After castling, your rook uses the f-file against f7. Black wants ...c5 and ...cxd4 to break your centre while your king is still in the middle.",
+    "remember": [
+      "d4 shuts the c5 bishop off from f2 with tempo.",
+      "Bd2 unpins the c3 knight against ...Bb4.",
+      "Bd3 attacks the e4 knight; trade it and castle."
+    ]
+  },
+  "vienna:9": {
+    "plan": "Black pinned your knight with ...Bg4, and Qe2 broke the pin while hitting e4. After the knight trade dxc3 opens the d-file, so the usual plan is Bf4, O-O-O and pressure on d5 with your rooks. Your e5 pawn gives you space on the kingside. Black has ...Nc6, ...Bc5 and ...Qd7 ideas and often castles long as well.",
+    "remember": [
+      "Qe2 unpins and attacks the e4 knight.",
+      "dxc3 opens the d-file for your rooks and frees the c1 bishop.",
+      "Bf4 protects e5; castle long next."
+    ]
+  },
+  "vienna:10": {
+    "plan": "Black's ...Qe7 tried to keep the knight on f6 by pinning e5, but Qe2 broke the pin and forced the knight back to g8. Black's queen now blocks the f8 bishop, so you are far ahead in development. Play Nf3, d4 and Bxf4 to win the pawn back, then castle and use the f-file. Black wants ...d6 or ...d5 to break up your e5 pawn.",
+    "remember": [
+      "Qe2 breaks the pin: exf6 becomes a real threat.",
+      "Nf3 stops ...Qh4+.",
+      "d4 and Bxf4 win back the gambit pawn with a big centre."
+    ]
+  },
 }

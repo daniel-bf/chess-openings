@@ -14,7 +14,7 @@ export const pirc: OpeningSource = {
   ],
   lines: [
     {
-      name: "Austrian Attack (4.f4)",
+      name: "Austrian Attack: Weiss Variation (6.Bd3)",
       pgn: `1. e4 d6 {The Pirc starts quietly. ...d6 controls e5, so after ...Nf6 White cannot easily kick the knight with e5.}
         2. d4 Nf6 {Develops and attacks e4, forcing White to defend it.}
         3. Nc3 {The natural way to protect e4.}
@@ -31,7 +31,7 @@ export const pirc: OpeningSource = {
         b6 {Keeps the queenside solid and prepares ...a6, ...Rb8 and ...b5 anyway. Always watch for White's e5 push in the centre.}`,
     },
     {
-      name: "150 Attack (4.Be3)",
+      name: "150 Attack (4.Be3 and 5.Qd2)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
         4. Be3 {The 150 Attack: White plans Qd2, Bh6 to swap off your g7 bishop, then f3 and a pawn storm with h4-h5.}
         Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
@@ -44,7 +44,7 @@ export const pirc: OpeningSource = {
         9. Qxh6 Bb7 {Develops the last minor piece on the long light diagonal towards e4. Next ...e5, ...Qb6 or ...a5 with play on the queenside; your king can stay in the centre or go queenside.}`,
     },
     {
-      name: "Classical System (4.Nf3 and 5.Be2)",
+      name: "Classical: Quiet System, Czech Defence (5.Be2 O-O 6.O-O c6)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
         4. Nf3 {The Classical system: calm development with Be2 and short castling.}
         Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
@@ -66,7 +66,7 @@ export const pirc: OpeningSource = {
         7. Bg3 Nh5 {Attack the bishop: you swap your knight for it and get the bishop pair (two bishops against bishop and knight).}`,
     },
     {
-      name: "Fianchetto System (4.g3)",
+      name: "Sveshnikov System (4.g3)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
         4. g3 {White puts a bishop on g2 too: a solid set-up aiming for a small, safe edge.}
         Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
@@ -97,10 +97,10 @@ export const pirc: OpeningSource = {
         4. Nf3 Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
         5. O-O O-O {Castle: your king is safe behind the g7 bishop before you start central play.}
         6. c3 {A solid centre: c3 supports d4 and blunts your g7 bishop.}
-        Nc6 {Develops and adds pressure on d4, preparing ...e5 to challenge the centre.}`,
+        Nbd7 {Develops and backs up ...e5, so that after dxe5 you can take back with the knight or pawn and keep control of e5. ...e5 and ...Re8 come next.}`,
     },
     {
-      name: "3.f3 (King's Indian structure)",
+      name: "3.f3: King's Indian, Sämisch Variation",
       pgn: `1. e4 d6 2. d4 Nf6
         3. f3 {White supports e4 with a pawn and may follow with c4, reaching a King's Indian structure.}
         g6 {Prepares the fianchetto as usual.}
@@ -110,6 +110,36 @@ export const pirc: OpeningSource = {
         6. Be3 e5 {Hit d4 at once, a standard answer to this set-up.}
         7. d5 {White closes the centre.}
         Nh5 {Clears the f-pawn so it can go to f5 and attack e4, and eyes f4. Because f3 weakened White's dark squares, ...Qh4+ can also be an idea.}`,
+    },
+    {
+      name: "Austrian Attack: Unzicker Attack (6.e5)",
+      pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. f4 Bg7 5. Nf3 O-O
+        6. e5 {The Unzicker Attack: White kicks your knight at once, hoping to drive it back and cramp you.}
+        dxe5 {Swap first, so the f-pawn has to take back and White's centre is less solid.}
+        7. fxe5 Nd5 {The knight jumps to the centre instead of going backwards.}
+        8. Bc4 {Attacks the d5 knight.}
+        Nb6 {Retreat with tempo on the c4 bishop.}
+        9. Bb3 Nc6 {Develops and adds pressure on d4 and e5.}
+        10. Be3 Bg4 {Pins the f3 knight, a defender of d4 and e5. Next ...Na5 to swap off the b3 bishop, or ...f6 to break up the centre.}`,
+    },
+    {
+      name: "Classical: Schlechter Variation (5.h3)",
+      pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7
+        5. h3 {The Schlechter Variation: h3 stops ...Bg4 and ...Ng4, so White can play Be3 in peace.}
+        O-O {Castle first; your king is safe behind the g7 bishop.}
+        6. Be3 {White plans Qd2 and perhaps long castling.}
+        a6 {Prepares ...b5 to gain queenside space, the usual plan against Be3 and Qd2 set-ups.}
+        7. a4 {Stops ...b5.}
+        b6 {Prepares ...Bb7, aiming at e4, and keeps the queenside flexible. Next ...Bb7, ...Nbd7 and ...e5 or ...c5.}`,
+    },
+    {
+      name: "Bayonet Attack (4.Be2 Bg7 5.h4)",
+      pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
+        4. Be2 {A flexible bishop move that keeps the f-pawn free and prepares h4.}
+        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
+        5. h4 {The Bayonet Attack: White wants h5 to open the h-file towards your king.}
+        h5 {Stop h5 for good. White's attack has no h-file to use, so your king can castle short.}
+        6. Nf3 O-O {Castle now that the h-file is shut. Next ...c6, ...Nbd7 and ...e5, or ...Bg4 to pin the f3 knight.}`,
     },
   ],
 }

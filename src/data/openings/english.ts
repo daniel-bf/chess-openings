@@ -14,7 +14,7 @@ export const english: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Four Knights: 4.g3 d5 (Reversed Sicilian)',
+      name: "King's English: Four Knights, Fianchetto Line with ...Nb6 (4...d5)",
       pgn: `1. c4 {The English: the c-pawn controls d5 from the side.}
         e5 {Black takes the centre. This is a Sicilian with colours reversed, and White has an extra move.}
         2. Nc3 {Develops and adds control of d5.}
@@ -30,7 +30,7 @@ export const english: OpeningSource = {
         O-O 9. a3 {Prepares b4 to gain queenside space and push away the c6 knight later with b5.}`,
     },
     {
-      name: 'Closed English: Rb1 and b4',
+      name: "King's English: Closed System, Full Symmetry (6.Rb1)",
       pgn: `1. c4 e5 2. Nc3
         Nc6 3. g3 {Prepares the bishop on g2.}
         g6 {Black also fianchettoes. With both sides keeping their centre pawns back, this is the Closed English.}
@@ -45,7 +45,7 @@ export const english: OpeningSource = {
         Nf6 10. b5 {Kicks the c6 knight away from d4 and gains more queenside space.}`,
     },
     {
-      name: 'Symmetrical English',
+      name: 'Symmetrical: Mecking Variation (7.d4)',
       pgn: `1. c4
         c5 {The Symmetrical English: Black copies White.}
         2. Nf3 {Develops and prepares a later d4.}
@@ -59,7 +59,7 @@ export const english: OpeningSource = {
         d6 10. Qd3 {Steps off the long diagonal, so Black cannot win time with ...Ng4 or ...Nd5 uncovering the g7 bishop. White keeps a small space edge thanks to the c4 pawn.}`,
     },
     {
-      name: 'Mikenas Attack (2...e6 3.e4)',
+      name: 'Mikenas-Carls Variation: Flohr line (3...d5 4.e5)',
       pgn: `1. c4 Nf6 2. Nc3 {Develops and controls d5 and e4.}
         e6 3. e4 {The Mikenas Attack: White grabs the centre at once.}
         d5 {Black hits the e4 pawn.}
@@ -70,7 +70,7 @@ export const english: OpeningSource = {
         Qxf6 7. d4 {Builds a strong pawn centre and shuts the queen out of c3. White has more central pawns and quick development.}`,
     },
     {
-      name: "Against the King's Indian setup",
+      name: "King's Indian: Averbakh Variation (3.e4, 6.Bg5)",
       pgn: `1. c4 Nf6 2. Nc3
         g6 3. e4 {Takes the centre with pawns: this will become a King's Indian.}
         d6 4. d4 {A big pawn centre.}
@@ -78,7 +78,7 @@ export const english: OpeningSource = {
         O-O 6. Bg5 {The Averbakh setup: the bishop pins the f6 knight and makes Black's usual ...e5 break harder to prepare.}`,
     },
     {
-      name: "Transposing to the Queen's Gambit",
+      name: "QGD: Modern Variation, Normal Line (1...e6 2...d5 3.d4)",
       pgn: `1. c4
         e6 2. Nc3 {Develops and controls d5.}
         d5 3. d4 {Transposes to the Queen's Gambit Declined.}
@@ -87,7 +87,7 @@ export const english: OpeningSource = {
         O-O 6. Nf3 {The same QGD setup as in the Queen's Gambit course.}`,
     },
     {
-      name: 'Four Knights: 4.g3 Bb4',
+      name: "King's English: Four Knights, Fianchetto Line (4...Bb4)",
       pgn: `1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. g3
         Bb4 {Pins the c3 knight to fight for the d5 and e4 squares.}
         5. Bg2 {Bishop on the long diagonal.}
@@ -99,7 +99,7 @@ export const english: OpeningSource = {
         9. f3 {Attacks e4 again to open the centre. Then White's bishops get open lines.}`,
     },
     {
-      name: '1...Nf6 2...c5 transposing',
+      name: 'Symmetrical: Mecking Variation via 1...Nf6 2...c5',
       pgn: `1. c4 Nf6 2. Nc3
         c5 3. Nf3 {Develops and prepares d4.}
         Nc6 4. g3 {Prepares the fianchetto.}
@@ -107,7 +107,7 @@ export const english: OpeningSource = {
         Bg7 6. O-O O-O 7. d4 {The Symmetrical main line again.}`,
     },
     {
-      name: 'Caro-Kann setup (1...c6)',
+      name: 'Caro-Kann: Panov Attack via 1...c6 2.e4',
       pgn: `1. c4
         c6 {Black prepares ...d5, as in the Caro-Kann.}
         2. e4 {Takes the centre and stops ...d5 from being played comfortably.}
@@ -116,7 +116,7 @@ export const english: OpeningSource = {
         Nf6 5. Nc3 {Develops with a second attacker on d5 alongside the c4 pawn.}`,
     },
     {
-      name: 'Modern setup (1...g6)',
+      name: 'Symmetrical: Mecking Variation via 1...g6',
       pgn: `1. c4
         g6 {Black prepares ...Bg7 first.}
         2. Nc3 {Develops and controls d5.}
@@ -126,13 +126,45 @@ export const english: OpeningSource = {
         Nf6 6. O-O O-O 7. d4 {The same Symmetrical main line.}`,
     },
     {
-      name: 'Reversed Sicilian: 2...Bb4',
+      name: "King's English: Kramnik-Shirov Counterattack (2...Bb4 3.Nd5)",
       pgn: `1. c4 e5 2. Nc3
         Bb4 {Pins the knight, threatening ...Bxc3 to double White's pawns.}
         3. Nd5 {Attacks the bishop and avoids doubled pawns. The knight is strong on d5.}
         Be7 {Black retreats.}
         4. d4 {Attacks e5 and grabs central space.}
         d6 5. e4 {A big pawn centre. White is comfortable and can trade the knight for the e7 bishop when it suits him.}`,
+    },
+    {
+      name: "Anglo-Indian: Anglo-Grünfeld Variation (4.g3 g6 5.Bg2 Nxc3)",
+      pgn: `1. c4 Nf6 2. Nc3
+        d5 {The Anglo-Grünfeld: Black strikes in the centre at once, as in the Grünfeld Defence.}
+        3. cxd5 {Trades the c-pawn for Black's centre pawn.}
+        Nxd5 4. g3 {Botvinnik's move: the bishop will go to g2 and hit the d5 knight along the long diagonal.}
+        g6 5. Bg2 {Now the knight on d5 is attacked by the bishop as well as the c3 knight.}
+        Nxc3 {Black trades knights so his own knight is not chased around.}
+        6. bxc3 {Recaptures toward the centre and opens the b-file for a rook.}
+        Bg7 7. Rb1 {The rook uses the half-open b-file to attack b7, which the g2 bishop is also aiming at.}`,
+    },
+    {
+      name: "Symmetrical: Rubinstein Variation (3...d5 4.cxd5 Nxd5 5.g3)",
+      pgn: `1. c4 Nf6 2. Nc3 c5 3. Nf3
+        d5 {Black opens the centre straight away.}
+        4. cxd5 {Exchanges, so Black has to recapture with the knight.}
+        Nxd5 5. g3 {Prepares Bg2, which will hit the d5 knight and the long diagonal.}
+        Nc6 6. Bg2 {The bishop pins down the d5 knight, which has to move again.}
+        Nc7 {The Rubinstein System: the knight retreats to c7 to support ...e5, building a reversed Maróczy Bind (pawns on c5 and e5 that clamp the d4 square).}
+        7. O-O {King to safety before the centre opens.}
+        e5 8. d3 {Controls e4 and c4 and opens the c1 bishop. White plans Nd2-c4, a3 and b4 to break up Black's clamp on the queenside.}`,
+    },
+    {
+      name: "King's English: Four Knights, Fianchetto Line with ...d6 (4...Bc5)",
+      pgn: `1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. g3
+        Bc5 {The bishop aims at f2, a natural developing move.}
+        5. Bg2 {Bishop on the long diagonal.}
+        d6 6. O-O {King to safety.}
+        O-O 7. d3 {Controls e4 and opens the c1 bishop.}
+        h6 {Stops Bg5 and Ng5.}
+        8. a3 {Prepares b4, which would gain queenside space with tempo by attacking the c5 bishop.}`,
     },
   ],
 }

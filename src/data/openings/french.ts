@@ -14,7 +14,7 @@ export const french: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Advance: 5...Qb6 6.a3',
+      name: 'Advance: Main Line (6.a3 c4)',
       pgn: `1. e4 e6 {The French. You prepare ...d5 so that if White takes, a pawn can take back.}
         2. d4 d5 {Challenges e4 at once. White must defend, swap or push it.}
         3. e5 {The Advance Variation. White grabs space and cramps your kingside, but the d4 pawn now holds the whole chain.}
@@ -30,7 +30,7 @@ export const french: OpeningSource = {
         Bd7 {Develops your problem bishop; it can go to b5 or a4 later. Then come ...Ne7 and ...f6.}`,
     },
     {
-      name: 'Advance: 6.Be2',
+      name: 'Advance: Paulsen Attack (6.Be2)',
       pgn: `1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6
         6. Be2 {Solid. White simply plans to castle and defend d4.}
         cxd4 {Swap now so the c-file opens and White's d4 pawn loses its c3 support.}
@@ -41,7 +41,7 @@ export const french: OpeningSource = {
         10. Kf1 Be7 {The bishop drops back with its job done: White can no longer castle and the h1 rook is stuck.}`,
     },
     {
-      name: 'Advance: Milner-Barry Gambit',
+      name: 'Advance: Milner-Barry Gambit, Main Line (6.Bd3)',
       pgn: `1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6
         6. Bd3 {The Milner-Barry Gambit: White is ready to give up the d4 pawn for fast development.}
         cxd4 {Swap first so the d4 pawn has no pawn support.}
@@ -51,7 +51,7 @@ export const french: OpeningSource = {
         10. Nc3 a6 {Stops Nb5, which would hit your queen and the c7 square.}`,
     },
     {
-      name: 'Winawer: Poisoned Pawn',
+      name: 'Winawer: Poisoned Pawn Variation, Main Line (7.Qg4)',
       pgn: `1. e4 e6 2. d4 d5
         3. Nc3 {The main line: the knight defends e4.}
         Bb4 {The Winawer: pin the knight that defends e4.}
@@ -72,7 +72,7 @@ export const french: OpeningSource = {
         dxc3 {Take on c3: the pawn there cramps White's queenside. A sharp, double-edged fight.}`,
     },
     {
-      name: 'Exchange Variation',
+      name: 'Exchange Variation (3.exd5)',
       pgn: `1. e4 e6 2. d4 d5
         3. exd5 {The Exchange: a symmetrical, quiet structure.}
         exd5 {Take back: the c8 bishop is no longer shut in.}
@@ -83,7 +83,7 @@ export const french: OpeningSource = {
         8. Nbd2 Nbd7 {Protects f6, so Bxf6 can be met with the knight. Equal, and easy to play.}`,
     },
     {
-      name: 'Tarrasch: 3...c5',
+      name: 'Tarrasch: Chistyakov Defence, Modern Line (3...c5 4.exd5 Qxd5)',
       pgn: `1. e4 e6 2. d4 d5
         3. Nd2 {The Tarrasch. The knight defends e4 without being pinned by ...Bb4.}
         c5 {Hit the centre at once.}
@@ -97,7 +97,7 @@ export const french: OpeningSource = {
         10. Nxd4 a6 {Stops Nb5 and Bb5+ and prepares ...b5. Your pawns are healthy.}`,
     },
     {
-      name: 'Winawer: 7.a4',
+      name: 'Winawer: Positional Variation (7.a4)',
       pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7
         7. a4 {Prepares Ba3, where the bishop would hit your c5 pawn and e7 knight.}
         Nbc6 {Develops and adds pressure on d4.}
@@ -106,7 +106,7 @@ export const french: OpeningSource = {
         10. Be2 f6 {Attack the front of the chain to open the f-file for your rook.}`,
     },
     {
-      name: 'Winawer: Exchange (4.exd5)',
+      name: 'Winawer: Delayed Exchange Variation (4.exd5)',
       pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4
         4. exd5 exd5 {A symmetrical structure, but your bishop is already active on b4.}
         5. Bd3 Nc6 {Develops and eyes d4.}
@@ -116,7 +116,7 @@ export const french: OpeningSource = {
         9. O-O O-O {Equal, with White's doubled pawns as a long-term target.}`,
     },
     {
-      name: 'Winawer: 4.a3',
+      name: 'Winawer: 4.a3 (Bxc3+ and ...dxe4)',
       pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4
         4. a3 {White forces the bishop to decide at once.}
         Bxc3+ {Swap: White gets doubled pawns.}
@@ -137,6 +137,38 @@ export const french: OpeningSource = {
         6. Bg2 Be7 {Prepare to castle.}
         7. O-O O-O {King to safety.}
         8. Re1 b5 {Race on the queenside with ...b4 and ...a5 while White pushes e5 and attacks your king.}`,
+    },
+    {
+      name: 'Winawer: Positional Variation (7.Nf3)',
+      pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7
+        7. Nf3 {The Positional Variation: White skips Qg4, develops and keeps the centre solid.}
+        Nbc6 {Develops and adds pressure on d4.}
+        8. Be2 {Quiet development so White can castle.}
+        Qa5 {Pins the c3 pawn to the king and presses on the doubled pawns.}
+        9. Bd2 {Defends c3 and unpins.}
+        Bd7 {Develops and connects your rooks; the bishop can later go to a4 or b5.}
+        10. O-O c4 {Closes the queenside: White's c3 and a3 pawns become fixed targets, and White's light-squared bishop has fewer squares. You can castle long or keep the king in the centre.}`,
+    },
+    {
+      name: 'Advance: Nimzowitsch System, Ruisdonk Gambit (4.Nf3 cxd4 5.Bd3)',
+      pgn: `1. e4 e6 2. d4 d5 3. e5 c5
+        4. Nf3 {The Nimzowitsch System: White develops instead of supporting d4 with c3.}
+        cxd4 {Take the pawn: without c3 there is no pawn to recapture.}
+        5. Bd3 {The Ruisdonk Gambit: White gives up the d4 pawn for fast development and attacking chances.}
+        Nc6 {Develops and holds the extra pawn on d4.}
+        6. O-O Nge7 {The knight heads for g6, where it attacks the e5 pawn and guards your king.}
+        7. Bf4 {Defends e5.}
+        Ng6 {Hits the f4 bishop and adds a third attacker on e5. You are a pawn up with a solid position.}`,
+    },
+    {
+      name: 'Tarrasch: Open System, Euwe-Keres Line (4.Ngf3)',
+      pgn: `1. e4 e6 2. d4 d5 3. Nd2 c5
+        4. Ngf3 {The Euwe-Keres Line: White develops first and keeps exd5 for later.}
+        cxd4 {Release the tension in the centre.}
+        5. exd5 {White opens the centre.}
+        Qxd5 {Take back with the queen, just as against 4.exd5: no isolated pawn for you.}
+        6. Bc4 Qd6 {Now it is the same position as in the 4.exd5 line, and the same plan applies.}
+        7. O-O Nf6 8. Nb3 Nc6 {The usual set-up: ...Nc6 protects the d4 pawn one more time.}`,
     },
   ],
 }

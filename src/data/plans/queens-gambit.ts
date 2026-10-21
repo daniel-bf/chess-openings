@@ -2,19 +2,19 @@ import type { Plans } from './types'
 
 export const queensGambitPlans: Plans = {
   "queens-gambit:0": {
-    "plan": "Black has freed his position with Capablanca's ...dxc4, ...Nd5 and ...e5, and several pieces are off. White keeps a small edge thanks to the active rook on c3 and the bishop aiming at f7. Typical plans are Qc2 and Rd1 or Re1, and taking on e5 when it suits you. Black wants to finish with ...exd4 and ...Bg4 or ...Nf6 and equalise.",
+    "plan": "Black has freed his position with Capablanca's ...dxc4, ...Nd5 and ...e5, and after 13.dxe5 and the knight trade the centre is open. White keeps a small initiative: f4 gains space and kicks the queen, the c4 bishop and the f-file aim at f7, and the c3 rook can swing to the kingside or the d-file. Black wants ...Bf5 or ...Bg4 and to trade more pieces to reach a level endgame.",
     "remember": [
       "4.Bg5 pins the f6 knight, one of the two defenders of d5.",
       "7.Rc1 goes to the c-file before it opens; after ...dxc4 Bxc4 and ...Nd5, trade with 10.Bxe7 and 12.Rxc3.",
-      "After Black's freeing ...e5, 13.Bb3 tucks the bishop away from ...exd4 and ...b5 while it keeps hitting f7.",
+      "After Black's freeing ...e5, 13.dxe5 and 14.Nxe5 bring the queen to e5, and 15.f4 chases it with gain of time.",
     ]
   },
   "queens-gambit:1": {
-    "plan": "After Bxf6 and cxd5, Black's d5 pawn is fixed and his b7 bishop bites on it. White pushes the queenside pawns (b4, then a4 and b5) to break up Black's c6 or c7 pawn and leave a weak pawn on c6 or d5 to attack. Black has the two bishops and wants the freeing ...c5; b4 makes that much harder.",
+    "plan": "After the early cxd5 and two trades, Black's pawn on d5 blocks his own b7-a8 diagonal, so the Tartakower bishop ends up on e6. Black's usual plan is ...c5, accepting 'hanging pawns' on c5 and d5 (two side-by-side pawns with no pawn support from the sides). White piles up on them with Qa3, Rc1 and Bb5 or Be2, and waits for a pawn to become weak.",
     "remember": [
       "7.Bh4 keeps the pin after ...h6.",
-      "9.Bxf6 and 10.cxd5 force ...exd5, so Black's own pawn blocks the b7 bishop.",
-      "11.b4 stops ...c5 and starts the queenside advance; b5 is the follow-up.",
+      "8.cxd5 and 10.Nxd5 force ...exd5, so the d5 pawn blocks Black's long diagonal.",
+      "11.Rc1 and 12.Qa4 (Fischer's idea) aim at c5 and a7; if ...c5, Qa3 hits c5 again.",
     ]
   },
   "queens-gambit:2": {
@@ -87,6 +87,30 @@ export const queensGambitPlans: Plans = {
       "5.c5 gains space and makes ...b5 pointless, since there is no c4 pawn to attack.",
       "6.Bf4 controls e5 and makes Black's ...e5 break harder.",
       "7.e3 supports d4; then Be2, O-O and b4 follow.",
+    ]
+  },
+  "queens-gambit:11": {
+    "plan": "Black has an isolated pawn on d5. White blockades the square in front of it (d4) with a knight, presses on it with the g2 bishop, the rooks on the c- and d-files and the queen, and is happy to trade pieces, because the weak pawn gets weaker in an endgame. Black wants active piece play: ...Re8, ...Bg4 or ...Be6, and the ...d4 break when it works.",
+    "remember": [
+      "4.cxd5 forces ...exd5 and leaves Black with an isolated d-pawn.",
+      "6.g3 and 7.Bg2 aim the bishop straight at d5.",
+      "After 9...cxd4 10.Nxd4 h6, 11.Be3 keeps the bishop guarding d4, the square in front of the pawn.",
+    ]
+  },
+  "queens-gambit:12": {
+    "plan": "White has a big centre with the e4 pawn and quicker development, and the queens are already off. White develops with Bb5+ or Bc4, Be3, O-O-O or Ke2, and uses the half-open d-file and the extra central space. Black aims to finish development with ...Bc5 or ...Bb4 and ...Nc6 and to target the e4 pawn.",
+    "remember": [
+      "3.cxd5 and 4.e4 grab the centre and kick the d5 knight.",
+      "Against ...e5 play 6.Nf3, not 6.dxe5 Qxd1+.",
+      "7.Qxd4 and 8.Nxd4 leave White with a centralised knight and a lead in development.",
+    ]
+  },
+  "queens-gambit:13": {
+    "plan": "This is just a move-order trick: after 3...Be7 4.Nf3 Nf6 5.Bg5 h6 6.Bh4 O-O 7.e3 the position is the same as in the Tartakower and Lasker lines. Black chooses between ...b6 (meet it with cxd5), ...Ne4 (trade bishops on e7 and play cxd5), and ...Nbd7. White's plans are the same: c-file pressure, a later Rc1 and Bd3.",
+    "remember": [
+      "4.Nf3 controls e5 and keeps the normal QGD set-up.",
+      "5.Bg5 pins the f6 knight once it arrives.",
+      "7.e3 reaches the main-line position after 6...O-O.",
     ]
   },
 }

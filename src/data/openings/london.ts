@@ -14,7 +14,7 @@ export const london: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Main line: ...e6, ...c5, ...Bd6',
+      name: 'London System: Main Line (...e6, ...c5, ...Bd6 7.Bg3)',
       pgn: `1. d4 {Puts a pawn in the centre and opens the c1 bishop.}
         d5 2. Bf4 {The London: the bishop comes out now, before e3 would lock it inside the pawn chain.}
         Nf6 3. e3 {Supports d4 and opens the f1 bishop.}
@@ -28,7 +28,7 @@ export const london: OpeningSource = {
         b6 9. Ne5 {The classic London knight: strong on e5, supported by d4. Next can come Qf3, f4 or castling, aiming at the kingside.}`,
     },
     {
-      name: '2...c5 and ...Qb6: the 6...Bf5? trap',
+      name: 'Accelerated London: Steinitz Countergambit (2...c5), the 6...Bf5? trap',
       pgn: `1. d4 d5 2. Bf4
         c5 {Black attacks d4 straight away.}
         3. e3 {Supports d4. The f1 bishop is now free too.}
@@ -44,7 +44,7 @@ export const london: OpeningSource = {
         Nf6 9. Qxc4 {White is a piece up. After ...Qc1+ the king steps to e2 and is safe enough.}`,
     },
     {
-      name: "Against the King's Indian setup",
+      name: "London System, with Be2: King's Indian setup (2...g6)",
       pgn: `1. d4
         Nf6 2. Bf4 {The London works against 1...Nf6 as well: the same setup follows.}
         g6 {Black prepares ...Bg7, the King's Indian setup.}
@@ -56,7 +56,7 @@ export const london: OpeningSource = {
         Nc6 8. O-O {King to safety. White is solid and waits to see whether Black goes for ...e5 or queenside play.}`,
     },
     {
-      name: '1...Nf6 2...e6 transposing',
+      name: 'Accelerated London: 1...Nf6 2...e6 into the main line',
       pgn: `1. d4 Nf6 2. Bf4
         e6 3. e3 {Supports d4 and frees the f1 bishop, just as in the main line.}
         c5 4. c3 {The pawn triangle again, holding d4 against ...c5.}
@@ -65,7 +65,7 @@ export const london: OpeningSource = {
         Bd6 7. Bg3 O-O 8. Bd3 {The same structure as the main line.}`,
     },
     {
-      name: '2...Bf5 mirror',
+      name: 'Accelerated London: Symmetrical 2...Bf5 (5.Bd3)',
       pgn: `1. d4 d5 2. Bf4
         Bf5 {Black copies White's bishop move.}
         3. e3 {Supports d4 and opens the f1 bishop, which will challenge Black's bishop from d3.}
@@ -77,7 +77,7 @@ export const london: OpeningSource = {
         Bd6 9. Bg3 {The usual answer to ...Bd6: if ...Bxg3, hxg3 opens the h-file.}`,
     },
     {
-      name: '3...Bf5 with 4.c4',
+      name: 'Accelerated London: 3...Bf5 (4.c4 and Qb3)',
       pgn: `1. d4 d5 2. Bf4 Nf6 3. e3
         Bf5 {Black develops actively, but now b7 has no defender.}
         4. c4 {Attacks d5 and opens the d1-b3 diagonal, so the queen can go to b3 and hit b7.}
@@ -88,14 +88,14 @@ export const london: OpeningSource = {
         Qxb3 8. axb3 {Recaptures toward the centre. The a-file opens for White's rook and the b-pawns support b4-b5 to attack Black's queenside.}`,
     },
     {
-      name: '3...c5 4.c3 transposing',
+      name: 'Accelerated London: 3...c5 4.c3 into the main line',
       pgn: `1. d4 d5 2. Bf4 Nf6 3. e3
         c5 4. c3 {Answers ...c5 by supporting d4 with a second pawn.}
         Nc6 5. Nd2 {Develops and keeps the g1 knight flexible. It also covers e4.}
         e6 6. Ngf3 Bd6 7. Bg3 O-O 8. Bd3 {The main London structure again.}`,
     },
     {
-      name: 'Against the Dutch (1...f5)',
+      name: 'Dutch Defence: London setup (2.Bf4)',
       pgn: `1. d4
         f5 {The Dutch: Black fights for the e4 square with a pawn.}
         2. Bf4 {The London setup works here too.}
@@ -108,7 +108,7 @@ export const london: OpeningSource = {
         O-O 8. Bd3 {Bishop aimed at f5 and Black's slightly loosened kingside. Ideas include Qe2, e4 to open the centre, or g4 to attack.}`,
     },
     {
-      name: '2...e6 with ...Bd6',
+      name: 'Accelerated London: 2...e6 3.e3 Bd6 (4.Bg3)',
       pgn: `1. d4 d5 2. Bf4
         e6 3. e3 {Solid: supports d4 and frees the f1 bishop.}
         Bd6 {Black challenges the bishop at once.}
@@ -119,7 +119,7 @@ export const london: OpeningSource = {
         O-O 8. Ngf3 {Standard setup reached. Ne5 is coming.}`,
     },
     {
-      name: '3...c6 4.Nf3 Bf5',
+      name: 'Accelerated London: Slav setup 3...c6 (5.Bd3)',
       pgn: `1. d4 d5 2. Bf4 Nf6 3. e3
         c6 {A solid setup: c6 backs up d5 and opens the d8-a5 diagonal for the queen, so ...Qb6 is possible.}
         4. Nf3 {Simple development. Because ...c6 makes ...Qb6 easy, the 4.c4 and Qb3 idea is less effective here.}
@@ -130,13 +130,42 @@ export const london: OpeningSource = {
         Be7 9. e4 {Opens the centre now that White is fully developed. The queen on d3 and the d2 knight both support it.}`,
     },
     {
-      name: '1...Nf6 2...d6 setup',
+      name: 'London System, with Be2: Old Indian move order (2...d6)',
       pgn: `1. d4 Nf6 2. Bf4
         d6 {Black prepares ...e5 to attack the bishop and the d4 pawn.}
         3. e3 {Supports d4 and opens the f1 bishop.}
         g6 4. Nf3 {Controls e5, making ...e5 harder.}
         Bg7 5. Be2 {Against a fianchetto the bishop is better on e2 than d3; it covers g4.}
         O-O 6. h3 {Same plan as against the King's Indian setup: a retreat square on h2 for the bishop.}`,
+    },
+    {
+      name: 'Accelerated London: 2...c5 3.e3 Qb6, Poisoned Pawn (4.Nc3)',
+      pgn: `1. d4 Nf6 2. Bf4
+        c5 {Black attacks d4 at once, before White has played c3.}
+        3. e3 {Supports d4 and opens the f1 bishop.}
+        Qb6 {The most critical line against the London: the queen hits b2, which lost its defender when the bishop left c1.}
+        4. Nc3 {Develops and leaves b2 as bait. If Black takes it, the knight jumps to b5 with threats.}
+        Qxb2 {Black grabs the "poisoned" pawn.}
+        5. Nb5 {Threatens Nc7+, forking the king and the a8 rook. Black has to find ...Nd5 at once, and White follows with Rb1 or a3 to harass the queen while Black lags in development.}`,
+    },
+    {
+      name: "Accelerated London: Queen's Indian setup (3...b6)",
+      pgn: `1. d4 Nf6 2. Bf4 e6 3. e3
+        b6 {A Queen's Indian setup: the bishop goes to b7 to control e4.}
+        4. Nf3 {Develops and controls e5.}
+        Bb7 5. h3 {Makes a retreat square on h2 for the bishop and keeps Black's knight off g4.}
+        Be7 6. Bd3 {The bishop helps fight for e4 and aims at h7.}
+        O-O 7. O-O {King to safety.}
+        c5 8. c3 {The pawn triangle again, so d4 stays protected by a pawn. Next come Nbd2 and Qe2, as in Carlsen v Tomashevsky, 2016.}`,
+    },
+    {
+      name: 'Accelerated London: 3...c5 4.c3 Qb6 (5.Qb3)',
+      pgn: `1. d4 d5 2. Bf4 Nf6 3. e3 c5 4. c3
+        Qb6 {Black goes for b2 again.}
+        5. Qb3 {Defends b2 and offers a queen trade. If ...Qxb3 axb3, the a-file opens for White's rook.}
+        c4 {Avoids the trade and kicks the queen.}
+        6. Qc2 {Still guards b2. Here 6...Bf5? fails to 7.Qxf5 Qxb2 8.Qc8 mate: the b8 knight blocks the a8 rook from guarding c8, and nothing can block on d8.}
+        Nc6 7. Nd2 {Develops and supports a later e4 break, which hits Black's centre now that ...c4 has released the tension. Next come Ngf3, Be2 and castling.}`,
     },
   ],
 }

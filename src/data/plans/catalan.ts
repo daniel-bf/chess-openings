@@ -65,4 +65,28 @@ export const catalanPlans: Plans = {
       "8.e4 answers ...e5 by grabbing more central space.",
     ]
   },
+  "catalan:8": {
+    "plan": "Black is holding the c4 pawn with ...a6 and ...b5, but his queenside is loose and the long diagonal toward c6 and a8 is open. White plays Rd1, then e4 or d5 in the centre, and attacks the queenside pawns with a4 or b3 to win back c4. Black wants ...Bd6, ...O-O and ...Na5 or ...Rb8 to keep the pawn and finish development.",
+    "remember": [
+      "6.O-O first: the c4 pawn does not run away.",
+      "7.e3 and 8.Qe2 keep d4 solid and aim the queen at c4.",
+      "9.Rd1 opposes Black's queen and prepares d5 or e4; a4 or b3 attacks the ...b5 chain later.",
+    ]
+  },
+  "catalan:9": {
+    "plan": "Black has won back the gambit pawn, so material is level. White has a small edge thanks to the c4 pawn and easy development: O-O, then Nb3 or a3 to question the b4 bishop, and pressure on the d-file. If Black takes on d2, White gets the bishop pair; Black's ideas are ...d6, ...a5-a4 and a kingside attack with ...Rh6 in some lines.",
+    "remember": [
+      "4.Bf4 defends e5 and develops: the most dangerous answer to the Budapest.",
+      "6.Nbd2 blocks the check so the f4 bishop keeps guarding e5.",
+      "After ...Ngxe5, 8.Nxe5 and 9.Be2 finish development; castle next.",
+    ]
+  },
+  "catalan:10": {
+    "plan": "Both fianchetto bishops face each other on the long diagonal. After the knight trade White has the queen on c3 and wants b3, Bb2 and later e4 or d5 to gain central space. Black plays ...f5 or ...d6 and ...Nd7 to control e4, or ...c5 to hit d4.",
+    "remember": [
+      "4.Nf3 and 5.Bg2: the knight stands between the two fianchettoed bishops.",
+      "7.Nc3 controls e4, the square Black's bishop and knight are fighting for.",
+      "After 7...Ne4, 8.Qc2 and 9.Qxc3 keep the pawn structure healthy.",
+    ]
+  },
 }

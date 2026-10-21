@@ -89,4 +89,28 @@ export const englishPlans: Plans = {
       "5.e4 completes the big pawn centre and supports the d5 knight.",
     ]
   },
+  "english:11": {
+    "plan": "After the knight trade White has a pawn on c3, the half-open b-file and the g2 bishop aiming at b7. White plays Rb1, Nf3, O-O and Qa4 or Qb3 to pile up on b7 and the queenside, and can build the centre with d4 later. Black castles, plays ...Nc6 or ...c6 to cover b7, and uses the g7 bishop against c3.",
+    "remember": [
+      "4.g3 and 5.Bg2 hit the d5 knight along the long diagonal.",
+      "After ...Nxc3, 6.bxc3 opens the b-file for White's rook.",
+      "7.Rb1 attacks b7 together with the g2 bishop.",
+    ]
+  },
+  "english:12": {
+    "plan": "Black has built a clamp with pawns on c5 and e5 and a knight on c7, a Maróczy Bind with colours reversed. White plays against it on the queenside with Nd2-c4, a3, Rb1 and b4, and the g2 bishop presses on c6 and b7. Black plays ...Be7, ...O-O and ...Be6 and keeps d4 under control.",
+    "remember": [
+      "4.cxd5 and 5.g3 aim the bishop at the d5 knight.",
+      "6.Bg2 forces the knight to move again; after ...Nc7 Black prepares ...e5.",
+      "8.d3 controls e4 and c4; then Nd2-c4, a3 and b4 attack the clamp.",
+    ]
+  },
+  "english:13": {
+    "plan": "This is a calm Reversed Sicilian. Black has a classical set-up with the bishop on c5; White plays a3 and b4 to gain queenside space with tempo, then Bb2 and Rb1, while the g2 bishop presses on b7. Black looks for ...a5 to stop b4, ...Be6 and ...Qd7, or kingside play with ...Nh7 and ...f5.",
+    "remember": [
+      "5.Bg2 and 6.O-O: the usual fianchetto and castle.",
+      "7.d3 controls e4 and opens the c1 bishop.",
+      "8.a3 prepares b4 with gain of time on the c5 bishop.",
+    ]
+  },
 }

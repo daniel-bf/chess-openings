@@ -14,7 +14,7 @@ export const vienna: OpeningSource = {
   ],
   lines: [
     {
-      name: "Vienna Gambit: 3...d5",
+      name: "Vienna Gambit: Breyer Variation (5...Be7)",
       pgn: `1. e4 {Takes a central square and opens lines for the queen and the f1 bishop.}
         e5 {Black claims an equal share of the centre.}
         2. Nc3 {The Vienna Game. The knight protects e4 and leaves the f-pawn free to advance.}
@@ -32,7 +32,7 @@ export const vienna: OpeningSource = {
         Bxf6 9. O-O {Castle. Your rook now stands on the open f-file and your pieces are very active.}`,
     },
     {
-      name: "Vienna Gambit: 5...Nc6",
+      name: "Vienna Gambit: Main Line (5...Nc6)",
       pgn: `1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Nf3
         Nc6 {Black develops and attacks e5.}
         6. Bb5 {Pins the c6 knight to Black's king (the d-pawn has left d7), so it cannot do much against e5.}
@@ -42,7 +42,7 @@ export const vienna: OpeningSource = {
         Be7 10. O-O {Castle. Your rook uses the f-file, and the e5 pawn cramps Black.}`,
     },
     {
-      name: "Vienna Gambit: 3...exf4",
+      name: "Vienna Gambit: 3...exf4 (4.e5 Ng8)",
       pgn: `1. e4 e5 2. Nc3 Nf6 3. f4
         exf4 {Black takes the pawn, but this lets you gain space with tempo.}
         4. e5 {Kick the f6 knight.}
@@ -65,7 +65,7 @@ export const vienna: OpeningSource = {
         exf4 7. Bxf4 {Win the pawn back with a developing move. You have the half-open f-file and easy play.}`,
     },
     {
-      name: "2...Nc6: Hamppe-Allgaier Gambit",
+      name: "Max Lange Defence: Hamppe-Allgaier Gambit (2...Nc6)",
       pgn: `1. e4 e5 2. Nc3
         Nc6 {Black develops and keeps an eye on d4.}
         3. f4 {The Vienna Gambit against ...Nc6.}
@@ -77,7 +77,7 @@ export const vienna: OpeningSource = {
         Kxf7 8. d4 {Build a big centre and open your c1 bishop to win back f4. This is a speculative gambit (engines prefer Black), so keep attacking with Bxf4, Bc4 and O-O.}`,
     },
     {
-      name: "2...Nc6 3...Bc5",
+      name: "Max Lange Defence: 3.f4 Bc5",
       pgn: `1. e4 e5 2. Nc3 Nc6 3. f4
         Bc5 {Black ignores the gambit. The bishop eyes g1, and after 4.fxe5? Black has ...Qh4+.}
         4. Nf3 {Develop and take h4 away from Black's queen.}
@@ -87,7 +87,7 @@ export const vienna: OpeningSource = {
         axb6 7. d3 {Support e4 and open your c1 bishop. You can castle next.}`,
     },
     {
-      name: "2...Bc5",
+      name: "Anderssen Defence (2...Bc5)",
       pgn: `1. e4 e5 2. Nc3
         Bc5 {Black develops the bishop toward f2 and skips ...Nc6.}
         3. Nf3 {Develop and attack e5.}
@@ -97,7 +97,7 @@ export const vienna: OpeningSource = {
         O-O 7. O-O {Both sides are developed, and your e4 pawn against d6 gives you more space.}`,
     },
     {
-      name: "2...d6",
+      name: "Omaha Gambit (2...d6 3.f4)",
       pgn: `1. e4 e5 2. Nc3
         d6 {A quiet move that supports e5.}
         3. f4 {Attack e5 with the f-pawn while it is free.}
@@ -106,6 +106,32 @@ export const vienna: OpeningSource = {
         5. d4 {Take the centre with two pawns.}
         Be7 6. Bxf4 {Win the pawn back with development.}
         O-O 7. Bd3 {Develop behind the e4 pawn, ready to castle with a strong centre.}`,
+    },
+    {
+      name: "Vienna Gambit: 5...Bc5",
+      pgn: `1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Nf3
+        Bc5 {Threatens ...Bf2+, because f2 is now guarded only by your king.}
+        6. d4 {Blocks the bishop's diagonal with tempo and builds a big centre.}
+        Bb4 {The bishop pins your c3 knight instead, adding a second attack on it.}
+        7. Bd2 {Unpins and defends c3 a second time.}
+        c5 {Black hits d4 to undermine your centre.}
+        8. Bd3 {Develops and attacks the e4 knight, the heart of Black's play.}`,
+    },
+    {
+      name: "Vienna Gambit: Kaufmann Variation (5...Bg4)",
+      pgn: `1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Nf3
+        Bg4 {Pins your f3 knight to the queen.}
+        6. Qe2 {The Kaufmann Variation: the queen steps out of the pin and attacks the e4 knight along the e-file.}
+        Nxc3 7. dxc3 {Take back toward the centre: the d-file opens and your c1 bishop is free.}
+        Nc6 8. Bf4 {Protects e5 and develops. Next comes O-O-O, with your rooks on the open d-file.}`,
+    },
+    {
+      name: "Vienna Gambit: 3...exf4 (4.e5 Qe7)",
+      pgn: `1. e4 e5 2. Nc3 Nf6 3. f4 exf4 4. e5
+        Qe7 {Pins the e5 pawn to your king, so it cannot take the f6 knight yet.}
+        5. Qe2 {Breaks the pin, so exf6 is a real threat. The knight has to go back to g8, and Black's queen blocks the f8 bishop.}
+        Ng8 6. Nf3 {Develop and stop ...Qh4+.}
+        Nc6 7. d4 {Build the centre and open your c1 bishop to win back f4. You are well ahead in development.}`,
     },
   ],
 }

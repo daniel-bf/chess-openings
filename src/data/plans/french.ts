@@ -81,4 +81,28 @@ export const frenchPlans: Plans = {
       "...b5 grabs queenside space and prepares ...b4 and ...a5 to open lines there."
     ]
   },
+  "french:10": {
+    "plan": "White develops calmly instead of grabbing on g7. You pile up on the weak doubled c-pawns with ...Nbc6, ...Qa5 and ...Bd7, then close the queenside with ...c4. After that the a3 and c3 pawns are fixed targets for your queen and knights (...Na5-b3), and you can castle long or keep the king in the centre. White's play is on the kingside with h4-h5 or Ng5, so be ready to answer with ...h6 or ...f6.",
+    "remember": [
+      "7...Nbc6 and 8...Qa5 hit d4 and the doubled c3 pawn.",
+      "9...Bd7 develops the problem bishop, which can later come to a4 or b5.",
+      "10...c4 locks the queenside and fixes a3 and c3 as targets for ...Na5-b3."
+    ]
+  },
+  "french:11": {
+    "plan": "White gives up the d4 pawn to develop fast and use the e5 pawn as a spearhead. You take on d4, defend the extra pawn with ...Nc6 and bring the king's knight via e7 to g6, where it attacks e5. Then ...Be7 (or ...Bc5) and short castling. Do not be greedy for more: keep the d4 pawn and finish development, and the extra pawn will tell.",
+    "remember": [
+      "4...cxd4 wins a pawn because White has not played c3.",
+      "5...Nc6 holds the d4 pawn and adds pressure on e5.",
+      "6...Nge7 and 7...Ng6 bring the knight to its best square, attacking e5 and the f4 bishop."
+    ]
+  },
+  "french:12": {
+    "plan": "4.Ngf3 is only a different move order: after ...cxd4 and exd5 Qxd5 you reach the main Chistyakov Defence position of the 4.exd5 line. White wins back the d4 pawn with Nb3 and Nbxd4; you develop with ...Nf6, ...Nc6, ...Be7 and castling, swap a pair of knights on d4 and play ...a6 and ...b5. Your pawns are healthy, so equal endgames are fine for you.",
+    "remember": [
+      "4...cxd4 releases the tension before White can choose the structure.",
+      "5...Qxd5 takes back with the queen, so you do not get an isolated d-pawn.",
+      "6...Qd6 steps away from the c4 bishop and still watches d4; 8...Nc6 adds another guard."
+    ]
+  },
 }

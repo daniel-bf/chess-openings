@@ -14,7 +14,7 @@ export const dutch: OpeningSource = {
   ],
   lines: [
     {
-      name: "Leningrad: main line (7...Qe8 8.d5)",
+      name: "Leningrad Variation (7...Qe8 8.d5)",
       pgn: `1. d4 f5 {The Dutch. Control e4 with a pawn from the side and claim kingside space.}
         2. g3 {White will fianchetto (put the bishop on g2, on the long diagonal), where it aims at e4 and b7.}
         Nf6 {Develop and control e4 again.}
@@ -28,7 +28,7 @@ export const dutch: OpeningSource = {
         9. Be3 Na6 {The knight heads for c5 (or b4), where it presses on White's queenside.}`,
     },
     {
-      name: "Leningrad: 7...Qe8 8.b3",
+      name: "Leningrad Variation (7...Qe8 8.b3)",
       pgn: `1. d4 f5 2. g3 Nf6 3. Bg2 g6 4. Nf3 Bg7 5. O-O O-O 6. c4 d6 7. Nc3 Qe8
         8. b3 {Calm. White prepares Ba3 or Bb2.}
         Na6 {Develop. The knight can go to c7, and it does not get in the way of your c-pawn.}
@@ -38,7 +38,7 @@ export const dutch: OpeningSource = {
         Rb8 {Prepare ...b5 to gain queenside space and challenge c4.}`,
     },
     {
-      name: "2.c4 move order",
+      name: "Leningrad Variation (via 2.c4)",
       pgn: `1. d4 f5
         2. c4 {The most common move. Now White can play Nc3 and e4 more easily.}
         Nf6 {Develop and control e4.}
@@ -48,7 +48,7 @@ export const dutch: OpeningSource = {
         6. O-O d6 {This is the main Leningrad position again. Next comes ...Qe8 or ...c6 to prepare ...e5.}`,
     },
     {
-      name: "2.Nf3 with 6.b3",
+      name: "Leningrad Variation (via 2.Nf3, 6.b3)",
       pgn: `1. d4 f5
         2. Nf3 {A flexible move order. White keeps the c-pawn back.}
         Nf6 {Develop and control e4.}
@@ -59,7 +59,7 @@ export const dutch: OpeningSource = {
         7. Bb2 Qe8 {Support ...e5. The queen can later swing to f7 or h5.}`,
     },
     {
-      name: "Staunton Gambit (2.e4)",
+      name: "Staunton Gambit: Lasker Variation (2.e4)",
       pgn: `1. d4 f5
         2. e4 {The Staunton Gambit. White offers a pawn for quick development and attacking chances.}
         fxe4 {Accept. You are a pawn up and have to keep your king safe.}
@@ -84,7 +84,7 @@ export const dutch: OpeningSource = {
         g4 {Push past. This keeps the kingside closed, while ...gxh4 would open the h-file for White.}`,
     },
     {
-      name: "Raphael Variation (2.Nc3) with 3.Bg5",
+      name: "Raphael Variation (2.Nc3 Nf6 3.Bg5)",
       pgn: `1. d4 f5
         2. Nc3 {White prepares e4.}
         Nf6 {Develop and control e4.}
@@ -96,7 +96,7 @@ export const dutch: OpeningSource = {
         g6 {Protect f5. Next ...Bd6 and ...O-O complete development.}`,
     },
     {
-      name: "London setup (2.Bf4)",
+      name: "London System (2.Bf4)",
       pgn: `1. d4 f5
         2. Bf4 {The London set-up. The bishop controls e5 and White plays e3 and Nf3.}
         Nf6 {Develop and control e4.}
@@ -104,6 +104,37 @@ export const dutch: OpeningSource = {
         4. Nf3 Bg7 {The bishop goes to the long diagonal.}
         5. Be2 O-O {Castle.}
         6. O-O d6 {Prepare ...e5. Later ...Nc6 or ...Nbd7 supports the break, and ...Nh5 can chase the f4 bishop.}`,
+    },
+    {
+      name: "Leningrad Variation (8.d5 a5 9.Nd4)",
+      pgn: `1. d4 f5 2. g3 Nf6 3. Bg2 g6 4. Nf3 Bg7 5. O-O O-O 6. c4 d6 7. Nc3 Qe8 8. d5 a5
+        9. Nd4 {The most popular move here. The knight eyes e6 and b5, and White prepares e4 to open the centre.}
+        Na6 {The usual plan: the knight heads for c5, where the a5 pawn supports it.}
+        10. e4 {White strikes at f5 before you are fully developed.}
+        fxe4 {Take. This opens the f-file for your rook.}
+        11. Nxe4 Nxe4 {Swap knights to reduce White's attacking force.}
+        12. Bxe4 Nc5 {The knight lands on its best square and hits the e4 bishop. Next ...Bd7 and ...Qf7, with play on the f-file.}`,
+    },
+    {
+      name: "Staunton Gambit: Blackmar's Second Gambit (4.f3)",
+      pgn: `1. d4 f5 2. e4 fxe4 3. Nc3 Nf6
+        4. f3 {Blackmar's Second Gambit: White offers a second pawn to open the f-file quickly.}
+        d5 {Hold e4 with a pawn and grab central space. Taking on f3 would only help White develop.}
+        5. fxe4 dxe4 {Recapture: you are still a pawn up, and the e4 pawn cramps White.}
+        6. Bg5 {White attacks the f6 knight, which defends e4.}
+        Bf5 {Defend e4 with the bishop, so even after Bxf6 your pawn stays protected.}
+        7. Bc4 {White aims the bishop at your kingside, through e6 towards g8.}
+        Nc6 {Develop with a hit on d4. Next ...e6 blocks the c4 bishop, and ...Qd7 with ...O-O-O gives your king a safe home.}`,
+    },
+    {
+      name: "Queen's Knight Variation (2.c4 Nf6 3.Nc3)",
+      pgn: `1. d4 f5 2. c4 Nf6
+        3. Nc3 {The Queen's Knight Variation: White develops first and keeps options such as Bg5, Qc2 or e4.}
+        g6 {Stick to the Leningrad set-up.}
+        4. Nf3 Bg7 {The bishop goes to the long diagonal, where it presses on d4.}
+        5. g3 O-O {Castle; your king is safe behind the g7 bishop.}
+        6. Bg2 d6 {Keep White's knight out of e5 and prepare ...e5.}
+        7. O-O Qe8 {This is the main Leningrad position again, reached by a different route. The queen supports ...e5.}`,
     },
   ],
 }

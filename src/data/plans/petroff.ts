@@ -42,11 +42,11 @@ export const petroffPlans: Plans = {
     ]
   },
   "petroff:5": {
-    "plan": "In the Cochrane Gambit White gives a knight for two pawns and a chase of your king. You take the knight, then hit the centre with ...c5 and ...d5 before White's pawns roll forward. After e5 Ng4 and h3 Nxe5 you have won a pawn back and are a piece for two pawns up. Develop quickly with ...Nbc6 or ...Bxc5, tuck your king on g8, and the extra piece should tell.",
+    "plan": "In the Cochrane Gambit White gives a knight for two pawns and a chase of your king. You take the knight, then hit the centre with ...c5 and ...d5 before White's pawns roll forward. After e5 your knight jumps to e4 and then takes on c5, so you win a pawn back and are a piece for two pawns up. Develop quickly with ...Nc6, ...Be7 and ...Be6, tuck your king away on g8 (or castle by hand with ...Rf8 and ...Kg8), and the extra piece should tell.",
     "remember": [
       "4...Kxf7 accepts the sacrifice; 5...Nxe4? 6.Qh5+ is the trap to avoid.",
       "5...c5 and 6...d5 strike the centre at once and open lines for your pieces.",
-      "7...Ng4 and 8...Nxe5 win back the e5 pawn; if Qh5+, block with ...Ng6."
+      "After 7.e5, 7...Ne4 centralises the knight, and 8...Nxc5 wins back a pawn with tempo on the d3 bishop."
     ]
   },
   "petroff:6": {
@@ -63,6 +63,30 @@ export const petroffPlans: Plans = {
       "5...f6 holds the e5 pawn, which the f3 knight attacked.",
       "6...g6 answers Nh4 by stopping Qh5+, a real check now that your f-pawn has moved, and by taking f5 from the knight.",
       "7...Qe7 defends e5 against f4 and covers f7 and the light squares around your king."
+    ]
+  },
+  "petroff:8": {
+    "plan": "White doubles the attack on your e4 knight with Re1 and later Nbd2. You keep the knight in place: ...Bg4 pins the f3 knight and ...f5 gives the e4 knight pawn support, so it becomes a monster on e4. After castling, play ...Bd6 or ...Qd7 and ...Rae8, and be ready for White's Qb3 (hitting b7 and d5), which you meet with ...Na5 or ...Kh8. The f5 pawn loosens your king a little, so do not open the position carelessly.",
+    "remember": [
+      "8...Bg4 pins the f3 knight and adds pressure on d4.",
+      "9...f5 supports the e4 knight with a pawn, the key idea of this line.",
+      "10...O-O tucks your king away; meet Qb3 with ...Na5 or ...Kh8."
+    ]
+  },
+  "petroff:9": {
+    "plan": "White kicks your e4 knight with d3 and gets a quiet, symmetrical position. You retreat to f6, take your share of the centre with ...d5 and copy White's development with ...Bd6 and castling. Then ...Bg4 to pin the f3 knight, ...Re8 to take the open e-file and ...c6 to support d5. The position is equal, and the open e-file means rook trades are likely.",
+    "remember": [
+      "5...Nf6 is the safest retreat: the knight guards h7 and your king.",
+      "6...d5 stakes a claim in the centre and frees the c8 bishop.",
+      "7...Bd6 and 8...O-O mirror White; then ...Bg4 and ...Re8."
+    ]
+  },
+  "petroff:10": {
+    "plan": "White develops with Bd3, castles and plans c3, Bc2, d4 and Re1 for a slow build-up. You retreat the knight to f6, develop with ...Be7 and castle, then take the open e-file with ...Re8. Follow up with ...Bf8, ...c6, ...Nbd7 and ...d5 for a sound, equal position. White's bishop on d3 or c2 aims at your king, so keep the f6 knight there as a defender.",
+    "remember": [
+      "5...Nf6 retreats to the knight's best defensive square.",
+      "6...Be7 and 7...O-O get your king safe quickly.",
+      "8...Re8 takes the open e-file before White can play Re1."
     ]
   },
 }

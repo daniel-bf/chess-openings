@@ -65,4 +65,20 @@ export const scandinavianPlans: Plans = {
       "4...Be6 develops and controls f5 and c4, squares White's knight and bishop would like to use."
     ]
   },
+  "scandinavian:8": {
+    "plan": "White develops the bishop to c4 early and sends the king's knight to e2 and g3 to chase your f5 bishop. You play ...c6 first, so that the Nd5 tricks do not work, develop the bishop to f5 and build the ...e6 wall. Keep the bishop on the b1-h7 diagonal with ...Bg6 (and ...h6 if h4 comes), then ...Nbd7, ...Bb4 or ...Be7 and short castling. Your position is solid and easy to play.",
+    "remember": [
+      "5...c6 covers d5 and b5 and gives the queen c7.",
+      "6...Bf5 develops the bishop before ...e6 shuts it in.",
+      "8...Bg6 keeps the bishop on its diagonal when Ng3 attacks it; meet h4 with ...h6."
+    ]
+  },
+  "scandinavian:9": {
+    "plan": "In the Blackmar-Diemer White gives a pawn for the open f-file and quick development. You accept, pin and swap off the f3 knight with ...Bg4xf3, then build a rock-solid wall with ...c6 and ...e6. Finish with ...Nbd7, ...Be7 or ...Bd6 and castling, usually short. White's attack runs out of steam without the knight, and you keep the extra pawn for the endgame.",
+    "remember": [
+      "4...exf3 accepts the gambit; you can keep the extra pawn if you develop calmly.",
+      "5...Bg4 and 6...Bxf3 remove White's best attacking knight.",
+      "7...c6 and 8...e6 shut the long diagonal and the e-file and give your king a safe home."
+    ]
+  },
 }

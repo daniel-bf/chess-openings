@@ -14,7 +14,7 @@ export const kingsIndian: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Classical: Mar del Plata (9.Ne1)',
+      name: "Orthodox: Classical System (9.Ne1)",
       pgn: `1. d4 Nf6 {Develops and stops White from playing e4 for now.}
         2. c4 g6 {Prepares ...Bg7, the King's Indian bishop.}
         3. Nc3 {Prepares e4.}
@@ -33,7 +33,7 @@ export const kingsIndian: OpeningSource = {
         12. f3 f4 {Locks the kingside. Next ...g5-g4 with ...Rf7, ...Bf8 and ...Ng6 to attack White's king, while White races with c5 on the other wing.}`,
     },
     {
-      name: 'Classical: Bayonet Attack (9.b4)',
+      name: "Orthodox: Bayonet Attack, Sokolov's Line (9.b4 Nh5 10.Re1)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7
         9. b4 {The Bayonet Attack: White starts the queenside expansion at once, aiming for c5.}
         Nh5 {Clears the f-pawn and eyes f4, so ...f5 can come straight away.}
@@ -43,7 +43,7 @@ export const kingsIndian: OpeningSource = {
         Nf6 {The knight comes back to the centre to fight for e4. Next ...h6 kicks the g5 knight.}`,
     },
     {
-      name: 'Classical: Petrosian (7.d5)',
+      name: "Petrosian Variation: Stein Defence (7.d5 a5)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5
         7. d5 {The Petrosian System: White locks the centre at once.}
         a5 {Slows down White's b4 push and secures c5 for a knight.}
@@ -52,7 +52,7 @@ export const kingsIndian: OpeningSource = {
         9. Bh4 Na6 {The knight heads for c5, a great square where no pawn can attack it once b4 is stopped.}`,
     },
     {
-      name: 'Sämisch Variation (5.f3)',
+      name: "Sämisch Variation: Closed Variation (7.d5)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6
         5. f3 {The Sämisch: f3 makes e4 rock solid and prepares Be3, Qd2 and a kingside pawn storm.}
         O-O {Castle first: your king is safe before you open the centre.}
@@ -63,7 +63,7 @@ export const kingsIndian: OpeningSource = {
         Nd7 {Develops the last knight; it can go to f6 or c5, and ...a6 with ...b5 can open lines at White's king.}`,
     },
     {
-      name: 'Four Pawns Attack (5.f4)',
+      name: "Four Pawns Attack: Main Line (5.f4)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6
         5. f4 {The Four Pawns Attack: four pawns in the centre, aiming for e5.}
         O-O {Castle first: your king is safe before you open the centre.}
@@ -78,7 +78,7 @@ export const kingsIndian: OpeningSource = {
         Qb6 {The queen steps away with an attack on b2, and e5 is still under fire. Sharp tactics follow.}`,
     },
     {
-      name: 'Fianchetto Variation (3.Nf3 4.g3)',
+      name: "Fianchetto Variation: Classical Main Line (4.g3)",
       pgn: `1. d4 Nf6 2. c4 g6
         3. Nf3 Bg7 {The bishop goes to the long diagonal, as always in the King's Indian.}
         4. g3 {White puts a bishop on g2 as well: a quieter, very solid approach.}
@@ -90,7 +90,7 @@ export const kingsIndian: OpeningSource = {
         9. h3 Qb6 {Presses on d4 along the diagonal and on b2 down the b-file, so White must keep defending.}`,
     },
     {
-      name: "Classical: Gligoric (7.Be3)",
+      name: "Orthodox: Gligoric-Taimanov System (7.Be3)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5
         7. Be3 {The Gligoric System: White keeps the central tension.}
         Ng4 {Hit the bishop, the piece guarding d4.}
@@ -100,7 +100,7 @@ export const kingsIndian: OpeningSource = {
         10. d5 Ne7 {The knight heads for the kingside. Next ...Nh6, ...f5 and a kingside attack.}`,
     },
     {
-      name: "Classical: Exchange (7.dxe5)",
+      name: "Exchange Variation (7.dxe5)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5
         7. dxe5 {The Exchange Variation: White trades in the centre to take the sting out of your attack.}
         dxe5 {Recapture; the d-file opens.}
@@ -112,7 +112,7 @@ export const kingsIndian: OpeningSource = {
         11. cxd5 c6 {Attack the d5 pawn at once to break up White's centre. Equal.}`,
     },
     {
-      name: "Makogonov (5.h3)",
+      name: "Makogonov Variation: Karpov System (5.h3 and 6.Be3)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6
         5. h3 {The Makogonov: stops ...Ng4 and ...Bg4, and prepares Be3 and g4.}
         O-O {Castle first: your king is safe before you open the centre.}
@@ -122,7 +122,7 @@ export const kingsIndian: OpeningSource = {
         Na6 {Heads for c5, where the knight attacks e4.}`,
     },
     {
-      name: "Averbakh (5.Be2 and 6.Bg5)",
+      name: "Averbakh Variation: Main Line (6.Bg5 c5)",
       pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6
         5. Be2 O-O {Castle first: your king is safe before you open the centre.}
         6. Bg5 {The Averbakh: the bishop pins your knight and makes ...e5 awkward (6...e5? 7.dxe5 dxe5 8.Qxd8 Rxd8 9.Nd5 hits f6 and c7).}
@@ -131,6 +131,33 @@ export const kingsIndian: OpeningSource = {
         8. Qd2 exd5 {Open the e-file.}
         9. exd5 Re8 {Pin the e2 bishop to White's king along the open e-file.}
         10. Nf3 Bg4 {Develops and pins the f3 knight to the e2 bishop. Next ...Nbd7, ...a6 and ...b5 or ...Ne4 ideas.}`,
+    },
+    {
+      name: "Orthodox: Modern System (9.Nd2)",
+      pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7
+        9. Nd2 {The Modern System: the knight heads for b3 or c4 to support the c5 push, and it no longer blocks White's f-pawn, so f3 is possible.}
+        a5 {Slow down White's queenside play: now b4 needs a3 and Rb1 first.}
+        10. a3 {White prepares b4 anyway.}
+        Nd7 {Clear the way for the f-pawn and keep an eye on c5.}
+        11. Rb1 {The rook backs up the b4 push.}
+        f5 {The usual kingside break: hit e4 and start your attack before White's queenside pawns arrive.}`,
+    },
+    {
+      name: "Zinnowitz Variation (6.Bg5)",
+      pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O
+        6. Bg5 {The Zinnowitz Variation: White pins your f6 knight to the queen before deciding where the f1 bishop goes.}
+        h6 {Ask the bishop at once whether it wants to keep the pin.}
+        7. Bh4 {White keeps the pin.}
+        g5 {Break the pin by force. Your king is a little looser, but White's bishop is pushed off the h4-d8 diagonal.}
+        8. Bg3 Nh5 {Hit the g3 bishop, ready to swap it with ...Nxg3. Without that bishop, White has fewer defenders of the dark squares, and your ...e5 or ...c5 break comes with more force.}`,
+    },
+    {
+      name: "Sämisch Variation (7.Nge2 c6)",
+      pgn: `1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5
+        7. Nge2 {White keeps the central tension instead of closing it with d5. The knight supports d4 and can go to c1 or g3 later.}
+        c6 {Prepare ...b5 or ...d5 and give your queen the a5 and b6 squares. If White plays d5, ...cxd5 opens the c-file.}
+        8. Qd2 {White connects and gets ready to castle long or play Rd1.}
+        Nbd7 {Add a defender to e5 and keep your options open: ...a6 and ...b5 on the queenside, or ...exd4 and ...Re8 against e4.}`,
     },
   ],
 }

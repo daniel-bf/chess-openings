@@ -81,4 +81,28 @@ export const ruyLopezPlans: Plans = {
       "Bf1 avoids exchanges, because the side with more space wants to keep pieces on the board."
     ]
   },
+  "ruy-lopez:10": {
+    "plan": "In the Arkhangelsk both Black bishops aim at your kingside: b7 at e4 and g2, c5 at f2. You answer with Re1, c3 and d4 to blunt them, then Bg5 to pin the f6 knight. The centre is tense: keep e4 well protected and look for a4 to attack b5, or d5 to shut the b7 bishop out. Black plays for ...h6, ...O-O and ...exd4 to open lines against e4.",
+    "remember": [
+      "Re1 must come early: e4 is attacked by both the f6 knight and the b7 bishop.",
+      "c3 and d4 block the c5 bishop's diagonal toward f2.",
+      "Bg5 pins the f6 knight so it cannot take on e4."
+    ]
+  },
+  "ruy-lopez:11": {
+    "plan": "Black put the bishop on c5 early, so your c3 and d4 gain time by hitting it. After Bb6 you have a strong centre, and a4 opens a second front against the b5 pawn. Typical follow-ups are Re1, Na3 and axb5, or d5 to gain more space. Black hopes the b6 bishop and ...exd4 will put pressure on d4 and f2.",
+    "remember": [
+      "c3 then d4 hits e5 and the c5 bishop, gaining time.",
+      "Bb3 keeps your bishop on the a2-g8 diagonal, aimed at f7.",
+      "a4 attacks b5: if Black lets you take, the a-file opens for your rook."
+    ]
+  },
+  "ruy-lopez:12": {
+    "plan": "Black traded knights with ...Nd4 and now has a pawn on d4 that cramps your queenside but has no pawn support. You castle, put the bishop on c4 aiming at f7, and protect e4 with Re1 and d3. Later c3 attacks the wedge, and f4 opens the f-file for your rook. Black wants ...Be7, ...O-O and ...d5 to free the game.",
+    "remember": [
+      "Nxd4 exd4 leaves Black with a lonely pawn on d4.",
+      "Bc4 is the bishop's best square once ...c6 chases it.",
+      "Later c3 breaks up the d4 wedge, and f4 opens the f-file."
+    ]
+  },
 }

@@ -14,7 +14,7 @@ export const caroKann: OpeningSource = {
   ],
   lines: [
     {
-      name: 'Classical: 4...Bf5',
+      name: 'Classical: Spassky Variation, Lobron System (6.h4)',
       pgn: `1. e4 c6 {The Caro-Kann. It prepares ...d5 while keeping the c8 bishop's path open.}
         2. d4 d5 {Challenge e4 at once, with the c6 pawn ready to support d5.}
         3. Nc3 {Defends e4.}
@@ -46,7 +46,7 @@ export const caroKann: OpeningSource = {
         8. O-O Nbc6 {Both knights now challenge White's centre, and your development is easy.}`,
     },
     {
-      name: 'Advance: 4.Bd3',
+      name: 'Advance: 4.Bd3 (bishop swap)',
       pgn: `1. e4 c6 2. d4 d5 3. e5 Bf5
         4. Bd3 {White offers to swap bishops.}
         Bxd3 {Take: White's bishop was a good attacker, and you are glad to swap yours.}
@@ -55,7 +55,7 @@ export const caroKann: OpeningSource = {
         7. O-O c5 {Hit the base of the chain. You have a French structure without the French problem bishop.}`,
     },
     {
-      name: 'Exchange Variation',
+      name: 'Exchange Variation: Rubinstein Variation (6.Bf4)',
       pgn: `1. e4 c6 2. d4 d5
         3. exd5 {The Exchange: the centre opens up.}
         cxd5 {Take back with the c-pawn: you get the half-open c-file.}
@@ -69,7 +69,7 @@ export const caroKann: OpeningSource = {
         10. Bxd6 Qxd6 {Equal. Your plan is a minority attack: push ...b5-b4 against White's c3 pawn.}`,
     },
     {
-      name: 'Panov-Botvinnik Attack',
+      name: 'Panov Attack (4.c4)',
       pgn: `1. e4 c6 2. d4 d5 3. exd5 cxd5
         4. c4 {The Panov: White is willing to get an isolated d-pawn for active pieces.}
         Nf6 {Develop and add pressure on d5.}
@@ -81,7 +81,7 @@ export const caroKann: OpeningSource = {
         10. Re1 Bf6 {A third attacker on d4. The more pieces come off, the weaker that pawn gets.}`,
     },
     {
-      name: 'Two Knights (2.Nc3 d5 3.Nf3)',
+      name: 'Two Knights Attack: Mindeno Variation, Exchange Line (3...Bg4)',
       pgn: `1. e4 c6
         2. Nc3 {White develops and keeps the d-pawn flexible.}
         d5 {Still challenge e4.}
@@ -94,7 +94,7 @@ export const caroKann: OpeningSource = {
         8. O-O Bd6 {Develop and castle next. White has the two bishops but nothing to attack.}`,
     },
     {
-      name: 'Classical: 6.Nf3 move order',
+      name: 'Classical: Spassky Variation via 6.Nf3',
       pgn: `1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6
         6. Nf3 {White develops before pushing h4.}
         Nd7 {Stops Ne5, which would hit the g6 bishop.}
@@ -114,7 +114,7 @@ export const caroKann: OpeningSource = {
         9. Qxd3 Ngf6 {A solid Classical set-up. White's knight on b3 is a bit offside.}`,
     },
     {
-      name: 'Fantasy Variation (3.f3)',
+      name: 'Maróczy (Fantasy) Variation (3.f3)',
       pgn: `1. e4 c6 2. d4 d5
         3. f3 {The Fantasy: White supports e4 with a pawn and wants a big centre.}
         e6 {Hold d5 solidly; the f3 pawn blocks White's own knight from f3.}
@@ -126,7 +126,7 @@ export const caroKann: OpeningSource = {
         9. Nh3 Nc6 {More pressure on d4. White's f3 pawn leaves the e3 square and the king a little weak.}`,
     },
     {
-      name: 'Accelerated Panov (2.c4)',
+      name: 'Accelerated Panov Attack: Modern Variation (2.c4)',
       pgn: `1. e4 c6
         2. c4 {White plays c4 before d4.}
         d5 {Challenge the centre anyway.}
@@ -137,6 +137,45 @@ export const caroKann: OpeningSource = {
         7. Bb5 e6 {Opens the f8 bishop so you can castle.}
         8. O-O Be7 {Get ready to castle.}
         9. d4 O-O {Now White has an isolated d-pawn and your d5 knight blockades it.}`,
+    },
+    {
+      name: 'Advance: Van der Wiel Attack (4.Nc3 e6 5.g4)',
+      pgn: `1. e4 c6 2. d4 d5 3. e5 Bf5
+        4. Nc3 {The Van der Wiel Attack (also called the Bayonet): White wants to chase your bishop with g4.}
+        e6 {Build the pawn wall now, so the bishop has a retreat to g6 and your f8 bishop is free.}
+        5. g4 {Attacks the bishop and grabs kingside space.}
+        Bg6 {Keep the bishop on its good diagonal.}
+        6. Nge2 {Prepares h4-h5 or Nf4 to hunt the g6 bishop.}
+        c5 {Hit the centre at once: when White attacks on the wing, counter in the middle.}
+        7. h4 {Threatens h5, trapping the bishop.}
+        h5 {Stop h5 and attack the g4 pawn at the same time.}
+        8. Nf4 {Hits the bishop again and eyes your h5 pawn.}
+        Bh7 {The bishop steps back but keeps its diagonal.}
+        9. Nxh5 {White wins the h5 pawn.}
+        Nc6 {Develop and add pressure on d4 and e5. Your lead in the centre and ...cxd4 or ...Qb6 give good play for the pawn.}`,
+    },
+    {
+      name: 'Advance: Tal Variation (4.h4)',
+      pgn: `1. e4 c6 2. d4 d5 3. e5 Bf5
+        4. h4 {The Tal Variation: White wants h5 and g4 to trap or chase your bishop.}
+        h5 {Stop h5 for good. Now g4 can be met by ...Bxg4, because the h5 pawn defends that square.}
+        5. c4 {White opens a second front in the centre.}
+        e6 {Supports d5 and opens the f8 bishop.}
+        6. Nc3 Ne7 {The knight heads for g6 or f5 and does not block your f-pawn.}
+        7. Nge2 {Prepares Ng3 to hit your f5 bishop.}
+        Nd7 {Develops and gets ready to answer Ng3 with ...Bg6; later ...dxc4 and ...Nb6 or ...Nf5 hit d4.}`,
+    },
+    {
+      name: 'Breyer Variation (2.d3)',
+      pgn: `1. e4 c6
+        2. d3 {The Breyer Variation: a King's Indian Attack set-up with Nd2, Ngf3, g3 and Bg2.}
+        d5 {Take the centre anyway.}
+        3. Nd2 {Supports e4 so White does not need to swap pawns.}
+        e5 {Build a full pawn centre: d5 and e5 side by side.}
+        4. Ngf3 Bd6 {Defends e5 with a piece and keeps the c8 bishop's diagonal open.}
+        5. g3 Nf6 {Develops and adds pressure on e4.}
+        6. Bg2 O-O {King to safety.}
+        7. O-O Re8 {The rook defends e5, so the d6 bishop is free to move. Your big centre gives you a comfortable game.}`,
     },
   ],
 }

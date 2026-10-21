@@ -81,4 +81,28 @@ export const sicilianPlans: Plans = {
       "...Bg7 puts the bishop on the long diagonal, where it eyes d4 and the c3 knight and also guards your castled king."
     ]
   },
+  "sicilian:10": {
+    "plan": "The Closed Sicilian is a slow build-up: White fianchettoes, plays d3 and f4 and only later attacks your king with f5 or g4-f5. You mirror the fianchetto with ...g6 and ...Bg7, hold d5 and f5 with ...e6 and develop the king's knight to e7. After castling, you play on the queenside with ...Rb8, ...b5-b4 and use the d4 hole for your knight.",
+    "remember": [
+      "3...Nc6 and 5...Bg7 both aim at d4, the square White leaves alone when the d-pawn stops on d3.",
+      "6...e6 and 7...Nge7 keep f5 under control, so White's f4-f5 push is harder to arrange.",
+      "9...Nd4 plants the knight in the hole; if White swaps it off, recapture so that your pieces stay active and ...b5 follows."
+    ]
+  },
+  "sicilian:11": {
+    "plan": "White develops the queen early, castles long and hopes to use the d-file against your d6 pawn. You gain time by hitting the queen with ...Nc6, break the pin with ...Bd7 and take back on c6 with the bishop, so you have the bishop pair and pressure on e4. Then ...Nf6, ...e6, ...Be7 and short castling, followed by ...Qa5, ...Rfc8 and ...b5 to attack the white king on the queenside.",
+    "remember": [
+      "4...Nc6 develops with an attack on the d4 queen.",
+      "After 6.Bxc6, recapture with the bishop: on c6 it hits e4 and you keep the two bishops.",
+      "8...e6 and 9...Be7 break the Bg5 pin; then castle short and attack White's long-castled king with ...Qa5 and ...b5."
+    ]
+  },
+  "sicilian:12": {
+    "plan": "With 6.f4 White aims for e5 or f5 and an attack. You answer with ...e5 straight away, support it with ...Nbd7 and castle short. Your main plan is ...exf4 at the right moment, which gives your knights the e5 square, followed by ...Nc5, ...Qb6 or ...Re8 and pressure on the e4 pawn. Keep an eye on the d5 hole, as in every ...e5 Najdorf.",
+    "remember": [
+      "6...e5 challenges f4 and gains space with tempo on the d4 knight.",
+      "7...Nbd7 supports e5 so White cannot easily open the f-file or win the square.",
+      "After 9...O-O, ...exf4 hands your knights the e5 square; ...Nc5 then hits e4 and the d3 bishop."
+    ]
+  },
 }
