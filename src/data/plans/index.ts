@@ -19,8 +19,24 @@ import { scotchPlans } from './scotch'
 import { sicilianPlans } from './sicilian'
 import { slavPlans } from './slav'
 import { viennaPlans } from './vienna'
+import { queensGambitDeclinedPlans } from './queens-gambit-declined'
+import { queensIndianPlans } from './queens-indian'
+import { benkoPlans } from './benko'
+import { alekhinePlans } from './alekhine'
+import { openGamesBlackPlans } from './open-games-black'
+import { alapinWhitePlans } from './alapin-white'
+import { frenchAdvanceWhitePlans } from './french-advance-white'
+import { caroKannAdvanceWhitePlans } from './caro-kann-advance-white'
 
 export const plans: Plans = {
+  ...queensGambitDeclinedPlans,
+  ...queensIndianPlans,
+  ...benkoPlans,
+  ...alekhinePlans,
+  ...openGamesBlackPlans,
+  ...alapinWhitePlans,
+  ...frenchAdvanceWhitePlans,
+  ...caroKannAdvanceWhitePlans,
   ...caroKannPlans,
   ...catalanPlans,
   ...dutchPlans,

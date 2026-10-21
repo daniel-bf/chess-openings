@@ -19,6 +19,14 @@ import { scotch } from './openings/scotch'
 import { vienna } from './openings/vienna'
 import { kingsGambit } from './openings/kings-gambit'
 import { catalan } from './openings/catalan'
+import { queensGambitDeclined } from './openings/queens-gambit-declined'
+import { queensIndian } from './openings/queens-indian'
+import { benko } from './openings/benko'
+import { alekhine } from './openings/alekhine'
+import { openGamesBlack } from './openings/open-games-black'
+import { alapinWhite } from './openings/alapin-white'
+import { frenchAdvanceWhite } from './openings/french-advance-white'
+import { caroKannAdvanceWhite } from './openings/caro-kann-advance-white'
 
 export const openingSources: OpeningSource[] = [
   sicilian,
@@ -41,4 +49,12 @@ export const openingSources: OpeningSource[] = [
   vienna,
   kingsGambit,
   catalan,
+  queensGambitDeclined,
+  queensIndian,
+  benko,
+  alekhine,
+  openGamesBlack,
+  alapinWhite,
+  frenchAdvanceWhite,
+  caroKannAdvanceWhite,
 ]
