@@ -2,63 +2,63 @@ import type { Plans } from './types'
 
 export const italianPlans: Plans = {
   "italian:0": {
-    "plan": "The Giuoco Pianissimo is a slow build-up: you play c3, d3, castle, a4, Re1, h3 and Nbd2. Your knight then usually travels via f1 to g3, and the central break d4 comes later when it is well prepared. The centre stays semi-closed and both sides manoeuvre, with chances on the kingside.",
+    "plan": "This is the Giuoco Pianissimo: a slow build-up where neither side has weaknesses yet. You have played c3, d3, castled, a4, Re1 and h3, and your knight is on its way via f1 to g3. From there you choose a plan: d4 to grab the centre, b4 to gain queenside space, or Be3 to trade off Black's strong a7 bishop. Black usually answers with ...Be6 to trade your c4 bishop and later ...d5.",
     "remember": [
-      "c3 and d3 keep e4 solid and prepare a later d4.",
-      "a4 stops ...b5 from gaining space with tempo on your c4 bishop, and gives the bishop a2 as a retreat.",
-      "h3 stops ...Bg4 and ...Ng4, so your f3 knight and a later Be3 are safe."
+      "a4 stops ...b5 from gaining space and chasing your c4 bishop, and gives the bishop a2 as a retreat.",
+      "h3 stops ...Bg4 and ...Ng4, so your f3 knight cannot be pinned and f2 stays safe.",
+      "Nbd2-f1-g3 is the key manoeuvre: the knight joins the kingside and eyes f5 and h5."
     ]
   },
   "italian:1": {
-    "plan": "Here Black breaks early with ...d5. You take with exd5, and with Black's d-pawn gone, Re1 puts pressure on e5. The position opens up, and you aim your pieces at e5 and the e4 square.",
+    "plan": "Black broke early with ...d5, so the centre is open. After exd5 Nxd5, the e5 pawn has lost its d-pawn support and becomes your main target: Re1 attacks it, and Black has to keep the c6 knight and the g4 pin to hold it. Your knight comes to e4 via d2 to hit the c5 bishop, while Black hopes for activity with ...Nb6 and ...Bxf3.",
     "remember": [
-      "exd5 followed by Re1 targets e5, which no longer has a d-pawn to support it.",
-      "h3 puts the question to the g4 bishop that pins your f3 knight; after ...Bh5 the pin remains, so keep that in mind.",
-      "Nbd2 develops and heads for e4, where the knight hits the c5 bishop."
+      "exd5 followed by Re1 puts pressure on e5, which only the c6 knight defends.",
+      "h3 asks the g4 bishop to decide: ...Bxf3 gives you the bishop pair, ...Bh5 keeps the pin.",
+      "Nbd2 heads for e4, where the knight hits the c5 bishop and supports the attack on e5."
     ]
   },
   "italian:2": {
-    "plan": "Against the Two Knights with ...Be7, Black hits your c4 bishop with ...Na5. Like in the Ruy Lopez, you keep the bishop by moving it Bb5-a4-c2. The structure becomes Ruy-like, with central tension and a d4 break for you later.",
+    "plan": "Black used ...Na5 to go after your c4 bishop, so you sent it on the Ruy Lopez route Bb5-a4-c2. The structure is now like a Closed Ruy Lopez: the centre is tense, Black has queenside space with ...b5 and ...c5, and you play on the kingside. Your knight goes d2-f1-g3, and later d4 or a4 can open the position.",
     "remember": [
       "c3 prepares d4 and gives your bishop the c2 square to retreat to.",
-      "Bb5 sidesteps ...Na5's attack and keeps your light-squared bishop from being traded.",
-      "Bc2 ends the bishop's journey on the b1-h7 diagonal, where it supports e4 and later aims at Black's king."
+      "Bb5 sidesteps ...Na5 so your light-squared bishop is not traded.",
+      "Bc2 ends the bishop's trip on the b1-h7 diagonal, where it defends e4 and later aims at Black's king."
     ]
   },
   "italian:3": {
-    "plan": "This position transposes to the Giuoco Piano. You follow the same slow plan: c3, castle, Re1, a4 and h3. Later the knight goes Nbd2-f1-g3 and you prepare d4.",
+    "plan": "This is the Giuoco Pianissimo reached through the Two Knights move order. Nothing changes in your plan: c3, castle, Re1, a4 and h3, then the knight goes Nbd2-f1-g3 and d4 comes when it is well prepared. Black usually plays ...h6, ...Re8 and ...Be6 to trade your c4 bishop.",
     "remember": [
-      "c3 prepares d4, which can later hit the c5 bishop and gain space.",
+      "c3 prepares d4, which can later hit Black's bishop and gain space.",
       "a4 stops ...b5 and pushes Black's bishop back to a7.",
-      "Re1 supports e4 and frees f1 for your knight's later Nbd2-f1-g3 route."
+      "Re1 supports e4 and frees f1 for your knight's Nbd2-f1-g3 route."
     ]
   },
   "italian:4": {
-    "plan": "The Hungarian ...Be7 is passive, so you open the centre at once with d4. After ...exd4 Nxd4 you have a pawn on e4 against Black's pawn on d6. You enjoy more space and freer pieces, and play for central and kingside pressure.",
+    "plan": "The Hungarian ...Be7 is passive, so you opened the centre at once with d4. After ...exd4 Nxd4 you have a pawn on e4 against Black's pawn on d6, which means more space and freer pieces. Typical plans are f4 and Qf3 for a kingside attack, or Be3 and Qd2 with a solid set-up. Black wants to free himself with ...Re8, ...Bf8 and maybe ...d5.",
     "remember": [
       "d4 strikes at e5 straight away, taking advantage of Black's passive bishop on e7.",
-      "Nxd4 recaptures with a centralised knight, and Nc3 adds a defender to e4 against the f6 knight.",
+      "Nxd4 recaptures with a central knight, and Nc3 adds a defender to e4 against the f6 knight.",
       "h3 stops ...Bg4, which would hit your queen now that the f3 knight has left, and also stops ...Ng4."
     ]
   },
   "italian:5": {
-    "plan": "This is the Blackburne Shilling trap with ...Nd4. You avoid the trap and simply take the knight with Nxd4, then grab f7 with Bxf7+ when Black plays ...Bc5. Black's king loses the right to castle and comes under fire along the open f-file.",
+    "plan": "You avoided the Blackburne Shilling trap by taking the d4 knight, then punished ...Bc5 with Bxf7+. You are a pawn up and Black's king on f8 cannot castle. Bring the last pieces out with Nd2, then play f4 to open the f-file against the king. Black's pawn on d4 is cut off and can become a target later.",
     "remember": [
-      "Nxd4 is the right capture; 4.Nxe5? is the trap, because ...Qg5 hits the knight and g2, and greedy play leads to a quick mate.",
-      "Bxf7+ wins a pawn and Black's right to castle; if ...Kxf7, Qh5+ followed by Qxc5 wins the bishop back along the fifth rank.",
-      "Qf3 lines up on the open f-file and pins Black's f6 knight against the king on f8."
+      "Nxd4 is the right capture; 4.Nxe5? Qg5! is the trap, with ideas like ...Qxg2 and ...Nf3 mate.",
+      "Bxf7+ wins a pawn and Black's right to castle; if ...Kxf7, Qh5+ followed by Qxc5 wins the bishop back.",
+      "After Bb3 and Nd2, f4 opens the f-file toward Black's king on f8."
     ]
   },
   "italian:6": {
-    "plan": "Black guards e5 with ...Qe7 instead of developing the knight first. You continue with the slow Italian plan: d3, castle, Nbd2, a4 and Re1. The knight later goes to f1 and g3, and you prepare d4 when everything is ready.",
+    "plan": "Black's ...Qe7 guards e5 in advance, but it does not stop you from taking the centre with d4. After ...Bb6 you have a broad centre with pawns on d4 and e4. You can gain space with d5 or a5, or keep the tension with Re1 and Nbd2. Black wants to keep pressure on d4 and break with ...exd4 or ...f5 later.",
     "remember": [
-      "d3 keeps e4 solid, so you can build up calmly.",
-      "a4 stops ...b5 and pushes Black's bishop back to a7.",
-      "Re1 supports e4 and frees f1, so Nbd2 can continue to f1 and g3."
+      "d4 builds the big centre anyway; c3 and the f3 knight support it.",
+      "a4 threatens a5, which would push Black's bishop off the a7-g1 diagonal, so Black spends a move on ...a6.",
+      "h3 stops ...Bg4, which would pin the f3 knight that defends d4."
     ]
   },
   "italian:7": {
-    "plan": "Against the Paris Defence ...d6, you open the centre with d4. After ...exd4 Nxd4 you have a pawn on e4 against a pawn on d6. You get the freer game, with more space and active pieces.",
+    "plan": "Against the Paris Defence ...d6 you opened the centre with d4. After ...exd4 Nxd4, you have a pawn on e4 against Black's on d6, and the position is the same as in the Hungarian Defence line. You have more space and freer pieces; plans with f4 or Be3 and Qd2 are typical, while Black looks for ...Re8 and ...Bf8.",
     "remember": [
       "d4 challenges e5 at once; after ...exd4, Nxd4 puts your knight on a strong central square.",
       "Nc3 develops and defends e4 against Black's f6 knight.",
@@ -66,7 +66,7 @@ export const italianPlans: Plans = {
     ]
   },
   "italian:8": {
-    "plan": "Black spends time on ...h6 and ...g6 to put the bishop on g7. You castle, play c3 and Re1, and then break with d4 to take the centre. Your c4 bishop stays on the a2-g8 diagonal aiming at f7.",
+    "plan": "Black spent time on ...h6 and ...g6 to put the bishop on g7. You castled and played c3 and Re1, so d4 can now come with full support. After d4 you have a broad centre, and the g7 bishop runs into your pawns. If Black takes on d4, you take back with the c-pawn and keep two central pawns.",
     "remember": [
       "c3 prepares d4 so you can recapture with a pawn and keep a broad centre.",
       "Re1 defends e4 before the centre opens.",
@@ -74,15 +74,15 @@ export const italianPlans: Plans = {
     ]
   },
   "italian:9": {
-    "plan": "Here Black breaks with ...d5 in the Two Knights. You take with exd5, and your rook on e1 then pressures e5. Your knight heads via d2 to the strong e4 square.",
+    "plan": "With your rook already on e1, Black's ...d5 is a mistake. After exd5 Nxd5 you win the e5 pawn with Nxe5, because the rook takes back safely on e5. Then retreat the rook to e1 and finish development with Nd2 and Nf3. You are simply a pawn up; Black will try to use the bishop pair and active pieces, so keep everything protected.",
     "remember": [
-      "Re1 comes before ...d5, so after exd5 and ...Nxd5 your rook already bears down on e5.",
-      "h3 puts the question to the g4 bishop that pins your f3 knight.",
-      "Ne4 puts the knight on a strong central square where it eyes c5 and g5."
+      "Re1 before ...d5 is what makes the trick work: e5 is attacked by the rook as soon as it loses its d-pawn support.",
+      "Nxe5 Nxe5 Rxe5 wins a clean pawn, and the rook on e5 attacks the d5 knight.",
+      "Re1 brings the rook home before ...Bd6 or ...Bf6 can chase it with tempo."
     ]
   },
   "italian:10": {
-    "plan": "In the Pianissimo, Black reroutes the knight with ...Ne7 and ...Ng6 toward the kingside. That knight no longer guards d4 and e5, so you strike with d4. You then develop with Nbd2 and keep a strong central presence.",
+    "plan": "In the Pianissimo, Black reroutes the knight with ...Ne7 and ...Ng6 toward the kingside. That knight no longer guards d4 and e5, so you strike with d4 at once. You then develop with Nbd2 and keep a strong centre. Black will play ...c6 and ...Re8 and try to hold e5.",
     "remember": [
       "a4 stops ...b5 and pushes Black's bishop to a7.",
       "d4 strikes as soon as ...Ne7 takes the knight away from the centre, putting pressure on e5.",
