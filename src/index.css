@@ -395,3 +395,5 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
   .sx-board { position: sticky; top: 76px; max-width: none; }
 }
 @media (max-width: 480px) { .topbar { gap: 0.4em; } .topnav { gap: 0; } .topnav button { padding: 0.45em 0.42em; font-size: 0.86rem; } }
+.flow-focus { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+.flow-focus button { padding: 0.3em 0.8em; font-size: 0.85rem; }
