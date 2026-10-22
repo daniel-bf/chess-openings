@@ -357,3 +357,5 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
   .bm-view { grid-template-columns: minmax(320px, min(50vw, calc(100vh - 230px), 600px)) minmax(0, 1fr); align-items: start; gap: 28px; }
   .bm-board { position: sticky; top: 76px; max-width: none; }
 }
+.flow-focus { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+.flow-focus button { padding: 0.3em 0.8em; font-size: 0.85rem; }

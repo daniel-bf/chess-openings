@@ -30,7 +30,7 @@ function runLabel(run: TreeNode[]): string {
 }
 
 /** Builds the boxes, unfolding only the branches in `open` (or everything), then lays them out top-down. */
-function build(root: TreeNode, open: Set<string>, all: boolean): { box: Box; width: number; height: number; list: Box[] } {
+function build(root: TreeNode, open: Set<string>, all: boolean, focus: TreeNode | null): { box: Box; width: number; height: number; list: Box[] } {
   const list: Box[] = []
   let leafX = 0
   function make(run: TreeNode[], end: TreeNode, depth: number, id: string): Box {
@@ -54,16 +54,23 @@ function build(root: TreeNode, open: Set<string>, all: boolean): { box: Box; wid
     }
     return box
   }
-  // The start box covers any forced moves at the very beginning.
-  const r: TreeNode[] = []
-  let e = root
+  // The start box covers any forced moves at the very beginning; a focused branch starts at its own first move.
+  const r: TreeNode[] = focus ? [focus] : []
+  let e = focus ?? root
   while (e.children.length === 1) {
     e = e.children[0]
     r.push(e)
   }
-  const box = make(r, e, 0, 'root')
+  const box = make(r, e, 0, focus ? focus.id : 'root')
   const depth = Math.max(...list.map((b) => b.y)) + H
   return { box, width: Math.max(leafX - GAP_X, W), height: depth, list }
+}
+
+/** The first move of the box holding `node`, or null when it is in the start box. */
+function boxStart(node: TreeNode): TreeNode | null {
+  let n = node
+  while (n.parent?.move && n.parent.children.length === 1) n = n.parent
+  return n.parent && n.parent.children.length > 1 ? n : null
 }
 
 export function FlowTree({
@@ -84,6 +91,14 @@ export function FlowTree({
   const [zoom, setZoom] = useState<number | null>(null)
   const [fit, setFit] = useState(1)
   const scroller = useRef<HTMLDivElement>(null)
+  // A branch the user tapped: only it and what grows below it are shown.
+  const [focus, setFocus] = useState<TreeNode | null>(null)
+
+  // Going back above the branch (with the board's arrows or the trail) shows the whole tree again.
+  useEffect(() => {
+    if (focus && !pathTo(selected).includes(focus)) setFocus(null)
+  }, [focus, selected])
+  const shown = focus && pathTo(selected).includes(focus) ? focus : null
 
   // Unfold every box on the way to the selected move, including its own, so its next choices show.
   const open = useMemo(() => {
@@ -92,7 +107,7 @@ export function FlowTree({
     return ids
   }, [selected])
 
-  const { width, height, list } = useMemo(() => build(root, open, showAll), [root, open, showAll])
+  const { width, height, list } = useMemo(() => build(root, open, showAll, shown), [root, open, showAll, shown])
 
   // Scale the chart to fit the width available, unless the user picked a zoom.
   useLayoutEffect(() => {
@@ -122,6 +137,16 @@ export function FlowTree({
   return (
     <section className="flow" aria-label="Tree of the opening">
       <div className="flow-tools">
+        {shown && (
+          <span className="flow-focus">
+            <button type="button" onClick={() => setFocus(shown.parent ? boxStart(shown.parent) : null)}>
+              ▲ Up one level
+            </button>
+            <button type="button" onClick={() => setFocus(null)}>
+              Whole tree
+            </button>
+          </span>
+        )}
         <label className="check small">
           <input type="checkbox" checked={showAll} onChange={(e) => setShowAll(e.target.checked)} /> Show every branch
         </label>
@@ -171,7 +196,11 @@ export function FlowTree({
                   className={`flow-box ${who}${b === activeBox ? ' active' : ''}`}
                   style={{ left: b.x + 12, top: b.y + 12, width: W, height: H }}
                   title={b.run.length ? runLabel(b.run) : 'Start'}
-                  onClick={() => onSelect(target ? target.id : 'root')}
+                  onClick={() => {
+                    // Tapping a branch narrows the tree to it; tapping the start box shows everything again.
+                    setFocus(b.id === 'root' ? null : b.run[0])
+                    onSelect(target ? target.id : 'root')
+                  }}
                 >
                   {tag && <span className="flow-tag">{tag}</span>}
                   <MiniBoard
