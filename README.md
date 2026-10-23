@@ -71,3 +71,16 @@ Each opening is a file in `src/data/openings/`. A line is PGN movetext; a `{comm
 ```
 
 Moves shared with an earlier line only need their comment once. Moves without a comment get a short generated description. Run `npm run validate` after editing: it fails if a move is illegal or if your side has two different moves in the same position.
+
+## Deploy to your own server
+
+On the server (any Linux box; Docker is installed for you if missing):
+
+```sh
+git clone https://github.com/daniel-bf/chess-openings.git
+cd chess-openings
+cp .env.example .env   # set DOMAIN, or leave it empty to use the server's IP
+./deploy.sh
+```
+
+To update later: `git pull && ./deploy.sh`.
