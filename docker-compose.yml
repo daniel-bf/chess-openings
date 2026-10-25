@@ -1,3 +1,5 @@
+name: chess-openings
+
 services:
   web:
     build: .

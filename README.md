@@ -84,3 +84,16 @@ cp .env.example .env   # set DOMAIN, or leave it empty to use the server's IP
 ```
 
 To update later: `git pull && ./deploy.sh`.
+
+### Behind a shared proxy
+
+If another stack on the server already owns ports 80/443 (for example the
+server-control edge proxy), run the app on that proxy's network instead. Add to
+`.env`:
+
+```sh
+COMPOSE_FILE=docker-compose.yml:docker-compose.shared-proxy.yml
+SHARED_NETWORK=edge
+```
+
+Then `./deploy.sh` and route a hostname to `chess-web:80` on the proxy.

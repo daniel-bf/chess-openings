@@ -1,0 +1,27 @@
+# Overlay for a server where a shared edge proxy already owns ports 80/443
+# (e.g. the server-control stack). The app stops binding host ports and joins
+# the proxy's network as `chess-web`, serving plain HTTP on :80; the proxy
+# terminates HTTPS and routes a hostname here.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.shared-proxy.yml up -d --build
+#
+# Or make it the default by adding this line to .env:
+#   COMPOSE_FILE=docker-compose.yml:docker-compose.shared-proxy.yml
+#
+# Leave DOMAIN empty in this mode: the proxy owns the certificate.
+
+services:
+  web:
+    ports: !reset []
+    environment:
+      DOMAIN: ":80"
+    networks:
+      default: {}
+      edge:
+        aliases:
+          - chess-web
+
+networks:
+  edge:
+    external: true
+    name: ${SHARED_NETWORK:-edge}
