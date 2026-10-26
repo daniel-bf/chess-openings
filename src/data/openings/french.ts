@@ -6,98 +6,169 @@ export const french: OpeningSource = {
   eco: 'C00–C19',
   side: 'black',
   summary:
-    'A solid, counter-punching reply to 1.e4. Black builds a pawn chain with ...e6 and ...d5, accepts a little less space, and attacks White\'s centre with ...c5 and ...f6.',
+    'A solid counter-punching reply to 1.e4. With ...e6 and ...d5 Black challenges e4 straight away, with a pawn ready to take back on d5. White often pushes e5 and gets more space, but the pawns on d4 and e5 then become targets: Black hits the base of the chain with ...c5 and the front with ...f6. The price is the light-squared bishop on c8, which is shut in behind the e6 pawn, so Black plays on the queenside and in the centre rather than attacking the king.',
   ideas: [
-    'Strike the base of White\'s pawn chain with ...c5.',
-    'Pile up on d4 with ...Nc6, ...Qb6 and ...Nf5 or ...Ne7-f5.',
-    'The c8 bishop is the problem piece: trade it or activate it via d7-b5 or a6.',
+    'Attack the base of White\'s pawn chain with ...c5; if d4 falls, the e5 pawn is left hanging.',
+    'Pile up on d4 with ...Nc6, ...Qb6 and a knight on f5, then break the front of the chain with ...f6.',
+    'The c8 bishop is your problem piece: swap it, or bring it out via d7 to b5 or a6 (or before ...e6 in the Exchange).',
   ],
   lines: [
     {
-      name: 'Advance: 5...Qb6 6.a3',
-      pgn: `1. e4 e6 {The French. Black prepares ...d5 with a pawn ready to recapture.}
-        2. d4 d5 {Challenges e4 straight away.}
-        3. e5 {The Advance Variation: White gains space and cramps Black.}
-        c5 {Hit the base of the chain right away.}
-        4. c3 Nc6 {Adds pressure on d4.}
-        5. Nf3 Qb6 {The queen joins the attack on d4 and also eyes b2.}
-        6. a3 {White prepares b4 to gain space on the queenside.}
-        c4 {Locks the queenside and stops b4 from coming with gain of time.}
-        7. Nbd2 Na5 {The knight eyes b3 and supports the c4 pawn.}
-        8. Rb1 Bd7 {Develop and prepare ...Ne7-c6 or ...Bb5. The queenside is Black's.}`,
+      name: 'Advance: Main Line (6.a3 c4)',
+      pgn: `1. e4 e6 {The French. You prepare ...d5 so that if White takes, a pawn can take back.}
+        2. d4 d5 {Challenges e4 at once. White must defend, swap or push it.}
+        3. e5 {The Advance Variation. White grabs space and cramps your kingside, but the d4 pawn now holds the whole chain.}
+        c5 {Hit the base of the chain right away: if d4 goes, e5 loses its support.}
+        4. c3 {Supports d4 with another pawn.}
+        Nc6 {A second attacker on d4.}
+        5. Nf3 Qb6 {A third attacker on d4, and the queen also eyes b2.}
+        6. a3 {White prepares b4 to grab queenside space and kick your c5 pawn.}
+        c4 {Closes the queenside before b4 comes. Now b3 is a hole your pieces can use.}
+        7. Nbd2 {The knight covers b3 and c4.}
+        Na5 {The knight eyes b3 and protects the c4 pawn.}
+        8. Rb1 {The rook prepares b4 anyway.}
+        Bd7 {Develops your problem bishop; it can go to b5 or a4 later. Then come ...Ne7 and ...f6.}`,
     },
     {
-      name: 'Advance: 6.Be2',
+      name: 'Advance: Paulsen Attack (6.Be2)',
       pgn: `1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6
-        6. Be2 {Solid. White simply defends d4 and castles.}
-        cxd4 7. cxd4 Nh6 {The knight heads for f5 to add a fourth attacker on d4.}
-        8. b3 {Lets the bishop defend d4 from b2.}
-        Nf5 9. Bb2 Bb4+ {Before White castles, the check forces an awkward reply.}
-        10. Kf1 Be7 {The bishop drops back. White has lost castling rights.}`,
+        6. Be2 {Solid. White simply plans to castle and defend d4.}
+        cxd4 {Swap now so the c-file opens and White's d4 pawn loses its c3 support.}
+        7. cxd4 Nh6 {The knight heads for f5, where it becomes the fourth attacker on d4.}
+        8. b3 {Prepares Bb2 to add a defender of d4.}
+        Nf5 {Now the knight, queen and c6 knight all hit d4.}
+        9. Bb2 Bb4+ {A useful check before White castles: blocking would take a defender away from d4, so White usually moves the king.}
+        10. Kf1 Be7 {The bishop drops back with its job done: White can no longer castle and the h1 rook is stuck.}`,
     },
     {
-      name: 'Advance: Milner-Barry Gambit',
+      name: 'Advance: Milner-Barry Gambit, Main Line (6.Bd3)',
       pgn: `1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6
-        6. Bd3 {The Milner-Barry: White is ready to give up d4.}
-        cxd4 7. cxd4 Bd7 {Prepares ...Nxd4 without allowing Bb5+.}
-        8. O-O Nxd4 9. Nxd4 Qxd4 {Take the pawn. Black must now defend carefully.}
-        10. Nc3 a6 {Stops Nb5 and keeps the queen safe. Black is a pawn up.}`,
+        6. Bd3 {The Milner-Barry Gambit: White is ready to give up the d4 pawn for fast development.}
+        cxd4 {Swap first so the d4 pawn has no pawn support.}
+        7. cxd4 Bd7 {Prepares to take on d4: now Bb5+ is no longer a threat, because the bishop on d7 blocks the check.}
+        8. O-O Nxd4 {Take the pawn.}
+        9. Nxd4 Qxd4 {Black is a pawn up; now defend carefully and develop.}
+        10. Nc3 a6 {Stops Nb5, which would hit your queen and the c7 square.}`,
     },
     {
-      name: 'Winawer: Poisoned Pawn',
+      name: 'Winawer: Poisoned Pawn Variation, Main Line (7.Qg4)',
       pgn: `1. e4 e6 2. d4 d5
-        3. Nc3 {The main line. The knight defends e4.}
-        Bb4 {The Winawer: pin the knight and pressure e4.}
-        4. e5 c5 {Attack the centre at once.}
-        5. a3 Bxc3+ 6. bxc3 {White has doubled pawns but gets the bishop pair.}
+        3. Nc3 {The main line: the knight defends e4.}
+        Bb4 {The Winawer: pin the knight that defends e4.}
+        4. e5 {White closes the centre and gains space.}
+        c5 {Attack the base of the chain at once, as in the Advance.}
+        5. a3 {White asks the bishop to decide.}
+        Bxc3+ {Give up the bishop to double White's c-pawns.}
+        6. bxc3 {White has doubled pawns but gets the bishop pair (two bishops against bishop and knight).}
         Ne7 {Heading for f5 or c6, without blocking the f-pawn.}
-        7. Qg4 {Attacks g7, which no longer has a dark-squared bishop to protect it.}
-        Qc7 {Counterattack: Black gives up the kingside pawns for central play.}
-        8. Qxg7 Rg8 9. Qxh7 cxd4 10. Ne2 Nbc6 11. f4 dxc3 {A sharp, double-edged position with chances for both sides.}`,
+        7. Qg4 {Attacks g7, which lost its defender when your dark-squared bishop left.}
+        Qc7 {Counterattack instead of defending: you give up the kingside pawns, hit e5 and prepare ...cxd4 against c3.}
+        8. Qxg7 Rg8 {Chase the queen and take the open g-file for your rook.}
+        9. Qxh7 cxd4 {Now the white centre collapses: c3 is attacked as well.}
+        10. Ne2 Nbc6 {Develops and adds pressure on e5 and d4.}
+        11. f4 {Defends e5.}
+        Bd7 {Develops and connects your pieces. Your king can castle long later.}
+        12. Qd3 {The queen comes back to defend.}
+        dxc3 {Take on c3: the pawn there cramps White's queenside. A sharp, double-edged fight.}`,
     },
     {
-      name: 'Exchange Variation',
+      name: 'Exchange Variation (3.exd5)',
       pgn: `1. e4 e6 2. d4 d5
         3. exd5 {The Exchange: a symmetrical, quiet structure.}
-        exd5 {Black's light-squared bishop is no longer blocked.}
-        4. Nf3 Nf6 5. Bd3 Bd6 6. O-O O-O 7. Bg5 Bg4 {Mirror moves. Black is fine and can play for a win.}
-        8. Nbd2 Nbd7 {Equal and easy to play.}`,
+        exd5 {Take back: the c8 bishop is no longer shut in.}
+        4. Nf3 Nf6 {Develop towards the kingside.}
+        5. Bd3 Bd6 {Mirror White's development.}
+        6. O-O O-O {Kings to safety.}
+        7. Bg5 Bg4 {Pin the f3 knight in return, so it cannot jump to e5 freely.}
+        8. Nbd2 Nbd7 {Protects f6, so Bxf6 can be met with the knight. Equal, and easy to play.}`,
     },
     {
-      name: 'Tarrasch: 3...c5',
+      name: 'Tarrasch: Chistyakov Defence, Modern Line (3...c5 4.exd5 Qxd5)',
       pgn: `1. e4 e6 2. d4 d5
-        3. Nd2 {The Tarrasch. The knight avoids the Winawer pin.}
-        c5 {Hit the centre immediately.}
-        4. exd5 Qxd5 {Recapture with the queen to avoid an isolated pawn.}
-        5. Ngf3 cxd4 6. Bc4 Qd6 {The queen retreats to a safe square.}
-        7. O-O Nf6 8. Nb3 Nc6 9. Nbxd4 Nxd4 10. Nxd4 a6 {Stops Nb5 and Bb5+. Black has a healthy pawn structure.}`,
+        3. Nd2 {The Tarrasch. The knight defends e4 without being pinned by ...Bb4.}
+        c5 {Hit the centre at once.}
+        4. exd5 Qxd5 {Take back with the queen to avoid an isolated d-pawn.}
+        5. Ngf3 cxd4 {Swap pawns; White will win d4 back.}
+        6. Bc4 {Attacks your queen.}
+        Qd6 {A safe central square that still watches d4.}
+        7. O-O Nf6 {Develop and prepare to castle.}
+        8. Nb3 Nc6 {Defends d4 one more time.}
+        9. Nbxd4 Nxd4 {Swap knights to reduce White's attacking pieces.}
+        10. Nxd4 a6 {Stops Nb5 and Bb5+ and prepares ...b5. Your pawns are healthy.}`,
     },
     {
-      name: "Winawer: 7.a4",
+      name: 'Winawer: Positional Variation (7.a4)',
       pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7
-        7. a4 {White prepares Ba3 to use the bishop pair.}
-        Nbc6 8. Nf3 Qa5 {Pressure on c3 and the a4 pawn.}
-        9. Bd2 Bd7 10. Be2 f6 {Black attacks e5 next, opening the f-file.}`,
+        7. a4 {Prepares Ba3, where the bishop would hit your c5 pawn and e7 knight.}
+        Nbc6 {Develops and adds pressure on d4.}
+        8. Nf3 Qa5 {Pressure on the weak c3 pawn and the a4 pawn.}
+        9. Bd2 Bd7 {Develops and connects your rooks.}
+        10. Be2 f6 {Attack the front of the chain to open the f-file for your rook.}`,
     },
     {
-      name: "Winawer: 4.exd5",
+      name: 'Winawer: Delayed Exchange Variation (4.exd5)',
       pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4
-        4. exd5 exd5 {A symmetrical structure, but Black's bishop is active.}
-        5. Bd3 Nc6 6. a3 Bxc3+ 7. bxc3 Nge7 8. Ne2 Bf5 {Trade off White's good bishop.}
-        9. O-O O-O {Equal and easy for Black.}`,
+        4. exd5 exd5 {A symmetrical structure, but your bishop is already active on b4.}
+        5. Bd3 Nc6 {Develops and eyes d4.}
+        6. a3 Bxc3+ {Swap to give White doubled c-pawns.}
+        7. bxc3 Nge7 {The knight goes to e7 so the c8 bishop can come to f5.}
+        8. Ne2 Bf5 {Offer to swap White's best bishop.}
+        9. O-O O-O {Equal, with White's doubled pawns as a long-term target.}`,
     },
     {
-      name: "Winawer: 4.a3",
+      name: 'Winawer: 4.a3 (Bxc3+ and ...dxe4)',
       pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4
-        4. a3 Bxc3+ 5. bxc3 dxe4 {Take the pawn while White's pieces are undeveloped.}
-        6. Qg4 Nf6 7. Qxg7 Rg8 8. Qh6 Nbd7 {Black is a pawn up in the centre and develops quickly.}`,
+        4. a3 {White forces the bishop to decide at once.}
+        Bxc3+ {Swap: White gets doubled pawns.}
+        5. bxc3 dxe4 {The knight that defended e4 is gone, so take the pawn.}
+        6. Qg4 {Attacks g7.}
+        Nf6 {Develop with an attack on the queen instead of weakening yourself with ...g6.}
+        7. Qxg7 Rg8 {Chase the queen and take the open g-file.}
+        8. Qh6 Nbd7 {Develop quickly. Material is level (your e4 pawn for g7) and you are ahead in development.}`,
     },
     {
-      name: "King's Indian Attack (2.d3)",
+      name: 'King\'s Indian Attack (2.d3)',
       pgn: `1. e4 e6
-        2. d3 {The King's Indian Attack: a quiet system with g3 and Bg2.}
-        d5 3. Nd2 Nf6 4. Ngf3 c5 {Space on the queenside.}
-        5. g3 Nc6 6. Bg2 Be7 7. O-O O-O 8. Re1 b5 {Black attacks on the queenside while White prepares e5 and a kingside attack.}`,
+        2. d3 {The King's Indian Attack: a quiet system with g3, Bg2, castling and later e5.}
+        d5 {Take the centre.}
+        3. Nd2 Nf6 {Develop and attack e4.}
+        4. Ngf3 c5 {Grab space on the queenside, where you will play.}
+        5. g3 Nc6 {Develops and controls d4.}
+        6. Bg2 Be7 {Prepare to castle.}
+        7. O-O O-O {King to safety.}
+        8. Re1 b5 {Race on the queenside with ...b4 and ...a5 while White pushes e5 and attacks your king.}`,
+    },
+    {
+      name: 'Winawer: Positional Variation (7.Nf3)',
+      pgn: `1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3 Bxc3+ 6. bxc3 Ne7
+        7. Nf3 {The Positional Variation: White skips Qg4, develops and keeps the centre solid.}
+        Nbc6 {Develops and adds pressure on d4.}
+        8. Be2 {Quiet development so White can castle.}
+        Qa5 {Pins the c3 pawn to the king and presses on the doubled pawns.}
+        9. Bd2 {Defends c3 and unpins.}
+        Bd7 {Develops and connects your rooks; the bishop can later go to a4 or b5.}
+        10. O-O c4 {Closes the queenside: White's c3 and a3 pawns become fixed targets, and White's light-squared bishop has fewer squares. You can castle long or keep the king in the centre.}`,
+    },
+    {
+      name: 'Advance: Nimzowitsch System, Ruisdonk Gambit (4.Nf3 cxd4 5.Bd3)',
+      pgn: `1. e4 e6 2. d4 d5 3. e5 c5
+        4. Nf3 {The Nimzowitsch System: White develops instead of supporting d4 with c3.}
+        cxd4 {Take the pawn: without c3 there is no pawn to recapture.}
+        5. Bd3 {The Ruisdonk Gambit: White gives up the d4 pawn for fast development and attacking chances.}
+        Nc6 {Develops and holds the extra pawn on d4.}
+        6. O-O Nge7 {The knight heads for g6, where it attacks the e5 pawn and guards your king.}
+        7. Bf4 {Defends e5.}
+        Ng6 {Hits the f4 bishop and adds a third attacker on e5. You are a pawn up with a solid position.}`,
+    },
+    {
+      name: 'Tarrasch: Open System, Euwe-Keres Line (4.Ngf3)',
+      pgn: `1. e4 e6 2. d4 d5 3. Nd2 c5
+        4. Ngf3 {The Euwe-Keres Line: White develops first and keeps exd5 for later.}
+        cxd4 {Release the tension in the centre.}
+        5. exd5 {White opens the centre.}
+        Qxd5 {Take back with the queen, just as against 4.exd5: no isolated pawn for you.}
+        6. Bc4 Qd6 {Now it is the same position as in the 4.exd5 line, and the same plan applies.}
+        7. O-O Nf6 8. Nb3 Nc6 {The usual set-up: ...Nc6 protects the d4 pawn one more time.}`,
     },
   ],
 }
