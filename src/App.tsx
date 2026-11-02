@@ -9,6 +9,7 @@ import { SoundsPage } from './pages/SoundsPage'
 import { TreePage } from './pages/TreePage'
 import { MapPage } from './pages/MapPage'
 import { StructurePage } from './pages/StructurePage'
+import { AnalyseHome, AnalysePage } from './pages/AnalysePage'
 
 export default function App() {
   const { parts, query } = useRoute()
@@ -21,6 +22,8 @@ export default function App() {
   else if (page === 'tree' && a) content = <TreePage key={a} openingId={a} />
   else if (page === 'explorer') content = <MapPage side={a} />
   else if (page === 'structure') content = <StructurePage key={a ?? ''} openingId={a} />
+  else if (page === 'analyse' && a) content = <AnalysePage key={a} lineId={a} mode={b} />
+  else if (page === 'analyse') content = <AnalyseHome />
   else if (page === 'learn' && a) content = <LearnPage key={a} lineId={a} />
   else if (page === 'review') content = <DrillPage key="review" mode="review" />
   else if (page === 'practice' && a)
@@ -45,6 +48,9 @@ export default function App() {
           </button>
           <button type="button" className={page === 'structure' ? 'on' : ''} onClick={() => go('/structure')}>
             Structure
+          </button>
+          <button type="button" className={page === 'analyse' ? 'on' : ''} onClick={() => go('/analyse')}>
+            Analyse
           </button>
           <button type="button" className={page === 'review' ? 'on' : ''} onClick={() => go('/review')}>
             Review

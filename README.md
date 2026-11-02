@@ -10,6 +10,8 @@ A free, client-side trainer for 20 popular chess openings: 185 lines with move-b
 - **Drill**: quiz yourself on every line of one opening in random order.
 - **Play mode**: choose a set of openings. The computer plays random branches from them and you must answer with your prepared moves. When the line ends you can keep playing against Stockfish at one of 8 levels, which you can change during the game. A bar above the board shows Stockfish's evaluation, and "Show best moves" draws the engine's top two moves with their scores.
 
+- **Analyse**: every line has an Analyse page with four modes. **Report** shows Stockfish's three best continuations from the end of the line and marks the moves that carry out the line's plan. **Board** is a free analysis board with live Stockfish, starting from any move of the line. **Candidates** asks you to list up to three moves you would consider, pick the best, and then has Stockfish judge them. **Annotated** checks every move of the line, draws an evaluation graph, and shows what else each side could have played.
+
 Progress is stored in the browser (localStorage). There is no server or account.
 
 - **Sound**: the speaker button in the top bar opens the Sounds page, where you can listen to seven sound sets and pick one, or turn sound off. Six are free sets from Lichess and PyChess, credited in `public/sound/README.md`, and one is generated in the browser. Lichess's classic "standard" sounds and chess.com's sounds are not freely licensed, so they are not included.
@@ -56,6 +58,10 @@ npx tsx scripts/engine-check.ts   # flags prepared moves Stockfish thinks are mi
 ## Plans
 
 Each line's plan and key points live in `src/data/plans/`, keyed by line id (`opening:index`). `npx tsx scripts/dump-plans.ts` prints every line next to its plan and reports any line without one.
+
+## Engine analysis
+
+`src/data/analysis/<opening>.json` holds Stockfish's top three moves for every position of every line (depth 14), with deeper and longer lines for each line's last position (depth 18). Regenerate it after adding or changing lines with `npx tsx scripts/analyse-lines.ts`. It runs 4 engines in parallel and takes about 15 minutes; `DEPTH`, `END_DEPTH` and `SHARDS` change the settings, and finished positions are kept in `scripts/analysis/` so a rerun only analyses new ones.
 
 ## Adding or editing lines
 

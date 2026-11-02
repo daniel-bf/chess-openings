@@ -209,9 +209,14 @@ export function StructurePage({ openingId }: { openingId?: string }) {
                   </p>
                 )}
                 <Plan lineId={line.id} compact />
-                <button type="button" onClick={() => go(`/learn/${line.id}`)}>
-                  Learn this line
-                </button>
+                <div className="row">
+                  <button type="button" onClick={() => go(`/learn/${line.id}`)}>
+                    Learn this line
+                  </button>
+                  <button type="button" onClick={() => go(`/analyse/${line.id}`)}>
+                    Analyse it
+                  </button>
+                </div>
               </>
             )}
           </div>
