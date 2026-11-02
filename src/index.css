@@ -398,19 +398,41 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .flow-focus { display: inline-flex; gap: 6px; flex-wrap: wrap; }
 .flow-focus button { padding: 0.3em 0.8em; font-size: 0.85rem; }
 
-/* Middlegame prototype */
-.middlegame .segmented { flex-wrap: wrap; max-width: 100%; }
-.middlegame .segmented button { padding: 0.4em 0.9em; }
-.mg-title { font-size: 1.1rem; margin: 0.2em 0 0.4em; line-height: 1.35; }
-.middlegame .sx-explain h3 { margin: 0.4em 0 0; font-size: 0.95rem; }
-.middlegame .sx-explain ul { margin: 0; padding-left: 1.2em; line-height: 1.5; }
-.mg-links { display: flex; flex-wrap: wrap; gap: 4px 14px; }
-.mg-options { display: grid; gap: 8px; margin: 0.8em 0; }
-.mg-option { text-align: left; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--border); border-left-width: 4px; border-radius: 10px; padding: 0.7em 0.9em; cursor: pointer; line-height: 1.4; }
-.mg-option:hover:not(:disabled), .mg-option:focus-visible { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); }
-.mg-option.good { border-left-color: var(--good); background: var(--good-bg); }
-.mg-option.bad { border-left-color: var(--bad); background: var(--bad-bg); }
-.mg-option:disabled { opacity: 0.55; cursor: default; }
-.mg-goals li { padding: 0.2em 0; }
-.mg-goals li.met { color: var(--good); font-weight: 600; }
-@media (max-width: 480px) { .topnav { min-width: 0; overflow-x: auto; scrollbar-width: none; } }
+/* Analyse a line */
+.an-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.an-head h1 { margin: 0.1em 0 0; font-size: clamp(1.3rem, 1rem + 1.2vw, 1.8rem); }
+.an-head p { margin: 0.2em 0 0; }
+.analyse .segmented { flex-wrap: wrap; max-width: 100%; }
+.analyse .segmented button { padding: 0.4em 0.9em; }
+.an-title { font-size: 1.15rem; margin: 0 0 0.4em; }
+.analyse .panel h3 { font-size: 0.95rem; margin: 0.9em 0 0.3em; }
+.an-cards { display: grid; gap: 8px; margin: 0.6em 0; }
+.an-card { display: flex; flex-direction: column; gap: 3px; text-align: left; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--border); border-left-width: 5px; border-radius: 10px; padding: 0.55em 0.8em; cursor: pointer; }
+div.an-card { cursor: default; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.an-card .row { margin: 0; }
+.an-card.on { background: var(--surface-2); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+.an-score { font-family: var(--font-mono); font-weight: 700; }
+.an-moves { font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; }
+.an-hits { font-size: 0.8rem; color: var(--good); font-weight: 600; }
+.an-hits.none { color: var(--muted); font-weight: 400; }
+.an-steps { padding-left: 1.3em; margin: 0.6em 0; color: var(--muted); font-size: 0.92rem; }
+.an-steps li { margin: 0.2em 0; }
+.an-steps li.on { color: inherit; font-weight: 600; }
+.an-steps li.past { text-decoration: line-through; }
+.an-table { width: 100%; border-collapse: collapse; margin: 0.6em 0; font-size: 0.9rem; }
+.an-table th { text-align: left; font-family: var(--font-mono); padding: 0.3em 0.5em 0.3em 0; white-space: nowrap; }
+.an-table td { padding: 0.3em 0.5em; vertical-align: top; }
+.an-table tr + tr { border-top: 1px solid var(--border); }
+.an-table tr.best th { color: var(--good); }
+.an-graph { width: 100%; height: auto; display: block; margin: 0.4em 0; border-radius: 8px; background: var(--surface-2); }
+.an-graph-up { fill: var(--good-bg); }
+.an-graph-axis { stroke: var(--border); stroke-width: 1; }
+.an-graph-line { fill: none; stroke: var(--muted); stroke-width: 2; }
+.an-dot { fill: var(--surface); stroke: var(--muted); stroke-width: 1.5; cursor: pointer; }
+.an-dot.dubious { fill: #e0a020; stroke: #e0a020; }
+.an-dot.bad { fill: var(--bad); stroke: var(--bad); }
+.an-dot.on { stroke: var(--accent); stroke-width: 3; }
+.an-movelist { margin: 0.5em 0; }
+.an-tag { font-weight: 700; margin-left: 1px; }
+.an-tag.dubious { color: #c88a10; }
+.an-tag.bad { color: var(--bad); }

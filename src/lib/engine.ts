@@ -1,6 +1,8 @@
 /** One analysed move. Scores are from White's point of view; `mate` counts moves to mate. */
 export interface EngineLine {
   uci: string
+  /** The whole principal variation in UCI, starting with `uci`. */
+  pv?: string[]
   cp?: number
   mate?: number
 }
@@ -74,10 +76,12 @@ export class Engine {
         const rank = Number(/ multipv (\d+)/.exec(line)?.[1] ?? 1)
         const cp = / score cp (-?\d+)/.exec(line)
         const mate = / score mate (-?\d+)/.exec(line)
-        const uci = / pv (\S+)/.exec(line)![1]
+        const pv = line.split(' pv ')[1].trim().split(' ')
+        const uci = pv[0]
         const sign = whiteToMove ? 1 : -1
         found.set(rank, {
           uci,
+          pv,
           cp: cp ? sign * Number(cp[1]) : undefined,
           mate: mate ? sign * Number(mate[1]) : undefined,
         })

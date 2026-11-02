@@ -83,6 +83,9 @@ export function LearnPage({ lineId }: { lineId: string }) {
         <button type="button" className="ghost" onClick={() => setPhase('watch')}>
           Watch again
         </button>
+        <button type="button" onClick={() => go(`/analyse/${lineId}`)}>
+          Analyse this line
+        </button>
         {nextLine ? (
           <button type="button" className="primary" onClick={() => go(`/learn/${nextLine.id}`)}>
             Next line: {nextLine.name}

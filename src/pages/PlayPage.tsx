@@ -14,7 +14,7 @@ import { EvalBar, formatScore } from '../components/EvalBar'
 const SETTINGS_KEY = 'chess-trainer:play:v1'
 
 // Stockfish "Skill Level" values (0 to 20) behind each level.
-export const LEVELS = [
+const LEVELS = [
   { skill: 0, label: 'Level 1: Beginner' },
   { skill: 3, label: 'Level 2: Novice' },
   { skill: 6, label: 'Level 3: Casual' },
@@ -30,7 +30,7 @@ function nearestSkill(skill: number): number {
   return LEVELS.reduce((best, l) => (Math.abs(l.skill - skill) < Math.abs(best - skill) ? l.skill : best), LEVELS[0].skill)
 }
 
-export function LevelSelect({ value, onChange }: { value: number; onChange: (skill: number) => void }) {
+function LevelSelect({ value, onChange }: { value: number; onChange: (skill: number) => void }) {
   return (
     <select value={value} onChange={(e) => onChange(Number(e.target.value))}>
       {LEVELS.map((l) => (

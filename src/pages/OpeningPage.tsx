@@ -61,6 +61,9 @@ export function OpeningPage({ id }: { id: string }) {
                 <button type="button" className="ghost" onClick={() => go(`/practice/${opening.id}/${i}`)}>
                   Drill
                 </button>
+                <button type="button" className="ghost" onClick={() => go(`/analyse/${line.id}`)}>
+                  Analyse
+                </button>
               </div>
             </li>
           )
