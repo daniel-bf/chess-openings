@@ -436,3 +436,4 @@ div.an-card { cursor: default; flex-direction: row; align-items: center; justify
 .an-tag { font-weight: 700; margin-left: 1px; }
 .an-tag.dubious { color: #c88a10; }
 .an-tag.bad { color: var(--bad); }
+@media (max-width: 480px) { .topnav { min-width: 0; overflow-x: auto; scrollbar-width: none; } }

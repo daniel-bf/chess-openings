@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Chess } from 'chess.js'
-import { lineById, openingById } from '../data/openings'
+import { lineById, openingById, openings } from '../data/openings'
 import { planFor } from '../data/plans'
 import type { Side } from '../data/types'
 import type { Line } from '../lib/repertoire'
@@ -32,6 +32,71 @@ const MODES = [
   { id: 'annotated', label: 'Annotated' },
 ] as const
 type Mode = (typeof MODES)[number]['id']
+
+const LAST_OPENING_KEY = 'chess-trainer:analyse-opening:v1'
+
+/** The Analyse tab: pick an opening, then a line to analyse. */
+export function AnalyseHome() {
+  const [id, setId] = useState(() => {
+    try {
+      const v = localStorage.getItem(LAST_OPENING_KEY)
+      if (v && openingById.has(v)) return v
+    } catch {
+      // Use the first opening.
+    }
+    return openings[0].id
+  })
+  const opening = openingById.get(id)!
+  function choose(next: string) {
+    setId(next)
+    try {
+      localStorage.setItem(LAST_OPENING_KEY, next)
+    } catch {
+      // Remember it for this visit only.
+    }
+  }
+  return (
+    <div className="page analyse">
+      <header className="an-head">
+        <div>
+          <h1>Analyse</h1>
+          <p className="muted small">Pick a line to see where it leads, explore it with Stockfish, test your own candidate moves, or check every move.</p>
+        </div>
+        <select className="sx-opening" value={id} onChange={(e) => choose(e.target.value)} aria-label="Opening">
+          {(['white', 'black'] as const).map((side) => (
+            <optgroup key={side} label={`You play ${side}`}>
+              {openings
+                .filter((o) => o.side === side)
+                .map((o) => (
+                  <option key={o.id} value={o.id}>
+                    {o.name}
+                  </option>
+                ))}
+            </optgroup>
+          ))}
+        </select>
+      </header>
+      <ol className="lines">
+        {opening.lines.map((line, i) => (
+          <li key={line.id}>
+            <div className="line-info">
+              <span className="line-num">{i + 1}</span>
+              <div>
+                <h3>{line.name}</h3>
+                <p className="muted small">{line.moves.map((m, j) => (j % 2 === 0 ? `${j / 2 + 1}.${m.san}` : m.san)).join(' ')}</p>
+              </div>
+            </div>
+            <div className="row">
+              <button type="button" className="primary" onClick={() => go(`/analyse/${line.id}`)}>
+                Analyse
+              </button>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
 
 const ARROW_COLORS = [ARROW_BEST, ARROW_SECOND, 'rgba(232, 160, 32, 0.6)']
 
