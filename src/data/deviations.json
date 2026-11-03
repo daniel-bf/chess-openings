@@ -1,0 +1,3825 @@
+[
+ {
+  "id": "alapin-white|r1b1kbnr/pp3ppp/2n5/3qp3/3P4/2N2N2/PP3PPP/R1BQKB1R b KQkq -|Qd8",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:2"
+  ],
+  "fenKey": "r1b1kbnr/pp3ppp/2n5/3qp3/3P4/2N2N2/PP3PPP/R1BQKB1R b KQkq -",
+  "bookSan": "Bb4",
+  "mistake": "Qd8",
+  "loss": 337,
+  "edge": 371,
+  "accept": [
+   "d5"
+  ],
+  "refutation": [
+   "d5",
+   "e4",
+   "Ng5",
+   "Ne5",
+   "Ngxe4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +3.7)."
+ },
+ {
+  "id": "alapin-white|rnbqkb1r/pp1ppppp/5n2/2p1P3/8/2P5/PP1P1PPP/RNBQKBNR b KQkq -|Ne4",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:3",
+   "alapin-white:4"
+  ],
+  "fenKey": "rnbqkb1r/pp1ppppp/5n2/2p1P3/8/2P5/PP1P1PPP/RNBQKBNR b KQkq -",
+  "bookSan": "Nd5",
+  "mistake": "Ne4",
+  "loss": 336,
+  "edge": 352,
+  "accept": [
+   "d3"
+  ],
+  "refutation": [
+   "d3",
+   "Nxf2",
+   "Kxf2",
+   "Nc6",
+   "Nf3"
+  ],
+  "gain": "You win a piece (engine: +3.5)."
+ },
+ {
+  "id": "alapin-white|r1bqkbnr/pp1p1ppp/2n5/2p1p3/2B1P3/2P2N2/PP1P1PPP/RNBQK2R b KQkq -|Nge7",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:9"
+  ],
+  "fenKey": "r1bqkbnr/pp1p1ppp/2n5/2p1p3/2B1P3/2P2N2/PP1P1PPP/RNBQK2R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "Nge7",
+  "loss": 221,
+  "edge": 249,
+  "accept": [
+   "Qb3"
+  ],
+  "refutation": [
+   "Qb3",
+   "d5",
+   "exd5",
+   "Na5",
+   "Qa4+"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.5)."
+ },
+ {
+  "id": "alapin-white|r3kbnr/pp2pppp/2n5/3q4/3P2b1/5N2/PP2BPPP/RNBQK2R b KQkq -|Rc8",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:8"
+  ],
+  "fenKey": "r3kbnr/pp2pppp/2n5/3q4/3P2b1/5N2/PP2BPPP/RNBQK2R b KQkq -",
+  "bookSan": "e6",
+  "mistake": "Rc8",
+  "loss": 205,
+  "edge": 236,
+  "accept": [
+   "Nc3"
+  ],
+  "refutation": [
+   "Nc3",
+   "Qd8",
+   "d5",
+   "Bxf3",
+   "Bxf3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.4)."
+ },
+ {
+  "id": "alapin-white|r1bqkb1r/pp2pppp/1nnP4/2p5/8/1BP2N2/PP1P1PPP/RNBQK2R b KQkq -|Bg4",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:3"
+  ],
+  "fenKey": "r1bqkb1r/pp2pppp/1nnP4/2p5/8/1BP2N2/PP1P1PPP/RNBQK2R b KQkq -",
+  "bookSan": "c4",
+  "mistake": "Bg4",
+  "loss": 182,
+  "edge": 189,
+  "accept": [
+   "Bxf7+"
+  ],
+  "refutation": [
+   "Bxf7+",
+   "Kxf7",
+   "Ng5+",
+   "Kg8",
+   "Qxg4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "alapin-white|r3kb1r/pp3ppp/2n1pn2/2pq3b/3P4/2P1BN1P/PP2BPP1/RN1Q1RK1 b kq -|Nd7",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:1"
+  ],
+  "fenKey": "r3kb1r/pp3ppp/2n1pn2/2pq3b/3P4/2P1BN1P/PP2BPP1/RN1Q1RK1 b kq -",
+  "bookSan": "cxd4",
+  "mistake": "Nd7",
+  "loss": 176,
+  "edge": 193,
+  "accept": [
+   "c4",
+   "g4"
+  ],
+  "refutation": [
+   "c4",
+   "Qf5",
+   "d5",
+   "Nce5",
+   "Nxe5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "alapin-white|rnbqkbnr/pp2pppp/8/2pP4/8/2P5/PP1P1PPP/RNBQKBNR b KQkq -|e6",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:0",
+   "alapin-white:1",
+   "alapin-white:2"
+  ],
+  "fenKey": "rnbqkbnr/pp2pppp/8/2pP4/8/2P5/PP1P1PPP/RNBQKBNR b KQkq -",
+  "bookSan": "Qxd5",
+  "mistake": "e6",
+  "loss": 175,
+  "edge": 195,
+  "accept": [
+   "Bb5+"
+  ],
+  "refutation": [
+   "Bb5+",
+   "Bd7",
+   "dxe6",
+   "fxe6",
+   "Qe2"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "alapin-white|rn2kb1r/pp3ppp/4pn2/2pq4/3P2b1/2P2N1P/PP2BPP1/RNBQK2R b KQkq -|Bxf3",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:1"
+  ],
+  "fenKey": "rn2kb1r/pp3ppp/4pn2/2pq4/3P2b1/2P2N1P/PP2BPP1/RNBQK2R b KQkq -",
+  "bookSan": "Bh5",
+  "mistake": "Bxf3",
+  "loss": 147,
+  "edge": 169,
+  "accept": [
+   "Bxf3"
+  ],
+  "refutation": [
+   "Bxf3",
+   "Qd7",
+   "dxc5",
+   "Bxc5",
+   "Qxd7+"
+  ],
+  "gain": "You win a piece (engine: +1.7)."
+ },
+ {
+  "id": "alapin-white|rnbqkbnr/pp3ppp/4p3/2pP4/3P4/2P5/PP3PPP/RNBQKBNR b KQkq -|cxd4",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:5"
+  ],
+  "fenKey": "rnbqkbnr/pp3ppp/4p3/2pP4/3P4/2P5/PP3PPP/RNBQKBNR b KQkq -",
+  "bookSan": "exd5",
+  "mistake": "cxd4",
+  "loss": 137,
+  "edge": 152,
+  "accept": [
+   "Bb5+"
+  ],
+  "refutation": [
+   "Bb5+",
+   "Bd7",
+   "dxe6",
+   "fxe6",
+   "Bd3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.5)."
+ },
+ {
+  "id": "alapin-white|r1bqkbnr/pp1ppppp/2n5/2p5/3PP3/2P5/PP3PPP/RNBQKBNR b KQkq -|e5",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:8"
+  ],
+  "fenKey": "r1bqkbnr/pp1ppppp/2n5/2p5/3PP3/2P5/PP3PPP/RNBQKBNR b KQkq -",
+  "bookSan": "cxd4",
+  "mistake": "e5",
+  "loss": 133,
+  "edge": 155,
+  "accept": [
+   "d5"
+  ],
+  "refutation": [
+   "d5",
+   "Nb8",
+   "Nf3",
+   "d6",
+   "a4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.6)."
+ },
+ {
+  "id": "alapin-white|rn2kb1r/pp3ppp/4pn2/2pq3b/3P4/2P2N1P/PP2BPP1/RNBQ1RK1 b kq -|Bd6",
+  "openingId": "alapin-white",
+  "lineIds": [
+   "alapin-white:1"
+  ],
+  "fenKey": "rn2kb1r/pp3ppp/4pn2/2pq3b/3P4/2P2N1P/PP2BPP1/RNBQ1RK1 b kq -",
+  "bookSan": "Nc6",
+  "mistake": "Bd6",
+  "loss": 132,
+  "edge": 157,
+  "accept": [
+   "g4",
+   "c4"
+  ],
+  "refutation": [
+   "g4",
+   "Bg6",
+   "Bb5+",
+   "Ke7",
+   "c4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.6)."
+ },
+ {
+  "id": "alekhine|rnbqkb1r/pppppppp/8/4P3/8/2n5/PPPP1PPP/R1BQKBNR w KQkq -|Qf3",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:7"
+  ],
+  "fenKey": "rnbqkb1r/pppppppp/8/4P3/8/2n5/PPPP1PPP/R1BQKBNR w KQkq -",
+  "bookSan": "dxc3",
+  "mistake": "Qf3",
+  "loss": 513,
+  "edge": 481,
+  "accept": [
+   "Na4"
+  ],
+  "refutation": [
+   "Na4",
+   "Nh3",
+   "e6",
+   "d4",
+   "h6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +4.8)."
+ },
+ {
+  "id": "alekhine|r2qkb1r/ppp1pppp/1nn5/4P3/2PP2b1/5N2/PP4PP/RNBQKB1R w KQkq -|Na3",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:3"
+  ],
+  "fenKey": "r2qkb1r/ppp1pppp/1nn5/4P3/2PP2b1/5N2/PP4PP/RNBQKB1R w KQkq -",
+  "bookSan": "e6",
+  "mistake": "Na3",
+  "loss": 252,
+  "edge": 229,
+  "accept": [
+   "Bxf3",
+   "e6"
+  ],
+  "refutation": [
+   "Bxf3",
+   "gxf3",
+   "e6",
+   "Be3",
+   "Bb4+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.3)."
+ },
+ {
+  "id": "alekhine|rnbqkb1r/ppp2ppp/3pp3/2PnP3/2B5/2N5/PP1P1PPP/R1BQK1NR w KQkq -|Qh5",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:5"
+  ],
+  "fenKey": "rnbqkb1r/ppp2ppp/3pp3/2PnP3/2B5/2N5/PP1P1PPP/R1BQK1NR w KQkq -",
+  "bookSan": "cxd6",
+  "mistake": "Qh5",
+  "loss": 211,
+  "edge": 181,
+  "accept": [
+   "Nb4",
+   "Nf4"
+  ],
+  "refutation": [
+   "Nb4",
+   "exd6",
+   "cxd6",
+   "Qd1",
+   "dxc5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "alekhine|r2qkb1r/ppp2ppp/1nn1p3/4Pb2/2PP4/2N1B3/PP4PP/R2QKBNR w KQkq -|g4",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:2"
+  ],
+  "fenKey": "r2qkb1r/ppp2ppp/1nn1p3/4Pb2/2PP4/2N1B3/PP4PP/R2QKBNR w KQkq -",
+  "bookSan": "Nf3",
+  "mistake": "g4",
+  "loss": 198,
+  "edge": 137,
+  "accept": [
+   "Qh4+"
+  ],
+  "refutation": [
+   "Qh4+",
+   "Bf2",
+   "Qxg4",
+   "Qxg4",
+   "Bxg4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.4)."
+ },
+ {
+  "id": "alekhine|rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/8/PP3PPP/RNBQKBNR w KQkq -|Bd3",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:2",
+   "alekhine:3",
+   "alekhine:4"
+  ],
+  "fenKey": "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/8/PP3PPP/RNBQKBNR w KQkq -",
+  "bookSan": "f4",
+  "mistake": "Bd3",
+  "loss": 188,
+  "edge": 120,
+  "accept": [
+   "dxe5"
+  ],
+  "refutation": [
+   "dxe5",
+   "d5",
+   "e6",
+   "Nf3",
+   "exd5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.2)."
+ },
+ {
+  "id": "alekhine|rnbqkb1r/ppp1pppp/1n1p4/4P3/2BP4/8/PPP2PPP/RNBQK1NR w KQkq -|Bf1",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:6"
+  ],
+  "fenKey": "rnbqkb1r/ppp1pppp/1n1p4/4P3/2BP4/8/PPP2PPP/RNBQK1NR w KQkq -",
+  "bookSan": "Bb3",
+  "mistake": "Bf1",
+  "loss": 180,
+  "edge": 139,
+  "accept": [
+   "dxe5"
+  ],
+  "refutation": [
+   "dxe5",
+   "dxe5",
+   "Qxd1+",
+   "Kxd1",
+   "Nc6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.4)."
+ },
+ {
+  "id": "alekhine|rnbqkb1r/pppppppp/8/2PnP3/8/8/PP1P1PPP/RNBQKBNR w KQkq -|Nh3",
+  "openingId": "alekhine",
+  "lineIds": [
+   "alekhine:5"
+  ],
+  "fenKey": "rnbqkb1r/pppppppp/8/2PnP3/8/8/PP1P1PPP/RNBQKBNR w KQkq -",
+  "bookSan": "Bc4",
+  "mistake": "Nh3",
+  "loss": 163,
+  "edge": 134,
+  "accept": [
+   "d6"
+  ],
+  "refutation": [
+   "d6",
+   "exd6",
+   "exd6",
+   "Bc4",
+   "dxc5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.3)."
+ },
+ {
+  "id": "benko|rn1qkb1r/4pppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKbNR w KQkq -|g4",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:1"
+  ],
+  "fenKey": "rn1qkb1r/4pppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKbNR w KQkq -",
+  "bookSan": "Kxf1",
+  "mistake": "g4",
+  "loss": 746,
+  "edge": 656,
+  "accept": [
+   "Bg2"
+  ],
+  "refutation": [
+   "Bg2",
+   "e5",
+   "dxe5",
+   "Nf3",
+   "Bxh1"
+  ],
+  "gain": "You win a rook or more (engine: +6.6)."
+ },
+ {
+  "id": "benko|rn1qkb1r/4pppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKbNR w KQkq -|Qf3",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:1"
+  ],
+  "fenKey": "rn1qkb1r/4pppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKbNR w KQkq -",
+  "bookSan": "Kxf1",
+  "mistake": "Qf3",
+  "loss": 703,
+  "edge": 613,
+  "accept": [
+   "Ba6",
+   "Bc4"
+  ],
+  "refutation": [
+   "Ba6",
+   "e5",
+   "dxe5",
+   "d6",
+   "Ra7"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +6.1)."
+ },
+ {
+  "id": "benko|r2q1rk1/3nppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - -|b3",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:0"
+  ],
+  "fenKey": "r2q1rk1/3nppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - -",
+  "bookSan": "Qc2",
+  "mistake": "b3",
+  "loss": 258,
+  "edge": 193,
+  "accept": [
+   "Nxd5",
+   "Ne4"
+  ],
+  "refutation": [
+   "Nxd5",
+   "Qxd5",
+   "Bxc3",
+   "Bh6",
+   "Nf6"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.9)."
+ },
+ {
+  "id": "benko|rnb1kb1r/3ppppp/pq3n2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq -|g4",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:5"
+  ],
+  "fenKey": "rnb1kb1r/3ppppp/pq3n2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq -",
+  "bookSan": "Nc3",
+  "mistake": "g4",
+  "loss": 212,
+  "edge": 180,
+  "accept": [
+   "Nxd5"
+  ],
+  "refutation": [
+   "Nxd5",
+   "Nd2",
+   "d6",
+   "Bg2",
+   "e6"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.8)."
+ },
+ {
+  "id": "benko|rnbqkb1r/3ppppp/5n2/2pP4/1p2P3/2N5/PP3PPP/R1BQKBNR w KQkq -|Nb1",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:6"
+  ],
+  "fenKey": "rnbqkb1r/3ppppp/5n2/2pP4/1p2P3/2N5/PP3PPP/R1BQKBNR w KQkq -",
+  "bookSan": "Nb5",
+  "mistake": "Nb1",
+  "loss": 209,
+  "edge": 208,
+  "accept": [
+   "Nxe4"
+  ],
+  "refutation": [
+   "Nxe4",
+   "Be3",
+   "Bb7",
+   "Nf3",
+   "Na6"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.1)."
+ },
+ {
+  "id": "benko|rnbqkb1r/3ppppp/5n2/2pP4/1p2P3/2N5/PP3PPP/R1BQKBNR w KQkq -|e5",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:6"
+  ],
+  "fenKey": "rnbqkb1r/3ppppp/5n2/2pP4/1p2P3/2N5/PP3PPP/R1BQKBNR w KQkq -",
+  "bookSan": "Nb5",
+  "mistake": "e5",
+  "loss": 163,
+  "edge": 162,
+  "accept": [
+   "bxc3"
+  ],
+  "refutation": [
+   "bxc3",
+   "exf6",
+   "cxb2",
+   "Bxb2",
+   "Qa5+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.6)."
+ },
+ {
+  "id": "benko|rnbqkb1r/p3pppp/3p1n2/2pP4/P1p5/2N5/1P2PPPP/R1BQKBNR w KQkq -|Qc2",
+  "openingId": "benko",
+  "lineIds": [
+   "benko:8"
+  ],
+  "fenKey": "rnbqkb1r/p3pppp/3p1n2/2pP4/P1p5/2N5/1P2PPPP/R1BQKBNR w KQkq -",
+  "bookSan": "e4",
+  "mistake": "Qc2",
+  "loss": 146,
+  "edge": 122,
+  "accept": [
+   "Na6"
+  ],
+  "refutation": [
+   "Na6",
+   "e4",
+   "Nb4",
+   "Qb1",
+   "Ba6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.2)."
+ },
+ {
+  "id": "caro-kann|r2qkbnr/p2n1ppp/1pp1p3/8/3P4/1N1b1N2/PPP2PPP/R1BQK2R w KQkq -|Bg5",
+  "openingId": "caro-kann",
+  "lineIds": [
+   "caro-kann:7"
+  ],
+  "fenKey": "r2qkbnr/p2n1ppp/1pp1p3/8/3P4/1N1b1N2/PPP2PPP/R1BQK2R w KQkq -",
+  "bookSan": "Qxd3",
+  "mistake": "Bg5",
+  "loss": 237,
+  "edge": 240,
+  "accept": [
+   "f6"
+  ],
+  "refutation": [
+   "f6",
+   "Qxd3",
+   "fxg5",
+   "h4",
+   "Qf6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.4)."
+ },
+ {
+  "id": "caro-kann|rn1qkbnr/pp3ppb/4p3/2ppP2p/3P1NPP/2N5/PPP2P2/R1BQKB1R w KQkq -|Bd3",
+  "openingId": "caro-kann",
+  "lineIds": [
+   "caro-kann:10"
+  ],
+  "fenKey": "rn1qkbnr/pp3ppb/4p3/2ppP2p/3P1NPP/2N5/PPP2P2/R1BQKB1R w KQkq -",
+  "bookSan": "Nxh5",
+  "mistake": "Bd3",
+  "loss": 209,
+  "edge": 179,
+  "accept": [
+   "Bxd3",
+   "cxd4"
+  ],
+  "refutation": [
+   "Bxd3",
+   "Qxd3",
+   "cxd4",
+   "Nce2",
+   "hxg4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.8)."
+ },
+ {
+  "id": "caro-kann|rn1qkbnr/pp3pp1/4p1b1/2ppP2p/3P2PP/2N5/PPP1NP2/R1BQKB1R w KQkq -|Rg1",
+  "openingId": "caro-kann",
+  "lineIds": [
+   "caro-kann:10"
+  ],
+  "fenKey": "rn1qkbnr/pp3pp1/4p1b1/2ppP2p/3P2PP/2N5/PPP1NP2/R1BQKB1R w KQkq -",
+  "bookSan": "Nf4",
+  "mistake": "Rg1",
+  "loss": 191,
+  "edge": 166,
+  "accept": [
+   "hxg4",
+   "cxd4"
+  ],
+  "refutation": [
+   "hxg4",
+   "Rxg4",
+   "Bh5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.7)."
+ },
+ {
+  "id": "caro-kann|rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2P1/2N5/PPP1NP1P/R1BQKB1R w KQkq -|f4",
+  "openingId": "caro-kann",
+  "lineIds": [
+   "caro-kann:10"
+  ],
+  "fenKey": "rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2P1/2N5/PPP1NP1P/R1BQKB1R w KQkq -",
+  "bookSan": "h4",
+  "mistake": "f4",
+  "loss": 173,
+  "edge": 145,
+  "accept": [
+   "cxd4"
+  ],
+  "refutation": [
+   "cxd4",
+   "Qxd4",
+   "Nc6",
+   "Qf2",
+   "Nh6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.4)."
+ },
+ {
+  "id": "caro-kann|rn1qkbnr/pp3ppb/4p3/2ppP2p/3P1NPP/2N5/PPP2P2/R1BQKB1R w KQkq -|Bd2",
+  "openingId": "caro-kann",
+  "lineIds": [
+   "caro-kann:10"
+  ],
+  "fenKey": "rn1qkbnr/pp3ppb/4p3/2ppP2p/3P1NPP/2N5/PPP2P2/R1BQKB1R w KQkq -",
+  "bookSan": "Nxh5",
+  "mistake": "Bd2",
+  "loss": 163,
+  "edge": 133,
+  "accept": [
+   "cxd4"
+  ],
+  "refutation": [
+   "cxd4",
+   "Nb5",
+   "Nc6",
+   "Nxh5",
+   "a6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "caro-kann-advance-white|r2qkbnr/pp2pppp/2n5/2PpP3/6b1/2P2N2/PP3PPP/RNBQKB1R b KQkq -|Nxe5",
+  "openingId": "caro-kann-advance-white",
+  "lineIds": [
+   "caro-kann-advance-white:5"
+  ],
+  "fenKey": "r2qkbnr/pp2pppp/2n5/2PpP3/6b1/2P2N2/PP3PPP/RNBQKB1R b KQkq -",
+  "bookSan": "e6",
+  "mistake": "Nxe5",
+  "loss": 653,
+  "edge": 701,
+  "accept": [
+   "Nxe5"
+  ],
+  "refutation": [
+   "Nxe5",
+   "Bd7",
+   "Be3",
+   "a6",
+   "Nxd7"
+  ],
+  "gain": "You win a piece (engine: +7.0)."
+ },
+ {
+  "id": "caro-kann-advance-white|rn1qkbnr/pp3ppp/4p3/3pPb2/3N4/4B3/PPP1BPPP/RN1QK2R b KQkq -|g6",
+  "openingId": "caro-kann-advance-white",
+  "lineIds": [
+   "caro-kann-advance-white:3"
+  ],
+  "fenKey": "rn1qkbnr/pp3ppp/4p3/3pPb2/3N4/4B3/PPP1BPPP/RN1QK2R b KQkq -",
+  "bookSan": "Ne7",
+  "mistake": "g6",
+  "loss": 414,
+  "edge": 452,
+  "accept": [
+   "Bb5+",
+   "g4"
+  ],
+  "refutation": [
+   "Bb5+",
+   "Nd7",
+   "g4",
+   "Be4",
+   "f3"
+  ],
+  "gain": "You win two pawns (engine: +4.5)."
+ },
+ {
+  "id": "caro-kann-advance-white|rn1qkb1r/pp2nppp/4p3/2ppPb2/2PP4/5N2/PP2BPPP/RNBQ1RK1 b kq -|Na6",
+  "openingId": "caro-kann-advance-white",
+  "lineIds": [
+   "caro-kann-advance-white:2"
+  ],
+  "fenKey": "rn1qkb1r/pp2nppp/4p3/2ppPb2/2PP4/5N2/PP2BPPP/RNBQ1RK1 b kq -",
+  "bookSan": "Nbc6",
+  "mistake": "Na6",
+  "loss": 225,
+  "edge": 257,
+  "accept": [
+   "cxd5"
+  ],
+  "refutation": [
+   "cxd5",
+   "Qxd5",
+   "Nc3",
+   "Qd7",
+   "Be3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.6)."
+ },
+ {
+  "id": "caro-kann-advance-white|r1bqkbnr/pp2pppp/2n5/2PpP3/8/5N2/PPP2PPP/RNBQKB1R b KQkq -|Qa5+",
+  "openingId": "caro-kann-advance-white",
+  "lineIds": [
+   "caro-kann-advance-white:5"
+  ],
+  "fenKey": "r1bqkbnr/pp2pppp/2n5/2PpP3/8/5N2/PPP2PPP/RNBQKB1R b KQkq -",
+  "bookSan": "Bg4",
+  "mistake": "Qa5+",
+  "loss": 157,
+  "edge": 204,
+  "accept": [
+   "c3"
+  ],
+  "refutation": [
+   "c3",
+   "e6",
+   "b4",
+   "Qc7",
+   "Bf4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "catalan|r1bqk2r/ppp2ppp/2n1pn2/8/QbpP4/5NP1/PP1BPPBP/RN2K2R b KQkq -|Bd7",
+  "openingId": "catalan",
+  "lineIds": [
+   "catalan:2"
+  ],
+  "fenKey": "r1bqk2r/ppp2ppp/2n1pn2/8/QbpP4/5NP1/PP1BPPBP/RN2K2R b KQkq -",
+  "bookSan": "Nd5",
+  "mistake": "Bd7",
+  "loss": 387,
+  "edge": 425,
+  "accept": [
+   "Bxb4"
+  ],
+  "refutation": [
+   "Bxb4",
+   "Nxd4",
+   "Qd1",
+   "Bc6",
+   "O-O"
+  ],
+  "gain": "You get a big lead in development and position (engine: +4.3)."
+ },
+ {
+  "id": "catalan|rnbqkb1r/pppp1ppp/8/4P3/2P2Bn1/8/PP2PPPP/RN1QKBNR b KQkq -|d5",
+  "openingId": "catalan",
+  "lineIds": [
+   "catalan:9"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P3/2P2Bn1/8/PP2PPPP/RN1QKBNR b KQkq -",
+  "bookSan": "Nc6",
+  "mistake": "d5",
+  "loss": 260,
+  "edge": 322,
+  "accept": [
+   "h3",
+   "Nf3",
+   "cxd5",
+   "e3"
+  ],
+  "refutation": [
+   "h3",
+   "Bb4+",
+   "Nd2",
+   "g5",
+   "Bg3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +3.2)."
+ },
+ {
+  "id": "catalan|r1bqkb1r/pppp1ppp/2n5/4P3/2P2Bn1/5N2/PP2PPPP/RN1QKB1R b KQkq -|Qe7",
+  "openingId": "catalan",
+  "lineIds": [
+   "catalan:9"
+  ],
+  "fenKey": "r1bqkb1r/pppp1ppp/2n5/4P3/2P2Bn1/5N2/PP2PPPP/RN1QKB1R b KQkq -",
+  "bookSan": "Bb4+",
+  "mistake": "Qe7",
+  "loss": 244,
+  "edge": 319,
+  "accept": [
+   "Nc3"
+  ],
+  "refutation": [
+   "Nc3",
+   "Qb4",
+   "Qd2",
+   "d6",
+   "exd6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +3.2)."
+ },
+ {
+  "id": "catalan|r1bqkb1r/1pp2ppp/p1n1pn2/8/2pP4/4PNP1/PP3PBP/RNBQ1RK1 b kq -|b5",
+  "openingId": "catalan",
+  "lineIds": [
+   "catalan:8"
+  ],
+  "fenKey": "r1bqkb1r/1pp2ppp/p1n1pn2/8/2pP4/4PNP1/PP3PBP/RNBQ1RK1 b kq -",
+  "bookSan": "Bd7",
+  "mistake": "b5",
+  "loss": 205,
+  "edge": 230,
+  "accept": [
+   "Ne5"
+  ],
+  "refutation": [
+   "Ne5",
+   "Nxe5",
+   "Bxa8",
+   "Ned7",
+   "b3"
+  ],
+  "gain": "You win two pawns (engine: +2.3)."
+ },
+ {
+  "id": "catalan|rnbqkb1r/pppp1ppp/8/4P3/2P2Bn1/8/PP2PPPP/RN1QKBNR b KQkq -|h5",
+  "openingId": "catalan",
+  "lineIds": [
+   "catalan:9"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P3/2P2Bn1/8/PP2PPPP/RN1QKBNR b KQkq -",
+  "bookSan": "Nc6",
+  "mistake": "h5",
+  "loss": 201,
+  "edge": 263,
+  "accept": [
+   "Nf3"
+  ],
+  "refutation": [
+   "Nf3",
+   "d6",
+   "exd6",
+   "Bxd6",
+   "Bxd6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.6)."
+ },
+ {
+  "id": "catalan|r1b1k2r/ppppqppp/2n5/4P3/1bP2Bn1/4PN2/PP1N1PPP/R2QKB1R b KQkq -|b6",
+  "openingId": "catalan",
+  "lineIds": [
+   "catalan:9"
+  ],
+  "fenKey": "r1b1k2r/ppppqppp/2n5/4P3/1bP2Bn1/4PN2/PP1N1PPP/R2QKB1R b KQkq -",
+  "bookSan": "Ngxe5",
+  "mistake": "b6",
+  "loss": 172,
+  "edge": 198,
+  "accept": [
+   "a3"
+  ],
+  "refutation": [
+   "a3",
+   "Bxd2+",
+   "Qxd2",
+   "O-O",
+   "h3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "dutch|r1b1qrk1/1pp1p1bp/n2p2p1/p2P4/2PNn3/6P1/PP3PBP/R1BQ1RK1 w - -|Nb5",
+  "openingId": "dutch",
+  "lineIds": [
+   "dutch:8"
+  ],
+  "fenKey": "r1b1qrk1/1pp1p1bp/n2p2p1/p2P4/2PNn3/6P1/PP3PBP/R1BQ1RK1 w - -",
+  "bookSan": "Bxe4",
+  "mistake": "Nb5",
+  "loss": 593,
+  "edge": 573,
+  "accept": [
+   "Nf6",
+   "Nec5"
+  ],
+  "refutation": [
+   "Nf6",
+   "h3",
+   "Qd8",
+   "Be3",
+   "Bd7"
+  ],
+  "gain": "You get a big lead in development and position (engine: +5.7)."
+ },
+ {
+  "id": "dutch|rnbqkb1r/ppppp3/5n1p/5pp1/3P4/6B1/PPP1PPPP/RN1QKBNR w KQkq -|c4",
+  "openingId": "dutch",
+  "lineIds": [
+   "dutch:5"
+  ],
+  "fenKey": "rnbqkb1r/ppppp3/5n1p/5pp1/3P4/6B1/PPP1PPPP/RN1QKBNR w KQkq -",
+  "bookSan": "e3",
+  "mistake": "c4",
+  "loss": 369,
+  "edge": 313,
+  "accept": [
+   "f4"
+  ],
+  "refutation": [
+   "f4",
+   "Qc2",
+   "Bg7",
+   "h4",
+   "fxg3"
+  ],
+  "gain": "You win two pawns (engine: +3.1)."
+ },
+ {
+  "id": "english|rnbqkb1r/ppp2ppp/4pP2/8/2Pp4/2N5/PP1P1PPP/R1BQKBNR b KQkq -|gxf6",
+  "openingId": "english",
+  "lineIds": [
+   "english:3"
+  ],
+  "fenKey": "rnbqkb1r/ppp2ppp/4pP2/8/2Pp4/2N5/PP1P1PPP/R1BQKBNR b KQkq -",
+  "bookSan": "dxc3",
+  "mistake": "gxf6",
+  "loss": 332,
+  "edge": 346,
+  "accept": [
+   "Nb1",
+   "Nce2",
+   "Ne4"
+  ],
+  "refutation": [
+   "Nb1",
+   "h5",
+   "d3",
+   "Bd7",
+   "Nd2"
+  ],
+  "gain": "You get a big lead in development and position (engine: +3.5)."
+ },
+ {
+  "id": "english|rnbqkb1r/ppp1pppp/5n2/3P4/8/2N5/PP1PPPPP/R1BQKBNR b KQkq -|Bf5",
+  "openingId": "english",
+  "lineIds": [
+   "english:11"
+  ],
+  "fenKey": "rnbqkb1r/ppp1pppp/5n2/3P4/8/2N5/PP1PPPPP/R1BQKBNR b KQkq -",
+  "bookSan": "Nxd5",
+  "mistake": "Bf5",
+  "loss": 184,
+  "edge": 219,
+  "accept": [
+   "e4",
+   "Qb3"
+  ],
+  "refutation": [
+   "e4",
+   "Bg6",
+   "f3",
+   "e6",
+   "Qa4+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.2)."
+ },
+ {
+  "id": "french|r3k1r1/ppqbnp1Q/2n1p3/3pP3/3p1P2/P1P5/2P1N1PP/R1B1KB1R w KQq -|cxd4",
+  "openingId": "french",
+  "lineIds": [
+   "french:3"
+  ],
+  "fenKey": "r3k1r1/ppqbnp1Q/2n1p3/3pP3/3p1P2/P1P5/2P1N1PP/R1B1KB1R w KQq -",
+  "bookSan": "Qd3",
+  "mistake": "cxd4",
+  "loss": 236,
+  "edge": 182,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "Kd1",
+   "Ndf5",
+   "Qh3",
+   "Rc8"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.8)."
+ },
+ {
+  "id": "french|rnb1k1r1/ppq1npQp/4p3/2ppP3/3P4/P1P5/2P2PPP/R1B1KBNR w KQq -|Bb5+",
+  "openingId": "french",
+  "lineIds": [
+   "french:3"
+  ],
+  "fenKey": "rnb1k1r1/ppq1npQp/4p3/2ppP3/3P4/P1P5/2P2PPP/R1B1KBNR w KQq -",
+  "bookSan": "Qxh7",
+  "mistake": "Bb5+",
+  "loss": 184,
+  "edge": 128,
+  "accept": [
+   "Bd7"
+  ],
+  "refutation": [
+   "Bd7",
+   "Bxd7+",
+   "Nxd7",
+   "Qxh7",
+   "cxd4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.3)."
+ },
+ {
+  "id": "french|r3kbnr/pp1b1ppp/4p3/3pP3/3q4/3B4/PP3PPP/RNBQ1RK1 w kq -|Qb3",
+  "openingId": "french",
+  "lineIds": [
+   "french:2"
+  ],
+  "fenKey": "r3kbnr/pp1b1ppp/4p3/3pP3/3q4/3B4/PP3PPP/RNBQ1RK1 w kq -",
+  "bookSan": "Nc3",
+  "mistake": "Qb3",
+  "loss": 135,
+  "edge": 174,
+  "accept": [
+   "Qxe5"
+  ],
+  "refutation": [
+   "Qxe5",
+   "Qxb7",
+   "Qb8",
+   "Qxb8+",
+   "Rxb8"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.7)."
+ },
+ {
+  "id": "french-advance-white|r1b1kbnr/pp3ppp/1qn1p3/3pP3/2pP4/P1P2N2/1P1N1PPP/R1BQKB1R b KQkq -|Nge7",
+  "openingId": "french-advance-white",
+  "lineIds": [
+   "french-advance-white:0"
+  ],
+  "fenKey": "r1b1kbnr/pp3ppp/1qn1p3/3pP3/2pP4/P1P2N2/1P1N1PPP/R1BQKB1R b KQkq -",
+  "bookSan": "Na5",
+  "mistake": "Nge7",
+  "loss": 168,
+  "edge": 207,
+  "accept": [
+   "Bxc4"
+  ],
+  "refutation": [
+   "Bxc4",
+   "dxc4",
+   "Nxc4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.1)."
+ },
+ {
+  "id": "french-advance-white|r1b1kb1r/pp3ppp/1qn1p2n/3pP3/1P1P4/P4N2/5PPP/RNBQKB1R b KQkq -|Be7",
+  "openingId": "french-advance-white",
+  "lineIds": [
+   "french-advance-white:2"
+  ],
+  "fenKey": "r1b1kb1r/pp3ppp/1qn1p2n/3pP3/1P1P4/P4N2/5PPP/RNBQKB1R b KQkq -",
+  "bookSan": "Nf5",
+  "mistake": "Be7",
+  "loss": 153,
+  "edge": 164,
+  "accept": [
+   "Bxh6"
+  ],
+  "refutation": [
+   "Bxh6",
+   "gxh6",
+   "Nc3",
+   "O-O",
+   "Bd3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.6)."
+ },
+ {
+  "id": "italian|r1b1k1nr/ppp1qppp/1bnp4/4p3/P1BPP3/2P2N2/1P3PPP/RNBQ1RK1 b kq -|h6",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:6"
+  ],
+  "fenKey": "r1b1k1nr/ppp1qppp/1bnp4/4p3/P1BPP3/2P2N2/1P3PPP/RNBQ1RK1 b kq -",
+  "bookSan": "a6",
+  "mistake": "h6",
+  "loss": 345,
+  "edge": 444,
+  "accept": [
+   "d5",
+   "a5"
+  ],
+  "refutation": [
+   "d5",
+   "a5",
+   "dxc6",
+   "bxc6",
+   "b4"
+  ],
+  "gain": "You win two pawns (engine: +4.4)."
+ },
+ {
+  "id": "italian|r1b1k1nr/ppp1qppp/1bnp4/4p3/P1BPP3/2P2N2/1P3PPP/RNBQ1RK1 b kq -|Nf6",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:6"
+  ],
+  "fenKey": "r1b1k1nr/ppp1qppp/1bnp4/4p3/P1BPP3/2P2N2/1P3PPP/RNBQ1RK1 b kq -",
+  "bookSan": "a6",
+  "mistake": "Nf6",
+  "loss": 283,
+  "edge": 382,
+  "accept": [
+   "d5",
+   "a5"
+  ],
+  "refutation": [
+   "d5",
+   "a5",
+   "dxc6",
+   "bxc6",
+   "Nbd2"
+  ],
+  "gain": "You win two pawns (engine: +3.8)."
+ },
+ {
+  "id": "italian|r1bq1k1r/pppp2pp/5n2/2b5/3pP3/1B1P4/PPP2PPP/RNBQ1RK1 b - -|h5",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:5"
+  ],
+  "fenKey": "r1bq1k1r/pppp2pp/5n2/2b5/3pP3/1B1P4/PPP2PPP/RNBQ1RK1 b - -",
+  "bookSan": "d6",
+  "mistake": "h5",
+  "loss": 242,
+  "edge": 643,
+  "accept": [
+   "e5"
+  ],
+  "refutation": [
+   "e5",
+   "d5",
+   "exf6",
+   "Bd6",
+   "f4"
+  ],
+  "gain": "You win a piece (engine: +6.4)."
+ },
+ {
+  "id": "italian|r1bqk2r/pppp2pp/2n2n2/2b1pp2/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 b kq -|Be7",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:13"
+  ],
+  "fenKey": "r1bqk2r/pppp2pp/2n2n2/2b1pp2/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 b kq -",
+  "bookSan": "d6",
+  "mistake": "Be7",
+  "loss": 223,
+  "edge": 331,
+  "accept": [
+   "Ng5"
+  ],
+  "refutation": [
+   "Ng5",
+   "Rf8",
+   "Nxh7",
+   "Rh8",
+   "Nxf6+"
+  ],
+  "gain": "You win two pawns (engine: +3.3)."
+ },
+ {
+  "id": "italian|r1bqk1nr/ppppbppp/2n5/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R b KQkq -|Bf6",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:4"
+  ],
+  "fenKey": "r1bqk1nr/ppppbppp/2n5/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R b KQkq -",
+  "bookSan": "exd4",
+  "mistake": "Bf6",
+  "loss": 208,
+  "edge": 251,
+  "accept": [
+   "dxe5"
+  ],
+  "refutation": [
+   "dxe5",
+   "Bxe5",
+   "Bxf7+",
+   "Kxf7",
+   "Qd5+"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.5)."
+ },
+ {
+  "id": "italian|r1bqk1nr/ppppbppp/2n5/8/2BNP3/8/PPP2PPP/RNBQK2R b KQkq -|Bc5",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:4"
+  ],
+  "fenKey": "r1bqk1nr/ppppbppp/2n5/8/2BNP3/8/PPP2PPP/RNBQK2R b KQkq -",
+  "bookSan": "d6",
+  "mistake": "Bc5",
+  "loss": 178,
+  "edge": 228,
+  "accept": [
+   "Bxf7+"
+  ],
+  "refutation": [
+   "Bxf7+",
+   "Kf8",
+   "Nxc6",
+   "Qh4",
+   "O-O"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.3)."
+ },
+ {
+  "id": "italian|r1bqk1nr/pppp1Bpp/8/2b5/3pP3/8/PPPP1PPP/RNBQ1RK1 b kq -|Kxf7",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:5"
+  ],
+  "fenKey": "r1bqk1nr/pppp1Bpp/8/2b5/3pP3/8/PPPP1PPP/RNBQ1RK1 b kq -",
+  "bookSan": "Kf8",
+  "mistake": "Kxf7",
+  "loss": 170,
+  "edge": 535,
+  "accept": [
+   "Qh5+"
+  ],
+  "refutation": [
+   "Qh5+",
+   "g6",
+   "Qxc5",
+   "d5",
+   "Qxd4"
+  ],
+  "gain": "You win a piece (engine: +5.3)."
+ },
+ {
+  "id": "italian|r1bq1rk1/ppp2ppp/2n2n2/2bPp3/2B5/2PP1N2/PP3PPP/RNBQ1RK1 b - -|Na5",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:1"
+  ],
+  "fenKey": "r1bq1rk1/ppp2ppp/2n2n2/2bPp3/2B5/2PP1N2/PP3PPP/RNBQ1RK1 b - -",
+  "bookSan": "Nxd5",
+  "mistake": "Na5",
+  "loss": 167,
+  "edge": 193,
+  "accept": [
+   "b4",
+   "Bb5"
+  ],
+  "refutation": [
+   "b4",
+   "Nxc4",
+   "bxc5",
+   "Na5",
+   "c4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "italian|r1bqk1nr/ppp2ppp/1bnp4/8/2BPP3/2N2N2/PP3PPP/R1BQK2R b KQkq -|Nge7",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:12"
+  ],
+  "fenKey": "r1bqk1nr/ppp2ppp/1bnp4/8/2BPP3/2N2N2/PP3PPP/R1BQK2R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "Nge7",
+  "loss": 150,
+  "edge": 189,
+  "accept": [
+   "Ng5"
+  ],
+  "refutation": [
+   "Ng5",
+   "d5",
+   "Nxd5",
+   "Nxd5",
+   "Bxd5"
+  ],
+  "gain": "You win two pawns (engine: +1.9)."
+ },
+ {
+  "id": "italian|r1bq1rk1/ppp2ppp/2n2n2/2bPp3/2B5/2PP1N2/PP3PPP/RNBQ1RK1 b - -|Ne7",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:1"
+  ],
+  "fenKey": "r1bq1rk1/ppp2ppp/2n2n2/2bPp3/2B5/2PP1N2/PP3PPP/RNBQ1RK1 b - -",
+  "bookSan": "Nxd5",
+  "mistake": "Ne7",
+  "loss": 142,
+  "edge": 168,
+  "accept": [
+   "Nxe5",
+   "Bg5"
+  ],
+  "refutation": [
+   "Nxe5",
+   "Bd6",
+   "d4",
+   "Bxe5",
+   "dxe5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.7)."
+ },
+ {
+  "id": "italian|r1bqkbnr/pppp2pp/2n5/4pp2/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq -|a6",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:13"
+  ],
+  "fenKey": "r1bqkbnr/pppp2pp/2n5/4pp2/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "a6",
+  "loss": 139,
+  "edge": 219,
+  "accept": [
+   "Ng5"
+  ],
+  "refutation": [
+   "Ng5",
+   "Nh6",
+   "exf5",
+   "d5",
+   "Qh5+"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.2)."
+ },
+ {
+  "id": "italian|r1bq1rk1/ppp1bppp/2n5/3nN3/2B5/3P4/PPP2PPP/RNBQR1K1 b - -|Bc5",
+  "openingId": "italian",
+  "lineIds": [
+   "italian:9"
+  ],
+  "fenKey": "r1bq1rk1/ppp1bppp/2n5/3nN3/2B5/3P4/PPP2PPP/RNBQR1K1 b - -",
+  "bookSan": "Nxe5",
+  "mistake": "Bc5",
+  "loss": 138,
+  "edge": 237,
+  "accept": [
+   "d4",
+   "Nxc6"
+  ],
+  "refutation": [
+   "d4",
+   "Bb6",
+   "Nxc6",
+   "bxc6",
+   "c3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.4)."
+ },
+ {
+  "id": "kings-gambit|rnbqkb1r/pppp1ppp/8/4P3/4n3/5N2/PPPP2PP/RNBQKB1R b KQkq -|Nc5",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:10"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P3/4n3/5N2/PPPP2PP/RNBQKB1R b KQkq -",
+  "bookSan": "Ng5",
+  "mistake": "Nc5",
+  "loss": 255,
+  "edge": 270,
+  "accept": [
+   "d4"
+  ],
+  "refutation": [
+   "d4",
+   "Nca6",
+   "Bc4",
+   "d5",
+   "exd6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.7)."
+ },
+ {
+  "id": "kings-gambit|rnbqkb1r/pppp1ppp/8/4P3/3P4/5Q2/PPP3PP/RNB1KB1R b KQkq -|d6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:10"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P3/3P4/5Q2/PPP3PP/RNB1KB1R b KQkq -",
+  "bookSan": "Qh4+",
+  "mistake": "d6",
+  "loss": 244,
+  "edge": 255,
+  "accept": [
+   "Bc4"
+  ],
+  "refutation": [
+   "Bc4",
+   "f5",
+   "Be3",
+   "Qh4+",
+   "Bf2"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.5)."
+ },
+ {
+  "id": "kings-gambit|r1bqkbnr/pppp1p1p/2n5/3P2p1/4Pp2/5N2/PPP3PP/RNBQKB1R b KQkq -|f5",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:7"
+  ],
+  "fenKey": "r1bqkbnr/pppp1p1p/2n5/3P2p1/4Pp2/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "g4",
+  "mistake": "f5",
+  "loss": 242,
+  "edge": 277,
+  "accept": [
+   "dxc6",
+   "Nc3"
+  ],
+  "refutation": [
+   "dxc6",
+   "Qe7",
+   "Nc3",
+   "dxc6",
+   "Bd3"
+  ],
+  "gain": "You win two pawns (engine: +2.8)."
+ },
+ {
+  "id": "kings-gambit|rnbqkb1r/pppp1ppp/8/4P3/4n3/5N2/PPPP2PP/RNBQKB1R b KQkq -|f6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:10"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P3/4n3/5N2/PPPP2PP/RNBQKB1R b KQkq -",
+  "bookSan": "Ng5",
+  "mistake": "f6",
+  "loss": 233,
+  "edge": 248,
+  "accept": [
+   "Qe2",
+   "d3"
+  ],
+  "refutation": [
+   "Qe2",
+   "Ng5",
+   "exf6+",
+   "Ne6",
+   "d4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.5)."
+ },
+ {
+  "id": "kings-gambit|r1bqkbnr/pppp1p1p/2P5/8/4Ppp1/5N2/PPP3PP/RNBQKB1R b KQkq -|bxc6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:7"
+  ],
+  "fenKey": "r1bqkbnr/pppp1p1p/2P5/8/4Ppp1/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "gxf3",
+  "mistake": "bxc6",
+  "loss": 208,
+  "edge": 229,
+  "accept": [
+   "Qd4"
+  ],
+  "refutation": [
+   "Qd4",
+   "gxf3",
+   "Qxh8",
+   "Qh4+",
+   "g3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.3)."
+ },
+ {
+  "id": "kings-gambit|rnbqkb1r/pppp1ppp/8/4P3/3P4/5Q2/PPP3PP/RNB1KB1R b KQkq -|c6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:10"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P3/3P4/5Q2/PPP3PP/RNB1KB1R b KQkq -",
+  "bookSan": "Qh4+",
+  "mistake": "c6",
+  "loss": 194,
+  "edge": 205,
+  "accept": [
+   "Bc4"
+  ],
+  "refutation": [
+   "Bc4",
+   "Qh4+",
+   "g3",
+   "Qxd4",
+   "Bxf7+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "kings-gambit|r1bqkbnr/pppp1ppp/2n5/4p3/4PP2/5N2/PPPP2PP/RNBQKB1R b KQkq -|Nf6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:7"
+  ],
+  "fenKey": "r1bqkbnr/pppp1ppp/2n5/4p3/4PP2/5N2/PPPP2PP/RNBQKB1R b KQkq -",
+  "bookSan": "exf4",
+  "mistake": "Nf6",
+  "loss": 166,
+  "edge": 177,
+  "accept": [
+   "fxe5"
+  ],
+  "refutation": [
+   "fxe5",
+   "Nxe4",
+   "d3",
+   "Nc5",
+   "d4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "kings-gambit|rnbqkb1r/pppp1ppp/8/4P2n/3P1p2/5N2/PPP3PP/RNBQKB1R b KQkq -|a5",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:3"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P2n/3P1p2/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "d5",
+  "mistake": "a5",
+  "loss": 162,
+  "edge": 127,
+  "accept": [
+   "g4"
+  ],
+  "refutation": [
+   "g4",
+   "fxg3",
+   "Ng5",
+   "g6",
+   "hxg3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "kings-gambit|rnbqkbnr/pp3ppp/2p5/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq -|Nf6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:9"
+  ],
+  "fenKey": "rnbqkbnr/pp3ppp/2p5/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq -",
+  "bookSan": "exf4",
+  "mistake": "Nf6",
+  "loss": 158,
+  "edge": 172,
+  "accept": [
+   "fxe5"
+  ],
+  "refutation": [
+   "fxe5",
+   "Nxd5",
+   "Nf3",
+   "c5",
+   "Bd3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.7)."
+ },
+ {
+  "id": "kings-gambit|r1bqkbnr/pppp1p1p/2P5/8/4Ppp1/5N2/PPP3PP/RNBQKB1R b KQkq -|Qe7",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:7"
+  ],
+  "fenKey": "r1bqkbnr/pppp1p1p/2P5/8/4Ppp1/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "gxf3",
+  "mistake": "Qe7",
+  "loss": 155,
+  "edge": 176,
+  "accept": [
+   "Nd4",
+   "Nc3",
+   "cxd7+"
+  ],
+  "refutation": [
+   "Nd4",
+   "Qh4+",
+   "Ke2",
+   "Qf6",
+   "Nb5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "kings-gambit|rnbqkbnr/pppp1pp1/7p/8/3PPp2/5N2/PPP3PP/RNBQKB1R b KQkq -|Ne7",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:8"
+  ],
+  "fenKey": "rnbqkbnr/pppp1pp1/7p/8/3PPp2/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "g5",
+  "mistake": "Ne7",
+  "loss": 152,
+  "edge": 124,
+  "accept": [
+   "Bxf4"
+  ],
+  "refutation": [
+   "Bxf4",
+   "d5",
+   "Nc3",
+   "dxe4",
+   "Nxe4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.2)."
+ },
+ {
+  "id": "kings-gambit|rnbqkbnr/pp3ppp/2p5/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq -|Ne7",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:9"
+  ],
+  "fenKey": "rnbqkbnr/pp3ppp/2p5/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq -",
+  "bookSan": "exf4",
+  "mistake": "Ne7",
+  "loss": 149,
+  "edge": 163,
+  "accept": [
+   "fxe5"
+  ],
+  "refutation": [
+   "fxe5",
+   "Nxd5",
+   "Nf3",
+   "c5",
+   "Bc4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.6)."
+ },
+ {
+  "id": "kings-gambit|rnbqkb1r/pppp1ppp/8/4P1n1/3P4/5N2/PPP3PP/RNBQKB1R b KQkq -|h6",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:10"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4P1n1/3P4/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "Nxf3+",
+  "mistake": "h6",
+  "loss": 140,
+  "edge": 144,
+  "accept": [
+   "Nxg5"
+  ],
+  "refutation": [
+   "Nxg5",
+   "hxg5",
+   "Qe2",
+   "a6",
+   "Nc3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.4)."
+ },
+ {
+  "id": "kings-gambit|r1bqkbnr/pppp1p1p/2n5/3P2p1/4Pp2/5N2/PPP3PP/RNBQKB1R b KQkq -|Na5",
+  "openingId": "kings-gambit",
+  "lineIds": [
+   "kings-gambit:7"
+  ],
+  "fenKey": "r1bqkbnr/pppp1p1p/2n5/3P2p1/4Pp2/5N2/PPP3PP/RNBQKB1R b KQkq -",
+  "bookSan": "g4",
+  "mistake": "Na5",
+  "loss": 136,
+  "edge": 171,
+  "accept": [
+   "Bd2",
+   "Qd4",
+   "Nc3",
+   "h4"
+  ],
+  "refutation": [
+   "Bd2",
+   "b6",
+   "Bc3",
+   "Nf6",
+   "Nbd2"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.7)."
+ },
+ {
+  "id": "kings-indian|rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -|Qc2",
+  "openingId": "kings-indian",
+  "lineIds": [
+   "kings-indian:3",
+   "kings-indian:12"
+  ],
+  "fenKey": "rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -",
+  "bookSan": "d5",
+  "mistake": "Qc2",
+  "loss": 318,
+  "edge": 245,
+  "accept": [
+   "Ng4"
+  ],
+  "refutation": [
+   "Ng4",
+   "fxg4",
+   "exd4",
+   "Bxd4",
+   "Bxd4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.5)."
+ },
+ {
+  "id": "kings-indian|rnbq1rk1/ppp2pbp/3p2p1/4p3/2PPP1n1/2N1BN2/PP2BPPP/R2QK2R w KQ -|Qc2",
+  "openingId": "kings-indian",
+  "lineIds": [
+   "kings-indian:6"
+  ],
+  "fenKey": "rnbq1rk1/ppp2pbp/3p2p1/4p3/2PPP1n1/2N1BN2/PP2BPPP/R2QK2R w KQ -",
+  "bookSan": "Bg5",
+  "mistake": "Qc2",
+  "loss": 239,
+  "edge": 192,
+  "accept": [
+   "Nxe3"
+  ],
+  "refutation": [
+   "Nxe3",
+   "fxe3",
+   "exd4",
+   "exd4",
+   "Bg4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "kings-indian|rnbqr1k1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP2B1PP/R1BQK2R w KQ -|Qd3",
+  "openingId": "kings-indian",
+  "lineIds": [
+   "kings-indian:4"
+  ],
+  "fenKey": "rnbqr1k1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP2B1PP/R1BQK2R w KQ -",
+  "bookSan": "e5",
+  "mistake": "Qd3",
+  "loss": 178,
+  "edge": 155,
+  "accept": [
+   "Nxe4",
+   "Na6",
+   "b5",
+   "c4"
+  ],
+  "refutation": [
+   "Nxe4",
+   "Nxe4",
+   "Bf5",
+   "Nfg5",
+   "Qe7"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.6)."
+ },
+ {
+  "id": "london|rn1qkb1r/pp2pppp/2p2n2/3p1b2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq -|Qa5+",
+  "openingId": "london",
+  "lineIds": [
+   "london:9"
+  ],
+  "fenKey": "rn1qkb1r/pp2pppp/2p2n2/3p1b2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq -",
+  "bookSan": "Bxd3",
+  "mistake": "Qa5+",
+  "loss": 244,
+  "edge": 255,
+  "accept": [
+   "b4"
+  ],
+  "refutation": [
+   "b4",
+   "Qxb4+",
+   "c3",
+   "Qb2",
+   "Bxf5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.5)."
+ },
+ {
+  "id": "london|rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP1B2/1QN1P3/PP3PPP/R3KBNR b KQkq -|Qa5",
+  "openingId": "london",
+  "lineIds": [
+   "london:5"
+  ],
+  "fenKey": "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP1B2/1QN1P3/PP3PPP/R3KBNR b KQkq -",
+  "bookSan": "Qb6",
+  "mistake": "Qa5",
+  "loss": 195,
+  "edge": 231,
+  "accept": [
+   "Qxb7"
+  ],
+  "refutation": [
+   "Qxb7",
+   "Bb4",
+   "Ne2",
+   "e5",
+   "Bxe5"
+  ],
+  "gain": "You win two pawns (engine: +2.3)."
+ },
+ {
+  "id": "nimzo-indian|rnbqk2r/pp1p1pp1/4pn1p/2p5/1bPP3B/2N5/PP2PPPP/R2QKBNR w KQkq -|e4",
+  "openingId": "nimzo-indian",
+  "lineIds": [
+   "nimzo-indian:3"
+  ],
+  "fenKey": "rnbqk2r/pp1p1pp1/4pn1p/2p5/1bPP3B/2N5/PP2PPPP/R2QKBNR w KQkq -",
+  "bookSan": "d5",
+  "mistake": "e4",
+  "loss": 148,
+  "edge": 130,
+  "accept": [
+   "Qa5"
+  ],
+  "refutation": [
+   "Qa5",
+   "Ne2",
+   "Nxe4",
+   "Qd3",
+   "cxd4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.3)."
+ },
+ {
+  "id": "nimzo-indian|rnbqk2r/ppp2ppp/4pn2/3p4/1bPP4/2N2P2/PP2P1PP/R1BQKBNR w KQkq -|e4",
+  "openingId": "nimzo-indian",
+  "lineIds": [
+   "nimzo-indian:4"
+  ],
+  "fenKey": "rnbqk2r/ppp2ppp/4pn2/3p4/1bPP4/2N2P2/PP2P1PP/R1BQKBNR w KQkq -",
+  "bookSan": "a3",
+  "mistake": "e4",
+  "loss": 132,
+  "edge": 125,
+  "accept": [
+   "dxe4"
+  ],
+  "refutation": [
+   "dxe4",
+   "a3",
+   "Bxc3+",
+   "bxc3",
+   "c5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "open-games-black|r2qkb1r/pppb1ppp/2n5/1B1pP3/3Nn3/8/PPP2PPP/RNBQK2R w KQkq -|f3",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:4"
+  ],
+  "fenKey": "r2qkb1r/pppb1ppp/2n5/1B1pP3/3Nn3/8/PPP2PPP/RNBQK2R w KQkq -",
+  "bookSan": "Bxc6",
+  "mistake": "f3",
+  "loss": 642,
+  "edge": 641,
+  "accept": [
+   "Qh4+"
+  ],
+  "refutation": [
+   "Qh4+",
+   "g3",
+   "Nxg3",
+   "Bg5",
+   "Qxg5"
+  ],
+  "gain": "You win two pawns (engine: +6.4)."
+ },
+ {
+  "id": "open-games-black|r2qkb1r/pppb1ppp/2n5/1B1pP3/3Nn3/8/PPP2PPP/RNBQK2R w KQkq -|Bf4",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:4"
+  ],
+  "fenKey": "r2qkb1r/pppb1ppp/2n5/1B1pP3/3Nn3/8/PPP2PPP/RNBQK2R w KQkq -",
+  "bookSan": "Bxc6",
+  "mistake": "Bf4",
+  "loss": 452,
+  "edge": 451,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "Bxd7+",
+   "Qxd7",
+   "Qxd4",
+   "Bc5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +4.5)."
+ },
+ {
+  "id": "open-games-black|r2qk2r/p1pb1ppp/2p5/2bpP3/3Nn3/8/PPP2PPP/RNBQ1RK1 w kq -|Nd2",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:4"
+  ],
+  "fenKey": "r2qk2r/p1pb1ppp/2p5/2bpP3/3Nn3/8/PPP2PPP/RNBQ1RK1 w kq -",
+  "bookSan": "f3",
+  "mistake": "Nd2",
+  "loss": 344,
+  "edge": 332,
+  "accept": [
+   "Nxf2"
+  ],
+  "refutation": [
+   "Nxf2",
+   "Qe2",
+   "Bxd4",
+   "Nf3",
+   "Bg4"
+  ],
+  "gain": "You win a piece (engine: +3.3)."
+ },
+ {
+  "id": "open-games-black|r2q1rk1/pp3ppp/2nb1n2/1B6/3P1pb1/5N2/PPPN2PP/R1BQ1RK1 w - -|Kh1",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:10"
+  ],
+  "fenKey": "r2q1rk1/pp3ppp/2nb1n2/1B6/3P1pb1/5N2/PPPN2PP/R1BQ1RK1 w - -",
+  "bookSan": "c3",
+  "mistake": "Kh1",
+  "loss": 328,
+  "edge": 392,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "Bd3",
+   "Re8",
+   "Re1",
+   "Qc7"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +3.9)."
+ },
+ {
+  "id": "open-games-black|r2q1rk1/pp3ppp/2nb1n2/1B6/3P1pb1/5N2/PPPN2PP/R1BQ1RK1 w - -|a4",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:10"
+  ],
+  "fenKey": "r2q1rk1/pp3ppp/2nb1n2/1B6/3P1pb1/5N2/PPPN2PP/R1BQ1RK1 w - -",
+  "bookSan": "c3",
+  "mistake": "a4",
+  "loss": 315,
+  "edge": 379,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "Kh1",
+   "Rc8",
+   "c3",
+   "Nf5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +3.8)."
+ },
+ {
+  "id": "open-games-black|r1b1kb1r/ppppqpp1/6p1/3P4/4n3/2P5/PP2QPPP/RNB1KB1R w KQkq -|f3",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:12"
+  ],
+  "fenKey": "r1b1kb1r/ppppqpp1/6p1/3P4/4n3/2P5/PP2QPPP/RNB1KB1R w KQkq -",
+  "bookSan": "Bf4",
+  "mistake": "f3",
+  "loss": 277,
+  "edge": 232,
+  "accept": [
+   "Ng3"
+  ],
+  "refutation": [
+   "Ng3",
+   "Qxe7+",
+   "Bxe7",
+   "Rg1",
+   "Bc5"
+  ],
+  "gain": "You win two pawns (engine: +2.3)."
+ },
+ {
+  "id": "open-games-black|r1b2rk1/ppp2ppp/2n2n2/1Bbqp3/8/2PP1N2/PP3PPP/RNBQ1RK1 w - -|Nbd2",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:1"
+  ],
+  "fenKey": "r1b2rk1/ppp2ppp/2n2n2/1Bbqp3/8/2PP1N2/PP3PPP/RNBQ1RK1 w - -",
+  "bookSan": "Bc4",
+  "mistake": "Nbd2",
+  "loss": 263,
+  "edge": 241,
+  "accept": [
+   "Bxf2+"
+  ],
+  "refutation": [
+   "Bxf2+",
+   "Rxf2",
+   "Qxb5",
+   "Ne4",
+   "Nxe4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.4)."
+ },
+ {
+  "id": "open-games-black|r1bq1rk1/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPPB1PPP/R3KBNR w KQ -|Nf3",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:13"
+  ],
+  "fenKey": "r1bq1rk1/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPPB1PPP/R3KBNR w KQ -",
+  "bookSan": "O-O-O",
+  "mistake": "Nf3",
+  "loss": 240,
+  "edge": 262,
+  "accept": [
+   "d5"
+  ],
+  "refutation": [
+   "d5",
+   "a3",
+   "d4",
+   "Nxd4",
+   "Nxd4"
+  ],
+  "gain": "You win two pawns (engine: +2.6)."
+ },
+ {
+  "id": "open-games-black|r1bqkb1r/ppppnppp/8/3Pp3/4n3/2P2N2/PP3PPP/RNBQKB1R w KQkq -|Na3",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:12"
+  ],
+  "fenKey": "r1bqkb1r/ppppnppp/8/3Pp3/4n3/2P2N2/PP3PPP/RNBQKB1R w KQkq -",
+  "bookSan": "Nxe5",
+  "mistake": "Na3",
+  "loss": 189,
+  "edge": 157,
+  "accept": [
+   "Ng6",
+   "Nf6"
+  ],
+  "refutation": [
+   "Ng6",
+   "Nc4",
+   "Bc5",
+   "Be3",
+   "d6"
+  ],
+  "gain": "You win two pawns (engine: +1.6)."
+ },
+ {
+  "id": "open-games-black|rnbqkbnr/ppp2ppp/8/3p4/4Pp2/5N2/PPPP2PP/RNBQKB1R w KQkq -|e5",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:10"
+  ],
+  "fenKey": "rnbqkbnr/ppp2ppp/8/3p4/4Pp2/5N2/PPPP2PP/RNBQKB1R w KQkq -",
+  "bookSan": "exd5",
+  "mistake": "e5",
+  "loss": 176,
+  "edge": 202,
+  "accept": [
+   "g5",
+   "Nc6"
+  ],
+  "refutation": [
+   "g5",
+   "h3",
+   "Nh6",
+   "d4",
+   "Nf5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "open-games-black|r1bq1rk1/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPPB1PPP/R3KBNR w KQ -|Bb5",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:13"
+  ],
+  "fenKey": "r1bq1rk1/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPPB1PPP/R3KBNR w KQ -",
+  "bookSan": "O-O-O",
+  "mistake": "Bb5",
+  "loss": 173,
+  "edge": 195,
+  "accept": [
+   "d5"
+  ],
+  "refutation": [
+   "d5",
+   "Bxc6",
+   "d4",
+   "Qd3",
+   "dxc3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "open-games-black|r1bqkb1r/ppppnppp/8/3Pp3/4n3/2P2N2/PP3PPP/RNBQKB1R w KQkq -|Qc2",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:12"
+  ],
+  "fenKey": "r1bqkb1r/ppppnppp/8/3Pp3/4n3/2P2N2/PP3PPP/RNBQKB1R w KQkq -",
+  "bookSan": "Nxe5",
+  "mistake": "Qc2",
+  "loss": 159,
+  "edge": 127,
+  "accept": [
+   "Nf6"
+  ],
+  "refutation": [
+   "Nf6",
+   "c4",
+   "d6",
+   "Bg5",
+   "h6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "open-games-black|r1bqk2r/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPP2PPP/R1B1KBNR w KQkq -|Be2",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:13"
+  ],
+  "fenKey": "r1bqk2r/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPP2PPP/R1B1KBNR w KQkq -",
+  "bookSan": "Bd2",
+  "mistake": "Be2",
+  "loss": 156,
+  "edge": 162,
+  "accept": [
+   "O-O"
+  ],
+  "refutation": [
+   "O-O",
+   "a3",
+   "Bxc3+",
+   "Qxc3",
+   "Nxe4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.6)."
+ },
+ {
+  "id": "open-games-black|rnbqkb1r/ppp2ppp/5n2/3pp3/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq -|Nxd5",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:8"
+  ],
+  "fenKey": "rnbqkb1r/ppp2ppp/5n2/3pp3/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq -",
+  "bookSan": "fxe5",
+  "mistake": "Nxd5",
+  "loss": 152,
+  "edge": 159,
+  "accept": [
+   "Nxe4"
+  ],
+  "refutation": [
+   "Nxe4",
+   "c4",
+   "c6",
+   "d3",
+   "Qa5+"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.6)."
+ },
+ {
+  "id": "open-games-black|r1bqk2r/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPP2PPP/R1B1KBNR w KQkq -|f3",
+  "openingId": "open-games-black",
+  "lineIds": [
+   "open-games-black:13"
+  ],
+  "fenKey": "r1bqk2r/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPP2PPP/R1B1KBNR w KQkq -",
+  "bookSan": "Bd2",
+  "mistake": "f3",
+  "loss": 130,
+  "edge": 136,
+  "accept": [
+   "O-O"
+  ],
+  "refutation": [
+   "O-O",
+   "a3",
+   "Ba5",
+   "Qd2",
+   "d5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.4)."
+ },
+ {
+  "id": "petroff|rnbq1b1r/ppp2kpp/3p1n2/8/4P3/8/PPPP1PPP/RNBQKB1R w KQ -|Be2",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:5"
+  ],
+  "fenKey": "rnbq1b1r/ppp2kpp/3p1n2/8/4P3/8/PPPP1PPP/RNBQKB1R w KQ -",
+  "bookSan": "d4",
+  "mistake": "Be2",
+  "loss": 192,
+  "edge": 211,
+  "accept": [
+   "Nxe4",
+   "Nc6"
+  ],
+  "refutation": [
+   "Nxe4",
+   "Bc4+",
+   "d5",
+   "Qh5+",
+   "Ke6"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.1)."
+ },
+ {
+  "id": "petroff|rnbq1b1r/pp3kpp/8/2PpP3/4n3/8/PPP2PPP/RNBQKB1R w KQ -|f3",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:5"
+  ],
+  "fenKey": "rnbq1b1r/pp3kpp/8/2PpP3/4n3/8/PPP2PPP/RNBQKB1R w KQ -",
+  "bookSan": "Bd3",
+  "mistake": "f3",
+  "loss": 182,
+  "edge": 322,
+  "accept": [
+   "Bxc5"
+  ],
+  "refutation": [
+   "Bxc5",
+   "fxe4",
+   "Qh4+",
+   "Kd2",
+   "Rd8"
+  ],
+  "gain": "You get a big lead in development and position (engine: +3.2)."
+ },
+ {
+  "id": "petroff|rnbqkb1r/pppp1ppp/8/4p3/2B5/2n2N2/PPPP1PPP/R1BQK2R w KQkq -|bxc3",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:7"
+  ],
+  "fenKey": "rnbqkb1r/pppp1ppp/8/4p3/2B5/2n2N2/PPPP1PPP/R1BQK2R w KQkq -",
+  "bookSan": "dxc3",
+  "mistake": "bxc3",
+  "loss": 181,
+  "edge": 180,
+  "accept": [
+   "e4",
+   "d5"
+  ],
+  "refutation": [
+   "e4",
+   "Nd4",
+   "d5",
+   "Bb3",
+   "c5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "petroff|rnbq1b1r/pp3kpp/5n2/2Pp4/4P3/8/PPP2PPP/RNBQKB1R w KQ -|Bd3",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:5"
+  ],
+  "fenKey": "rnbq1b1r/pp3kpp/5n2/2Pp4/4P3/8/PPP2PPP/RNBQKB1R w KQ -",
+  "bookSan": "e5",
+  "mistake": "Bd3",
+  "loss": 178,
+  "edge": 317,
+  "accept": [
+   "Bxc5"
+  ],
+  "refutation": [
+   "Bxc5",
+   "Nc3",
+   "Re8",
+   "O-O",
+   "dxe4"
+  ],
+  "gain": "You win two pawns (engine: +3.2)."
+ },
+ {
+  "id": "petroff|rnbq1b1r/pp3kpp/8/2PpP3/4n3/8/PPP2PPP/RNBQKB1R w KQ -|Qh5+",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:5"
+  ],
+  "fenKey": "rnbq1b1r/pp3kpp/8/2PpP3/4n3/8/PPP2PPP/RNBQKB1R w KQ -",
+  "bookSan": "Bd3",
+  "mistake": "Qh5+",
+  "loss": 173,
+  "edge": 313,
+  "accept": [
+   "g6",
+   "Kg8"
+  ],
+  "refutation": [
+   "g6",
+   "Qf3+",
+   "Kg7",
+   "Nc3",
+   "Bxc5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +3.1)."
+ },
+ {
+  "id": "petroff|rnbq1b1r/ppp2kpp/3p1n2/8/4P3/8/PPPP1PPP/RNBQKB1R w KQ -|c3",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:5"
+  ],
+  "fenKey": "rnbq1b1r/ppp2kpp/3p1n2/8/4P3/8/PPPP1PPP/RNBQKB1R w KQ -",
+  "bookSan": "d4",
+  "mistake": "c3",
+  "loss": 162,
+  "edge": 181,
+  "accept": [
+   "g6",
+   "Qe8",
+   "Be7",
+   "Be6"
+  ],
+  "refutation": [
+   "g6",
+   "d3",
+   "Bg7",
+   "Be2",
+   "Rf8"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "petroff|rnbqkb1r/pppp2pp/5p2/4p3/2B5/2P2N2/PPP2PPP/R1BQK2R w KQkq -|Qd5",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:7"
+  ],
+  "fenKey": "rnbqkb1r/pppp2pp/5p2/4p3/2B5/2P2N2/PPP2PPP/R1BQK2R w KQkq -",
+  "bookSan": "Nh4",
+  "mistake": "Qd5",
+  "loss": 151,
+  "edge": 199,
+  "accept": [
+   "Qe7"
+  ],
+  "refutation": [
+   "Qe7",
+   "O-O",
+   "c6",
+   "Qd1",
+   "d5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "petroff|rnbqkb1r/pppp3p/5pp1/4p3/2B4N/2P5/PPP2PPP/R1BQK2R w KQkq -|Qd2",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:7"
+  ],
+  "fenKey": "rnbqkb1r/pppp3p/5pp1/4p3/2B4N/2P5/PPP2PPP/R1BQK2R w KQkq -",
+  "bookSan": "f4",
+  "mistake": "Qd2",
+  "loss": 140,
+  "edge": 208,
+  "accept": [
+   "c6",
+   "Qe7",
+   "Nc6",
+   "d6"
+  ],
+  "refutation": [
+   "c6",
+   "Be2",
+   "d5",
+   "c4",
+   "Be6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.1)."
+ },
+ {
+  "id": "petroff|rnbq1b1r/pp3kpp/3p1n2/2p5/3PP3/8/PPP2PPP/RNBQKB1R w KQ -|e5",
+  "openingId": "petroff",
+  "lineIds": [
+   "petroff:5"
+  ],
+  "fenKey": "rnbq1b1r/pp3kpp/3p1n2/2p5/3PP3/8/PPP2PPP/RNBQKB1R w KQ -",
+  "bookSan": "dxc5",
+  "mistake": "e5",
+  "loss": 133,
+  "edge": 222,
+  "accept": [
+   "dxe5"
+  ],
+  "refutation": [
+   "dxe5",
+   "Bc4+",
+   "Ke8",
+   "dxe5",
+   "Qxd1+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.2)."
+ },
+ {
+  "id": "pirc|rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -|Bd3",
+  "openingId": "pirc",
+  "lineIds": [
+   "pirc:7"
+  ],
+  "fenKey": "rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -",
+  "bookSan": "d5",
+  "mistake": "Bd3",
+  "loss": 325,
+  "edge": 242,
+  "accept": [
+   "Ng4"
+  ],
+  "refutation": [
+   "Ng4",
+   "fxg4",
+   "exd4",
+   "h3",
+   "dxc3"
+  ],
+  "gain": "You win two pawns (engine: +2.4)."
+ },
+ {
+  "id": "pirc|rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -|Qc2",
+  "openingId": "pirc",
+  "lineIds": [
+   "pirc:7"
+  ],
+  "fenKey": "rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -",
+  "bookSan": "d5",
+  "mistake": "Qc2",
+  "loss": 276,
+  "edge": 193,
+  "accept": [
+   "Ng4"
+  ],
+  "refutation": [
+   "Ng4",
+   "fxg4",
+   "exd4",
+   "Bxd4",
+   "Bxd4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "queens-gambit|rnbqkb1r/ppp1pppp/5n2/4P3/2pP4/8/PP3PPP/RNBQKBNR b KQkq -|Ne4",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:3"
+  ],
+  "fenKey": "rnbqkb1r/ppp1pppp/5n2/4P3/2pP4/8/PP3PPP/RNBQKBNR b KQkq -",
+  "bookSan": "Nd5",
+  "mistake": "Ne4",
+  "loss": 313,
+  "edge": 373,
+  "accept": [
+   "f3"
+  ],
+  "refutation": [
+   "f3",
+   "e6",
+   "fxe4",
+   "Qh4+",
+   "Ke2"
+  ],
+  "gain": "You win two pawns (engine: +3.7)."
+ },
+ {
+  "id": "queens-gambit|rnbqkb1r/ppp1pppp/8/3n4/3PP3/8/PP3PPP/RNBQKBNR b KQkq -|Nb4",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:12"
+  ],
+  "fenKey": "rnbqkb1r/ppp1pppp/8/3n4/3PP3/8/PP3PPP/RNBQKBNR b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "Nb4",
+  "loss": 308,
+  "edge": 379,
+  "accept": [
+   "Qa4+"
+  ],
+  "refutation": [
+   "Qa4+",
+   "Bd7",
+   "Qxb4",
+   "e5",
+   "Qc4"
+  ],
+  "gain": "You win two pawns (engine: +3.8)."
+ },
+ {
+  "id": "queens-gambit|r3k1nr/ppp2ppp/2n5/3qp3/1b1P4/2N1PP2/PP1B1P1P/R2QKB1R b KQkq -|Qd8",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:9"
+  ],
+  "fenKey": "r3k1nr/ppp2ppp/2n5/3qp3/1b1P4/2N1PP2/PP1B1P1P/R2QKB1R b KQkq -",
+  "bookSan": "Bxc3",
+  "mistake": "Qd8",
+  "loss": 274,
+  "edge": 363,
+  "accept": [
+   "d5"
+  ],
+  "refutation": [
+   "d5",
+   "Bxc3",
+   "Bxc3",
+   "Nce7",
+   "Qa4+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +3.6)."
+ },
+ {
+  "id": "queens-gambit|rnbq1rk1/p1p1bpp1/1p2pn1p/3P4/3P3B/2N1PN2/PP3PPP/R2QKB1R b KQ -|g5",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:1"
+  ],
+  "fenKey": "rnbq1rk1/p1p1bpp1/1p2pn1p/3P4/3P3B/2N1PN2/PP3PPP/R2QKB1R b KQ -",
+  "bookSan": "Nxd5",
+  "mistake": "g5",
+  "loss": 252,
+  "edge": 254,
+  "accept": [
+   "Bg3"
+  ],
+  "refutation": [
+   "Bg3",
+   "Nxd5",
+   "h4",
+   "g4",
+   "Ne5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.5)."
+ },
+ {
+  "id": "queens-gambit|r1bqkbnr/ppp1pppp/2n5/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq -|Bf5",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:9"
+  ],
+  "fenKey": "r1bqkbnr/ppp1pppp/2n5/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq -",
+  "bookSan": "Bg4",
+  "mistake": "Bf5",
+  "loss": 223,
+  "edge": 274,
+  "accept": [
+   "cxd5"
+  ],
+  "refutation": [
+   "cxd5",
+   "Qxd5",
+   "Nc3",
+   "Qa5",
+   "Bd2"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.7)."
+ },
+ {
+  "id": "queens-gambit|rnb2rk1/ppp1qpp1/4p2p/3P4/3Pn3/2N1PN2/PP3PPP/R2QKB1R b KQ -|Qb4",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:7"
+  ],
+  "fenKey": "rnb2rk1/ppp1qpp1/4p2p/3P4/3Pn3/2N1PN2/PP3PPP/R2QKB1R b KQ -",
+  "bookSan": "Nxc3",
+  "mistake": "Qb4",
+  "loss": 187,
+  "edge": 198,
+  "accept": [
+   "dxe6",
+   "Qc2",
+   "Qc1"
+  ],
+  "refutation": [
+   "dxe6",
+   "Bxe6",
+   "a3",
+   "Nxc3",
+   "axb4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "queens-gambit|rnbqkbnr/ppp2ppp/8/4p3/2pPP3/5N2/PP3PPP/RNBQKB1R b KQkq -|Ne7",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:2"
+  ],
+  "fenKey": "rnbqkbnr/ppp2ppp/8/4p3/2pPP3/5N2/PP3PPP/RNBQKB1R b KQkq -",
+  "bookSan": "exd4",
+  "mistake": "Ne7",
+  "loss": 183,
+  "edge": 211,
+  "accept": [
+   "Bxc4",
+   "Nxe5"
+  ],
+  "refutation": [
+   "Bxc4",
+   "Ng6",
+   "Qb3",
+   "Qe7",
+   "O-O"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.1)."
+ },
+ {
+  "id": "queens-gambit|r2qkb1r/ppp1pppp/1nn5/4Pb2/3P4/1BN5/PP2NPPP/R1BQK2R b KQkq -|Nb4",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:3"
+  ],
+  "fenKey": "r2qkb1r/ppp1pppp/1nn5/4Pb2/3P4/1BN5/PP2NPPP/R1BQK2R b KQkq -",
+  "bookSan": "e6",
+  "mistake": "Nb4",
+  "loss": 150,
+  "edge": 178,
+  "accept": [
+   "Nf4",
+   "O-O"
+  ],
+  "refutation": [
+   "Nf4",
+   "Qd7",
+   "e6",
+   "fxe6",
+   "O-O"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "queens-gambit|rnbqkb1r/ppp2ppp/5n2/8/3QP3/2N2N2/PP3PPP/R1B1KB1R b KQkq -|a5",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:12"
+  ],
+  "fenKey": "rnbqkb1r/ppp2ppp/5n2/8/3QP3/2N2N2/PP3PPP/R1B1KB1R b KQkq -",
+  "bookSan": "Qxd4",
+  "mistake": "a5",
+  "loss": 141,
+  "edge": 190,
+  "accept": [
+   "Qxd8+",
+   "e5",
+   "Bf4"
+  ],
+  "refutation": [
+   "Qxd8+",
+   "Kxd8",
+   "e5",
+   "Nfd7",
+   "Bg5+"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "queens-gambit|r2qkbnr/ppp3pp/2n1p3/8/3pP3/1Q3N2/PP3PPP/RNB2RK1 b kq -|Bd6",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:2"
+  ],
+  "fenKey": "r2qkbnr/ppp3pp/2n1p3/8/3pP3/1Q3N2/PP3PPP/RNB2RK1 b kq -",
+  "bookSan": "Qd7",
+  "mistake": "Bd6",
+  "loss": 139,
+  "edge": 164,
+  "accept": [
+   "Ng5"
+  ],
+  "refutation": [
+   "Ng5",
+   "Qd7",
+   "Nxe6",
+   "a5",
+   "Na3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.6)."
+ },
+ {
+  "id": "queens-gambit|rnbqkbnr/ppp2ppp/8/8/2BpP3/5N2/PP3PPP/RNBQK2R b KQkq -|c5",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:2"
+  ],
+  "fenKey": "rnbqkbnr/ppp2ppp/8/8/2BpP3/5N2/PP3PPP/RNBQK2R b KQkq -",
+  "bookSan": "Nc6",
+  "mistake": "c5",
+  "loss": 135,
+  "edge": 161,
+  "accept": [
+   "Ne5"
+  ],
+  "refutation": [
+   "Ne5",
+   "Be6",
+   "Bxe6",
+   "fxe6",
+   "Qh5+"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.6)."
+ },
+ {
+  "id": "queens-gambit|rnbqkb1r/ppp2ppp/5n2/4p3/3PP3/2N2N2/PP3PPP/R1BQKB1R b KQkq -|Bg4",
+  "openingId": "queens-gambit",
+  "lineIds": [
+   "queens-gambit:12"
+  ],
+  "fenKey": "rnbqkb1r/ppp2ppp/5n2/4p3/3PP3/2N2N2/PP3PPP/R1BQKB1R b KQkq -",
+  "bookSan": "exd4",
+  "mistake": "Bg4",
+  "loss": 131,
+  "edge": 186,
+  "accept": [
+   "Qa4+",
+   "dxe5"
+  ],
+  "refutation": [
+   "Qa4+",
+   "Bd7",
+   "Qb3",
+   "exd4",
+   "Bc4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "queens-gambit-declined|rnbq1rk1/p1p1bpp1/1p2p2p/3n4/3P3B/2N1PN2/PP3PPP/R2QKB1R w KQ -|g3",
+  "openingId": "queens-gambit-declined",
+  "lineIds": [
+   "queens-gambit-declined:3"
+  ],
+  "fenKey": "rnbq1rk1/p1p1bpp1/1p2p2p/3n4/3P3B/2N1PN2/PP3PPP/R2QKB1R w KQ -",
+  "bookSan": "Bxe7",
+  "mistake": "g3",
+  "loss": 180,
+  "edge": 175,
+  "accept": [
+   "g5",
+   "Nxc3"
+  ],
+  "refutation": [
+   "g5",
+   "Ne5",
+   "Bb7",
+   "Qh5",
+   "Nxc3"
+  ],
+  "gain": "You win two pawns (engine: +1.8)."
+ },
+ {
+  "id": "queens-indian|rn1qkb1r/pbp2ppp/1p2p3/8/3P4/P1n2N2/1PQ1PPPP/R1B1KB1R w KQkq -|Bg5",
+  "openingId": "queens-indian",
+  "lineIds": [
+   "queens-indian:4"
+  ],
+  "fenKey": "rn1qkb1r/pbp2ppp/1p2p3/8/3P4/P1n2N2/1PQ1PPPP/R1B1KB1R w KQkq -",
+  "bookSan": "bxc3",
+  "mistake": "Bg5",
+  "loss": 419,
+  "edge": 405,
+  "accept": [
+   "f6"
+  ],
+  "refutation": [
+   "f6",
+   "bxc3",
+   "fxg5",
+   "e3",
+   "Bd6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +4.0)."
+ },
+ {
+  "id": "queens-indian|rn1qkb1r/pb1p1ppp/1p6/2pn4/8/5NP1/PPQ1PPBP/RNB1K2R w KQkq -|Ng5",
+  "openingId": "queens-indian",
+  "lineIds": [
+   "queens-indian:3"
+  ],
+  "fenKey": "rn1qkb1r/pb1p1ppp/1p6/2pn4/8/5NP1/PPQ1PPBP/RNB1K2R w KQkq -",
+  "bookSan": "O-O",
+  "mistake": "Ng5",
+  "loss": 170,
+  "edge": 135,
+  "accept": [
+   "Ne3"
+  ],
+  "refutation": [
+   "Ne3",
+   "Bxe3",
+   "Bxg2",
+   "Rg1",
+   "Bb7"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.4)."
+ },
+ {
+  "id": "ruy-lopez|r1bq1rk1/2pnbppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP1N1PP1/R1BQR1K1 b - -|Re8",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:6"
+  ],
+  "fenKey": "r1bq1rk1/2pnbppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP1N1PP1/R1BQR1K1 b - -",
+  "bookSan": "Bb7",
+  "mistake": "Re8",
+  "loss": 495,
+  "edge": 537,
+  "accept": [
+   "Bxf7+"
+  ],
+  "refutation": [
+   "Bxf7+",
+   "Kh8",
+   "Bxe8",
+   "Qxe8",
+   "a4"
+  ],
+  "gain": "You win two pawns (engine: +5.4)."
+ },
+ {
+  "id": "ruy-lopez|r1bq1rk1/2p1bppp/p1n5/1p1nN3/8/1BP5/PP1P1PPP/RNBQR1K1 b - -|Bh4",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:1"
+  ],
+  "fenKey": "r1bq1rk1/2p1bppp/p1n5/1p1nN3/8/1BP5/PP1P1PPP/RNBQR1K1 b - -",
+  "bookSan": "Nxe5",
+  "mistake": "Bh4",
+  "loss": 430,
+  "edge": 496,
+  "accept": [
+   "Nxc6"
+  ],
+  "refutation": [
+   "Nxc6",
+   "Bxf2+",
+   "Kxf2",
+   "Qf6+",
+   "Kg1"
+  ],
+  "gain": "You win two pawns (engine: +5.0)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkb1r/1ppp1ppp/p1n5/4p3/B2Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -|Nxd4",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:3"
+  ],
+  "fenKey": "r1bqkb1r/1ppp1ppp/p1n5/4p3/B2Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -",
+  "bookSan": "b5",
+  "mistake": "Nxd4",
+  "loss": 239,
+  "edge": 265,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "exd4",
+   "Re1",
+   "f5",
+   "f3"
+  ],
+  "gain": "You win two pawns (engine: +2.6)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkb1r/pppp1ppp/2n5/1B2p3/3Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -|Nxd4",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:2"
+  ],
+  "fenKey": "r1bqkb1r/pppp1ppp/2n5/1B2p3/3Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -",
+  "bookSan": "Nd6",
+  "mistake": "Nxd4",
+  "loss": 226,
+  "edge": 231,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "exd4",
+   "Re1",
+   "f5",
+   "f3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.3)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkb1r/1ppp1ppp/p1n5/4p3/B2Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -|Rb8",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:3"
+  ],
+  "fenKey": "r1bqkb1r/1ppp1ppp/p1n5/4p3/B2Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -",
+  "bookSan": "b5",
+  "mistake": "Rb8",
+  "loss": 180,
+  "edge": 206,
+  "accept": [
+   "Re1"
+  ],
+  "refutation": [
+   "Re1",
+   "d5",
+   "c4",
+   "Bb4",
+   "cxd5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.1)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkbnr/pppp2pp/2n5/1B2pp2/4P3/3P1N2/PPP2PPP/RNBQK2R b KQkq -|Nd4",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:5"
+  ],
+  "fenKey": "r1bqkbnr/pppp2pp/2n5/1B2pp2/4P3/3P1N2/PPP2PPP/RNBQK2R b KQkq -",
+  "bookSan": "fxe4",
+  "mistake": "Nd4",
+  "loss": 162,
+  "edge": 198,
+  "accept": [
+   "Nxd4"
+  ],
+  "refutation": [
+   "Nxd4",
+   "exd4",
+   "O-O",
+   "Qf6",
+   "Nd2"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "ruy-lopez|rnbq1rk1/2p1bppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - -|Qe8",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:6"
+  ],
+  "fenKey": "rnbq1rk1/2p1bppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - -",
+  "bookSan": "Nbd7",
+  "mistake": "Qe8",
+  "loss": 158,
+  "edge": 201,
+  "accept": [
+   "dxe5",
+   "a4"
+  ],
+  "refutation": [
+   "dxe5",
+   "dxe5",
+   "Nxe5",
+   "Nbd7",
+   "Nxd7"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.0)."
+ },
+ {
+  "id": "ruy-lopez|r1bqk2r/pppp1ppp/2n2n2/1Bb1p3/4P3/2P2N2/PP1P1PPP/RNBQ1RK1 b kq -|d5",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:4"
+  ],
+  "fenKey": "r1bqk2r/pppp1ppp/2n2n2/1Bb1p3/4P3/2P2N2/PP1P1PPP/RNBQ1RK1 b kq -",
+  "bookSan": "O-O",
+  "mistake": "d5",
+  "loss": 157,
+  "edge": 183,
+  "accept": [
+   "exd5"
+  ],
+  "refutation": [
+   "exd5",
+   "Qxd5",
+   "d4",
+   "exd4",
+   "cxd4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkb1r/2pp1ppp/p1n5/1p2p3/3Pn3/1B3N2/PPP2PPP/RNBQ1RK1 b kq -|h5",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:3"
+  ],
+  "fenKey": "r1bqkb1r/2pp1ppp/p1n5/1p2p3/3Pn3/1B3N2/PPP2PPP/RNBQ1RK1 b kq -",
+  "bookSan": "d5",
+  "mistake": "h5",
+  "loss": 153,
+  "edge": 179,
+  "accept": [
+   "Nxe5",
+   "dxe5",
+   "Bd5",
+   "a4"
+  ],
+  "refutation": [
+   "Nxe5",
+   "Nxe5",
+   "dxe5",
+   "Bb7",
+   "Qf3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.8)."
+ },
+ {
+  "id": "ruy-lopez|r1bq1rk1/pppp1ppp/1bn2n2/1B2p3/3PP3/2P2N2/PP3PPP/RNBQR1K1 b - -|Qe8",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:4"
+  ],
+  "fenKey": "r1bq1rk1/pppp1ppp/1bn2n2/1B2p3/3PP3/2P2N2/PP3PPP/RNBQR1K1 b - -",
+  "bookSan": "d6",
+  "mistake": "Qe8",
+  "loss": 150,
+  "edge": 196,
+  "accept": [
+   "a4",
+   "Bg5",
+   "h3",
+   "Bxc6"
+  ],
+  "refutation": [
+   "a4",
+   "a5",
+   "Bg5",
+   "Kh8",
+   "Bxf6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "ruy-lopez|r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq -|h6",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:9"
+  ],
+  "fenKey": "r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "h6",
+  "loss": 150,
+  "edge": 193,
+  "accept": [
+   "dxe5",
+   "Bxc6"
+  ],
+  "refutation": [
+   "dxe5",
+   "Nxe5",
+   "Nxe5",
+   "dxe5",
+   "Qd5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.9)."
+ },
+ {
+  "id": "ruy-lopez|rnbq1rk1/2p1bppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - -|Be6",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:6"
+  ],
+  "fenKey": "rnbq1rk1/2p1bppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - -",
+  "bookSan": "Nbd7",
+  "mistake": "Be6",
+  "loss": 147,
+  "edge": 190,
+  "accept": [
+   "Bxe6",
+   "Bc2",
+   "dxe5"
+  ],
+  "refutation": [
+   "Bxe6",
+   "fxe6",
+   "Qb3",
+   "Qd7",
+   "dxe5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.9)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkb1r/pppp1ppp/2n5/1B2p3/3Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -|f5",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:2"
+  ],
+  "fenKey": "r1bqkb1r/pppp1ppp/2n5/1B2p3/3Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -",
+  "bookSan": "Nd6",
+  "mistake": "f5",
+  "loss": 140,
+  "edge": 145,
+  "accept": [
+   "dxe5"
+  ],
+  "refutation": [
+   "dxe5",
+   "Bb4",
+   "Nbd2",
+   "d5",
+   "exd6"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.4)."
+ },
+ {
+  "id": "ruy-lopez|r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq -|h5",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:9"
+  ],
+  "fenKey": "r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "h5",
+  "loss": 137,
+  "edge": 180,
+  "accept": [
+   "dxe5",
+   "Bxc6"
+  ],
+  "refutation": [
+   "dxe5",
+   "Nxe5",
+   "Nxe5",
+   "dxe5",
+   "Qd5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.8)."
+ },
+ {
+  "id": "ruy-lopez|r1bqkb1r/2pp1ppp/p1n5/1p2p3/3Pn3/1B3N2/PPP2PPP/RNBQ1RK1 b kq -|h6",
+  "openingId": "ruy-lopez",
+  "lineIds": [
+   "ruy-lopez:3"
+  ],
+  "fenKey": "r1bqkb1r/2pp1ppp/p1n5/1p2p3/3Pn3/1B3N2/PPP2PPP/RNBQ1RK1 b kq -",
+  "bookSan": "d5",
+  "mistake": "h6",
+  "loss": 134,
+  "edge": 160,
+  "accept": [
+   "Nxe5",
+   "d5"
+  ],
+  "refutation": [
+   "Nxe5",
+   "Nxe5",
+   "dxe5",
+   "Bb7",
+   "Qf3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.6)."
+ },
+ {
+  "id": "scandinavian|rn2kb1r/ppq1pppp/2p2n2/8/2B3b1/2NP1N2/PPPB1PPP/R2QK2R w KQkq -|Ng5",
+  "openingId": "scandinavian",
+  "lineIds": [
+   "scandinavian:2"
+  ],
+  "fenKey": "rn2kb1r/ppq1pppp/2p2n2/8/2B3b1/2NP1N2/PPPB1PPP/R2QK2R w KQkq -",
+  "bookSan": "h3",
+  "mistake": "Ng5",
+  "loss": 264,
+  "edge": 200,
+  "accept": [
+   "Bxd1"
+  ],
+  "refutation": [
+   "Bxd1",
+   "Bxf7+",
+   "Kd7",
+   "Be6+",
+   "Kd8"
+  ],
+  "gain": "You win a rook or more (engine: +2.0)."
+ },
+ {
+  "id": "scandinavian|r1bqkbnr/pp2pppp/2n5/2ppP3/8/2P5/PP1P1PPP/RNBQKBNR w KQkq -|Qc2",
+  "openingId": "scandinavian",
+  "lineIds": [
+   "scandinavian:6"
+  ],
+  "fenKey": "r1bqkbnr/pp2pppp/2n5/2ppP3/8/2P5/PP1P1PPP/RNBQKBNR w KQkq -",
+  "bookSan": "d4",
+  "mistake": "Qc2",
+  "loss": 161,
+  "edge": 168,
+  "accept": [
+   "Nxe5",
+   "f6"
+  ],
+  "refutation": [
+   "Nxe5",
+   "d4",
+   "cxd4",
+   "cxd4",
+   "Nc6"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.7)."
+ },
+ {
+  "id": "scandinavian|r1bqkbnr/pp2pppp/2n5/2ppP3/8/2P5/PP1P1PPP/RNBQKBNR w KQkq -|Na3",
+  "openingId": "scandinavian",
+  "lineIds": [
+   "scandinavian:6"
+  ],
+  "fenKey": "r1bqkbnr/pp2pppp/2n5/2ppP3/8/2P5/PP1P1PPP/RNBQKBNR w KQkq -",
+  "bookSan": "d4",
+  "mistake": "Na3",
+  "loss": 158,
+  "edge": 165,
+  "accept": [
+   "Nxe5"
+  ],
+  "refutation": [
+   "Nxe5",
+   "d4",
+   "cxd4",
+   "Bb5+",
+   "Nc6"
+  ],
+  "gain": "You win two pawns (engine: +1.6)."
+ },
+ {
+  "id": "scotch|r1b1k1nr/pppp1ppp/2n5/1N6/1b2q3/2N5/PPP1BPPP/R1BQK2R b KQkq -|Ba5",
+  "openingId": "scotch",
+  "lineIds": [
+   "scotch:4"
+  ],
+  "fenKey": "r1b1k1nr/pppp1ppp/2n5/1N6/1b2q3/2N5/PPP1BPPP/R1BQK2R b KQkq -",
+  "bookSan": "Bxc3+",
+  "mistake": "Ba5",
+  "loss": 309,
+  "edge": 387,
+  "accept": [
+   "Nxc7+"
+  ],
+  "refutation": [
+   "Nxc7+",
+   "Kd8",
+   "Nxa8",
+   "Qxg2",
+   "Bf3"
+  ],
+  "gain": "You win a rook or more (engine: +3.9)."
+ },
+ {
+  "id": "scotch|r1b1k1nr/pppp1ppp/2n5/1N6/1b2q3/2N5/PPP1BPPP/R1BQK2R b KQkq -|Qe5",
+  "openingId": "scotch",
+  "lineIds": [
+   "scotch:4"
+  ],
+  "fenKey": "r1b1k1nr/pppp1ppp/2n5/1N6/1b2q3/2N5/PPP1BPPP/R1BQK2R b KQkq -",
+  "bookSan": "Bxc3+",
+  "mistake": "Qe5",
+  "loss": 221,
+  "edge": 299,
+  "accept": [
+   "g3",
+   "f4"
+  ],
+  "refutation": [
+   "g3",
+   "g5",
+   "f4",
+   "Qc5",
+   "Nxc7+"
+  ],
+  "gain": "You win a rook or more (engine: +3.0)."
+ },
+ {
+  "id": "scotch|r2qkb1r/pppb1ppp/2np1n2/1B6/3NP3/2N5/PPP2PPP/R1BQ1RK1 b kq -|g6",
+  "openingId": "scotch",
+  "lineIds": [
+   "scotch:7"
+  ],
+  "fenKey": "r2qkb1r/pppb1ppp/2np1n2/1B6/3NP3/2N5/PPP2PPP/R1BQ1RK1 b kq -",
+  "bookSan": "Be7",
+  "mistake": "g6",
+  "loss": 142,
+  "edge": 183,
+  "accept": [
+   "Re1",
+   "Bxc6"
+  ],
+  "refutation": [
+   "Re1",
+   "Bg7",
+   "Nxc6",
+   "bxc6",
+   "e5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.8)."
+ },
+ {
+  "id": "scotch|r1bqkbnr/ppp2ppp/2np4/1B2p3/3PP3/5N2/PPP2PPP/RNBQK2R b KQkq -|Be7",
+  "openingId": "scotch",
+  "lineIds": [
+   "scotch:7"
+  ],
+  "fenKey": "r1bqkbnr/ppp2ppp/2np4/1B2p3/3PP3/5N2/PPP2PPP/RNBQK2R b KQkq -",
+  "bookSan": "Bd7",
+  "mistake": "Be7",
+  "loss": 139,
+  "edge": 187,
+  "accept": [
+   "dxe5",
+   "Bxc6+"
+  ],
+  "refutation": [
+   "dxe5",
+   "Bd7",
+   "Bxc6",
+   "Bxc6",
+   "Nc3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.9)."
+ },
+ {
+  "id": "scotch|r1b1k1nr/pppp1ppp/2n5/8/1b1NP2q/2N5/PPP1BPPP/R1BQK2R b KQkq -|Bc5",
+  "openingId": "scotch",
+  "lineIds": [
+   "scotch:4"
+  ],
+  "fenKey": "r1b1k1nr/pppp1ppp/2n5/8/1b1NP2q/2N5/PPP1BPPP/R1BQK2R b KQkq -",
+  "bookSan": "Qxe4",
+  "mistake": "Bc5",
+  "loss": 131,
+  "edge": 202,
+  "accept": [
+   "Be3"
+  ],
+  "refutation": [
+   "Be3",
+   "Bb4",
+   "O-O",
+   "Bxc3",
+   "bxc3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "scotch|r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq -|h6",
+  "openingId": "scotch",
+  "lineIds": [
+   "scotch:7"
+  ],
+  "fenKey": "r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQK2R b KQkq -",
+  "bookSan": "exd4",
+  "mistake": "h6",
+  "loss": 131,
+  "edge": 197,
+  "accept": [
+   "Bxc6",
+   "dxe5"
+  ],
+  "refutation": [
+   "Bxc6",
+   "Bxc6",
+   "dxe5",
+   "Qd7",
+   "O-O"
+  ],
+  "gain": "You get a big lead in development and position (engine: +2.0)."
+ },
+ {
+  "id": "sicilian|rnb2rk1/2q1bppp/p2ppn2/1p6/3NP3/1BN3Q1/PPP2PPP/R1B2RK1 w - -|h3",
+  "openingId": "sicilian",
+  "lineIds": [
+   "sicilian:6"
+  ],
+  "fenKey": "rnb2rk1/2q1bppp/p2ppn2/1p6/3NP3/1BN3Q1/PPP2PPP/R1B2RK1 w - -",
+  "bookSan": "Bh6",
+  "mistake": "h3",
+  "loss": 207,
+  "edge": 194,
+  "accept": [
+   "b4"
+  ],
+  "refutation": [
+   "b4",
+   "Na4",
+   "Nxe4",
+   "Qd3",
+   "d5"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.9)."
+ },
+ {
+  "id": "sicilian|rnb2rk1/2q1bppp/p2ppn2/1p6/3NP3/1BN3Q1/PPP2PPP/R1B2RK1 w - -|Be3",
+  "openingId": "sicilian",
+  "lineIds": [
+   "sicilian:6"
+  ],
+  "fenKey": "rnb2rk1/2q1bppp/p2ppn2/1p6/3NP3/1BN3Q1/PPP2PPP/R1B2RK1 w - -",
+  "bookSan": "Bh6",
+  "mistake": "Be3",
+  "loss": 138,
+  "edge": 125,
+  "accept": [
+   "b4"
+  ],
+  "refutation": [
+   "b4",
+   "Na4",
+   "Nxe4",
+   "Qh3",
+   "Nc6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "sicilian|rnbqkbnr/pp1ppppp/8/8/3pP3/8/PPP2PPP/RNBQKBNR w KQkq -|Bf4",
+  "openingId": "sicilian",
+  "lineIds": [
+   "sicilian:5"
+  ],
+  "fenKey": "rnbqkbnr/pp1ppppp/8/8/3pP3/8/PPP2PPP/RNBQKBNR w KQkq -",
+  "bookSan": "c3",
+  "mistake": "Bf4",
+  "loss": 132,
+  "edge": 129,
+  "accept": [
+   "Nc6",
+   "e5"
+  ],
+  "refutation": [
+   "Nc6",
+   "Nf3",
+   "e5",
+   "Bg3",
+   "Nf6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "slav|rnbqkb1r/pp3ppp/2p2n2/4p3/P1pP3N/2N1P3/1P3PPP/R1BQKB1R w KQkq -|Qc2",
+  "openingId": "slav",
+  "lineIds": [
+   "slav:11"
+  ],
+  "fenKey": "rnbqkb1r/pp3ppp/2p2n2/4p3/P1pP3N/2N1P3/1P3PPP/R1BQKB1R w KQkq -",
+  "bookSan": "Bxc4",
+  "mistake": "Qc2",
+  "loss": 188,
+  "edge": 146,
+  "accept": [
+   "exd4"
+  ],
+  "refutation": [
+   "exd4",
+   "exd4",
+   "Be6",
+   "Be2",
+   "Na6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.5)."
+ },
+ {
+  "id": "slav|rnbqkb1r/pp3ppp/2p2n2/4p3/P1pP3N/2N1P3/1P3PPP/R1BQKB1R w KQkq -|h3",
+  "openingId": "slav",
+  "lineIds": [
+   "slav:11"
+  ],
+  "fenKey": "rnbqkb1r/pp3ppp/2p2n2/4p3/P1pP3N/2N1P3/1P3PPP/R1BQKB1R w KQkq -",
+  "bookSan": "Bxc4",
+  "mistake": "h3",
+  "loss": 179,
+  "edge": 137,
+  "accept": [
+   "exd4"
+  ],
+  "refutation": [
+   "exd4",
+   "exd4",
+   "Be6",
+   "Nf3",
+   "Bb4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.4)."
+ },
+ {
+  "id": "slav|r2qkb1r/pp1npppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq -|g4",
+  "openingId": "slav",
+  "lineIds": [
+   "slav:8"
+  ],
+  "fenKey": "r2qkb1r/pp1npppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq -",
+  "bookSan": "Nxc4",
+  "mistake": "g4",
+  "loss": 169,
+  "edge": 149,
+  "accept": [
+   "Nxg4"
+  ],
+  "refutation": [
+   "Nxg4",
+   "Nxc4",
+   "e5",
+   "e4",
+   "Qh4"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.5)."
+ },
+ {
+  "id": "slav|r3kb1r/ppqn1ppp/2p2n2/4pb2/P1NP4/2N3P1/1P2PP1P/R1BQKB1R w KQkq -|Ne3",
+  "openingId": "slav",
+  "lineIds": [
+   "slav:8"
+  ],
+  "fenKey": "r3kb1r/ppqn1ppp/2p2n2/4pb2/P1NP4/2N3P1/1P2PP1P/R1BQKB1R w KQkq -",
+  "bookSan": "dxe5",
+  "mistake": "Ne3",
+  "loss": 158,
+  "edge": 125,
+  "accept": [
+   "Be6"
+  ],
+  "refutation": [
+   "Be6",
+   "dxe5",
+   "Qxe5",
+   "Bg2",
+   "Nc5"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "slav|r2qkb1r/pp1npppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq -|Bf4",
+  "openingId": "slav",
+  "lineIds": [
+   "slav:8"
+  ],
+  "fenKey": "r2qkb1r/pp1npppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq -",
+  "bookSan": "Nxc4",
+  "mistake": "Bf4",
+  "loss": 154,
+  "edge": 134,
+  "accept": [
+   "Nd5"
+  ],
+  "refutation": [
+   "Nd5",
+   "Qd2",
+   "Nxe5",
+   "Bxe5",
+   "f6"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.3)."
+ },
+ {
+  "id": "vienna|rnbqk1nr/ppp1bppp/8/4Q3/3P1p2/2N2N2/PPP3PP/R1B1KB1R b KQkq -|Kf8",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:2"
+  ],
+  "fenKey": "rnbqk1nr/ppp1bppp/8/4Q3/3P1p2/2N2N2/PPP3PP/R1B1KB1R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "Kf8",
+  "loss": 211,
+  "edge": 280,
+  "accept": [
+   "Bxf4"
+  ],
+  "refutation": [
+   "Bxf4",
+   "c6",
+   "O-O-O",
+   "Nd7",
+   "Qe1"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.8)."
+ },
+ {
+  "id": "vienna|rnb1kb1r/ppppqppp/5n2/4P3/5p2/2N5/PPPPQ1PP/R1B1KBNR b KQkq -|f3",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:10"
+  ],
+  "fenKey": "rnb1kb1r/ppppqppp/5n2/4P3/5p2/2N5/PPPPQ1PP/R1B1KBNR b KQkq -",
+  "bookSan": "Ng8",
+  "mistake": "f3",
+  "loss": 197,
+  "edge": 400,
+  "accept": [
+   "Nxf3"
+  ],
+  "refutation": [
+   "Nxf3",
+   "Ng8",
+   "d4",
+   "Qd8",
+   "Bf4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +4.0)."
+ },
+ {
+  "id": "vienna|rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq -|g6",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:9"
+  ],
+  "fenKey": "rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq -",
+  "bookSan": "Nxc3",
+  "mistake": "g6",
+  "loss": 186,
+  "edge": 204,
+  "accept": [
+   "Nxe4"
+  ],
+  "refutation": [
+   "Nxe4",
+   "dxe4",
+   "Qxe4",
+   "Bxf3",
+   "Qxf3"
+  ],
+  "gain": "You win two pawns (engine: +2.0)."
+ },
+ {
+  "id": "vienna|rnbqk2r/ppp2ppp/8/2bpP3/3Pn3/2N2N2/PPP3PP/R1BQKB1R b KQkq -|Ba3",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:8"
+  ],
+  "fenKey": "rnbqk2r/ppp2ppp/8/2bpP3/3Pn3/2N2N2/PPP3PP/R1BQKB1R b KQkq -",
+  "bookSan": "Bb4",
+  "mistake": "Ba3",
+  "loss": 169,
+  "edge": 149,
+  "accept": [
+   "Bd3",
+   "Bb5+"
+  ],
+  "refutation": [
+   "Bd3",
+   "Bf5",
+   "O-O",
+   "Nxc3",
+   "bxc3"
+  ],
+  "gain": "You get a big lead in development and position (engine: +1.5)."
+ },
+ {
+  "id": "vienna|rnbqk1nr/ppp1bppp/8/4Q3/3P1p2/2N2N2/PPP3PP/R1B1KB1R b KQkq -|Nd7",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:2"
+  ],
+  "fenKey": "rnbqk1nr/ppp1bppp/8/4Q3/3P1p2/2N2N2/PPP3PP/R1B1KB1R b KQkq -",
+  "bookSan": "Nf6",
+  "mistake": "Nd7",
+  "loss": 163,
+  "edge": 232,
+  "accept": [
+   "Qxg7"
+  ],
+  "refutation": [
+   "Qxg7",
+   "Bf6",
+   "Qg4",
+   "Ne5",
+   "Qxf4"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +2.3)."
+ },
+ {
+  "id": "vienna|rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq -|Bf5",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:9"
+  ],
+  "fenKey": "rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq -",
+  "bookSan": "Nxc3",
+  "mistake": "Bf5",
+  "loss": 143,
+  "edge": 161,
+  "accept": [
+   "Qb5+"
+  ],
+  "refutation": [
+   "Qb5+",
+   "Nc6",
+   "Qxb7",
+   "Nb4",
+   "Bb5+"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.6)."
+ },
+ {
+  "id": "vienna|rnbqkb1r/ppp2ppp/3p1n2/8/3PPp2/2N2N2/PPP3PP/R1BQKB1R b KQkq -|Qe7",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:7"
+  ],
+  "fenKey": "rnbqkb1r/ppp2ppp/3p1n2/8/3PPp2/2N2N2/PPP3PP/R1BQKB1R b KQkq -",
+  "bookSan": "Be7",
+  "mistake": "Qe7",
+  "loss": 140,
+  "edge": 190,
+  "accept": [
+   "Bxf4",
+   "Qe2",
+   "Qd3",
+   "Bd3"
+  ],
+  "refutation": [
+   "Bxf4",
+   "Nc6",
+   "Bd3",
+   "Bg4",
+   "Be3"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +1.9)."
+ },
+ {
+  "id": "vienna|rnb1kbnr/ppppqppp/8/4P3/5p2/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq -|b6",
+  "openingId": "vienna",
+  "lineIds": [
+   "vienna:10"
+  ],
+  "fenKey": "rnb1kbnr/ppppqppp/8/4P3/5p2/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq -",
+  "bookSan": "Nc6",
+  "mistake": "b6",
+  "loss": 138,
+  "edge": 356,
+  "accept": [
+   "d4"
+  ],
+  "refutation": [
+   "d4",
+   "Bb7",
+   "Bxf4",
+   "d5",
+   "Qf2"
+  ],
+  "gain": "You win a pawn and keep the pressure (engine: +3.6)."
+ }
+]

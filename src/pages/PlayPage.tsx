@@ -47,6 +47,8 @@ interface Settings {
   color: Side | 'random'
   skill: number
   continueWithEngine: boolean
+  /** The computer sometimes leaves the book with a mistake that you must punish. */
+  sparring: boolean
 }
 
 function loadSettings(preselect: string | null): Settings {
@@ -61,6 +63,7 @@ function loadSettings(preselect: string | null): Settings {
     color: saved.color ?? 'random',
     skill: nearestSkill(saved.skill ?? 6),
     continueWithEngine: saved.continueWithEngine ?? true,
+    sparring: saved.sparring ?? false,
   }
   if (preselect) {
     const ids = preselect.split(',').filter((id) => openingById.has(id))
@@ -104,6 +107,7 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
         openingIds={settings.selected.filter((id) => openingById.get(id)?.side === game.side)}
         skill={settings.skill}
         continueWithEngine={settings.continueWithEngine}
+        sparring={settings.sparring}
         onSkill={(skill) => setSettings((s) => ({ ...s, skill }))}
         onNew={start}
         onSetup={() => setGame(null)}
@@ -179,6 +183,10 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
           />
           Keep playing against the computer when the prepared line ends
         </label>
+        <label className="check">
+          <input type="checkbox" checked={settings.sparring} onChange={(e) => setSettings({ ...settings, sparring: e.target.checked })} />
+          Sparring: once a game, the computer leaves your line with a mistake, and you have to punish it
+        </label>
       </div>
 
       <button type="button" className="primary big" disabled={sidesAvailable.length === 0} onClick={start}>
@@ -205,6 +213,7 @@ interface GameProps {
   openingIds: string[]
   skill: number
   continueWithEngine: boolean
+  sparring: boolean
   onSkill: (skill: number) => void
   onNew: () => void
   onSetup: () => void
@@ -229,7 +238,21 @@ function gameOverText(chess: Chess, side: Side): string | null {
   return null
 }
 
-function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onSetup }: GameProps) {
+/** A mistake the computer played on purpose, and the replies that punish it. */
+interface Punish {
+  fen: string
+  accept: string[]
+  best: EngineLine
+}
+
+/** Searching this many moves finds a plausible move that is still clearly worse than the best. */
+const SPARRING_CANDIDATES = 8
+const SPARRING_MIN_LOSS = 120
+const SPARRING_MAX_LOSS = 600
+/** Your advantage after the mistake, if you punish it well. */
+const SPARRING_MIN_EDGE = 110
+
+function Game({ side, openingIds, skill, continueWithEngine, sparring, onSkill, onNew, onSetup }: GameProps) {
   const pace = usePace()
   const book: Book = useMemo(() => buildBook(openingIds.flatMap((id) => openingById.get(id)!.lines)), [openingIds])
   const [moves, setMoves] = useState<PlayedMove[]>([])
@@ -249,6 +272,13 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
   const busy = useRef(false)
   const [analysis, setAnalysis] = useState<{ fen: string; lines: EngineLine[] } | null>(null)
   const [showBest, setShowBest] = useState<string | null>(null)
+  // Sparring: the computer's ply on which it tries to leave the book with a mistake.
+  const [deviatePly] = useState(() => {
+    const first = side === 'white' ? 3 : 2
+    return first + 2 * Math.floor(Math.random() * 4)
+  })
+  const deviated = useRef(false)
+  const [punish, setPunish] = useState<Punish | null>(null)
 
   const fen = moves.length ? moves[moves.length - 1].fen : START_FEN
   const chess = useMemo(() => new Chess(fen), [fen])
@@ -292,6 +322,64 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [computerBookTurn, fen])
 
+  /** Sparring: play a plausible but clearly bad move instead of the book move. */
+  async function deviate() {
+    busy.current = true
+    setThinking(true)
+    try {
+      const engine = getEngine()
+      const sign = turn === 'white' ? 1 : -1 // computer's point of view
+      const score = (l: EngineLine) => (l.mate !== undefined ? Math.sign(l.mate) * 10000 : (l.cp ?? 0)) * sign
+      const lines = await engine.analyse(fen, SPARRING_CANDIDATES, 900)
+      const inBook = new Set(candidates.map((c) => c.san))
+      const best = score(lines[0])
+      // The best-ranked moves that lose enough: mistakes that still look natural.
+      const picks = lines.filter((l) => {
+        const loss = best - score(l)
+        return loss >= SPARRING_MIN_LOSS && loss <= SPARRING_MAX_LOSS && !inBook.has(sanOf(l.uci))
+      })
+      const mine = (l: EngineLine) => -score(l)
+      let found: { after: Chess; mv: ReturnType<Chess['move']>; replies: EngineLine[] } | null = null
+      for (const pick of picks.slice(0, 3)) {
+        const after = new Chess(fen)
+        const mv = after.move({ from: pick.uci.slice(0, 2), to: pick.uci.slice(2, 4), promotion: pick.uci[4] })
+        const replies = await engine.analyse(after.fen(), 4, 1200)
+        // Only keep it if you really get a clear advantage by punishing it.
+        if (replies.length && mine(replies[0]) >= SPARRING_MIN_EDGE) {
+          found = { after, mv, replies }
+          break
+        }
+      }
+      if (!found) {
+        // Nothing suitable here: stay in the book and try again on the next move.
+        deviated.current = false
+        playBookMove()
+        return
+      }
+      const { after, mv, replies } = found
+      // Which replies punish it: anything close to the engine's best for you.
+      const top = mine(replies[0])
+      const accept = replies
+        .filter((l) => mine(l) >= top - 60 && mine(l) >= SPARRING_MIN_EDGE * 0.6)
+        .map((l) => new Chess(after.fen()).move({ from: l.uci.slice(0, 2), to: l.uci.slice(2, 4), promotion: l.uci[4] }).san)
+      const bookNames = candidates.map((c) => c.san).join(' or ')
+      add({
+        who: 'opponent',
+        tone: 'bad',
+        label: label(moves.length, mv.san),
+        text: `Out of the book! Instead of ${bookNames}, the computer plays ${mv.san}. Stockfish says this is a mistake (${formatScore(replies[0])} now). Find the move that punishes it.`,
+      })
+      setPunish({ fen: after.fen(), accept, best: replies[0] })
+      setPhase('engine')
+      push({ san: mv.san, from: mv.from, to: mv.to, inBook: false }, after)
+    } catch {
+      playBookMove()
+    } finally {
+      busy.current = false
+      setThinking(false)
+    }
+  }
+
   // Computer's move.
   useEffect(() => {
     if (phase === 'over' || userTurn || busy.current || over) return
@@ -300,7 +388,9 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
         leaveBook('computer')
         return
       }
-      const t = setTimeout(playBookMove, delay)
+      const tryDeviation = sparring && !deviated.current && moves.length >= deviatePly
+      if (tryDeviation) deviated.current = true
+      const t = setTimeout(tryDeviation ? deviate : playBookMove, delay)
       return () => clearTimeout(t)
     }
     busy.current = true
@@ -401,6 +491,20 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
     if (phase === 'engine') {
       try {
         const mv = after.move(input)
+        if (punish && punish.fen === fen) {
+          if (punish.accept.includes(mv.san)) {
+            add({ who: 'you', tone: 'good', label: label(moves.length, mv.san), text: `Punished! ${mv.san} is one of Stockfish's best replies (${formatScore(punish.best)}). Now convert the advantage.` })
+          } else {
+            setMistakes((n) => n + 1)
+            add({
+              who: 'you',
+              tone: 'bad',
+              label: label(moves.length, mv.san),
+              text: `That lets the computer off the hook. Stockfish wanted ${punish.accept.join(' or ') || sanOf(punish.best.uci)} (${formatScore(punish.best)}). Play on from here.`,
+            })
+          }
+          setPunish(null)
+        }
         push({ san: mv.san, from: mv.from, to: mv.to, inBook: false }, after)
         return true
       } catch {

@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "validate": "tsx scripts/validate.ts"
+    "validate": "tsx scripts/validate.ts",
+    "deviations": "tsx scripts/find-deviations.ts",
+    "traps": "tsx scripts/check-traps.ts"
   },
   "dependencies": {
     "chess.js": "^1.4.0",
