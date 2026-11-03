@@ -1,11 +1,15 @@
 import { openingById } from '../data/openings'
 import { formatDue, lineStatus, useProgress } from '../lib/progress'
 import { go } from '../router'
+import { deviationsForLine, deviationsForOpening } from '../lib/deviations'
+import { trapsForOpening } from '../data/traps'
 
 export function OpeningPage({ id }: { id: string }) {
   const opening = openingById.get(id)
   const progress = useProgress()
   if (!opening) return <NotFound />
+  const deviationCount = deviationsForOpening(opening.id).length
+  const trapCount = trapsForOpening(opening.id).length
 
   return (
     <div className="page narrow">
@@ -34,6 +38,16 @@ export function OpeningPage({ id }: { id: string }) {
           <button type="button" onClick={() => go(`/play?openings=${opening.id}`)}>
             Play this opening
           </button>
+          {deviationCount > 0 && (
+            <button type="button" onClick={() => go(`/punish/${opening.id}`)}>
+              Punish mistakes ({deviationCount})
+            </button>
+          )}
+          {trapCount > 0 && (
+            <button type="button" onClick={() => go(`/traps/${opening.id}`)}>
+              Traps ({trapCount})
+            </button>
+          )}
         </div>
       </header>
 
@@ -61,6 +75,11 @@ export function OpeningPage({ id }: { id: string }) {
                 <button type="button" className="ghost" onClick={() => go(`/practice/${opening.id}/${i}`)}>
                   Drill
                 </button>
+                {deviationsForLine(line.id).length > 0 && (
+                  <button type="button" className="ghost" onClick={() => go(`/punish/${opening.id}/${i}`)}>
+                    Punish ({deviationsForLine(line.id).length})
+                  </button>
+                )}
               </div>
             </li>
           )

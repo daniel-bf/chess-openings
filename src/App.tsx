@@ -9,6 +9,7 @@ import { SoundsPage } from './pages/SoundsPage'
 import { TreePage } from './pages/TreePage'
 import { MapPage } from './pages/MapPage'
 import { StructurePage } from './pages/StructurePage'
+import { PuzzlePage, TrapsPage } from './pages/PuzzlePage'
 
 export default function App() {
   const { parts, query } = useRoute()
@@ -25,6 +26,11 @@ export default function App() {
   else if (page === 'review') content = <DrillPage key="review" mode="review" />
   else if (page === 'practice' && a)
     content = <DrillPage key={`${a}-${b}`} mode="practice" openingId={a} lineIndex={b === undefined ? undefined : Number(b)} />
+  else if (page === 'punish' && a)
+    content = <PuzzlePage key={`${a}-${b}`} mode="punish" openingId={a} lineIndex={b === undefined ? undefined : Number(b)} />
+  else if (page === 'traps' && a) content = <PuzzlePage key={a} mode="traps" openingId={a === 'all' ? undefined : a} />
+  else if (page === 'traps') content = <TrapsPage />
+  else if (page === 'trap' && a) content = <PuzzlePage key={a} mode="traps" trapId={a} />
   else if (page === 'play') content = <PlayPage preselect={query.get('openings')} />
   else if (page === 'sounds') content = <SoundsPage />
   else content = <NotFound />
@@ -45,6 +51,9 @@ export default function App() {
           </button>
           <button type="button" className={page === 'structure' ? 'on' : ''} onClick={() => go('/structure')}>
             Structure
+          </button>
+          <button type="button" className={page === 'traps' || page === 'trap' ? 'on' : ''} onClick={() => go('/traps')}>
+            Traps
           </button>
           <button type="button" className={page === 'review' ? 'on' : ''} onClick={() => go('/review')}>
             Review
