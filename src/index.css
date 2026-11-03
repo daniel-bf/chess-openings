@@ -406,3 +406,9 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .report-result { font-weight: 700; }
 .report-list { padding-left: 1.1em; margin: 0.3em 0; display: grid; gap: 0.35em; }
 .viewing-note { color: var(--info); }
+.game-actions { flex-wrap: wrap; }
+.game-result { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 0.2em 0.7em; text-align: center; border-radius: 8px; padding: 0.7em 1em; margin: 8px 0; border: 2px solid currentColor; }
+.game-result strong { font-family: var(--font-display, inherit); font-size: 1.35rem; }
+.game-result.win { background: var(--good-bg); color: var(--good); }
+.game-result.loss { background: var(--bad-bg); color: var(--bad); }
+.game-result.draw { background: var(--info-bg); color: var(--info); }

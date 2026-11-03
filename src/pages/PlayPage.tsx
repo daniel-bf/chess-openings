@@ -11,6 +11,7 @@ import { Board, ARROW_HINT, ARROW_BEST, ARROW_SECOND, type MoveInput } from '../
 import { go } from '../router'
 import { EvalBar, formatScore } from '../components/EvalBar'
 import { recordResult } from '../lib/progress'
+import { play } from '../lib/sound'
 
 const SETTINGS_KEY = 'chess-trainer:play:v1'
 
@@ -107,6 +108,7 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
         continueWithEngine={settings.continueWithEngine}
         onSkill={(skill) => setSettings((s) => ({ ...s, skill }))}
         onNew={start}
+        onReset={() => setGame({ side: game.side, key: Date.now() })}
         onSetup={() => setGame(null)}
       />
     )
@@ -238,6 +240,7 @@ interface GameProps {
   continueWithEngine: boolean
   onSkill: (skill: number) => void
   onNew: () => void
+  onReset: () => void
   onSetup: () => void
 }
 
@@ -260,7 +263,7 @@ function gameOverText(chess: Chess, side: Side): string | null {
   return null
 }
 
-function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onSetup }: GameProps) {
+function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onReset, onSetup }: GameProps) {
   const pace = usePace()
   const book: Book = useMemo(() => buildBook(openingIds.flatMap((id) => openingById.get(id)!.lines)), [openingIds])
   const [moves, setMoves] = useState<PlayedMove[]>([])
@@ -369,6 +372,7 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
     if (over) {
       setPhase('over')
       add({ who: 'note', tone: 'info', text: over })
+      if (over.endsWith('You win!')) setTimeout(() => play('success'), 300)
     }
   }, [over])
 
@@ -547,12 +551,37 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
   const showHint = !viewing && phase === 'book' && userTurn && (revealed || misses >= 2)
   const last = moves[shown - 1]
   const resultText = resigned ? 'You resigned.' : over ?? (phase === 'over' ? 'Opening finished.' : null)
+  const outcome: 'win' | 'loss' | 'draw' | null = resigned
+    ? 'loss'
+    : chess.isCheckmate()
+      ? (chess.turn() === 'w') === (side === 'white')
+        ? 'loss'
+        : 'win'
+      : chess.isDraw()
+        ? 'draw'
+        : null
+  const banner = outcome && {
+    title: resigned
+      ? 'You resigned'
+      : chess.isCheckmate()
+        ? outcome === 'win'
+          ? 'Checkmate! You win'
+          : 'Checkmate. The computer wins'
+        : 'Draw',
+    detail: resigned ? 'The computer wins.' : chess.isCheckmate() ? `${last?.san ?? ''} ends the game.` : (over ?? '').replace(/^Draw[.:]?\s*/, ''),
+  }
 
   return (
     <div className="page">
       <div className="session">
         <div className="board-col">
           <EvalBar line={shownAnalysis?.[0] ?? null} orientation={orientation} />
+          {banner && !viewing && (
+            <div className={`game-result ${outcome}`} role="status">
+              <strong>{banner.title}</strong>
+              {banner.detail && <span>{banner.detail}</span>}
+            </div>
+          )}
           <Board
             fen={boardFen}
             orientation={orientation}
@@ -600,6 +629,23 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
                 {current ? 'Show best moves' : 'Analysing…'}
               </button>
             )}
+          </div>
+          <div className="nav game-actions">
+            <button type="button" className="primary" onClick={onNew}>
+              New game
+            </button>
+            <button type="button" onClick={onReset} disabled={moves.length === 0} title="Start this game again from the first move">
+              Reset
+            </button>
+            <button type="button" onClick={takeback} disabled={takebackCount === 0} title="Take back your last move against the computer">
+              Take back
+            </button>
+            <button type="button" onClick={resign} disabled={phase !== 'engine' || !!over}>
+              Resign
+            </button>
+            <button type="button" className="ghost" onClick={copyPgn} disabled={moves.length === 0}>
+              {copied ? 'Copied' : 'Copy PGN'}
+            </button>
           </div>
         </div>
         <aside className="panel">
@@ -661,26 +707,6 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onS
               </li>
             ))}
           </ol>
-          <div className="row">
-            <button type="button" className="primary" onClick={onNew}>
-              New game
-            </button>
-            {takebackCount > 0 && (
-              <button type="button" onClick={takeback}>
-                Take back
-              </button>
-            )}
-            {phase === 'engine' && !over && (
-              <button type="button" className="ghost" onClick={resign}>
-                Resign
-              </button>
-            )}
-            {moves.length > 0 && (
-              <button type="button" className="ghost" onClick={copyPgn}>
-                {copied ? 'Copied' : 'Copy PGN'}
-              </button>
-            )}
-          </div>
         </aside>
       </div>
     </div>
