@@ -99,7 +99,10 @@ export function Board({ fen, orientation, movable, onMove, arrows = [], lastMove
   }
   if (chess.inCheck()) {
     const king = chess.board().flat().find((p) => p && p.type === 'k' && p.color === chess.turn())
-    if (king) squareStyles[king.square] = { background: 'radial-gradient(circle, rgba(230, 40, 40, 0.85) 25%, transparent 75%)' }
+    if (king)
+      squareStyles[king.square] = chess.isCheckmate()
+        ? { background: 'rgba(210, 30, 30, 0.85)', boxShadow: 'inset 0 0 0 3px rgba(120, 0, 0, 0.9)' }
+        : { background: 'radial-gradient(circle, rgba(230, 40, 40, 0.85) 25%, transparent 75%)' }
   }
   for (const [sq, color] of Object.entries(marks)) squareStyles[sq] = { background: color }
 

@@ -8,7 +8,7 @@ A free, client-side trainer for 20 popular chess openings: 185 lines with move-b
 - **Pace**: the opponent pauses before each reply, longer when the note to read is longer. A thin bar shows the time left. Choose Slow (the default), Normal or Fast. Every note stays in a running log, and opponent moves that attack one of your pieces are called out.
 - **Review**: lines you have learned come back on a spaced-repetition schedule (1, 3, 7, 16, 35 days). A mistake resets a line to the start of the schedule.
 - **Drill**: quiz yourself on every line of one opening in random order.
-- **Play mode**: choose a set of openings. The computer plays random branches from them and you must answer with your prepared moves. When the line ends you can keep playing against Stockfish at one of 8 levels, which you can change during the game. A bar above the board shows Stockfish's evaluation, and "Show best moves" draws the engine's top two moves with their scores.
+- **Play mode**: choose a set of openings. The computer plays random branches from them and you must answer with your prepared moves. When the line ends you can keep playing against Stockfish at one of 8 levels, which you can change during the game. A bar above the board shows Stockfish's evaluation, and "Show best moves" draws the engine's top two moves with their scores. Click any move (or use the arrow keys) to look back at the game, flip the board, take back moves played against the computer, resign, or copy the game as PGN. When the game ends, an opening report lists each opening mistake with your move, the prepared move and a link to learn the line, and the missed lines go back into Review for the next day.
 
 Progress is stored in the browser (localStorage). There is no server or account.
 
