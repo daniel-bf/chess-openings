@@ -49,7 +49,12 @@ interface Settings {
   color: Side | 'random'
   skill: number
   continueWithEngine: boolean
+  /** After the prepared line, only accept one of Stockfish's top moves from the user. */
+  topMovesOnly: boolean
 }
+
+/** How many of the engine's best moves count as allowed in "top moves only" play. */
+const TOP_MOVES = 3
 
 function loadSettings(preselect: string | null): Settings {
   let saved: Partial<Settings> = {}
@@ -63,6 +68,7 @@ function loadSettings(preselect: string | null): Settings {
     color: saved.color ?? 'random',
     skill: nearestSkill(saved.skill ?? 6),
     continueWithEngine: saved.continueWithEngine ?? true,
+    topMovesOnly: saved.topMovesOnly ?? false,
   }
   if (preselect) {
     const ids = preselect.split(',').filter((id) => openingById.has(id))
@@ -106,7 +112,9 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
         openingIds={settings.selected.filter((id) => openingById.get(id)?.side === game.side)}
         skill={settings.skill}
         continueWithEngine={settings.continueWithEngine}
+        topMovesOnly={settings.topMovesOnly}
         onSkill={(skill) => setSettings((s) => ({ ...s, skill }))}
+        onTopMovesOnly={(topMovesOnly) => setSettings((s) => ({ ...s, topMovesOnly }))}
         onNew={start}
         onReset={() => setGame({ side: game.side, key: Date.now() })}
         onSetup={() => setGame(null)}
@@ -182,6 +190,15 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
           />
           Keep playing against the computer when the prepared line ends
         </label>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={settings.topMovesOnly}
+            disabled={!settings.continueWithEngine}
+            onChange={(e) => setSettings({ ...settings, topMovesOnly: e.target.checked })}
+          />
+          Best moves only: against the computer, only Stockfish's top {TOP_MOVES} moves are accepted
+        </label>
       </div>
 
       <button type="button" className="primary big" disabled={sidesAvailable.length === 0} onClick={start}>
@@ -238,7 +255,9 @@ interface GameProps {
   openingIds: string[]
   skill: number
   continueWithEngine: boolean
+  topMovesOnly: boolean
   onSkill: (skill: number) => void
+  onTopMovesOnly: (on: boolean) => void
   onNew: () => void
   onReset: () => void
   onSetup: () => void
@@ -263,7 +282,7 @@ function gameOverText(chess: Chess, side: Side): string | null {
   return null
 }
 
-function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onReset, onSetup }: GameProps) {
+function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSkill, onTopMovesOnly, onNew, onReset, onSetup }: GameProps) {
   const pace = usePace()
   const book: Book = useMemo(() => buildBook(openingIds.flatMap((id) => openingById.get(id)!.lines)), [openingIds])
   const [moves, setMoves] = useState<PlayedMove[]>([])
@@ -291,6 +310,9 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
   const [view, setView] = useState<number | null>(null)
   const recorded = useRef(false)
   const [rescheduled, setRescheduled] = useState<string[]>([])
+  // "Best moves only": wrong tries in the current position, and the total rejected this game.
+  const [topMisses, setTopMisses] = useState(0)
+  const [rejected, setRejected] = useState(0)
 
   const fen = moves.length ? moves[moves.length - 1].fen : START_FEN
   const viewing = view !== null && view < moves.length
@@ -387,7 +409,7 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
     let live = true
     const t = setTimeout(() => {
       getEngine()
-        .analyse(boardFen, 2)
+        .analyse(boardFen, TOP_MOVES)
         .then((lines) => live && setAnalysis({ fen: boardFen, lines }))
         .catch(() => {})
     }, 250)
@@ -400,6 +422,11 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
   const shownAnalysis = analysis?.fen === boardFen ? analysis.lines : null
   const current = !viewing ? shownAnalysis : null
   const bestShown = !viewing && showBest === fen && current
+  // In "best moves only" play the user's move must be one of these (null while the engine is still analysing).
+  const restricted = topMovesOnly && phase === 'engine' && userTurn && !over
+  const allowed = restricted && current ? current.slice(0, TOP_MOVES) : null
+
+  useEffect(() => setTopMisses(0), [fen])
 
   // Once the opening phase is over, missed lines go back to the start of the review schedule.
   useEffect(() => {
@@ -483,6 +510,29 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
       return true
     }
     if (phase === 'engine') {
+      if (restricted) {
+        if (!allowed) return false
+        if (!allowed.some((l) => l.uci.slice(0, 2) === input.from && l.uci.slice(2, 4) === input.to)) {
+          let played = 'That move'
+          try {
+            played = new Chess(fen).move(input).san
+          } catch {
+            return false
+          }
+          setTopMisses((n) => n + 1)
+          setRejected((n) => n + 1)
+          setFlash({ [input.to]: 'rgba(220, 50, 50, 0.6)' })
+          add({
+            who: 'note',
+            tone: 'bad',
+            text:
+              topMisses >= 1
+                ? `${played} is not one of the top ${TOP_MOVES} either. The arrows show the moves you can play.`
+                : `${played} is not one of Stockfish's top ${TOP_MOVES} moves here. Try again.`,
+          })
+          return false
+        }
+      }
       try {
         const mv = after.move(input)
         push({ san: mv.san, from: mv.from, to: mv.to, inBook: false }, after)
@@ -549,6 +599,7 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
   }
 
   const showHint = !viewing && phase === 'book' && userTurn && (revealed || misses >= 2)
+  const showTop = !viewing && !!allowed && topMisses >= 2
   const last = moves[shown - 1]
   const resultText = resigned ? 'You resigned.' : over ?? (phase === 'over' ? 'Opening finished.' : null)
   const outcome: 'win' | 'loss' | 'draw' | null = resigned
@@ -585,11 +636,12 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
           <Board
             fen={boardFen}
             orientation={orientation}
-            movable={phase !== 'over' && userTurn && !thinking && !viewing ? side : null}
+            movable={phase !== 'over' && userTurn && !thinking && !viewing && !(restricted && !allowed) ? side : null}
             onMove={onMove}
             lastMove={last ? { from: last.from, to: last.to } : null}
             arrows={[
               ...(showHint ? candidates.map((c) => ({ from: c.from, to: c.to, color: ARROW_HINT })) : []),
+              ...(showTop ? allowed.map((l) => ({ from: l.uci.slice(0, 2), to: l.uci.slice(2, 4), color: ARROW_HINT })) : []),
               ...(bestShown
                 ? current.slice(0, 2).map((l, i) => ({ from: l.uci.slice(0, 2), to: l.uci.slice(2, 4), color: i === 0 ? ARROW_BEST : ARROW_SECOND }))
                 : []),
@@ -677,8 +729,24 @@ function Game({ side, openingIds, skill, continueWithEngine, onSkill, onNew, onR
             Computer level after the opening{' '}
             <LevelSelect value={skill} onChange={onSkill} />
           </label>
+          <label className="check small">
+            <input type="checkbox" checked={topMovesOnly} onChange={(e) => onTopMovesOnly(e.target.checked)} />
+            Best moves only (top {TOP_MOVES} after the opening)
+          </label>
           <p className="muted small status-line">
-            {thinking ? 'Computer is thinking…' : computerBookTurn ? 'The computer is about to reply…' : userTurn && phase !== 'over' ? 'Your move.' : ''} Opening mistakes: {mistakes}
+            {thinking
+              ? 'Computer is thinking…'
+              : computerBookTurn
+                ? 'The computer is about to reply…'
+                : restricted && !allowed
+                  ? 'Finding the top moves…'
+                  : userTurn && phase !== 'over'
+                    ? restricted
+                      ? `Your move: play one of the top ${TOP_MOVES}.`
+                      : 'Your move.'
+                    : ''}{' '}
+            Opening mistakes: {mistakes}
+            {topMovesOnly && ` · Moves rejected: ${rejected}`}
           </p>
           {computerBookTurn && moves.length > 0 && <div className="countdown" key={moves.length} style={{ animationDuration: `${delay}ms` }} />}
           {phase === 'over' && (
