@@ -227,6 +227,11 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .evalbar-text { margin: 0.25em 0 0; }
 .best-moves { margin: 0.4em 0 0; }
 .level { display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap; margin: 0.4em 0; }
+.top-moves { display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap; margin: 0.4em 0; }
+.top-moves-slider { display: inline-flex; align-items: center; gap: 0.6em; }
+.top-moves-slider input[type="range"] { width: 10em; max-width: 50vw; accent-color: var(--accent, currentColor); }
+.top-moves-slider output { min-width: 4.5em; font-variant-numeric: tabular-nums; font-weight: 600; }
+.top-moves-slider input:disabled + output { opacity: 0.5; }
 .sound-toggle { padding-inline: 0.55em; font-size: 1.05rem; line-height: 1; }
 .sound-sets { list-style: none; padding: 0; margin: 1em 0 0; display: grid; gap: 0.8em; }
 .sound-sets li { border: 1px solid var(--border); border-radius: 10px; padding: 0.8em 1em; background: var(--surface); }
