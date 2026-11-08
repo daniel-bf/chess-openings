@@ -4,12 +4,12 @@ import { START_FEN } from '../lib/repertoire'
 import { moveNumber, pathTo, type TreeNode } from '../lib/tree'
 import { MiniBoard } from './MiniBoard'
 
-/** A box in the chart: the position reached after a run of moves with no alternatives. */
+/** A box in the chart: the position reached after one move (or the start position). */
 interface Box {
   id: string
-  /** The moves that lead here from the parent box (empty for the start). */
-  run: TreeNode[]
-  /** The tree node this box ends on (the start node for the root box). */
+  /** The move that leads here from the parent box (null for the start). */
+  node: TreeNode | null
+  /** The tree node this box shows (the root for the start box). */
   end: TreeNode
   children: Box[]
   /** True when the box has children that are folded away. */
@@ -18,34 +18,25 @@ interface Box {
   y: number
 }
 
-const W = 128
-const H = 150
-const GAP_X = 18
-const GAP_Y = 46
+const W = 112
+const H = 132
+const GAP_X = 14
+const GAP_Y = 34
 
 const isMine = (node: TreeNode, side: Side) => (node.ply % 2 === 0) === (side === 'white')
 
-function runLabel(run: TreeNode[]): string {
-  return run.map((n, i) => (i === 0 || n.ply % 2 === 0 ? `${moveNumber(n)}${n.move!.san}` : n.move!.san)).join(' ')
-}
-
-/** Builds the boxes, unfolding only the branches in `open` (or everything), then lays them out top-down. */
-function build(root: TreeNode, open: Set<string>, all: boolean, focus: TreeNode | null): { box: Box; width: number; height: number; list: Box[] } {
+/**
+ * Builds one box per move, unfolding only the moves in `open` (or everything), then lays them out top-down.
+ * Every move gets its own box, even when there is only one choice, so a line can be followed move by move.
+ */
+function build(root: TreeNode, open: Set<string>, all: boolean): { width: number; height: number; list: Box[] } {
   const list: Box[] = []
   let leafX = 0
-  function make(run: TreeNode[], end: TreeNode, depth: number, id: string): Box {
-    const box: Box = { id, run, end, children: [], folded: false, x: 0, y: depth * (H + GAP_Y) }
+  function make(end: TreeNode, depth: number): Box {
+    const box: Box = { id: end.id, node: end.move ? end : null, end, children: [], folded: false, x: 0, y: depth * (H + GAP_Y) }
     list.push(box)
-    if (end.children.length && (all || open.has(id))) {
-      box.children = end.children.map((c) => {
-        const r = [c]
-        let e = c
-        while (e.children.length === 1) {
-          e = e.children[0]
-          r.push(e)
-        }
-        return make(r, e, depth + 1, c.id)
-      })
+    if (end.children.length && (all || open.has(end.id))) {
+      box.children = end.children.map((c) => make(c, depth + 1))
       box.x = (box.children[0].x + box.children[box.children.length - 1].x) / 2
     } else {
       box.folded = end.children.length > 0
@@ -54,23 +45,9 @@ function build(root: TreeNode, open: Set<string>, all: boolean, focus: TreeNode 
     }
     return box
   }
-  // The start box covers any forced moves at the very beginning; a focused branch starts at its own first move.
-  const r: TreeNode[] = focus ? [focus] : []
-  let e = focus ?? root
-  while (e.children.length === 1) {
-    e = e.children[0]
-    r.push(e)
-  }
-  const box = make(r, e, 0, focus ? focus.id : 'root')
+  make(root, 0)
   const depth = Math.max(...list.map((b) => b.y)) + H
-  return { box, width: Math.max(leafX - GAP_X, W), height: depth, list }
-}
-
-/** The first move of the box holding `node`, or null when it is in the start box. */
-function boxStart(node: TreeNode): TreeNode | null {
-  let n = node
-  while (n.parent?.move && n.parent.children.length === 1) n = n.parent
-  return n.parent && n.parent.children.length > 1 ? n : null
+  return { width: Math.max(leafX - GAP_X, W), height: depth, list }
 }
 
 export function FlowTree({
@@ -91,23 +68,11 @@ export function FlowTree({
   const [zoom, setZoom] = useState<number | null>(null)
   const [fit, setFit] = useState(1)
   const scroller = useRef<HTMLDivElement>(null)
-  // A branch the user tapped: only it and what grows below it are shown.
-  const [focus, setFocus] = useState<TreeNode | null>(null)
 
-  // Going back above the branch (with the board's arrows or the trail) shows the whole tree again.
-  useEffect(() => {
-    if (focus && !pathTo(selected).includes(focus)) setFocus(null)
-  }, [focus, selected])
-  const shown = focus && pathTo(selected).includes(focus) ? focus : null
+  // Unfold every move on the way to the selected one, including itself, so every choice along the line shows.
+  const open = useMemo(() => new Set<string>(['root', ...pathTo(selected).map((n) => n.id)]), [selected])
 
-  // Unfold every box on the way to the selected move, including its own, so its next choices show.
-  const open = useMemo(() => {
-    const ids = new Set<string>(['root'])
-    for (const n of pathTo(selected)) if (n.parent && n.parent.children.length > 1) ids.add(n.id)
-    return ids
-  }, [selected])
-
-  const { width, height, list } = useMemo(() => build(root, open, showAll, shown), [root, open, showAll, shown])
+  const { width, height, list } = useMemo(() => build(root, open, showAll), [root, open, showAll])
 
   // Scale the chart to fit the width available, unless the user picked a zoom.
   useLayoutEffect(() => {
@@ -121,7 +86,7 @@ export function FlowTree({
   }, [width])
   const scale = zoom ?? fit
 
-  const activeBox = list.find((b) => b.run.includes(selected)) ?? list.find((b) => b.end === selected) ?? list[0]
+  const activeBox = list.find((b) => b.end === selected) ?? list[0]
 
   // Bring the active box into view inside the chart.
   useEffect(() => {
@@ -137,16 +102,6 @@ export function FlowTree({
   return (
     <section className="flow" aria-label="Tree of the opening">
       <div className="flow-tools">
-        {shown && (
-          <span className="flow-focus">
-            <button type="button" onClick={() => setFocus(shown.parent ? boxStart(shown.parent) : null)}>
-              ▲ Up one level
-            </button>
-            <button type="button" onClick={() => setFocus(null)}>
-              Whole tree
-            </button>
-          </span>
-        )}
         <label className="check small">
           <input type="checkbox" checked={showAll} onChange={(e) => setShowAll(e.target.checked)} /> Show every branch
         </label>
@@ -179,28 +134,24 @@ export function FlowTree({
                     x1 === x2
                       ? `M${x1},${y1} V${y2}`
                       : `M${x1},${y1} V${mid - r} Q${x1},${mid} ${x1 + dir * r},${mid} H${x2 - dir * r} Q${x2},${mid} ${x2},${mid + r} V${y2}`
-                  return <path key={c.id} d={d} className={isMine(c.run[0], side) ? 'mine' : 'theirs'} />
+                  return <path key={c.id} d={d} className={isMine(c.end, side) ? 'mine' : 'theirs'} />
                 }),
               )}
             </svg>
             {list.map((b) => {
-              const first = b.run[0]
+              const first = b.node
               const who = first ? (isMine(first, side) ? 'mine' : 'theirs') : 'start'
               const lines = b.end.lineIds.length
-              const target = b.end.move ? b.end : b.run[b.run.length - 1] ?? null
               const tag = first && tagFor ? tagFor(first) : null
+              const label = first ? `${moveNumber(first)}${first.move!.san}` : 'Start'
               return (
                 <button
                   key={b.id}
                   type="button"
                   className={`flow-box ${who}${b === activeBox ? ' active' : ''}`}
                   style={{ left: b.x + 12, top: b.y + 12, width: W, height: H }}
-                  title={b.run.length ? runLabel(b.run) : 'Start'}
-                  onClick={() => {
-                    // Tapping a branch narrows the tree to it; tapping the start box shows everything again.
-                    setFocus(b.id === 'root' ? null : b.run[0])
-                    onSelect(target ? target.id : 'root')
-                  }}
+                  title={label}
+                  onClick={() => onSelect(b.end.id)}
                 >
                   {tag && <span className="flow-tag">{tag}</span>}
                   <MiniBoard
@@ -208,7 +159,7 @@ export function FlowTree({
                     orientation={side}
                     highlight={b.end.move ? [b.end.move.from, b.end.move.to] : []}
                   />
-                  <span className="flow-label">{b.run.length ? runLabel(b.run) : 'Start'}</span>
+                  <span className="flow-label">{label}</span>
                   <span className="flow-meta">
                     {b.end.children.length === 0 ? 'End of line' : `${lines} line${lines === 1 ? '' : 's'}`}
                     {b.folded && ' ▸'}
