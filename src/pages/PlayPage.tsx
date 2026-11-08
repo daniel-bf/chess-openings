@@ -51,10 +51,37 @@ interface Settings {
   continueWithEngine: boolean
   /** After the prepared line, only accept one of Stockfish's top moves from the user. */
   topMovesOnly: boolean
+  /** How many of the engine's best moves count as allowed in "best moves only" play. */
+  topMoves: number
 }
 
-/** How many of the engine's best moves count as allowed in "top moves only" play. */
-const TOP_MOVES = 3
+const TOP_MOVES_MIN = 1
+const TOP_MOVES_MAX = 10
+const TOP_MOVES_DEFAULT = 3
+
+function clampTopMoves(k: unknown): number {
+  const n = Math.round(Number(k))
+  return Number.isFinite(n) ? Math.min(TOP_MOVES_MAX, Math.max(TOP_MOVES_MIN, n)) : TOP_MOVES_DEFAULT
+}
+
+/** Slider for how many of the engine's best moves are accepted. */
+function TopMovesSlider({ value, onChange, disabled }: { value: number; onChange: (k: number) => void; disabled?: boolean }) {
+  return (
+    <span className="top-moves-slider">
+      <input
+        type="range"
+        min={TOP_MOVES_MIN}
+        max={TOP_MOVES_MAX}
+        step={1}
+        value={value}
+        disabled={disabled}
+        onChange={(e) => onChange(clampTopMoves(e.target.value))}
+        aria-label="Number of best moves accepted"
+      />
+      <output>{value === 1 ? 'Best only' : `Top ${value}`}</output>
+    </span>
+  )
+}
 
 function loadSettings(preselect: string | null): Settings {
   let saved: Partial<Settings> = {}
@@ -69,6 +96,7 @@ function loadSettings(preselect: string | null): Settings {
     skill: nearestSkill(saved.skill ?? 6),
     continueWithEngine: saved.continueWithEngine ?? true,
     topMovesOnly: saved.topMovesOnly ?? false,
+    topMoves: clampTopMoves(saved.topMoves ?? TOP_MOVES_DEFAULT),
   }
   if (preselect) {
     const ids = preselect.split(',').filter((id) => openingById.has(id))
@@ -113,8 +141,10 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
         skill={settings.skill}
         continueWithEngine={settings.continueWithEngine}
         topMovesOnly={settings.topMovesOnly}
+        topMoves={settings.topMoves}
         onSkill={(skill) => setSettings((s) => ({ ...s, skill }))}
         onTopMovesOnly={(topMovesOnly) => setSettings((s) => ({ ...s, topMovesOnly }))}
+        onTopMoves={(topMoves) => setSettings((s) => ({ ...s, topMoves }))}
         onNew={start}
         onReset={() => setGame({ side: game.side, key: Date.now() })}
         onSetup={() => setGame(null)}
@@ -197,7 +227,15 @@ export function PlayPage({ preselect }: { preselect: string | null }) {
             disabled={!settings.continueWithEngine}
             onChange={(e) => setSettings({ ...settings, topMovesOnly: e.target.checked })}
           />
-          Best moves only: against the computer, only Stockfish's top {TOP_MOVES} moves are accepted
+          Best moves only: against the computer, only {settings.topMoves === 1 ? "Stockfish's best move is" : `Stockfish's top ${settings.topMoves} moves are`} accepted
+        </label>
+        <label className="top-moves">
+          Moves accepted in "best moves only"
+          <TopMovesSlider
+            value={settings.topMoves}
+            disabled={!settings.continueWithEngine || !settings.topMovesOnly}
+            onChange={(topMoves) => setSettings({ ...settings, topMoves })}
+          />
         </label>
       </div>
 
@@ -256,8 +294,10 @@ interface GameProps {
   skill: number
   continueWithEngine: boolean
   topMovesOnly: boolean
+  topMoves: number
   onSkill: (skill: number) => void
   onTopMovesOnly: (on: boolean) => void
+  onTopMoves: (k: number) => void
   onNew: () => void
   onReset: () => void
   onSetup: () => void
@@ -282,7 +322,7 @@ function gameOverText(chess: Chess, side: Side): string | null {
   return null
 }
 
-function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSkill, onTopMovesOnly, onNew, onReset, onSetup }: GameProps) {
+function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMoves, onSkill, onTopMovesOnly, onTopMoves, onNew, onReset, onSetup }: GameProps) {
   const pace = usePace()
   const book: Book = useMemo(() => buildBook(openingIds.flatMap((id) => openingById.get(id)!.lines)), [openingIds])
   const [moves, setMoves] = useState<PlayedMove[]>([])
@@ -300,7 +340,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSki
   const [flash, setFlash] = useState<Record<string, string>>({})
   const [thinking, setThinking] = useState(false)
   const busy = useRef(false)
-  const [analysis, setAnalysis] = useState<{ fen: string; lines: EngineLine[] } | null>(null)
+  const [analysis, setAnalysis] = useState<{ fen: string; count: number; lines: EngineLine[] } | null>(null)
   const [showBest, setShowBest] = useState<string | null>(null)
   const [openingMistakes, setOpeningMistakes] = useState<OpeningMistake[]>([])
   const [resigned, setResigned] = useState(false)
@@ -404,27 +444,29 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSki
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fen, phase])
 
-  // Analyse the position on the board for the evaluation bar and the best-move hint.
+  // Analyse the position on the board for the evaluation bar, the best-move hint, and the allowed moves.
+  const analysisCount = Math.max(2, topMoves)
   useEffect(() => {
     let live = true
     const t = setTimeout(() => {
       getEngine()
-        .analyse(boardFen, TOP_MOVES)
-        .then((lines) => live && setAnalysis({ fen: boardFen, lines }))
+        .analyse(boardFen, analysisCount)
+        .then((lines) => live && setAnalysis({ fen: boardFen, count: analysisCount, lines }))
         .catch(() => {})
     }, 250)
     return () => {
       live = false
       clearTimeout(t)
     }
-  }, [boardFen])
+  }, [boardFen, analysisCount])
 
   const shownAnalysis = analysis?.fen === boardFen ? analysis.lines : null
   const current = !viewing ? shownAnalysis : null
   const bestShown = !viewing && showBest === fen && current
   // In "best moves only" play the user's move must be one of these (null while the engine is still analysing).
   const restricted = topMovesOnly && phase === 'engine' && userTurn && !over
-  const allowed = restricted && current ? current.slice(0, TOP_MOVES) : null
+  // Wait for an analysis with enough lines (the slider may have just been raised).
+  const allowed = restricted && current && analysis!.count >= topMoves ? current.slice(0, topMoves) : null
 
   useEffect(() => setTopMisses(0), [fen])
 
@@ -527,8 +569,12 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSki
             tone: 'bad',
             text:
               topMisses >= 1
-                ? `${played} is not one of the top ${TOP_MOVES} either. The arrows show the moves you can play.`
-                : `${played} is not one of Stockfish's top ${TOP_MOVES} moves here. Try again.`,
+                ? topMoves === 1
+                  ? `${played} is not the best move either. The arrow shows the move to play.`
+                  : `${played} is not one of the top ${topMoves} either. The arrows show the moves you can play.`
+                : topMoves === 1
+                  ? `${played} is not Stockfish's best move here. Try again.`
+                  : `${played} is not one of Stockfish's top ${topMoves} moves here. Try again.`,
           })
           return false
         }
@@ -731,8 +777,13 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSki
           </label>
           <label className="check small">
             <input type="checkbox" checked={topMovesOnly} onChange={(e) => onTopMovesOnly(e.target.checked)} />
-            Best moves only (top {TOP_MOVES} after the opening)
+            Best moves only after the opening
           </label>
+          {topMovesOnly && (
+            <label className="top-moves small">
+              Moves accepted <TopMovesSlider value={topMoves} onChange={onTopMoves} />
+            </label>
+          )}
           <p className="muted small status-line">
             {thinking
               ? 'Computer is thinking…'
@@ -742,7 +793,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, onSki
                   ? 'Finding the top moves…'
                   : userTurn && phase !== 'over'
                     ? restricted
-                      ? `Your move: play one of the top ${TOP_MOVES}.`
+                      ? topMoves === 1 ? 'Your move: play the best move.' : `Your move: play one of the top ${topMoves}.`
                       : 'Your move.'
                     : ''}{' '}
             Opening mistakes: {mistakes}
