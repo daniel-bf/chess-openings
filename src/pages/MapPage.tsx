@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { lineById, openingById, openings } from '../data/openings'
 import type { Side } from '../data/types'
-import { START_FEN } from '../lib/repertoire'
 import { explain } from '../lib/describe'
 import { buildTree, moveNumber, pathTo, type TreeNode } from '../lib/tree'
-import { Board, ARROW_BEST, ARROW_NEXT } from '../components/Board'
 import { FlowTree } from '../components/FlowTree'
 import { go } from '../router'
 import { BoardMap } from '../components/explorer/BoardMap'
@@ -108,15 +106,9 @@ export function MapPage({ side: initialSide }: { side?: string }) {
 
   const path = pathTo(selected)
   const moves = path.map((n) => n.move!)
-  const fen = selected.move?.fenAfter ?? START_FEN
   const note = selected.move ? explain(moves, moves.length - 1) : null
   const here = openingsAt(selected)
   const lines = selected.lineIds.map((id) => lineById.get(id)!)
-  const arrows = selected.children.map((c) => ({
-    from: c.move!.from,
-    to: c.move!.to,
-    color: isMine(c, side) ? ARROW_BEST : ARROW_NEXT,
-  }))
 
   return (
     <div className={`page explore map style-${style}`}>
@@ -148,32 +140,6 @@ export function MapPage({ side: initialSide }: { side?: string }) {
       {style === 'board' && <BoardMap key={side} root={tree.root} side={side} selected={selected} onSelect={setSelectedId} />}
       {style === 'tree' && (
         <div className="explore-body">
-          <div className="explore-board">
-            <Board
-              fen={fen}
-              orientation={side}
-              movable={null}
-              lastMove={selected.move ? { from: selected.move.from, to: selected.move.to } : null}
-              arrows={arrows}
-            />
-            <div className="nav">
-              <button type="button" onClick={() => setSelectedId('root')} disabled={!selected.move} aria-label="Start position">
-                ⏮
-              </button>
-              <button type="button" onClick={() => selected.parent && setSelectedId(selected.parent.id)} disabled={!selected.parent} aria-label="Previous move">
-                ◀
-              </button>
-              <button
-                type="button"
-                onClick={() => selected.children[0] && setSelectedId(selected.children[0].id)}
-                disabled={!selected.children.length}
-                aria-label="Next move"
-              >
-                ▶
-              </button>
-            </div>
-          </div>
-
           <div className="explore-side">
             <nav className="trail" aria-label="Moves so far" ref={trailRef}>
               <button type="button" className={`trail-step${!selected.move ? ' current' : ''}`} onClick={() => setSelectedId('root')}>
