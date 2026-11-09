@@ -9,6 +9,7 @@ import { SoundsPage } from './pages/SoundsPage'
 import { TreePage } from './pages/TreePage'
 import { MapPage } from './pages/MapPage'
 import { StructurePage } from './pages/StructurePage'
+import { AnalysisPage } from './pages/AnalysisPage'
 
 export default function App() {
   const { parts, query } = useRoute()
@@ -26,6 +27,7 @@ export default function App() {
   else if (page === 'practice' && a)
     content = <DrillPage key={`${a}-${b}`} mode="practice" openingId={a} lineIndex={b === undefined ? undefined : Number(b)} />
   else if (page === 'play') content = <PlayPage preselect={query.get('openings')} />
+  else if (page === 'analysis') content = <AnalysisPage />
   else if (page === 'sounds') content = <SoundsPage />
   else content = <NotFound />
 
@@ -51,6 +53,9 @@ export default function App() {
           </button>
           <button type="button" className={page === 'play' ? 'on' : ''} onClick={() => go('/play')}>
             Play
+          </button>
+          <button type="button" className={page === 'analysis' ? 'on' : ''} onClick={() => go('/analysis')}>
+            Analyse
           </button>
           <button
             type="button"

@@ -9,7 +9,7 @@ export function formatScore(line: EngineLine): string {
 }
 
 /** White's share of the bar, 0 to 100, using Lichess's win-chance curve. */
-function whiteShare(line: EngineLine): number {
+export function whiteShare(line: EngineLine): number {
   if (line.mate !== undefined) return line.mate > 0 ? 100 : 0
   const cp = Math.max(-1000, Math.min(1000, line.cp ?? 0))
   return 50 + 50 * (2 / (1 + Math.exp(-0.00368208 * cp)) - 1)
@@ -26,7 +26,7 @@ function verdict(line: EngineLine): string {
   return `${who} is winning`
 }
 
-export function EvalBar({ line, orientation }: { line: EngineLine | null; orientation: Side }) {
+export function EvalBar({ line, orientation, text }: { line: EngineLine | null; orientation: Side; text?: string }) {
   const share = line ? whiteShare(line) : 50
   return (
     <div className={`evalbar ${orientation}`} title="Stockfish evaluation">
@@ -34,7 +34,9 @@ export function EvalBar({ line, orientation }: { line: EngineLine | null; orient
         <div className="evalbar-white" style={{ width: `${share}%` }} />
       </div>
       <p className="evalbar-text small">
-        {line ? (
+        {text ? (
+          <strong>{text}</strong>
+        ) : line ? (
           <>
             <strong>{formatScore(line)}</strong> {verdict(line)}
           </>

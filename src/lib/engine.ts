@@ -3,6 +3,9 @@ export interface EngineLine {
   uci: string
   cp?: number
   mate?: number
+  /** The engine's principal variation in UCI, starting with `uci`. */
+  pv?: string[]
+  depth?: number
 }
 
 /** A small wrapper around the Stockfish web worker (UCI over postMessage). */
@@ -64,8 +67,10 @@ export class Engine {
   }
 
   /** Full-strength analysis: the top `count` moves with scores from White's point of view. */
-  analyse(fen: string, count = 2, movetime = 700): Promise<EngineLine[]> {
+  analyse(fen: string, count = 2, movetime = 700, isStale?: () => boolean): Promise<EngineLine[]> {
     return this.enqueue(async () => {
+      // Skip searches nobody needs any more (e.g. the user already moved on to another position).
+      if (isStale?.()) return []
       await this.ready
       const whiteToMove = fen.split(' ')[1] === 'w'
       const found = new Map<number, EngineLine>()
@@ -74,10 +79,13 @@ export class Engine {
         const rank = Number(/ multipv (\d+)/.exec(line)?.[1] ?? 1)
         const cp = / score cp (-?\d+)/.exec(line)
         const mate = / score mate (-?\d+)/.exec(line)
-        const uci = / pv (\S+)/.exec(line)![1]
+        const pv = / pv (.+)$/.exec(line)![1].trim().split(/\s+/)
+        const depth = / depth (\d+)/.exec(line)
         const sign = whiteToMove ? 1 : -1
         found.set(rank, {
-          uci,
+          uci: pv[0],
+          pv,
+          depth: depth ? Number(depth[1]) : undefined,
           cp: cp ? sign * Number(cp[1]) : undefined,
           mate: mate ? sign * Number(mate[1]) : undefined,
         })

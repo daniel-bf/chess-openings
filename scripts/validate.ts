@@ -2,6 +2,8 @@
 // prepared move in each position of an opening.
 import { openingSources } from '../src/data/index'
 import { buildOpening, buildBook, sideToMove } from '../src/lib/repertoire'
+import { famousGames } from '../src/data/famousGames'
+import { parsePgn } from '../src/lib/pgn'
 
 let problems = 0
 let total = 0
@@ -24,5 +26,14 @@ for (const src of openingSources) {
     }
   }
 }
-console.log(`${total} lines, ${problems} conflicts`)
+// The bundled games on the Analysis page must all be legal.
+for (const game of famousGames) {
+  try {
+    console.log(`Famous game ${game.name}: ${parsePgn(game.pgn).moves.length} plies`)
+  } catch (e) {
+    problems++
+    console.log(`ILLEGAL famous game ${game.name}: ${(e as Error).message}`)
+  }
+}
+console.log(`${total} lines, ${famousGames.length} famous games, ${problems} problems`)
 process.exit(problems ? 1 : 0)

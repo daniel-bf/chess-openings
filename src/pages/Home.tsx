@@ -31,6 +31,9 @@ export function Home() {
           <button type="button" onClick={() => go('/play')}>
             Play mode
           </button>
+          <button type="button" onClick={() => go('/analysis')}>
+            Analyse a game
+          </button>
         </div>
       </section>
 
