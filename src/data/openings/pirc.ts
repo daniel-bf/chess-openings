@@ -6,140 +6,140 @@ export const pirc: OpeningSource = {
   eco: "B07–B09",
   side: "black",
   summary:
-    "A flexible 'hypermodern' defence to 1.e4: instead of putting pawns in the centre at once, you let White build a big centre and plan to attack it later. You play ...d6, ...Nf6, ...g6 and ...Bg7 (a fianchetto: the bishop goes on the long diagonal behind the g6 pawn), castle, and then hit back at White's centre with ...e5 or ...c5.",
+    "The White Kingdom opens with 1.e4, and you, ruler of the Black Kingdom, choose a flexible 'hypermodern' defence: instead of sending soldiers into the heartland at once, you let White build a big centre and plan to attack it later. You play ...d6, ...Nf6, ...g6 and ...Bg7 (a fianchetto: the priest stands on the long diagonal road behind the g6 soldier), retreat into the castle, and then strike back at White's centre with ...e5 or ...c5.",
   ideas: [
-    "Set up with ...d6, ...Nf6, ...g6, ...Bg7 and ...O-O. The g7 bishop looks down the long diagonal at d4 and b2, so keep it.",
-    "Strike at White's centre with a pawn, usually ...e5 or ...c5, once your pieces are ready. Waiting too long lets White push e5 and cramp you.",
-    "Against aggressive set-ups (Be3, Qd2, f3, Bh6), do not castle into the attack too early: grab queenside space with ...c6 and ...b5 first.",
+    "Build your camp with ...d6, ...Nf6, ...g6, ...Bg7 and ...O-O. The g7 priest gazes down the long diagonal road at d4 and b2, so keep it.",
+    "Strike White's heartland with a soldier, usually ...e5 or ...c5, once your army is ready. Wait too long and White pushes e5 and cramps you.",
+    "Against fierce set-ups (Be3, Qd2, f3, Bh6), do not retreat into the castle too early, right into the storm: grab queenside land with ...c6 and ...b5 first.",
   ],
   lines: [
     {
       name: "Austrian Attack: Weiss Variation (6.Bd3)",
-      pgn: `1. e4 d6 {The Pirc starts quietly. ...d6 controls e5, so after ...Nf6 White cannot easily kick the knight with e5.}
-        2. d4 Nf6 {Develops and attacks e4, forcing White to defend it.}
-        3. Nc3 {The natural way to protect e4.}
-        g6 {Prepares ...Bg7, putting the bishop on the long diagonal aimed at White's centre.}
-        4. f4 {The Austrian Attack: White builds a huge pawn centre and wants e5 to kick your f6 knight.}
-        Bg7 {The bishop develops on the long diagonal, pressing on d4 and e5.}
-        5. Nf3 O-O {Get your king safe first; your counterattack in the centre comes next.}
-        6. Bd3 {The bishop supports e4 and aims at your king.}
-        Na6 {The knight is heading for c7, where it supports ...b5 and is not in the way of ...c5.}
-        7. O-O c5 {Hit d4 now that your king is safe. White's centre has to commit.}
-        8. d5 {White gains space and blocks your g7 bishop's diagonal a little.}
-        Nc7 {The knight arrives on c7, supporting ...b5 and watching d5.}
-        9. a4 {White stops ...b5 for now.}
-        b6 {Keeps the queenside solid and prepares ...a6, ...Rb8 and ...b5 anyway. Always watch for White's e5 push in the centre.}`,
+      pgn: `1. e4 d6 {The Pirc begins quietly. Your d6 soldier watches e5, so after ...Nf6 White cannot easily drive off the rider with e5.}
+        2. d4 Nf6 {Your rider develops and attacks e4, forcing White to defend it.}
+        3. Nc3 {The natural way for White to guard e4.}
+        g6 {This prepares ...Bg7, placing your priest on the long diagonal road aimed at White's heartland.}
+        4. f4 {The Austrian Attack: White builds a huge wall of central soldiers and wants e5 to drive off your f6 rider.}
+        Bg7 {Your priest takes the long diagonal road, pressing on d4 and e5.}
+        5. Nf3 O-O {Get your King into the castle first; your counterattack in the heartland comes next.}
+        6. Bd3 {The White priest supports e4 and aims at your King.}
+        Na6 {Your rider is heading for c7, where it supports ...b5 and stays out of the way of ...c5.}
+        7. O-O c5 {Strike d4 now that your King is safe. White's heartland has to commit.}
+        8. d5 {White grabs land and partly blocks your g7 priest's road.}
+        Nc7 {Your rider arrives on c7, supporting ...b5 and watching d5.}
+        9. a4 {White bars the road to ...b5 for now.}
+        b6 {This keeps the queenside solid and prepares ...a6, ...Rb8 and ...b5 anyway. Always watch for White's e5 push in the heartland.}`,
     },
     {
       name: "150 Attack (4.Be3 and 5.Qd2)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
-        4. Be3 {The 150 Attack: White plans Qd2, Bh6 to swap off your g7 bishop, then f3 and a pawn storm with h4-h5.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. Qd2 {Lining up Bh6.}
-        c6 {Prepares ...b5. Your king stays in the centre for now, because castling would give White's attack a target.}
-        6. f3 {Supports e4 and prepares g4 and h4.}
-        b5 {Gains queenside space and threatens ...b4, kicking the c3 knight that defends e4.}
-        7. Nge2 Nbd7 {Develops and supports a later ...e5 or ...c5.}
-        8. Bh6 Bxh6 {Swap the bishops yourself, so White's queen has to spend a move recapturing.}
-        9. Qxh6 Bb7 {Develops the last minor piece on the long light diagonal towards e4. Next ...e5, ...Qb6 or ...a5 with play on the queenside; your king can stay in the centre or go queenside.}`,
+        4. Be3 {The 150 Attack: White plans Qd2, Bh6 to trade off your g7 priest, then f3 and a soldier storm with h4-h5.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. Qd2 {The White Queen lines up Bh6.}
+        c6 {This prepares ...b5. Your King stays in the centre for now, because castling would hand White's storm a target.}
+        6. f3 {White props up e4 and prepares g4 and h4.}
+        b5 {Grab queenside land and threaten ...b4, driving off the c3 rider that guards e4.}
+        7. Nge2 Nbd7 {Your rider develops and supports a later ...e5 or ...c5.}
+        8. Bh6 Bxh6 {Trade the priests yourself, so the White Queen must spend a move taking back.}
+        9. Qxh6 Bb7 {Your last minor piece develops on the long light road toward e4. Next ...e5, ...Qb6 or ...a5 with play on the queenside; your King can stay in the centre or go queenside.}`,
     },
     {
       name: "Classical: Quiet System, Czech Defence (5.Be2 O-O 6.O-O c6)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
-        4. Nf3 {The Classical system: calm development with Be2 and short castling.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. Be2 O-O {Castle: your king is safe behind the g7 bishop before you start central play.}
-        6. O-O c6 {Controls d5 and b5 and prepares ...b5, or ...Qc7 and ...e5.}
-        7. a4 {Stops ...b5.}
-        a5 {Stops White from pushing a5 and makes b4 a safe square for your knight.}
-        8. h3 {Stops ...Bg4 and ...Ng4.}
-        Na6 {The knight heads for b4, where no pawn can chase it away. Later ...e5 challenges the centre.}`,
+        4. Nf3 {The Classical system: a calm White muster with Be2 and short castling.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. Be2 O-O {Castle: your King is safe behind the g7 priest before you start the fight for the heartland.}
+        6. O-O c6 {This soldier watches d5 and b5 and prepares ...b5, or ...Qc7 and ...e5.}
+        7. a4 {White stops ...b5.}
+        a5 {You stop White from pushing a5 and make b4 a safe post for your rider.}
+        8. h3 {White stops ...Bg4 and ...Ng4.}
+        Na6 {Your rider heads for b4, where no soldier can chase it away. Later ...e5 challenges the heartland.}`,
     },
     {
       name: "Byrne Variation (4.Bg5)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
-        4. Bg5 {The Byrne Variation: White plans Qd2 and Bh6 to swap off your g7 bishop.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. Qd2 {Prepares Bh6.}
-        h6 {Ask the bishop to decide before Bh6 comes. Bxh6 does not win a pawn: your bishop and the h8 rook both guard h6.}
-        6. Bh4 g5 {Chase the bishop again and gain kingside space. It has to go to g3.}
-        7. Bg3 Nh5 {Attack the bishop: you swap your knight for it and get the bishop pair (two bishops against bishop and knight).}`,
+        4. Bg5 {The Byrne Variation: White plans Qd2 and Bh6 to trade off your g7 priest.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. Qd2 {The White Queen prepares Bh6.}
+        h6 {Make the White priest decide before Bh6 comes. Bxh6 does not win a soldier: your priest and the h8 tower both guard h6.}
+        6. Bh4 g5 {Chase the priest again and grab kingside land. It has to flee to g3.}
+        7. Bg3 Nh5 {Your rider attacks the priest: you trade the rider for it and win the bishop pair (two priests against priest and rider).}`,
     },
     {
       name: "Sveshnikov System (4.g3)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
-        4. g3 {White puts a bishop on g2 too: a solid set-up aiming for a small, safe edge.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. Bg2 O-O {Castle: your king is safe behind the g7 bishop before you start central play.}
-        6. Nge2 {The knight goes to e2 so it does not block the g2 bishop.}
-        e5 {The classic Pirc break: challenge d4 straight away.}
-        7. h3 {Prepares Be3 without allowing ...Ng4.}
-        c6 {Controls d5 and b5, gives your queen c7 or b6, and prepares ...b5.}
-        8. a4 {Stops ...b5.}
-        Nbd7 {Develops and supports e5, so you can keep the central tension.}`,
+        4. g3 {White sends a priest to g2 too: a solid camp aiming for a small, safe edge.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. Bg2 O-O {Castle: your King is safe behind the g7 priest before you start the fight for the heartland.}
+        6. Nge2 {The White rider goes to e2 so it does not block the g2 priest.}
+        e5 {The classic Pirc break: your soldier challenges d4 straight away.}
+        7. h3 {White prepares Be3 without allowing ...Ng4.}
+        c6 {This soldier watches d5 and b5, gives your Queen c7 or b6, and prepares ...b5.}
+        8. a4 {White stops ...b5.}
+        Nbd7 {Your rider develops and supports e5, so you can keep the tension in the heartland.}`,
     },
     {
       name: "Kholmov System (4.Bc4)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
-        4. Bc4 {The bishop aims at f7. White often follows with Qe2 and e5.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. Qe2 {Prepares e5, which would kick your f6 knight.}
-        c6 {Now after e5 dxe5 dxe5 your knight can jump to d5 and be protected by the c6 pawn. ...b5 hitting the c4 bishop is also possible.}
-        6. e5 dxe5 {Take back, so the centre opens while White is not castled.}
-        7. dxe5 Nd5 {The knight lands in the centre, blocks the c4 bishop and attacks c3.}
-        8. Bd2 O-O {Castle now. Your g7 bishop will target the e5 pawn, and ...Bf5 or ...Nxc3 follow.}`,
+        4. Bc4 {The White priest aims at f7. White often follows with Qe2 and e5.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. Qe2 {White prepares e5, which would drive off your f6 rider.}
+        c6 {Now after e5 dxe5 dxe5 your rider can leap to d5, guarded by the c6 soldier. ...b5 striking the c4 priest is also possible.}
+        6. e5 dxe5 {Take back, so the heartland opens while the White King is not yet in the castle.}
+        7. dxe5 Nd5 {Your rider lands in the heartland, blocks the c4 priest and attacks c3.}
+        8. Bd2 O-O {Castle now. Your g7 priest will target the e5 soldier, and ...Bf5 or ...Nxc3 follow.}`,
     },
     {
       name: "3.Bd3",
       pgn: `1. e4 d6 2. d4 Nf6
-        3. Bd3 {White defends e4 with the bishop, keeping c3 free for a pawn.}
-        g6 {Carry on with the normal Pirc set-up.}
-        4. Nf3 Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. O-O O-O {Castle: your king is safe behind the g7 bishop before you start central play.}
-        6. c3 {A solid centre: c3 supports d4 and blunts your g7 bishop.}
-        Nbd7 {Develops and backs up ...e5, so that after dxe5 you can take back with the knight or pawn and keep control of e5. ...e5 and ...Re8 come next.}`,
+        3. Bd3 {White guards e4 with the priest, keeping c3 free for a soldier.}
+        g6 {Carry on building the normal Pirc camp.}
+        4. Nf3 Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. O-O O-O {Castle: your King is safe behind the g7 priest before you start the fight for the heartland.}
+        6. c3 {A solid White heartland: c3 props up d4 and blunts your g7 priest.}
+        Nbd7 {Your rider develops and backs up ...e5, so that after dxe5 you can take back with rider or soldier and keep control of e5. ...e5 and ...Re8 come next.}`,
     },
     {
       name: "3.f3: King's Indian, Sämisch Variation",
       pgn: `1. e4 d6 2. d4 Nf6
-        3. f3 {White supports e4 with a pawn and may follow with c4, reaching a King's Indian structure.}
-        g6 {Prepares the fianchetto as usual.}
-        4. c4 {Now it is a King's Indian Defence, Sämisch Variation.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. Nc3 O-O {Castle: your king is safe behind the g7 bishop before you start central play.}
-        6. Be3 e5 {Hit d4 at once, a standard answer to this set-up.}
-        7. d5 {White closes the centre.}
-        Nh5 {Clears the f-pawn so it can go to f5 and attack e4, and eyes f4. Because f3 weakened White's dark squares, ...Qh4+ can also be an idea.}`,
+        3. f3 {White props up e4 with a soldier and may follow with c4, reaching a King's Indian structure.}
+        g6 {You prepare the fianchetto as usual.}
+        4. c4 {Now the war is a King's Indian Defence, Sämisch Variation.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. Nc3 O-O {Castle: your King is safe behind the g7 priest before you start the fight for the heartland.}
+        6. Be3 e5 {Strike d4 at once, a standard answer to this set-up.}
+        7. d5 {White closes the heartland.}
+        Nh5 {Your rider clears the f-soldier's path to f5 to strike e4, and eyes f4. Because f3 weakened White's dark squares, ...Qh4+ can also be an idea.}`,
     },
     {
       name: "Austrian Attack: Unzicker Attack (6.e5)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. f4 Bg7 5. Nf3 O-O
-        6. e5 {The Unzicker Attack: White kicks your knight at once, hoping to drive it back and cramp you.}
-        dxe5 {Swap first, so the f-pawn has to take back and White's centre is less solid.}
-        7. fxe5 Nd5 {The knight jumps to the centre instead of going backwards.}
-        8. Bc4 {Attacks the d5 knight.}
-        Nb6 {Retreat with tempo on the c4 bishop.}
-        9. Bb3 Nc6 {Develops and adds pressure on d4 and e5.}
-        10. Be3 Bg4 {Pins the f3 knight, a defender of d4 and e5. Next ...Na5 to swap off the b3 bishop, or ...f6 to break up the centre.}`,
+        6. e5 {The Unzicker Attack: White drives off your rider at once, hoping to push it back and cramp you.}
+        dxe5 {Trade first, so the f-soldier must take back and White's heartland is less solid.}
+        7. fxe5 Nd5 {Your rider leaps into the heartland instead of retreating.}
+        8. Bc4 {The White priest attacks the d5 rider.}
+        Nb6 {Retreat while gaining time on the c4 priest.}
+        9. Bb3 Nc6 {Your rider develops and adds pressure on d4 and e5.}
+        10. Be3 Bg4 {Your priest pins the f3 rider, a defender of d4 and e5. Next ...Na5 to trade off the b3 priest, or ...f6 to break up the heartland.}`,
     },
     {
       name: "Classical: Schlechter Variation (5.h3)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7
-        5. h3 {The Schlechter Variation: h3 stops ...Bg4 and ...Ng4, so White can play Be3 in peace.}
-        O-O {Castle first; your king is safe behind the g7 bishop.}
-        6. Be3 {White plans Qd2 and perhaps long castling.}
-        a6 {Prepares ...b5 to gain queenside space, the usual plan against Be3 and Qd2 set-ups.}
-        7. a4 {Stops ...b5.}
-        b6 {Prepares ...Bb7, aiming at e4, and keeps the queenside flexible. Next ...Bb7, ...Nbd7 and ...e5 or ...c5.}`,
+        5. h3 {The Schlechter Variation: h3 bars ...Bg4 and ...Ng4, so the White priest can go to e3 in peace.}
+        O-O {Castle first; your King is safe behind the g7 priest.}
+        6. Be3 {White plans Qd2 and perhaps a long castle on the queenside.}
+        a6 {This prepares ...b5 to grab queenside land, the usual plan against Be3 and Qd2 set-ups.}
+        7. a4 {White stops ...b5.}
+        b6 {This prepares ...Bb7, aiming at e4, and keeps the queenside flexible. Next ...Bb7, ...Nbd7 and ...e5 or ...c5.}`,
     },
     {
       name: "Bayonet Attack (4.Be2 Bg7 5.h4)",
       pgn: `1. e4 d6 2. d4 Nf6 3. Nc3 g6
-        4. Be2 {A flexible bishop move that keeps the f-pawn free and prepares h4.}
-        Bg7 {The bishop goes to the long diagonal, aiming at d4 and the centre.}
-        5. h4 {The Bayonet Attack: White wants h5 to open the h-file towards your king.}
-        h5 {Stop h5 for good. White's attack has no h-file to use, so your king can castle short.}
-        6. Nf3 O-O {Castle now that the h-file is shut. Next ...c6, ...Nbd7 and ...e5, or ...Bg4 to pin the f3 knight.}`,
+        4. Be2 {A flexible priest move that keeps the f-soldier free and prepares h4.}
+        Bg7 {Your priest takes the long diagonal road, aiming at d4 and the heartland.}
+        5. h4 {The Bayonet Attack: White wants h5 to open the h-road toward your King.}
+        h5 {Stop h5 for good. White's storm has no h-road to use, so your King can castle short.}
+        6. Nf3 O-O {Castle now that the h-road is shut. Next ...c6, ...Nbd7 and ...e5, or ...Bg4 to pin the f3 rider.}`,
     },
   ],
 }

@@ -2,115 +2,115 @@ import type { Plans } from './types'
 
 export const italianPlans: Plans = {
   "italian:0": {
-    "plan": "This is the Giuoco Pianissimo: a slow build-up where neither side has weaknesses yet. You have played c3, d3, castled, a4, Re1 and h3, and your knight is on its way via f1 to g3. From there you choose a plan: d4 to grab the centre, b4 to gain queenside space, or Be3 to trade off Black's strong a7 bishop. Black usually answers with ...Be6 to trade your c4 bishop and later ...d5.",
+    "plan": "This is the Giuoco Pianissimo, a cold war: both kingdoms build walls and neither shows a weakness yet. You have played c3, d3, castled, a4, Re1 and h3, and your rider is on its journey via f1 to g3. From there the war council picks a plan: d4 to seize the heartland, b4 to grab land on the queenside, or Be3 to trade off the strong Black priest on a7. The enemy usually answers with ...Be6 to trade your c4 priest and later ...d5.",
     "remember": [
-      "a4 stops ...b5 from gaining space and chasing your c4 bishop, and gives the bishop a2 as a retreat.",
-      "h3 stops ...Bg4 and ...Ng4, so your f3 knight cannot be pinned and f2 stays safe.",
-      "Nbd2-f1-g3 is the key manoeuvre: the knight joins the kingside and eyes f5 and h5."
+      "a4 stops ...b5 from grabbing land and chasing your c4 priest, and gives the priest a2 as a road home.",
+      "h3 stops ...Bg4 and ...Ng4, so your f3 rider cannot be pinned and f2 stays safe.",
+      "Nbd2-f1-g3 is the key journey: the rider joins the kingside and eyes f5 and h5."
     ]
   },
   "italian:1": {
-    "plan": "Black broke early with ...d5, so the centre is open. After exd5 Nxd5, the e5 pawn has lost its d-pawn support and becomes your main target: Re1 attacks it, and Black has to keep the c6 knight and the g4 pin to hold it. Your knight comes to e4 via d2 to hit the c5 bishop, while Black hopes for activity with ...Nb6 and ...Bxf3.",
+    "plan": "The Black Kingdom broke early with ...d5, so the heartland is open. After exd5 Nxd5, the e5 soldier has lost its d-soldier's support and becomes your main target: Re1 attacks it, and the enemy must keep the c6 rider and the g4 pin to hold it. Your rider comes to e4 via d2 to hit the c5 priest, while the enemy hopes for activity with ...Nb6 and ...Bxf3.",
     "remember": [
-      "exd5 followed by Re1 puts pressure on e5, which only the c6 knight defends.",
-      "h3 asks the g4 bishop to decide: ...Bxf3 gives you the bishop pair, ...Bh5 keeps the pin.",
-      "Nbd2 heads for e4, where the knight hits the c5 bishop and supports the attack on e5."
+      "exd5 followed by Re1 presses on e5, which only the c6 rider guards.",
+      "h3 asks the g4 priest to decide: ...Bxf3 gives you the bishop pair, ...Bh5 keeps the pin.",
+      "Nbd2 heads for e4, where the rider hits the c5 priest and joins the attack on e5."
     ]
   },
   "italian:2": {
-    "plan": "Black used ...Na5 to go after your c4 bishop, so you sent it on the Ruy Lopez route Bb5-a4-c2. The structure is now like a Closed Ruy Lopez: the centre is tense, Black has queenside space with ...b5 and ...c5, and you play on the kingside. Your knight goes d2-f1-g3, and later d4 or a4 can open the position.",
+    "plan": "The enemy used ...Na5 to hunt your c4 priest, so you sent it on the Ruy Lopez road Bb5-a4-c2. The camps now look like a Closed Ruy Lopez: the heartland is tense, the Black Kingdom holds queenside land with ...b5 and ...c5, and you wage war on the kingside. Your rider travels d2-f1-g3, and later d4 or a4 can open the front.",
     "remember": [
-      "c3 prepares d4 and gives your bishop the c2 square to retreat to.",
-      "Bb5 sidesteps ...Na5 so your light-squared bishop is not traded.",
-      "Bc2 ends the bishop's trip on the b1-h7 diagonal, where it defends e4 and later aims at Black's king."
+      "c3 prepares d4 and gives your priest the c2 square as a road home.",
+      "Bb5 sidesteps ...Na5 so your light-squared priest is not traded.",
+      "Bc2 ends the priest's journey on the b1-h7 diagonal road, where it guards e4 and later stares at the Black King."
     ]
   },
   "italian:3": {
-    "plan": "This is the Giuoco Pianissimo reached through the Two Knights move order. Nothing changes in your plan: c3, castle, Re1, a4 and h3, then the knight goes Nbd2-f1-g3 and d4 comes when it is well prepared. Black usually plays ...h6, ...Re8 and ...Be6 to trade your c4 bishop.",
+    "plan": "This is the Giuoco Pianissimo reached by the Two Knights path. Nothing changes in your war plan: c3, castle, Re1, a4 and h3, then the rider travels Nbd2-f1-g3 and d4 comes when it is well prepared. The enemy usually plays ...h6, ...Re8 and ...Be6 to trade your c4 priest.",
     "remember": [
-      "c3 prepares d4, which can later hit Black's bishop and gain space.",
-      "a4 stops ...b5 and pushes Black's bishop back to a7.",
-      "Re1 supports e4 and frees f1 for your knight's Nbd2-f1-g3 route."
+      "c3 prepares d4, which can later hit the Black priest and win land.",
+      "a4 stops ...b5 and pushes the Black priest back to a7.",
+      "Re1 props up e4 and frees f1 for your rider's Nbd2-f1-g3 journey."
     ]
   },
   "italian:4": {
-    "plan": "The Hungarian ...Be7 is passive, so you opened the centre at once with d4. After ...exd4 Nxd4 you have a pawn on e4 against Black's pawn on d6, which means more space and freer pieces. Typical plans are f4 and Qf3 for a kingside attack, or Be3 and Qd2 with a solid set-up. Black wants to free himself with ...Re8, ...Bf8 and maybe ...d5.",
+    "plan": "The Hungarian ...Be7 is timid, so you stormed the heartland at once with d4. After ...exd4 Nxd4 your soldier on e4 faces the Black soldier on d6, which means more land and freer warriors. Typical plans are f4 and Qf3 for a kingside assault, or Be3 and Qd2 for a sturdy camp. The enemy wants to break free with ...Re8, ...Bf8 and maybe ...d5.",
     "remember": [
-      "d4 strikes at e5 straight away, taking advantage of Black's passive bishop on e7.",
-      "Nxd4 recaptures with a central knight, and Nc3 adds a defender to e4 against the f6 knight.",
-      "h3 stops ...Bg4, which would hit your queen now that the f3 knight has left, and also stops ...Ng4."
+      "d4 strikes at e5 at once, punishing the timid Black priest on e7.",
+      "Nxd4 takes back with a rider in the heartland, and Nc3 adds a guard to e4 against the f6 rider.",
+      "h3 stops ...Bg4, which would hit your Queen now that the f3 rider has left, and also stops ...Ng4."
     ]
   },
   "italian:5": {
-    "plan": "You avoided the Blackburne Shilling trap by taking the d4 knight, then punished ...Bc5 with Bxf7+. You are a pawn up and Black's king on f8 cannot castle. Bring the last pieces out with Nd2, then play f4 to open the f-file against the king. Black's pawn on d4 is cut off and can become a target later.",
+    "plan": "You dodged the Blackburne Shilling ambush by taking the d4 rider, then punished ...Bc5 with Bxf7+. You are a soldier up and the Black King on f8 cannot castle. Bring out the last warriors with Nd2, then play f4 to open the f-file road against the King. The Black soldier on d4 is cut off and can become a target later.",
     "remember": [
-      "Nxd4 is the right capture; 4.Nxe5? Qg5! is the trap, with ideas like ...Qxg2 and ...Nf3 mate.",
-      "Bxf7+ wins a pawn and Black's right to castle; if ...Kxf7, Qh5+ followed by Qxc5 wins the bishop back.",
-      "After Bb3 and Nd2, f4 opens the f-file toward Black's king on f8."
+      "Nxd4 is the right capture; 4.Nxe5? Qg5! is the ambush, with ideas like ...Qxg2 and ...Nf3 mate.",
+      "Bxf7+ wins a soldier and the Black King's right to castle; if ...Kxf7, Qh5+ followed by Qxc5 wins the priest back.",
+      "After Bb3 and Nd2, f4 opens the f-file road toward the Black King on f8."
     ]
   },
   "italian:6": {
-    "plan": "Black's ...Qe7 guards e5 in advance, but it does not stop you from taking the centre with d4. After ...Bb6 you have a broad centre with pawns on d4 and e4. You can gain space with d5 or a5, or keep the tension with Re1 and Nbd2. Black wants to keep pressure on d4 and break with ...exd4 or ...f5 later.",
+    "plan": "The Black Queen's ...Qe7 guards e5 in advance, but it does not stop you seizing the heartland with d4. After ...Bb6 you hold a broad wall with soldiers on d4 and e4. You can win land with d5 or a5, or keep the tension with Re1 and Nbd2. The enemy wants to keep pressing d4 and break with ...exd4 or ...f5 later.",
     "remember": [
-      "d4 builds the big centre anyway; c3 and the f3 knight support it.",
-      "a4 threatens a5, which would push Black's bishop off the a7-g1 diagonal, so Black spends a move on ...a6.",
-      "h3 stops ...Bg4, which would pin the f3 knight that defends d4."
+      "d4 builds the great wall anyway; c3 and the f3 rider support it.",
+      "a4 threatens a5, which would push the Black priest off the a7-g1 diagonal road, so the enemy spends a move on ...a6.",
+      "h3 stops ...Bg4, which would pin the f3 rider that guards d4."
     ]
   },
   "italian:7": {
-    "plan": "Against the Paris Defence ...d6 you opened the centre with d4. After ...exd4 Nxd4, you have a pawn on e4 against Black's on d6, and the position is the same as in the Hungarian Defence line. You have more space and freer pieces; plans with f4 or Be3 and Qd2 are typical, while Black looks for ...Re8 and ...Bf8.",
+    "plan": "Against the Paris Defence ...d6 you stormed the heartland with d4. After ...exd4 Nxd4, your soldier on e4 faces the Black soldier on d6, and the camp is the same as in the Hungarian Defence chapter. You hold more land and freer warriors; plans with f4 or Be3 and Qd2 are typical, while the enemy looks for ...Re8 and ...Bf8.",
     "remember": [
-      "d4 challenges e5 at once; after ...exd4, Nxd4 puts your knight on a strong central square.",
-      "Nc3 develops and defends e4 against Black's f6 knight.",
-      "h3 stops ...Bg4, which would hit your queen now that the f3 knight has moved, and also keeps ...Ng4 out."
+      "d4 challenges e5 at once; after ...exd4, Nxd4 plants your rider on a strong post in the heartland.",
+      "Nc3 brings out a rider and guards e4 against the Black rider on f6.",
+      "h3 stops ...Bg4, which would hit your Queen now that the f3 rider has moved, and also keeps ...Ng4 out."
     ]
   },
   "italian:8": {
-    "plan": "Black spent time on ...h6 and ...g6 to put the bishop on g7. You castled and played c3 and Re1, so d4 can now come with full support. After d4 you have a broad centre, and the g7 bishop runs into your pawns. If Black takes on d4, you take back with the c-pawn and keep two central pawns.",
+    "plan": "The enemy spent time on ...h6 and ...g6 to post its priest on g7. You castled and played c3 and Re1, so d4 can now come with full support. After d4 you hold a broad wall in the heartland, and the g7 priest runs into your soldiers. If the enemy takes on d4, take back with the c-soldier and keep two soldiers in the heartland.",
     "remember": [
-      "c3 prepares d4 so you can recapture with a pawn and keep a broad centre.",
-      "Re1 defends e4 before the centre opens.",
-      "d4 strikes while Black has used time on ...h6 and ...g6, putting pressure on e5."
+      "c3 prepares d4 so you can take back with a soldier and keep a broad wall.",
+      "Re1 guards e4 before the heartland opens.",
+      "d4 strikes while the enemy has spent time on ...h6 and ...g6, pressing on e5."
     ]
   },
   "italian:9": {
-    "plan": "With your rook already on e1, Black's ...d5 is a mistake. After exd5 Nxd5 you win the e5 pawn with Nxe5, because the rook takes back safely on e5. Then retreat the rook to e1 and finish development with Nd2 and Nf3. You are simply a pawn up; Black will try to use the bishop pair and active pieces, so keep everything protected.",
+    "plan": "With your tower already on e1, the Black ...d5 is a mistake. After exd5 Nxd5 you win the e5 soldier with Nxe5, because the tower takes back safely on e5. Then bring the tower home to e1 and finish mustering with Nd2 and Nf3. You are simply a soldier up; the enemy will try to use the bishop pair and lively warriors, so keep everything guarded.",
     "remember": [
-      "Re1 before ...d5 is what makes the trick work: e5 is attacked by the rook as soon as it loses its d-pawn support.",
-      "Nxe5 Nxe5 Rxe5 wins a clean pawn, and the rook on e5 attacks the d5 knight.",
-      "Re1 brings the rook home before ...Bd6 or ...Bf6 can chase it with tempo."
+      "Re1 before ...d5 is what makes the trick work: the tower hits e5 as soon as it loses its d-soldier's support.",
+      "Nxe5 Nxe5 Rxe5 wins a clean soldier, and the tower on e5 attacks the d5 rider.",
+      "Re1 brings the tower home before ...Bd6 or ...Bf6 can chase it with tempo."
     ]
   },
   "italian:10": {
-    "plan": "In the Pianissimo, Black reroutes the knight with ...Ne7 and ...Ng6 toward the kingside. That knight no longer guards d4 and e5, so you strike with d4 at once. You then develop with Nbd2 and keep a strong centre. Black will play ...c6 and ...Re8 and try to hold e5.",
+    "plan": "In the Pianissimo, the enemy sends its rider round with ...Ne7 and ...Ng6 toward the kingside. That rider no longer guards d4 and e5, so you strike with d4 at once. You then bring out Nbd2 and keep a strong heartland. The enemy will play ...c6 and ...Re8 and try to hold e5.",
     "remember": [
-      "a4 stops ...b5 and pushes Black's bishop to a7.",
-      "d4 strikes as soon as ...Ne7 takes the knight away from the centre, putting pressure on e5.",
-      "Nbd2 develops and supports e4, which Black's f6 knight attacks."
+      "a4 stops ...b5 and pushes the Black priest to a7.",
+      "d4 strikes as soon as ...Ne7 pulls the rider away from the heartland, pressing on e5.",
+      "Nbd2 brings out a rider and props up e4, which the Black rider on f6 attacks."
     ]
   },
   "italian:11": {
-    "plan": "Black pinned your knight with ...Bg4 before you had played h3. After h3 Bh5 the pin stays, but it costs Black time: your knight goes d2-f1-g3, attacks the h5 bishop and ends the pin. Then you continue with the usual Pianissimo plans: d4 in the centre, or b4 and a4 on the queenside. Black wants ...Bxf3 at a moment when your recapture is awkward, or ...d5 to free the position.",
+    "plan": "The enemy pinned your rider with ...Bg4 before you had played h3. After h3 Bh5 the pin stays, but it costs the enemy time: your rider travels d2-f1-g3, attacks the h5 priest and ends the pin. Then the usual Pianissimo plans return: d4 in the heartland, or b4 and a4 on the queenside. The enemy wants ...Bxf3 at a moment when your recapture is awkward, or ...d5 to break free.",
     "remember": [
-      "h3 asks the g4 bishop to decide: ...Bxf3 gives you the bishop pair, ...Bh5 keeps the pin.",
-      "Nbd2-f1-g3 attacks the h5 bishop and removes the pin for good.",
-      "Do not rush d4: prepare it with the knight trip and Bb3 so the centre holds."
+      "h3 asks the g4 priest to decide: ...Bxf3 gives you the bishop pair, ...Bh5 keeps the pin.",
+      "Nbd2-f1-g3 attacks the h5 priest and lifts the pin for good.",
+      "Do not rush d4: prepare it with the rider's journey and Bb3 so the heartland holds."
     ]
   },
   "italian:12": {
-    "plan": "Black played ...d6 before ...Nf6, so you took the centre at once with d4. After exd4 cxd4 you have two central pawns against one, and Black's b6 bishop presses on d4. Your plan is Nc3, Bb3, h3, castling and Be3 to hold d4, later pushing d5 or e5 to gain space. Black hopes for ...Bg4 or ...Na5 and ...Nxe4 tricks against your centre.",
+    "plan": "The enemy played ...d6 before ...Nf6, so you seized the heartland at once with d4. After exd4 cxd4 you have two soldiers in the heartland against one, and the Black priest on b6 presses on d4. Your plan is Nc3, Bb3, h3, castling and Be3 to hold d4, later marching d5 or e5 to win land. The enemy hopes for ...Bg4 or ...Na5 and ...Nxe4 tricks against your wall.",
     "remember": [
-      "5.d4 is good because e4 is not attacked yet: Black has no knight on f6.",
-      "cxd4 gives you two pawns side by side on d4 and e4.",
-      "Bb3 sidesteps ...Na5 and the ...Nxe4 and ...d5 fork trick."
+      "5.d4 is good because e4 is not attacked yet: there is no Black rider on f6.",
+      "cxd4 gives you two soldiers side by side on d4 and e4.",
+      "Bb3 takes the priest out of reach of ...Na5 and of the ...Nxe4 and ...d5 fork trick."
     ]
   },
   "italian:13": {
-    "plan": "Black gambled with ...f5, which weakens the diagonal from your c4 bishop to g8. You keep it simple with d3, castle, Nc3 and Bg5, and Black struggles to castle short. Later you can play Bxf6 and Nd5, or open the f-file with exf5 to aim at Black's king. Black wants ...f4 to gain kingside space, or ...fxe4 dxe4 and ...Bg4.",
+    "plan": "The enemy gambled with ...f5, which weakens the diagonal road from your c4 priest to g8. You keep it simple with d3, castle, Nc3 and Bg5, and the Black King struggles to castle short. Later you can play Bxf6 and Nd5, or open the f-file road with exf5 to aim at the Black King. The enemy wants ...f4 to grab kingside land, or ...fxe4 dxe4 and ...Bg4.",
     "remember": [
-      "d3 keeps e4 safe, so ...fxe4 just trades pawns.",
-      "The c4 bishop covers g8: Black cannot easily castle short.",
-      "Bg5 pins the f6 knight; Bxf6 and Nd5 put a knight on a strong central square."
+      "d3 keeps e4 safe, so ...fxe4 just trades soldiers.",
+      "The c4 priest watches g8: the Black King cannot easily castle short.",
+      "Bg5 pins the f6 rider; Bxf6 and Nd5 plant a rider on a strong post in the heartland."
     ]
   },
 }

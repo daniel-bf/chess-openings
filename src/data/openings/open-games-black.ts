@@ -6,201 +6,201 @@ export const openGamesBlack: OpeningSource = {
   eco: 'C20–C67',
   side: 'black',
   summary:
-    'A complete answer to 1.e4 with 1...e5. After 2.Nf3 Nc6 you meet the Ruy Lopez with the solid Berlin Defence (3...Nf6), the Italian with the Two Knights Defence (also 3...Nf6), and the Scotch and Four Knights with quick development and ...Bb4 or ...Nf6 pressure on e4. Against the Vienna, King\'s Gambit, Bishop\'s Opening, Ponziani and Centre Game you strike back in the centre with ...Nf6 and ...d5 instead of just defending.',
+    "A complete war plan against 1.e4 with 1...e5. After 2.Nf3 Nc6 you meet the Ruy Lopez with the sturdy Berlin Defence (3...Nf6), the Italian with the Two Knights Defence (also 3...Nf6), and the Scotch and Four Knights with fast mustering and ...Bb4 or ...Nf6 pressure on e4. Against the Vienna, King's Gambit, Bishop's Opening, Ponziani and Centre Game you strike back in the heartland with ...Nf6 and ...d5 instead of just hiding behind walls.",
   ideas: [
-    "Attack the e4 pawn. ...Nf6 hits it in almost every line, and often you can take it (the Berlin, the Vienna 3.Bc4 Nxe4, the Ponziani 4...Nxe4) because you get it back or keep it safely.",
-    'Hit back in the centre with ...d5. It frees your pieces, blunts a bishop on c4 and is the best answer to most early White gambits (Two Knights 4.Ng5, Vienna 3.f4, King\'s Gambit).',
-    'Develop with gain of time: ...Bb4 pins a knight on c3, ...Nf6 and ...Nc6 hit pawns, and the bishop on c5 or b4 gets out before ...d6 closes it in.',
+    "Attack the e4 soldier. ...Nf6 hits it in almost every line, and often you can take it (the Berlin, the Vienna 3.Bc4 Nxe4, the Ponziani 4...Nxe4) because you win it back or keep it safely.",
+    "Strike back in the heartland with ...d5. It frees your warriors, blunts a priest on c4 and is the best answer to most early White gambits (Two Knights 4.Ng5, Vienna 3.f4, King's Gambit).",
+    'Muster with gain of time: ...Bb4 pins a rider on c3, ...Nf6 and ...Nc6 hit soldiers, and the priest on c5 or b4 gets out before ...d6 walls it in.',
   ],
   lines: [
     {
       name: 'Ruy Lopez: Berlin Wall Endgame (9.Nc3 Bd7)',
-      pgn: `1. e4 e5 {Take your share of the centre and open lines for the queen and the f8 bishop.}
-        2. Nf3 {Attacks the e5 pawn.}
-        Nc6 {Defend e5 while developing.}
-        3. Bb5 {The Ruy Lopez: the bishop attacks the knight that defends e5.}
-        Nf6 {The Berlin Defence: counterattack the e4 pawn instead of defending.}
-        4. O-O {White leaves e4 hanging, planning Re1 or d4 to get it back.}
-        Nxe4 {Take it. White will regain the pawn, but you get easy development.}
-        5. d4 {Opens the e-file and threatens d5 or dxe5.}
-        Nd6 {The knight hits the b5 bishop and guards against tricks along the e-file.}
-        6. Bxc6 dxc6 {Recapture away from the centre: this opens the d-file and the c8 bishop's diagonal, so your two bishops come to life.}
-        7. dxe5 Nf5 {The only good square; from f5 the knight watches d4, e7 and h4.}
-        8. Qxd8+ Kxd8 {The Berlin endgame. You can no longer castle, but with queens off your king is safe and you own the two bishops.}
-        9. Nc3 Bd7 {Connect the rooks and prepare ...Kc8.}
-        10. h3 h6 {Takes g5 away from White's knight and bishop, a typical Berlin move.}
-        11. b3 Kc8 {The king walks to the queenside, where it is safe and guards your pawns.}
-        12. Bb2 b6 {Makes room for ...Kb7 and prepares ...c5, using your extra queenside pawn.}`,
+      pgn: `1. e4 e5 {Your foot soldier claims its share of the heartland and opens roads for the Queen and the f8 priest.}
+        2. Nf3 {A White rider gallops out and threatens the e5 soldier.}
+        Nc6 {A rider rides out and guards e5.}
+        3. Bb5 {The Ruy Lopez: the White priest attacks the rider who guards e5.}
+        Nf6 {The Berlin Defence: strike back at the e4 soldier instead of defending.}
+        4. O-O {White leaves e4 unguarded, planning Re1 or d4 to win it back.}
+        Nxe4 {Take it. White will win the soldier back, but your army musters easily.}
+        5. d4 {Opens the e-file road and threatens d5 or dxe5.}
+        Nd6 {The rider hits the b5 priest and guards against raids along the e-file.}
+        6. Bxc6 dxc6 {Take back away from the heartland: this opens the d-file road and the c8 priest's diagonal, so your two priests come to life.}
+        7. dxe5 Nf5 {The only good post; from f5 the rider watches d4, e7 and h4.}
+        8. Qxd8+ Kxd8 {The Berlin endgame. Your King can no longer castle, but with the Queens gone he is safe, and you own the two priests.}
+        9. Nc3 Bd7 {Link your towers and prepare ...Kc8.}
+        10. h3 h6 {Takes g5 away from the White rider and priest, a typical Berlin move.}
+        11. b3 Kc8 {The King walks to the queenside, where he is safe and guards your soldiers.}
+        12. Bb2 b6 {Makes room for ...Kb7 and prepares ...c5, using your extra queenside soldier.}`,
     },
     {
       name: 'Ruy Lopez: Berlin, Anti-Berlin (4.d3 Bc5)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6
-        4. d3 {The Anti-Berlin: White simply guards e4 and keeps the queens on.}
-        Bc5 {The active square: the bishop aims at f2 and gets out before ...d6.}
-        5. c3 {Prepares d4 and gives the bishop a retreat.}
-        O-O {Castle early; your king is safe and the rook can come to e8.}
-        6. O-O d5 {Strike in the centre while White is still slow.}
-        7. exd5 Qxd5 {Recapture with the queen, which now attacks the b5 bishop.}
-        8. Bc4 {The bishop retreats with an attack on your queen.}
-        Qd6 {A safe square where the queen guards e5 and eyes h2.}`,
+        4. d3 {The Anti-Berlin: White simply guards e4 and keeps the Queens on the field.}
+        Bc5 {The active post: the priest aims at f2 and gets out before ...d6.}
+        5. c3 {Prepares d4 and gives the White priest a road home.}
+        O-O {Into the castle early; your King is safe and the tower can come to e8.}
+        6. O-O d5 {Strike the heartland while White is still slow.}
+        7. exd5 Qxd5 {Take back with the Queen, who now attacks the b5 priest.}
+        8. Bc4 {The priest retreats with an attack on your Queen.}
+        Qd6 {A safe square where the Queen guards e5 and eyes h2.}`,
     },
     {
       name: 'Two Knights: Polerio Defence (4.Ng5 d5 5.exd5 Na5)',
       pgn: `1. e4 e5 2. Nf3 Nc6
-        3. Bc4 {The Italian: the bishop aims at f7, the weakest point near your king.}
-        Nf6 {The Two Knights Defence: develop and attack e4 at once.}
-        4. Ng5 {White attacks f7 a second time.}
-        d5 {Block the bishop's line to f7. It is the main move.}
-        5. exd5 Na5 {Do NOT retake with the knight (that allows the dangerous Fried Liver sacrifice on f7). Instead hit the c4 bishop.}
-        6. Bb5+ c6 {Block the check with gain of time: the pawn attacks d5.}
-        7. dxc6 bxc6 {You are a pawn down, but you gain lots of time chasing White's pieces. This is a well-known gambit.}
-        8. Be2 h6 {Kick the knight from g5.}
-        9. Nf3 e4 {Kick the knight again.}
-        10. Ne5 Bd6 {Develop and attack the e5 knight.}
-        11. d4 exd3 {Take en passant (the pawn on e4 takes the d-pawn as if it had moved one square).}
-        12. Nxd3 Qc7 {The queen hits h2 and connects your pieces. After ...O-O your active pieces make up for the pawn.}`,
+        3. Bc4 {The Italian: the White priest stares at f7, the weakest point near your King.}
+        Nf6 {The Two Knights Defence: your rider rides out and attacks e4 at once.}
+        4. Ng5 {The White rider attacks f7 a second time.}
+        d5 {Block the priest's road to f7. It is the main move.}
+        5. exd5 Na5 {Do NOT take back with the rider (that allows the dangerous Fried Liver sacrifice on f7). Instead hit the c4 priest.}
+        6. Bb5+ c6 {Block the check with gain of time: the soldier attacks d5.}
+        7. dxc6 bxc6 {You are a soldier down, but you win lots of time chasing White's warriors. This is a well-known gambit.}
+        8. Be2 h6 {Chase the rider from g5.}
+        9. Nf3 e4 {Chase the rider again.}
+        10. Ne5 Bd6 {Your priest steps out and attacks the e5 rider.}
+        11. d4 exd3 {Take en passant (the soldier on e4 takes the d-soldier as if it had moved one square).}
+        12. Nxd3 Qc7 {Your Queen hits h2 and links your warriors. After ...O-O your lively army makes up for the soldier.}`,
     },
     {
       name: 'Two Knights: 4.d3 into the Giuoco Pianissimo Main Line',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6
-        4. d3 {The quiet main line: White guards e4 and plays slowly (the Giuoco Pianissimo).}
-        Bc5 {The most common reply: an active bishop aimed at f2.}
-        5. c3 d6 {Firmly support e5.}
-        6. O-O O-O {Castle.}
-        7. Re1 a6 {Gives the bishop a retreat on a7, so White's b4 or d4 will not come with gain of time.}
-        8. Bb3 Ba7 {The bishop keeps aiming at f2 from a safe square.}
-        9. h3 h6 {Stops Ng5 and Bg5. Both sides manoeuvre before ...Re8, ...Be6 or ...d5.}`,
+        4. d3 {The quiet main road: White guards e4 and builds slowly (the Giuoco Pianissimo).}
+        Bc5 {The most common reply: a lively priest aimed at f2.}
+        5. c3 d6 {Prop up e5 firmly.}
+        6. O-O O-O {Both Kings retreat into their castles.}
+        7. Re1 a6 {Gives the priest a road home on a7, so White's b4 or d4 will not come with gain of time.}
+        8. Bb3 Ba7 {The priest keeps aiming at f2 from a safe square.}
+        9. h3 h6 {Stops Ng5 and Bg5. Both kingdoms manoeuvre before ...Re8, ...Be6 or ...d5.}`,
     },
     {
       name: 'Scotch Gambit: Max Lange Attack (4.d4 exd4 5.e5)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6
-        4. d4 {White opens the centre at once.}
-        exd4 {Take the pawn.}
-        5. e5 {White kicks the knight.}
-        d5 {Counterattack the c4 bishop rather than retreat the knight.}
-        6. Bb5 Ne4 {The knight goes to a strong central square.}
-        7. Nxd4 Bd7 {Break the pin on the c6 knight.}
-        8. Bxc6 bxc6 {Recapture; the b-pawn now supports d5.}
-        9. O-O Bc5 {Develop and hit the d4 knight. (Against 5.O-O, take with 5...Nxe4.)}
-        10. f3 Ng5 {Step back from f3's attack; the knight heads for e6 to challenge d4.}`,
+        4. d4 {White storms the heartland at once.}
+        exd4 {Take the soldier.}
+        5. e5 {A White soldier chases your rider.}
+        d5 {Strike back at the c4 priest rather than retreat the rider.}
+        6. Bb5 Ne4 {Your rider leaps to a strong post in the heartland.}
+        7. Nxd4 Bd7 {Your priest breaks the pin on the c6 rider.}
+        8. Bxc6 bxc6 {Take back; the b-soldier now props up d5.}
+        9. O-O Bc5 {Your priest steps out and hits the d4 rider. (Against 5.O-O, take with 5...Nxe4.)}
+        10. f3 Ng5 {Step back from f3's attack; the rider heads for e6 to challenge d4.}`,
     },
     {
       name: 'Scotch: Mieses Variation (4...Nf6)',
       pgn: `1. e4 e5 2. Nf3 Nc6
-        3. d4 {The Scotch: White opens the centre straight away.}
-        exd4 {Take the pawn; you cannot hold e5 comfortably.}
-        4. Nxd4 Nf6 {Develop and attack e4. (After 5.Nc3, play 5...Bb4 as in the Scotch Four Knights.)}
-        5. Nxc6 bxc6 {Recapture towards the centre; the b-pawn supports ...d5.}
-        6. e5 {Kicks the f6 knight.}
-        Qe7 {Pin the e5 pawn to White's king on e1: it cannot take your knight, and the queen attacks it, so White must defend it.}
-        7. Qe2 Nd5 {The knight goes to a strong central square.}
-        8. c4 Ba6 {Pin the c4 pawn to White's queen on e2, so the d5 knight is not chased away for free.}
-        9. b3 g6 {Prepare ...Bg7 to attack e5 again, then castle.}`,
+        3. d4 {The Scotch: White storms the heartland straight away.}
+        exd4 {Take the soldier; you cannot hold e5 comfortably.}
+        4. Nxd4 Nf6 {Your rider rides out and attacks e4. (After 5.Nc3, play 5...Bb4 as in the Scotch Four Knights.)}
+        5. Nxc6 bxc6 {Take back towards the heartland; the b-soldier props up ...d5.}
+        6. e5 {A White soldier chases the f6 rider.}
+        Qe7 {Pin the e5 soldier to the White King on e1: it cannot take your rider, and your Queen attacks it, so White must defend it.}
+        7. Qe2 Nd5 {Your rider leaps to a strong post in the heartland.}
+        8. c4 Ba6 {Pin the c4 soldier to the White Queen on e2, so the d5 rider is not chased away for free.}
+        9. b3 g6 {Clear the long diagonal road for ...Bg7, so the priest can attack e5 again, then castle.}`,
     },
     {
       name: 'Four Knights: Spanish, Metger Unpin (4.Bb5 Bb4)',
       pgn: `1. e4 e5 2. Nf3 Nc6
-        3. Nc3 {The Four Knights Game.}
-        Nf6 {Develop and hit e4.}
-        4. Bb5 {The Spanish Four Knights.}
-        Bb4 {Copy White: pin the c3 knight.}
-        5. O-O O-O {Castle, like White.}
-        6. d3 d6 {Solid: guard e5 and open the c8 bishop.}
-        7. Bg5 {Pin the f6 knight.}
-        Bxc3 {Take the knight first: White gets doubled c-pawns.}
-        8. bxc3 Qe7 {The Metger unpin: the queen gets off the d8-h4 line so the pin on f6 is harmless.}
-        9. Re1 Nd8 {The knight heads for e6 to hit the g5 bishop.}
-        10. d4 Ne6 {Attack the bishop on g5 and watch d4, f4 and g5.}`,
+        3. Nc3 {The Four Knights Game: a second White rider joins the war.}
+        Nf6 {Your rider rides out and hits e4.}
+        4. Bb5 {The Spanish Four Knights: the White priest rides to b5.}
+        Bb4 {Copy the enemy: your priest pins the c3 rider.}
+        5. O-O O-O {Into the castle, like White.}
+        6. d3 d6 {Sturdy: guard e5 and open the road for the c8 priest.}
+        7. Bg5 {The White priest pins the f6 rider.}
+        Bxc3 {Take the rider first: White is left with doubled c-soldiers.}
+        8. bxc3 Qe7 {The Metger unpin: your Queen steps off the d8-h4 road so the pin on f6 is harmless.}
+        9. Re1 Nd8 {The rider heads for e6 to hit the g5 priest.}
+        10. d4 Ne6 {Attack the priest on g5 and watch d4, f4 and g5.}`,
     },
     {
       name: 'Four Knights: Scotch Variation, Main Line (4.d4)',
       pgn: `1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6
-        4. d4 {The Scotch Four Knights.}
-        exd4 {Take the pawn; it opens the e-file and your bishops.}
-        5. Nxd4 Bb4 {Pin the c3 knight, which threatens ...Nxe4.}
-        6. Nxc6 bxc6 {Recapture towards the centre; the b-pawn now supports ...d5.}
-        7. Bd3 {Protects e4.}
-        d5 {Strike at e4: it is now attacked three times.}
-        8. exd5 O-O {Castle first; the d5 pawn will not run away.}
-        9. O-O cxd5 {Win the pawn back and get a strong pawn on d5.}
-        10. Bg5 c6 {Support the d5 pawn. Next ...h6 or ...Be7 deals with the pin.}`,
+        4. d4 {The Scotch Four Knights: White storms the heartland.}
+        exd4 {Take the soldier; it opens the e-file road and your priests' paths.}
+        5. Nxd4 Bb4 {Your priest pins the c3 rider, and ...Nxe4 is now threatened.}
+        6. Nxc6 bxc6 {Take back towards the heartland; the b-soldier now props up ...d5.}
+        7. Bd3 {The White priest guards e4.}
+        d5 {Your soldier strikes at e4: it is now attacked three times.}
+        8. exd5 O-O {Into the castle first; the d5 soldier will not run away.}
+        9. O-O cxd5 {Win the soldier back and plant a strong soldier on d5.}
+        10. Bg5 c6 {Prop up the d5 soldier. Next ...h6 or ...Be7 deals with the pin.}`,
     },
     {
       name: 'Vienna Gambit: Breyer Variation (3.f4 d5)',
       pgn: `1. e4 e5
-        2. Nc3 {The Vienna Game.}
-        Nf6 {Develop and attack e4. (If 3.Nf3, play 3...Nc6, the Four Knights.)}
-        3. f4 {The Vienna Gambit, attacking e5.}
-        d5 {Hit back in the centre; this is the main move.}
-        4. fxe5 Nxe4 {The knight lands on a great central square and hits c3.}
-        5. Nf3 Be7 {Quiet development, getting ready to castle. (Against 5.Qf3, play 5...Nc6 or 5...f5; against 5.d3, 5...Nxc3 6.bxc3 d4.)}
-        6. d4 O-O {Castle before opening any lines.}
-        7. Bd3 f5 {Support the e4 knight, your best piece.}
-        8. exf6 Bxf6 {White took en passant; recapture with the bishop. The f-file is open for your rook and the bishop hits d4.}`,
+        2. Nc3 {The Vienna Game: the White rider rides out to c3.}
+        Nf6 {Your rider rides out and attacks e4. (If 3.Nf3, play 3...Nc6, the Four Knights.)}
+        3. f4 {The Vienna Gambit: a White soldier attacks e5.}
+        d5 {Strike back in the heartland; this is the main move.}
+        4. fxe5 Nxe4 {Your rider lands on a great post in the heartland and hits c3.}
+        5. Nf3 Be7 {Quiet mustering, readying the castle. (Against 5.Qf3, play 5...Nc6 or 5...f5; against 5.d3, 5...Nxc3 6.bxc3 d4.)}
+        6. d4 O-O {Into the castle before opening any roads.}
+        7. Bd3 f5 {A soldier props up the e4 rider, your finest warrior.}
+        8. exf6 Bxf6 {White took en passant; take back with the priest. The f-file road is open for your tower and the priest hits d4.}`,
     },
     {
       name: 'Vienna: Stanley Variation (3.Bc4 Nxe4)',
       pgn: `1. e4 e5 2. Nc3 Nf6
-        3. Bc4 {The bishop aims at f7.}
-        Nxe4 {Take the pawn. If 4.Nxe4, ...d5 forks bishop and knight and wins the piece back.}
-        4. Qh5 {Threatens Qxf7 mate.}
-        Nd6 {Blocks the bishop's attack on f7 and hits the c4 bishop.}
-        5. Bb3 Be7 {Calm development, avoiding the wild lines after 5...Nc6.}
-        6. Nf3 Nc6 {Defend e5.}
-        7. Nxe5 O-O {Castle: now f7 is guarded by the rook too.}
-        8. O-O Nd4 {Attack the b3 bishop and head for the centre.}`,
+        3. Bc4 {The White priest stares at f7.}
+        Nxe4 {Take the soldier. If 4.Nxe4, ...d5 forks priest and rider and wins the warrior back.}
+        4. Qh5 {The White Queen threatens Qxf7 mate.}
+        Nd6 {Blocks the priest's attack on f7 and hits the c4 priest.}
+        5. Bb3 Be7 {Calm mustering, avoiding the wild battles after 5...Nc6.}
+        6. Nf3 Nc6 {A rider guards e5.}
+        7. Nxe5 O-O {Into the castle: now your tower guards f7 too.}
+        8. O-O Nd4 {Attack the b3 priest and head for the heartland.}`,
     },
     {
       name: "King's Gambit Accepted: Abbazia (Modern) Defence (3...d5)",
       pgn: `1. e4 e5
-        2. f4 {The King's Gambit: White offers a pawn to open the f-file.}
-        exf4 {Accept the pawn.}
-        3. Nf3 {Develops and stops ...Qh4+.}
-        d5 {The Modern Defence: give back a central pawn to open lines for your pieces.}
-        4. exd5 Nf6 {Develop and attack d5. (Against 5.Bc4 take with 5...Nxd5.)}
-        5. Bb5+ c6 {Block the check by offering another pawn; it gains time for your development.}
-        6. dxc6 Nxc6 {You develop with gain of time.}
-        7. d4 Bd6 {Develop and protect the f4 pawn.}
-        8. O-O O-O {Castle; now you are ready to pin the f3 knight.}
-        9. Nbd2 Bg4 {Pin the knight and press on d4.}
-        10. c3 Bc7 {Keep guarding f4 from a safe square where the bishop cannot be hit by Nc4.}`,
+        2. f4 {The King's Gambit: White sacrifices a soldier to open the f-file road.}
+        exf4 {Accept the soldier.}
+        3. Nf3 {A White rider rides out and stops ...Qh4+.}
+        d5 {The Modern Defence: give back a soldier in the heartland to open roads for your army.}
+        4. exd5 Nf6 {Your rider rides out and attacks d5. (Against 5.Bc4 take with 5...Nxd5.)}
+        5. Bb5+ c6 {Block the check by offering another soldier; it buys time for your mustering.}
+        6. dxc6 Nxc6 {Your army musters with gain of time.}
+        7. d4 Bd6 {Your priest steps out and guards the f4 soldier.}
+        8. O-O O-O {Into the castle; now you are ready to pin the f3 rider.}
+        9. Nbd2 Bg4 {Pin the rider and press on d4.}
+        10. c3 Bc7 {Keep guarding f4 from a safe square where the priest cannot be hit by Nc4.}`,
     },
     {
       name: "Bishop's Opening: Paulsen Defence (3.d3 c6)",
       pgn: `1. e4 e5
-        2. Bc4 {The Bishop's Opening: the bishop aims at f7.}
-        Nf6 {Develop and hit e4. (After 3.Nc3, play 3...Nxe4 as in the Vienna.)}
-        3. d3 {Guard e4.}
-        c6 {Prepare ...d5 to take the centre and blunt the c4 bishop.}
-        4. Nf3 d5 {Take the centre and attack e4.}
-        5. Bb3 Bd6 {Protect e5 and develop.}
-        6. O-O O-O {Castle; then ...Re8 or ...Nbd7 with a nice centre.}`,
+        2. Bc4 {The Bishop's Opening: the White priest stares at f7.}
+        Nf6 {Your rider rides out and hits e4. (After 3.Nc3, play 3...Nxe4 as in the Vienna.)}
+        3. d3 {A White soldier guards e4.}
+        c6 {Prepare ...d5 to seize the heartland and blunt the c4 priest.}
+        4. Nf3 d5 {Seize the heartland and attack e4.}
+        5. Bb3 Bd6 {Your priest steps out and guards e5.}
+        6. O-O O-O {Into the castle; then ...Re8 or ...Nbd7 with a fine heartland.}`,
     },
     {
       name: 'Ponziani: Jaenisch Counterattack (3...Nf6)',
       pgn: `1. e4 e5 2. Nf3 Nc6
-        3. c3 {The Ponziani: White prepares d4.}
-        Nf6 {The safest reply: hit e4 at once.}
-        4. d4 Nxe4 {Take the pawn.}
-        5. d5 {Kicks the c6 knight.}
-        Ne7 {The usual retreat; the knight heads for g6.}
-        6. Nxe5 Ng6 {Challenge the strong e5 knight.}
-        7. Nxg6 hxg6 {Take back towards the centre; your rook on h8 now has the open h-file.}
-        8. Qe2 {Pins the e4 knight against your king.}
-        Qe7 {Block the e-file and guard the knight.}
-        9. Bf4 d6 {Guard the c7 and e5 squares and open the c8 bishop, which will support the knight from f5.}`,
+        3. c3 {The Ponziani: a White soldier steps to c3 to prepare d4.}
+        Nf6 {The safest reply: your rider hits e4 at once.}
+        4. d4 Nxe4 {Take the soldier.}
+        5. d5 {A White soldier chases the c6 rider.}
+        Ne7 {The usual retreat; the rider heads for g6.}
+        6. Nxe5 Ng6 {Challenge the proud e5 rider.}
+        7. Nxg6 hxg6 {Take back towards the heartland; your tower on h8 now has the open h-file road.}
+        8. Qe2 {The White Queen pins the e4 rider against your King.}
+        Qe7 {Your Queen blocks the e-file and guards the rider.}
+        9. Bf4 d6 {Guard the c7 and e5 squares and open the road for the c8 priest, which will back the rider from f5.}`,
     },
     {
       name: 'Centre Game: Berger Variation (4.Qe3 Nf6)',
       pgn: `1. e4 e5
-        2. d4 {The Centre Game.}
-        exd4 {Take the pawn: White has to recapture with the queen.}
-        3. Qxd4 {White's queen comes out early.}
-        Nc6 {Develop with an attack on the queen.}
-        4. Qe3 Nf6 {Develop and attack e4.}
-        5. Nc3 Bb4 {Pin the c3 knight, which guards e4.}
-        6. Bd2 O-O {Castle, ready to put the rook on the open e-file.}
-        7. O-O-O Re8 {Attack e4. The pawn is pinned to White's queen on e3, so it is hard to defend.}`,
+        2. d4 {The Centre Game: White charges straight into the heartland.}
+        exd4 {Take the soldier: White has to take back with the Queen.}
+        3. Qxd4 {The White Queen rides out early.}
+        Nc6 {Your rider rides out with an attack on the Queen.}
+        4. Qe3 Nf6 {Another rider joins and attacks e4.}
+        5. Nc3 Bb4 {Your priest pins the c3 rider, which guards e4.}
+        6. Bd2 O-O {Into the castle, ready to put your tower on the open e-file road.}
+        7. O-O-O Re8 {Attack e4. The soldier is pinned to the White Queen on e3, so it is hard to defend.}`,
     },
   ],
 }
