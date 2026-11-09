@@ -6,6 +6,8 @@ import { EvalGraph } from '../components/analysis/EvalGraph'
 import { GameList, GameLoader, type LoadRequest } from '../components/analysis/GameLoader'
 import type { Side } from '../data/types'
 import { getEngine, type EngineLine } from '../lib/engine'
+import { rateGame, summarise, type GameMove, type Rating } from '../lib/moveQuality'
+import { GameReview, MoveBadge, QualityChip } from '../components/MoveBadge'
 import { mastersGames, mastersPgn, type GameSummary } from '../lib/gameSources'
 import { ANALYSE_HANDOFF_KEY, gameSubtitle, gameTitle, moveNumberLabel, parsePgn, uciToSan, type GamePly, type LoadedGame } from '../lib/pgn'
 
@@ -55,8 +57,15 @@ function initial(): { game: LoadedGame; pgn: string; ply: number; orientation: S
   }
 }
 
+const terminalCache = new Map<string, { line: EngineLine; text: string } | null>()
+
 /** A finished position has no engine lines; describe it directly. */
 function terminal(fen: string): { line: EngineLine; text: string } | null {
+  if (!terminalCache.has(fen)) terminalCache.set(fen, findTerminal(fen))
+  return terminalCache.get(fen)!
+}
+
+function findTerminal(fen: string): { line: EngineLine; text: string } | null {
   const chess = new Chess(fen)
   if (chess.isCheckmate()) {
     const whiteWins = chess.turn() === 'b'
@@ -83,6 +92,11 @@ function shiftText(before: EngineLine | undefined, after: EngineLine | undefined
   return `${formatScore(before)} → ${result}`
 }
 
+const toGameMoves = (list: GamePly[]): GameMove[] => list.map((m) => ({ fenBefore: m.fenBefore, uci: m.uci }))
+
+/** Ratings worth marking on the eval graph. */
+const GRAPH_MARKS = new Set(['brilliant', 'mistake', 'miss', 'blunder'])
+
 interface Variation {
   /** Main-line position index the variation branches from. */
   from: number
@@ -105,11 +119,30 @@ export function AnalysisPage() {
   const [orientation, setOrientation] = useState<Side>(start?.orientation ?? 'white')
   const [choosing, setChoosing] = useState(!start)
   const [analysis, setAnalysis] = useState<Analysis | null>(null)
-  const [evals, setEvals] = useState<Record<string, EngineLine>>({})
+  // Engine lines for every position looked at so far, by FEN (best first). Feeds the bar, graph and move ratings.
+  const [analyses, setAnalyses] = useState<Record<string, EngineLine[]>>({})
+  const evals = useMemo(() => {
+    const out: Record<string, EngineLine> = {}
+    for (const [f, ls] of Object.entries(analyses)) if (ls[0]) out[f] = ls[0]
+    return out
+  }, [analyses])
   const [showArrows, setShowArrows] = useState(true)
   const [masters, setMasters] = useState<{ fen: string; state: 'loading' | 'done' | 'error'; total?: number; games?: GameSummary[]; error?: string } | null>(null)
 
   const moves = useMemo(() => game?.moves ?? [], [game])
+
+  // ---- Move ratings (brilliant … blunder), from the cached analyses. ----
+  const ratingInput = useMemo(() => {
+    const m = new Map(Object.entries(analyses))
+    for (const mv of [...moves, ...(variation?.moves ?? [])]) {
+      const t = terminal(mv.fenAfter)
+      if (t && !m.has(mv.fenAfter)) m.set(mv.fenAfter, [t.line])
+    }
+    return m
+  }, [analyses, moves, variation])
+  const mainMoves = useMemo(() => toGameMoves(moves), [moves])
+  const ratings = useMemo(() => rateGame(mainMoves, ratingInput), [mainMoves, ratingInput])
+  const varRatings = useMemo(() => (variation ? rateGame(toGameMoves(variation.moves), ratingInput) : []), [variation, ratingInput])
   const mainFen = useCallback((i: number) => (i === 0 ? game!.startFen : moves[i - 1].fenAfter), [game, moves])
   const inVariation = !!variation && varPly > 0
   const fen = !game ? '' : inVariation ? variation!.moves[varPly - 1].fenAfter : mainFen(ply)
@@ -142,7 +175,7 @@ export function AnalysisPage() {
     setVarPly(0)
     setOrientation(r.orientation ?? 'white')
     setAnalysis(null)
-    setEvals({})
+    setAnalyses({})
     setMasters(null)
     setChoosing(false)
   }
@@ -163,13 +196,13 @@ export function AnalysisPage() {
         .then((lines) => {
           if (stale() || !lines.length) return
           setAnalysis({ fen, lines, deep: false })
-          setEvals((e) => ({ ...e, [fen]: lines[0] }))
+          setAnalyses((a) => ({ ...a, [fen]: lines }))
           return engine.analyse(fen, LINE_COUNT, DEEP_MS, stale)
         })
         .then((lines) => {
           if (!lines || stale() || !lines.length) return
           setAnalysis({ fen, lines, deep: true })
-          setEvals((e) => ({ ...e, [fen]: lines[0] }))
+          setAnalyses((a) => ({ ...a, [fen]: lines }))
         })
         .catch(() => {})
     }, 120)
@@ -180,26 +213,28 @@ export function AnalysisPage() {
   }, [fen, end])
 
   // ---- Engine: a fast pass over every main-line position for the graph. ----
-  const evalsRef = useRef(evals)
+  const analysesRef = useRef(analyses)
   useEffect(() => {
-    evalsRef.current = evals
-  }, [evals])
+    analysesRef.current = analyses
+  }, [analyses])
   useEffect(() => {
     if (!game) return
     let live = true
-    const fens = [game.startFen, ...game.moves.map((m) => m.fenAfter)]
+    // Your own line first (so its moves get rated quickly), then the whole game.
+    const fens = [...(variation?.moves.map((m) => m.fenAfter) ?? []), game.startFen, ...game.moves.map((m) => m.fenAfter)]
     ;(async () => {
       for (const f of fens) {
         if (!live) return
-        if (evalsRef.current[f]) continue
+        if (analysesRef.current[f]) continue
         const t = terminal(f)
         if (t) {
-          setEvals((e) => ({ ...e, [f]: t.line }))
+          setAnalyses((a) => ({ ...a, [f]: [t.line] }))
           continue
         }
         try {
-          const lines = await getEngine().analyse(f, 1, GRAPH_MS, () => !live)
-          if (live && lines[0]) setEvals((e) => (e[f] ? e : { ...e, [f]: lines[0] }))
+          // Two lines, so the move ratings can tell an only move ("great") from an ordinary best move.
+          const lines = await getEngine().analyse(f, 2, GRAPH_MS, () => !live)
+          if (live && lines[0]) setAnalyses((a) => (a[f] ? a : { ...a, [f]: lines }))
         } catch {
           return
         }
@@ -208,7 +243,7 @@ export function AnalysisPage() {
     return () => {
       live = false
     }
-  }, [game])
+  }, [game, variation])
 
   // ---- Moving around ----
   const goMain = useCallback(
@@ -333,6 +368,9 @@ export function AnalysisPage() {
   const graphEvals = [game.startFen, ...moves.map((m) => m.fenAfter)].map((f) => evals[f])
   const beforeFen = lastMove?.fenBefore
   const shift = lastMove ? shiftText(beforeFen ? evals[beforeFen] : undefined, evals[fen], end) : null
+  const lastRating: Rating | null = inVariation ? varRatings[varPly - 1] ?? null : ply > 0 ? ratings[ply - 1] : null
+  const lastBest = lastRating && lastMove && lastRating.best !== lastMove.uci && lastRating.loss >= 2 ? uciToSan(lastMove.fenBefore, [lastRating.best])[0] : null
+  const graphMarks = ratings.flatMap((r, i) => (r && GRAPH_MARKS.has(r.quality) ? [{ ply: i + 1, quality: r.quality }] : []))
   const arrows = showArrows && !end ? lines.map((l, i) => ({ from: l.uci.slice(0, 2), to: l.uci.slice(2, 4), color: [ARROW_BEST, ARROW_SECOND, ARROW_THIRD][i] })) : []
   const gameMoveHere = !inVariation ? moves[ply] : undefined
   const h = game.headers
@@ -360,7 +398,7 @@ export function AnalysisPage() {
               ⇅
             </button>
           </div>
-          <EvalGraph evals={graphEvals} current={inVariation ? variation!.from : ply} onJump={goMain} />
+          <EvalGraph evals={graphEvals} marks={graphMarks} current={inVariation ? variation!.from : ply} onJump={goMain} />
         </div>
 
         <aside className="panel">
@@ -391,6 +429,12 @@ export function AnalysisPage() {
                     {moveNumberLabel(lastMove.fenBefore)} {lastMove.san}
                   </strong>
                   {shift && <span className="muted"> · bar {shift}</span>}
+                  {lastRating && (
+                    <span className="last-rating">
+                      <QualityChip quality={lastRating.quality} />
+                      {lastBest && <span className="muted"> · best was {lastBest}</span>}
+                    </span>
+                  )}
                 </>
               ) : (
                 <span className="muted">Starting position. Use ◀ ▶ or the arrow keys to step through, or play any move on the board.</span>
@@ -416,6 +460,7 @@ export function AnalysisPage() {
                       {(i === 0 || m.fenBefore.split(' ')[1] === 'w') && <span className="num">{moveNumberLabel(m.fenBefore)}</span>}
                       <button type="button" onClick={() => setVarPly(i + 1)}>
                         {m.san}
+                        <MoveBadge rating={varRatings[i]} />
                       </button>
                     </li>
                   ))}
@@ -473,6 +518,7 @@ export function AnalysisPage() {
                   {(i === 0 || m.fenBefore.split(' ')[1] === 'w') && <span className="num">{moveNumberLabel(m.fenBefore)}</span>}
                   <button type="button" onClick={() => goMain(i + 1)}>
                     {m.san}
+                    <MoveBadge rating={ratings[i]} />
                     {ev && <span className="move-eval">{formatScore(ev)}</span>}
                   </button>
                 </li>
@@ -480,6 +526,12 @@ export function AnalysisPage() {
             })}
             {h.Result && h.Result !== '*' && <li className="muted">{h.Result}</li>}
           </ol>
+
+          <GameReview
+            summary={summarise(mainMoves, ratings)}
+            names={[h.White && h.White !== '?' ? h.White : 'White', h.Black && h.Black !== '?' ? h.Black : 'Black']}
+            pending={ratings.filter((r) => !r).length}
+          />
 
           <section className="masters">
             <h2>Master games from here</h2>

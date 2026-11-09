@@ -13,6 +13,8 @@ import { EvalBar, formatScore } from '../components/EvalBar'
 import { recordResult } from '../lib/progress'
 import { play } from '../lib/sound'
 import { ANALYSE_HANDOFF_KEY } from '../lib/pgn'
+import { QUALITY, rateGame, summarise, type GameMove } from '../lib/moveQuality'
+import { GameReview, MoveBadge } from '../components/MoveBadge'
 
 const SETTINGS_KEY = 'chess-trainer:play:v1'
 
@@ -251,6 +253,7 @@ interface PlayedMove {
   san: string
   from: string
   to: string
+  promotion?: string
   fen: string
   inBook: boolean
   comment?: string
@@ -342,6 +345,14 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
   const [thinking, setThinking] = useState(false)
   const busy = useRef(false)
   const [analysis, setAnalysis] = useState<{ fen: string; count: number; lines: EngineLine[] } | null>(null)
+  // Every engine analysis of this game, by FEN, for the move ratings. `analysed` bumps to re-rate.
+  const analyses = useRef(new Map<string, EngineLine[]>())
+  const [analysed, setAnalysed] = useState(0)
+  const rememberAnalysis = useCallback((fen: string, lines: EngineLine[]) => {
+    if (lines.length >= (analyses.current.get(fen)?.length ?? 0)) analyses.current.set(fen, lines)
+    setAnalysed((n) => n + 1)
+  }, [])
+  const ratingNoted = useRef(new Set<number>())
   const [showBest, setShowBest] = useState<string | null>(null)
   const [openingMistakes, setOpeningMistakes] = useState<OpeningMistake[]>([])
   const [resigned, setResigned] = useState(false)
@@ -419,7 +430,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
       .then((uci) => {
         const after = new Chess(fen)
         const mv = after.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] })
-        push({ san: mv.san, from: mv.from, to: mv.to, inBook: false }, after)
+        push({ san: mv.san, from: mv.from, to: mv.to, promotion: mv.promotion, inBook: false }, after)
       })
       .catch(() => add({ who: 'note', tone: 'bad', text: 'The computer engine failed to load.' }))
       .finally(() => {
@@ -452,14 +463,67 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
     const t = setTimeout(() => {
       getEngine()
         .analyse(boardFen, analysisCount)
-        .then((lines) => live && setAnalysis({ fen: boardFen, count: analysisCount, lines }))
+        .then((lines) => {
+          rememberAnalysis(boardFen, lines)
+          if (live) setAnalysis({ fen: boardFen, count: analysisCount, lines })
+        })
         .catch(() => {})
     }, 250)
     return () => {
       live = false
       clearTimeout(t)
     }
-  }, [boardFen, analysisCount])
+  }, [boardFen, analysisCount, rememberAnalysis])
+
+  // Move ratings. Positions the live analysis skipped (moves played quickly) are analysed in the background.
+  const gameMoves: GameMove[] = useMemo(
+    () => moves.map((m, i) => ({ fenBefore: i === 0 ? START_FEN : moves[i - 1].fen, uci: m.from + m.to + (m.promotion ?? ''), inBook: m.inBook })),
+    [moves],
+  )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const ratings = useMemo(() => rateGame(gameMoves, analyses.current), [gameMoves, analysed])
+  const filling = useRef(false)
+  useEffect(() => {
+    if (filling.current || thinking) return
+    const missing = [START_FEN, ...moves.map((m) => m.fen)].find(
+      (f) => f !== fen && f !== boardFen && !analyses.current.has(f) && !new Chess(f).isGameOver(),
+    )
+    if (!missing) return
+    filling.current = true
+    getEngine()
+      .analyse(missing, 2, 500)
+      .then((lines) => rememberAnalysis(missing, lines))
+      .catch(() => analyses.current.set(missing, []))
+      .finally(() => {
+        filling.current = false
+        setAnalysed((n) => n + 1)
+      })
+  }, [moves, fen, boardFen, thinking, analysed, rememberAnalysis])
+
+  // Call out notable moves of yours against the computer in the coach log.
+  useEffect(() => {
+    // A takeback frees its plies to be called out again.
+    for (const i of ratingNoted.current) if (i >= moves.length) ratingNoted.current.delete(i)
+    ratings.forEach((r, i) => {
+      if (!r || ratingNoted.current.has(i) || moves[i]?.inBook) return
+      const mine = (i % 2 === 0) === (side === 'white')
+      if (!mine) return
+      ratingNoted.current.add(i)
+      const q = r.quality
+      if (q !== 'brilliant' && q !== 'great' && q !== 'inaccuracy' && q !== 'mistake' && q !== 'miss' && q !== 'blunder') return
+      const good = q === 'brilliant' || q === 'great'
+      const bestSan = sanAt(gameMoves[i].fenBefore, r.best)
+      add({
+        who: 'note',
+        tone: good ? 'good' : 'bad',
+        label: label(i, moves[i].san),
+        text: good
+          ? `${QUALITY[q].label} move${q === 'brilliant' ? ': a sound sacrifice' : ': the only move that keeps your advantage'}.`
+          : `${QUALITY[q].label}: it cost ${r.loss.toFixed(0)}% win chance. ${bestSan} was best.`,
+      })
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ratings])
 
   const shownAnalysis = analysis?.fen === boardFen ? analysis.lines : null
   const current = !viewing ? shownAnalysis : null
@@ -499,11 +563,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
   }, [moves.length])
 
   function sanOf(uci: string): string {
-    try {
-      return new Chess(fen).move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] }).san
-    } catch {
-      return uci
-    }
+    return sanAt(fen, uci)
   }
 
   function showBestMoves() {
@@ -582,7 +642,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
       }
       try {
         const mv = after.move(input)
-        push({ san: mv.san, from: mv.from, to: mv.to, inBook: false }, after)
+        push({ san: mv.san, from: mv.from, to: mv.to, promotion: mv.promotion, inBook: false }, after)
         return true
       } catch {
         return false
@@ -823,6 +883,13 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
               onView={(ply) => setView(ply)}
             />
           )}
+          {phase === 'over' && moves.some((m) => !m.inBook) && (
+            <GameReview
+              summary={summarise(gameMoves, ratings)}
+              names={side === 'white' ? ['You', 'Computer'] : ['Computer', 'You']}
+              pending={ratings.filter((r) => !r).length}
+            />
+          )}
           <CoachLog entries={log} />
           <ol className="movelist">
             {moves.map((m, i) => (
@@ -835,6 +902,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
                   title={m.inBook ? 'Prepared move' : undefined}
                 >
                   {m.san}
+                  <MoveBadge rating={ratings[i]} />
                 </button>
               </li>
             ))}
@@ -843,6 +911,14 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
       </div>
     </div>
   )
+}
+
+function sanAt(fen: string, uci: string): string {
+  try {
+    return new Chess(fen).move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] }).san
+  } catch {
+    return uci
+  }
 }
 
 /** The lines a mistake belongs to: those through the move finally played there, narrowed to the lines the game reached. */

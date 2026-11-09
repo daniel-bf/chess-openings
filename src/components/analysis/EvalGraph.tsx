@@ -1,4 +1,5 @@
 import type { EngineLine } from '../../lib/engine'
+import { QUALITY, type MoveQuality } from '../../lib/moveQuality'
 import { whiteShare } from '../EvalBar'
 
 interface Props {
@@ -6,13 +7,15 @@ interface Props {
   evals: (EngineLine | undefined)[]
   current: number
   onJump: (ply: number) => void
+  /** Rated moves to flag on the graph (position index after the move). */
+  marks?: { ply: number; quality: MoveQuality }[]
 }
 
 const W = 600
 const H = 90
 
 /** The evaluation over the whole game: white area above the line is White's share of the bar. */
-export function EvalGraph({ evals, current, onJump }: Props) {
+export function EvalGraph({ evals, current, onJump, marks = [] }: Props) {
   const n = evals.length
   if (n < 2) return null
   const x = (i: number) => (i / (n - 1)) * W
@@ -47,20 +50,37 @@ export function EvalGraph({ evals, current, onJump }: Props) {
 
   return (
     <figure className="evalgraph">
-      <svg
-        viewBox={`0 0 ${W} ${H}`}
-        preserveAspectRatio="none"
-        role="img"
-        aria-label="Evaluation graph of the game. Click to jump to a move."
-        onClick={click}
-      >
-        <rect x="0" y="0" width={W} height={H} className="evalgraph-pending" />
-        {open && <rect x="0" y="0" width={lastX} height={H} className="evalgraph-black" />}
-        <path d={area} className="evalgraph-white" />
-        <line x1="0" x2={W} y1={H / 2} y2={H / 2} className="evalgraph-mid" />
-        <path d={line} className="evalgraph-line" vectorEffect="non-scaling-stroke" />
-        <line x1={x(current)} x2={x(current)} y1="0" y2={H} className="evalgraph-cursor" vectorEffect="non-scaling-stroke" />
-      </svg>
+      <div className="evalgraph-plot">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          preserveAspectRatio="none"
+          role="img"
+          aria-label="Evaluation graph of the game. Click to jump to a move."
+          onClick={click}
+        >
+          <rect x="0" y="0" width={W} height={H} className="evalgraph-pending" />
+          {open && <rect x="0" y="0" width={lastX} height={H} className="evalgraph-black" />}
+          <path d={area} className="evalgraph-white" />
+          <line x1="0" x2={W} y1={H / 2} y2={H / 2} className="evalgraph-mid" />
+          <path d={line} className="evalgraph-line" vectorEffect="non-scaling-stroke" />
+          <line x1={x(current)} x2={x(current)} y1="0" y2={H} className="evalgraph-cursor" vectorEffect="non-scaling-stroke" />
+        </svg>
+        {marks.map((m) => {
+          const l = evals[m.ply]
+          if (!l) return null
+          return (
+            <button
+              key={m.ply}
+              type="button"
+              className={`evalgraph-mark q-${QUALITY[m.quality].tone}`}
+              style={{ left: `${(m.ply / (n - 1)) * 100}%`, top: `${100 - whiteShare(l)}%` }}
+              title={`${QUALITY[m.quality].label}, move ${Math.ceil(m.ply / 2)}`}
+              aria-label={`${QUALITY[m.quality].label} at move ${Math.ceil(m.ply / 2)}`}
+              onClick={() => onJump(m.ply)}
+            />
+          )
+        })}
+      </div>
       <figcaption className="muted small">
         {done < n ? `Analysing the game… ${done}/${n} positions` : 'Evaluation through the game. Click to jump.'}
       </figcaption>
