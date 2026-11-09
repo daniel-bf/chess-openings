@@ -9,6 +9,8 @@ import { LineQuiz } from '../components/LineQuiz'
 import { go } from '../router'
 import { NotFound } from './OpeningPage'
 import { Plan } from '../components/Plan'
+import { NoteLegend, NoteText } from '../components/NoteText'
+import { noteSquares } from '../lib/squareNotes'
 
 type Phase = 'watch' | 'try' | 'done'
 
@@ -127,7 +129,9 @@ function Watch({ lineId, header, onReady }: { lineId: string; header: React.Reac
             movable={null}
             lastMove={last ? { from: last.from, to: last.to } : null}
             arrows={next ? [{ from: next.from, to: next.to, color: ARROW_NEXT }] : []}
+            notes={noteSquares(note?.text)}
           />
+          <NoteLegend text={note?.text} />
           <div className="nav">
             <button type="button" onClick={() => setPlayed(0)} disabled={played === 0} aria-label="Start">
               ⏮
@@ -148,7 +152,7 @@ function Watch({ lineId, header, onReady }: { lineId: string; header: React.Reac
           <div className="feedback info">
             {note && last ? (
               <p className={note.auto ? 'auto' : ''}>
-                <strong>{last.san}</strong> {note.text}
+                <strong>{last.san}</strong> <NoteText text={note.text} />
               </p>
             ) : (
               <>

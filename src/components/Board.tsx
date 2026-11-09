@@ -3,6 +3,7 @@ import { Chessboard } from 'react-chessboard'
 import { Chess, type Square } from 'chess.js'
 import type { Side } from '../data/types'
 import { play } from '../lib/sound'
+import { NOTE_COLOR, NOTE_FILL, type NoteKind } from '../lib/squareNotes'
 
 export interface MoveInput {
   from: string
@@ -26,6 +27,8 @@ interface Props {
   lastMove?: { from: string; to: string } | null
   /** Squares to tint, e.g. a wrong-move flash. */
   marks?: Record<string, string>
+  /** Squares an explanation talks about, coloured by what the move does to them. */
+  notes?: Record<string, NoteKind>
 }
 
 export const ARROW_HINT = 'rgba(46, 125, 230, 0.8)'
@@ -33,7 +36,7 @@ export const ARROW_NEXT = 'rgba(232, 160, 32, 0.85)'
 export const ARROW_BEST = 'rgba(30, 140, 70, 0.85)'
 export const ARROW_SECOND = 'rgba(46, 125, 230, 0.6)'
 
-export function Board({ fen, orientation, movable, onMove, arrows = [], lastMove, marks = {} }: Props) {
+export function Board({ fen, orientation, movable, onMove, arrows = [], lastMove, marks = {}, notes = {} }: Props) {
   const [selection, setSelection] = useState<{ fen: string; square: string } | null>(null)
   const selected = selection?.fen === fen ? selection.square : null
   const setSelected = (square: string | null) => setSelection(square ? { fen, square } : null)
@@ -103,6 +106,16 @@ export function Board({ fen, orientation, movable, onMove, arrows = [], lastMove
       squareStyles[king.square] = chess.isCheckmate()
         ? { background: 'rgba(210, 30, 30, 0.85)', boxShadow: 'inset 0 0 0 3px rgba(120, 0, 0, 0.9)' }
         : { background: 'radial-gradient(circle, rgba(230, 40, 40, 0.85) 25%, transparent 75%)' }
+  }
+  for (const [sq, kind] of Object.entries(notes)) {
+    const prev = squareStyles[sq] ?? {}
+    // A tint on top of whatever is already there (last move, legal-move dot) plus a coloured outline.
+    const tint = `linear-gradient(${NOTE_FILL[kind]}, ${NOTE_FILL[kind]})`
+    squareStyles[sq] = {
+      ...prev,
+      backgroundImage: prev.backgroundImage ? `${prev.backgroundImage}, ${tint}` : tint,
+      boxShadow: `inset 0 0 0 3px ${NOTE_COLOR[kind]}`,
+    }
   }
   for (const [sq, color] of Object.entries(marks)) squareStyles[sq] = { background: color }
 

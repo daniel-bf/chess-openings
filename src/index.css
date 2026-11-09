@@ -502,3 +502,14 @@ button.chip { border-radius: 99px; padding: 0.25em 0.8em; font-size: 0.87rem; }
 .evalgraph-plot { position: relative; }
 .evalgraph-mark { position: absolute; width: 11px; height: 11px; padding: 0; margin: -5.5px 0 0 -5.5px; border-radius: 50%; border: 1.5px solid #fff; background: var(--q); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35); }
 .last-rating { display: inline-flex; align-items: center; gap: 0.3em; margin-left: 0.5em; }
+
+/* Squares named in move explanations, coloured by what the move does to them. */
+.sq-chip { font-family: var(--font-mono); font-weight: 700; font-style: normal; padding: 0 0.28em; border-radius: 4px; color: #fff; white-space: nowrap; }
+.sq-attack { background: rgb(214, 48, 49); }
+.sq-protect { background: rgb(34, 150, 74); }
+.sq-prevent { background: rgb(142, 68, 200); }
+.sq-control { background: rgb(36, 110, 220); }
+.sq-plan { background: rgb(230, 126, 14); }
+.sq-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0.4em 0 0; padding: 0; font-size: 0.8rem; color: var(--muted, inherit); }
+.sq-legend li { display: inline-flex; align-items: center; gap: 5px; }
+.sq-swatch { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }

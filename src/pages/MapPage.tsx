@@ -7,6 +7,8 @@ import { buildTree, moveNumber, pathTo, type TreeNode } from '../lib/tree'
 import { Board, ARROW_BEST, ARROW_NEXT } from '../components/Board'
 import { FlowTree } from '../components/FlowTree'
 import { go } from '../router'
+import { NoteLegend, NoteText } from '../components/NoteText'
+import { noteSquares } from '../lib/squareNotes'
 import { BoardMap } from '../components/explorer/BoardMap'
 import { isMine, plural } from './TreePage'
 
@@ -155,7 +157,9 @@ export function MapPage({ side: initialSide }: { side?: string }) {
               movable={null}
               lastMove={selected.move ? { from: selected.move.from, to: selected.move.to } : null}
               arrows={arrows}
+              notes={noteSquares(note?.text)}
             />
+            <NoteLegend text={note?.text} />
             <div className="nav">
               <button type="button" onClick={() => setSelectedId('root')} disabled={!selected.move} aria-label="Start position">
                 ⏮
@@ -198,7 +202,7 @@ export function MapPage({ side: initialSide }: { side?: string }) {
                   <strong className={isMine(selected, side) ? 'mine' : 'theirs'}>
                     {moveNumber(selected)} {selected.move.san}
                   </strong>{' '}
-                  {note.text}
+                  <NoteText text={note.text} />
                 </p>
               ) : (
                 <p>

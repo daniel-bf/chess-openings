@@ -1,3 +1,4 @@
+import { NoteText } from './NoteText'
 import { PACE_LABEL, setPace, usePace, type Pace } from '../lib/settings'
 
 export interface CoachEntry {
@@ -6,6 +7,8 @@ export interface CoachEntry {
   text: string
   auto?: boolean
   tone?: 'good' | 'bad' | 'info'
+  /** How many moves had been played once this move was made, so its note is only drawn on that position. */
+  ply?: number
 }
 
 /** Every explanation so far, newest first, so nothing disappears before you have read it. */
@@ -15,7 +18,7 @@ export function CoachLog({ entries }: { entries: CoachEntry[] }) {
       {[...entries].reverse().map((e, i) => (
         <li key={entries.length - i} className={`${e.who} ${e.tone ?? ''} ${i === 0 ? 'latest' : ''}`}>
           {e.label && <span className="who">{e.label}</span>}
-          <span className={e.auto ? 'auto' : ''}>{e.text}</span>
+          <span className={e.auto ? 'auto' : ''}>{e.who === 'note' ? e.text : <NoteText text={e.text} />}</span>
         </li>
       ))}
     </ol>
