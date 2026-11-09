@@ -8,6 +8,8 @@ import type { Side } from '../data/types'
 import { Board, ARROW_HINT, type MoveInput } from './Board'
 import { MoveList } from './MoveList'
 import { CoachLog, PaceControl, type CoachEntry } from './Coach'
+import { NoteLegend } from './NoteText'
+import { latestMoveNote, noteSquares } from '../lib/squareNotes'
 
 interface Props {
   line: Line
@@ -107,6 +109,7 @@ export function LineQuiz({ line, side, explainMoves, onComplete, header }: Props
     setLog((l) => [...l, { who: 'note', tone: 'info', text: `The move is ${next.san}. Play it on the board.` }])
   }
 
+  const moveNote = explainMoves ? latestMoveNote(log) : null
   const showArrow = !finished && next.isTrainee && (revealed || missesHere >= 2)
 
   return (
@@ -120,7 +123,9 @@ export function LineQuiz({ line, side, explainMoves, onComplete, header }: Props
           lastMove={last ? { from: last.from, to: last.to } : null}
           arrows={showArrow ? [{ from: next.from, to: next.to, color: ARROW_HINT }] : []}
           marks={flash}
+          notes={noteSquares(moveNote)}
         />
+        <NoteLegend text={moveNote} />
         <div className="nav">
           {!finished && next.isTrainee && (
             <button type="button" className="ghost" onClick={reveal} disabled={revealed}>

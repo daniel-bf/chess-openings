@@ -7,6 +7,8 @@ import { getEngine, type EngineLine } from '../lib/engine'
 import { explainOpponent } from '../lib/describe'
 import { replyDelay, usePace } from '../lib/settings'
 import { CoachLog, PaceControl, type CoachEntry } from '../components/Coach'
+import { NoteLegend } from '../components/NoteText'
+import { latestMoveNote, noteSquares } from '../lib/squareNotes'
 import { Board, ARROW_HINT, ARROW_BEST, ARROW_SECOND, type MoveInput } from '../components/Board'
 import { go } from '../router'
 import { EvalBar, formatScore } from '../components/EvalBar'
@@ -405,7 +407,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
     const prev = moves[moves.length - 1]
     after.move(pick.san)
     const note = explainOpponent({ fenBefore: fen, from: pick.from, to: pick.to, san: pick.san, comment: pick.comment }, prev)
-    add({ who: 'opponent', label: label(moves.length, pick.san), text: note.text, auto: note.auto })
+    add({ who: 'opponent', label: label(moves.length, pick.san), text: note.text, auto: note.auto, ply: moves.length + 1 })
     push({ san: pick.san, from: pick.from, to: pick.to, inBook: true, comment: pick.comment, lineIds: pick.lineIds }, after)
     if (bookMoves(book, after.fen()).length === 0) leaveBook('computer')
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -605,7 +607,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
       }
       const note = explainOpponent({ fenBefore: fen, from: hit.from, to: hit.to, san: hit.san, comment: hit.comment }, moves[moves.length - 1])
       after.move(hit.san)
-      add({ who: 'you', tone: 'good', label: label(moves.length, hit.san), text: note.text.replace('It attacks your', 'It attacks the').replace(' and your ', ' and the '), auto: note.auto })
+      add({ who: 'you', tone: 'good', label: label(moves.length, hit.san), text: note.text.replace('It attacks your', 'It attacks the').replace(' and your ', ' and the '), auto: note.auto, ply: moves.length + 1 })
       push({ san: hit.san, from: hit.from, to: hit.to, inBook: true, comment: hit.comment, lineIds: hit.lineIds }, after)
       setMisses(0)
       setRevealed(false)
@@ -704,6 +706,7 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
     }
   }
 
+  const moveNote = viewing ? null : latestMoveNote(log, moves.length)
   const showHint = !viewing && phase === 'book' && userTurn && (revealed || misses >= 2)
   const showTop = !viewing && !!allowed && topMisses >= 2
   const last = moves[shown - 1]
@@ -753,7 +756,9 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
                 : []),
             ]}
             marks={flash}
+            notes={moveNote ? noteSquares(moveNote) : {}}
           />
+          {moveNote && <NoteLegend text={moveNote} />}
           <div className="nav">
             <button type="button" onClick={() => setView(0)} disabled={shown === 0} aria-label="Start of the game">
               ⏮

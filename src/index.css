@@ -442,3 +442,14 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .review-summary td { text-align: right; font-variant-numeric: tabular-nums; width: 25%; }
 .review-summary thead th { font-size: 0.82rem; color: var(--muted); text-align: right; }
 .review-summary tr.accuracy td { font-weight: 700; font-size: 1.05rem; }
+
+/* Squares named in move explanations, coloured by what the move does to them. */
+.sq-chip { font-family: var(--font-mono); font-weight: 700; font-style: normal; padding: 0 0.28em; border-radius: 4px; color: #fff; white-space: nowrap; }
+.sq-attack { background: rgb(214, 48, 49); }
+.sq-protect { background: rgb(34, 150, 74); }
+.sq-prevent { background: rgb(142, 68, 200); }
+.sq-control { background: rgb(36, 110, 220); }
+.sq-plan { background: rgb(230, 126, 14); }
+.sq-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0.4em 0 0; padding: 0; font-size: 0.8rem; color: var(--muted, inherit); }
+.sq-legend li { display: inline-flex; align-items: center; gap: 5px; }
+.sq-swatch { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
