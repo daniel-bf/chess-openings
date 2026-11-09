@@ -12,6 +12,7 @@ A free, client-side trainer for 20 popular chess openings: 185 lines with move-b
 
 Progress is stored in the browser (localStorage). There is no server or account.
 
+- **Move ratings** (prototype): in Play mode every move gets a label as the engine analyses it: Brilliant (!!), Great (!), Best (★), Excellent (✓), Good, Book, Inaccuracy (?!), Mistake (?), Miss (×) or Blunder (??). Your notable moves against the computer are called out in the coach log, and the end-of-game report shows each side's accuracy and label counts. The rules live in `src/lib/moveQuality.ts`; `npx tsx scripts/move-quality-check.ts` rates a few known games as a sanity check.
 - **Sound**: the speaker button in the top bar opens the Sounds page, where you can listen to seven sound sets and pick one, or turn sound off. Six are free sets from Lichess and PyChess, credited in `public/sound/README.md`, and one is generated in the browser. Lichess's classic "standard" sounds and chess.com's sounds are not freely licensed, so they are not included.
 
 ## Openings
