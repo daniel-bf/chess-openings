@@ -418,6 +418,63 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .game-result.loss { background: var(--bad-bg); color: var(--bad); }
 .game-result.draw { background: var(--info-bg); color: var(--info); }
 
+/* Analysis page */
+.loader .lead { margin-bottom: 1em; }
+.famous-list, .game-list { list-style: none; padding: 0; margin: 0.6em 0; display: grid; gap: 8px; }
+.famous-list { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.famous-list button, .game-list button { width: 100%; text-align: left; display: flex; flex-direction: column; gap: 0.2em; padding: 0.7em 0.9em; background: var(--surface); border-radius: var(--radius); }
+.game-list { max-height: 520px; overflow-y: auto; }
+.game-list button { padding: 0.55em 0.8em; }
+.game-players { overflow-wrap: anywhere; }
+.game-players .me { font-weight: 700; }
+.game-result-tag { margin-right: 0.6em; color: var(--text); font-family: var(--font-mono); }
+.player-search { display: flex; flex-wrap: wrap; gap: 0.5em; align-items: center; margin: 0.4em 0 0.6em; }
+.player-search input, .pgn-input { font: inherit; padding: 0.5em 0.7em; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); min-width: 0; }
+.player-search input { flex: 1 1 12em; }
+.pgn-input { width: 100%; font-family: var(--font-mono); font-size: 0.88rem; resize: vertical; }
+button.chip { border-radius: 99px; padding: 0.25em 0.8em; font-size: 0.87rem; }
+.random-pick .row { margin: 0.8em 0; }
+
+.analysis .session-head h1 { overflow-wrap: anywhere; }
+.analysis-now { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.6em 0 0.2em; margin: 0.6em 0; }
+.analysis-now p { margin: 0 0 0.4em; }
+.variation-box { background: var(--info-bg); border-radius: 8px; padding: 0.6em 0.8em; margin: 0.4em 0 0.6em; }
+.variation-box .movelist { margin: 0.3em 0 0.6em; max-height: 120px; }
+.engine-lines { margin: 0.6em 0 1em; }
+.engine-head { display: flex; align-items: baseline; gap: 0.7em; flex-wrap: wrap; }
+.engine-head h2 { margin: 0; }
+.engine-head .check { margin-left: auto; padding: 0; }
+.pv-list { list-style: none; padding: 0; margin: 0.5em 0; display: grid; gap: 6px; }
+.pv-list li { display: flex; gap: 0.5em; align-items: baseline; min-width: 0; }
+.pv-score { flex: none; min-width: 3.6em; text-align: center; font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem; padding: 0.1em 0.3em; border-radius: 4px; }
+.pv-score.w { background: #f4f1ea; color: #222; border: 1px solid var(--border); }
+.pv-score.b { background: #2b2b2b; color: #f4f1ea; }
+.pv-moves { display: flex; flex-wrap: wrap; gap: 0 2px; font-family: var(--font-mono); font-size: 0.86rem; min-width: 0; }
+.pv-moves button { border: none; background: none; padding: 0.05em 0.25em; border-radius: 4px; color: var(--muted); }
+.pv-moves button.first { color: var(--text); font-weight: 700; }
+.pv-moves button:hover { background: var(--surface-2); color: var(--text); }
+.tag { flex: none; padding: 0.05em 0.5em; border-radius: 99px; background: var(--good-bg); color: var(--good); }
+.analysis-moves { max-height: 260px; }
+.analysis-moves .move-eval { margin-left: 0.35em; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+.analysis-moves li.current .move-eval { color: inherit; opacity: 0.8; }
+.analysis-moves li.branch button { box-shadow: inset 0 0 0 1px var(--accent); }
+.masters { margin-top: 1em; border-top: 1px solid var(--border); padding-top: 0.8em; }
+.masters .game-list { max-height: 300px; }
+
+.evalgraph { margin: 12px 0 0; }
+.evalgraph svg { display: block; width: 100%; height: 90px; border-radius: 6px; border: 1px solid var(--border); cursor: pointer; }
+.evalgraph-pending { fill: var(--surface-2); }
+.evalgraph-black { fill: #2b2b2b; }
+.evalgraph-white { fill: #f4f1ea; }
+.evalgraph-mid { stroke: #888; stroke-width: 0.5; stroke-dasharray: 4 4; }
+.evalgraph-line { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.evalgraph-cursor { stroke: #e0a020; stroke-width: 2; }
+.evalgraph figcaption { margin-top: 0.3em; }
+/* Seven nav items: let the bar scroll sideways on the narrowest phones instead of widening the page. */
+.topnav { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.topnav::-webkit-scrollbar { display: none; }
+.topnav button { flex: none; white-space: nowrap; }
+@media (max-width: 420px) { .topnav button { padding: 0.45em 0.34em; font-size: 0.82rem; } }
 /* Move ratings (brilliant, blunder, ...). */
 .q-brilliant { --q: #1baca6; --q-text: #fff; }
 .q-great { --q: #5b8bb0; --q-text: #fff; }
@@ -442,6 +499,9 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 .review-summary td { text-align: right; font-variant-numeric: tabular-nums; width: 25%; }
 .review-summary thead th { font-size: 0.82rem; color: var(--muted); text-align: right; }
 .review-summary tr.accuracy td { font-weight: 700; font-size: 1.05rem; }
+.evalgraph-plot { position: relative; }
+.evalgraph-mark { position: absolute; width: 11px; height: 11px; padding: 0; margin: -5.5px 0 0 -5.5px; border-radius: 50%; border: 1.5px solid #fff; background: var(--q); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35); }
+.last-rating { display: inline-flex; align-items: center; gap: 0.3em; margin-left: 0.5em; }
 
 /* Squares named in move explanations, coloured by what the move does to them. */
 .sq-chip { font-family: var(--font-mono); font-weight: 700; font-style: normal; padding: 0 0.28em; border-radius: 4px; color: #fff; white-space: nowrap; }

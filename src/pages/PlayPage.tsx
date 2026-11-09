@@ -14,6 +14,7 @@ import { go } from '../router'
 import { EvalBar, formatScore } from '../components/EvalBar'
 import { recordResult } from '../lib/progress'
 import { play } from '../lib/sound'
+import { ANALYSE_HANDOFF_KEY } from '../lib/pgn'
 import { QUALITY, rateGame, summarise, type GameMove } from '../lib/moveQuality'
 import { GameReview, MoveBadge } from '../components/MoveBadge'
 
@@ -693,6 +694,15 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
 
   const pgn = () => buildPgn(moves, side, resultTag(chess, side, resigned))
 
+  function analyse() {
+    try {
+      sessionStorage.setItem(ANALYSE_HANDOFF_KEY, JSON.stringify({ pgn: pgn(), orientation: side }))
+    } catch {
+      // Without storage the Analysis page simply opens its game picker.
+    }
+    go('/analysis')
+  }
+
   function copyPgn() {
     const text = pgn()
     const done = () => {
@@ -808,6 +818,9 @@ function Game({ side, openingIds, skill, continueWithEngine, topMovesOnly, topMo
             </button>
             <button type="button" className="ghost" onClick={copyPgn} disabled={moves.length === 0}>
               {copied ? 'Copied' : 'Copy PGN'}
+            </button>
+            <button type="button" className="ghost" onClick={analyse} disabled={moves.length === 0} title="Open this game on the Analysis page">
+              Analyse
             </button>
           </div>
         </div>
